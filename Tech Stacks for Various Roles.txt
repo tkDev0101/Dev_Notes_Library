@@ -14,48 +14,44 @@ Goal -> Lucky No. 4
 
 
 ----------------------------------------------------------------------------------------------
-8. Junior C# Backend & Azure Cloud Developer
+4. DevOps -tk
 
-1. Language: C#
 
-2. Frameworks:
-   • .NET Core
-   •  ASP.NET Core (MVC & Web API)
+change other n0 4
 
-3. Database:
-   • Microsoft SQL Server
-   • Azure SQL Database
-
-4. ORM:
-   • Entity Framework Core
-
-5. Version Control:
-   • Git
-   • GitHub or Azure Repos
-
-6. Cloud:
-   • Microsoft Azure
-
-7. DevOps & CI/CD:
+1. CI/CD:
+   • Tools: GitHub Actions
+   • GitLab CI/CD
+   • Jenkins
    • Azure DevOps
-   • GitHub Actions
 
-8. Containerization:
-   • Docker
-   • Kubernetes (Azure Kubernetes Service - AKS)
 
-9. Infrastructure as Code:
-   • PowerShell
-   • Azure CLI
-   • Terraform (Optional)
+2. Containerization & Orchestration
+   • Docker 
+   • Kubernetes 
 
-10. Testing: 
-   • xUnit
-   • NUnit
 
-11. IDE:
-   • Visual Studio
-   •  Visual Studio Code
+3. Operating Systems & System Administration
+   • Linux Administration 
+   • Windows Server Administration (Active Directory, PowerShell, Group Policy)
+
+
+4. Scripting & Automation
+   • Bash & PowerShell 
+   • Python 
+
+
+5. Networking & Security
+   • CCNA Networking Academy Certifications
+   • CompTIA Network+ Certification
+
+
+6. Infrastructure as Code (IaC)
+   • Terraform 
+
+
+7. Cloud Platforms
+   • Azure 
 
 
 
@@ -227,13 +223,10 @@ Logging & Monitoring:
    • Kubernetes 
 
 
-3. Infrastructure as Code (IaC)
-   • Terraform 
+6. Operating Systems & System Administration
+   • Linux Administration 
+   • Windows Server Administration (Active Directory, PowerShell, Group Policy)
 
-
-
-4. Cloud Platforms
-   • Azure 
 
 
 5. Scripting & Automation
@@ -241,14 +234,22 @@ Logging & Monitoring:
    • Python 
 
 
-6. Operating Systems & System Administration
-   • Linux Administration 
-   • Windows Server Administration (Active Directory, PowerShell, Group Policy)
-
-
 7. Networking & Security
    • CCNA Networking Academy Certifications
    • CompTIA Network+ Certification
+
+
+
+
+3. Infrastructure as Code (IaC)
+   • Terraform 
+
+
+4. Cloud Platforms
+   • Azure 
+
+
+
 
 
 
@@ -495,6 +496,52 @@ Others
 
 
 1. Programming Language: C#
+
+2. Frameworks:
+   • .NET Core
+   •  ASP.NET Core (MVC & Web API)
+
+3. Database:
+   • Microsoft SQL Server
+   • Azure SQL Database
+
+4. ORM:
+   • Entity Framework Core
+
+5. Version Control:
+   • Git
+   • GitHub or Azure Repos
+
+6. Cloud:
+   • Microsoft Azure
+
+7. DevOps & CI/CD:
+   • Azure DevOps
+   • GitHub Actions
+
+8. Containerization:
+   • Docker
+   • Kubernetes (Azure Kubernetes Service - AKS)
+
+9. Infrastructure as Code:
+   • PowerShell
+   • Azure CLI
+   • Terraform (Optional)
+
+10. Testing: 
+   • xUnit
+   • NUnit
+
+11. IDE:
+   • Visual Studio
+   •  Visual Studio Code
+
+
+
+
+8. Junior C# Backend & Azure Cloud Developer
+
+1. Language: C#
 
 2. Frameworks:
    • .NET Core
