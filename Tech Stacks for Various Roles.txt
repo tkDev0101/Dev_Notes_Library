@@ -3,16 +3,18 @@ Tech Stacks
 1. Systems Administrator
 2. C# Backend
 3. Microsoft Software Developer
-4. Azure Cloud Dev
-5.  AWS Cloud Dev 
-6. Python Backend 
-7. Junior C# Backend & Azure Cloud Developer
+4. DevOps
+5. Azure Cloud Dev
+6.  AWS Cloud Dev 
+7. Python Backend 
+8. Junior C# Backend & Azure Cloud Developer
 
-Goal -> Lucky No.7
+
+Goal -> Lucky No. 4
 
 
 ----------------------------------------------------------------------------------------------
-7. Junior C# Backend & Azure Cloud Developer
+8. Junior C# Backend & Azure Cloud Developer
 
 1. Language: C#
 
@@ -210,7 +212,54 @@ Logging & Monitoring:
 
 
 ============================================================================================
-4. Azure Cloud Developer Tech Stack
+4. DevOps -tk
+
+
+1. CI/CD:
+   • Tools: GitHub Actions
+   • GitLab CI/CD
+   • Jenkins
+   • Azure DevOps
+
+
+2. Containerization & Orchestration
+   • Docker 
+   • Kubernetes 
+
+
+3. Infrastructure as Code (IaC)
+   • Terraform 
+
+
+
+4. Cloud Platforms
+   • Azure 
+
+
+5. Scripting & Automation
+   • Bash & PowerShell 
+   • Python 
+
+
+6. Operating Systems & System Administration
+   • Linux Administration 
+   • Windows Server Administration (Active Directory, PowerShell, Group Policy)
+
+
+7. Networking & Security
+   • CCNA Networking Academy Certifications
+   • CompTIA Network+ Certification
+
+
+
+
+
+
+
+
+
+============================================================================================
+5. Azure Cloud Developer Tech Stack
 
 1. Programming Languages
    • C# (Primary language for Azure development)
@@ -246,7 +295,7 @@ Logging & Monitoring:
    • Postman for API testing
 
 ---------------------------------------------
-4. Azure Cloud Dev
+5. Azure Cloud Dev
 
 
 1. Compute: Virtual Machines (VMs),
@@ -324,7 +373,7 @@ Logging & Monitoring:
 
 
 ============================================================================================
-5. AWS Cloud Dev 
+6. AWS Cloud Dev 
 
 1. Compute
    • EC2
@@ -411,7 +460,7 @@ Logging & Monitoring:
 
 
 ============================================================================================
-6. Python Backend Development
+7. Python Backend Development
 
  Languages
    • Core: Python.
@@ -442,7 +491,7 @@ Others
 
 
 ============================================================================================
-7. Junior C# Backend & Azure Cloud Developer
+8. Junior C# Backend & Azure Cloud Developer
 
 
 1. Programming Language: C#
