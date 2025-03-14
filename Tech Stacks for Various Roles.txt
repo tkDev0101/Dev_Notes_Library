@@ -223,38 +223,27 @@ Logging & Monitoring:
    • Kubernetes 
 
 
-6. Operating Systems & System Administration
+3. Operating Systems & System Administration
    • Linux Administration 
    • Windows Server Administration (Active Directory, PowerShell, Group Policy)
 
 
-
-5. Scripting & Automation
+4. Scripting & Automation
    • Bash & PowerShell 
    • Python 
 
 
-7. Networking & Security
+5. Networking & Security
    • CCNA Networking Academy Certifications
    • CompTIA Network+ Certification
 
 
-
-
-3. Infrastructure as Code (IaC)
+6. Infrastructure as Code (IaC)
    • Terraform 
 
 
-4. Cloud Platforms
+7. Cloud Platforms
    • Azure 
-
-
-
-
-
-
-
-
 
 
 
