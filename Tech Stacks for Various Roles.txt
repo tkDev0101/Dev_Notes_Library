@@ -246,8 +246,6 @@ Logging & Monitoring:
    • Azure 
 
 
-
-
 ============================================================================================
 5. Azure Cloud Developer Tech Stack
 
@@ -283,6 +281,7 @@ Logging & Monitoring:
    • .NET Core & ASP.NET for backend development
    • REST APIs & GraphQL
    • Postman for API testing
+
 
 ---------------------------------------------
 5. Azure Cloud Dev
@@ -418,23 +417,23 @@ Logging & Monitoring:
 • Grafana
 
 10. Automation & Config Management
-• AWS CLI
-• Boto3
-• Systems Manager
-• Ansible
+   • AWS CLI
+   • Boto3
+   • Systems Manager
+   • Ansible
 
 11. Security & Compliance
-• IAM
-• WAF
-• KMS
-• Shield
-• Security Hub
+   • IAM
+   • WAF
+   • KMS
+   • Shield
+   • Security Hub
 
 12. Messaging & Event-Driven Systems
-• SNS
-• SQS
-• Kinesis
-• EventBridge
+   • SNS
+   • SQS
+   • Kinesis
+   • EventBridge
 
 13. Machine Learning & Data Analytics
    • SageMaker
@@ -570,7 +569,6 @@ Others
 11. IDE:
    • Visual Studio
    •  Visual Studio Code
-
 
 
 
