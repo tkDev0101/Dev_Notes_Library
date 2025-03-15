@@ -19,6 +19,7 @@ Goal -> Lucky No. 4
 
 change other n0 4
 
+
 1. CI/CD:
    • Tools: GitHub Actions
    • GitLab CI/CD
@@ -528,6 +529,8 @@ Others
 
 
 8. Junior C# Backend & Azure Cloud Developer
+================
+8. Junior C# Backend & Azure Cloud Developer
 
 1. Language: C#
 
@@ -573,6 +576,8 @@ Others
 
 
 ============================================================================================
+
+
 
 
 
