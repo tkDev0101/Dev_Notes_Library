@@ -528,9 +528,10 @@ Others
 
 
 
+================================================
+
 8. Junior C# Backend & Azure Cloud Developer
-================
-8. Junior C# Backend & Azure Cloud Developer
+
 
 1. Language: C#
 
