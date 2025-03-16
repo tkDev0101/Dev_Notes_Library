@@ -1,0 +1,441 @@
+Linux Ubuntu Server && Linux Ubuntu Guide
+
+
+========================================================================================
+Linux Ubuntu Server Guide
+
+	About Linux
+ - Linux is an open-source operating system kernel that powers many operating systems (distros).
+
+ - It is widely used for servers, cloud computing, cybersecurity, networking, and personal computing.
+
+
+	About Ubuntu
+ - Ubuntu is one of the most beginner-friendly Linux distributions (distros) based on Debian.
+
+It is designed for ease of use, stability, and security.
+
+Ubuntu comes in different versions:
+
+Ubuntu Desktop – For personal use with a graphical interface.
+
+Ubuntu Server – For running servers without a graphical interface.
+
+Ubuntu Core – A lightweight version for IoT devices.
+
+---------------------------------------------
+ - Here are some essential commands to navigate the system:
+
+pwd           # Shows your current location in the system
+ls            # Lists the files and folders in the current directory
+cd folder     # Moves into a specific folder
+cd ..         # Moves up one level in the directory tree
+mkdir newdir  # Creates a new folder
+rm file       # Deletes a file
+rm -r dir     # Deletes a directory and its contents
+
+
+cat /etc/os-release	#Check OS Release Information
+lsb_release -a		#information about your Linux distribution
+			#Check with lsb_release (For Ubuntu/Debian)
+
+ls -la
+ - l (long listing format)
+ - a (all): includes hidden files,  those whose names begin with a dot (.)
+
+
+---------------------------------------------
+ - User Commands:
+
+whoami         # Shows your current username
+id             # Displays your user and group IDs
+adduser newuser  # Creates a new user
+passwd newuser   # Changes a user's password
+deluser newuser  # Deletes a user
+sudo usermod -aG sudo newusername	#Grant Administrative (sudo) Privileges
+cat /etc/passwd | grep newusername	#Check if the user was created successfully:
+
+cut -d: -f1 /etc/passwd			#List All Users on the System
+
+
+
+---------------------------------------------
+ - Understanding File Permissions:
+ls -l file   # View file permissions
+chmod 755 file  # Change file permissions
+chown user file  # Change file ownership
+
+
+---------------------------------------------
+Types of Permissions:
+Read (r): 4
+Write (w): 2
+Execute (x): 1
+
+rwxr-xr-- translates to 755
+
+
+chmod (Change File Permissions)
+
+
+
+chown (Change File Owner and Group)
+
+
+
+---------------------------------------------
+ - Installing and Managing Software (APT Package Manager)
+
+Ubuntu Server uses APT (Advanced Package Tool) to install and manage software. 
+It’s very similar to an app store, but everything is done through the command line.
+
+Essential Commands for Package Management:
+apt update             # Updates the list of available software
+apt upgrade            # Upgrades installed software to the latest versions
+apt install package    # Installs a new software package
+apt remove package     # Removes a software package
+apt search package     # Searches for available software
+
+Want to install a web server? Try this:
+ - apt install apache2 -y
+
+
+---------------------------------------------
+ - Networking Basics
+
+ip a               # Shows IP addresses
+ip route           # Displays network routes
+hostname -I        # Shows your server’s IP address
+ping google.com    # Tests if you have internet connectivity
+netstat -tulnp     # Lists open network ports
+
+These commands help you diagnose and manage network connections on your server.
+
+
+---------------------------------------------
+ - Monitoring System Performance:
+
+top         # Shows active processes
+htop        # A better, interactive process viewer (install using `apt install htop`)
+free -h     # Shows memory usage
+df -h       # Shows disk space usage
+uptime      # Shows how long the server has been running
+
+
+---------------------------------------------
+ - Securing Your Server with a Firewall (UFW) (Uncomplicated Firewall):
+
+ufw status           # Checks if the firewall is enabled
+ufw allow ssh        # Allows SSH access
+ufw allow 80/tcp     # Allows HTTP traffic (for web servers)
+ufw enable           # Activates the firewall
+ufw disable          # Deactivates the firewall
+
+
+---------------------------------------------
+ - Server Updates:
+
+apt update && apt upgrade -y  # Updates the system packages
+reboot                        # Restarts the server
+shutdown -h now               # Shuts down the server
+
+
+---------------------------------------------
+ - Remote Access with SSH:
+
+SSH (Secure Shell) lets you control your server from another computer. 
+This is especially useful for managing cloud servers.
+
+ - To enable SSH on Ubuntu Server:
+apt install openssh-server -y
+systemctl enable ssh
+systemctl start ssh
+
+ - To connect from another computer:
+ssh username@server-ip
+Example: ssh user@192.168.1.100
+
+
+========================================================================================
+Linux Ubuntu Guide
+
+
+---------------------------------------------
+Navigating Linux (Basic Commands)
+
+- Opening the Terminal
+Press Ctrl + Alt + T OR
+
+---------------------------------------------
+- Basic Commands:
+
+pwd → Show current directory.
+ls → List files in the current directory.
+cd folder_name → Change directory.
+mkdir new_folder → Create a new folder.
+touch file.txt → Create an empty file.
+rm file.txt → Delete a file.
+rmdir folder_name → Delete an empty folder.
+rm -r folder_name → Delete a folder and its contents.
+
+- Viewing File Contents
+cat filename → Show file content.
+nano filename → Open a file in the Nano text editor.
+less filename → View file one page at a time.
+
+
+
+
+---------------------------------------------
+ - Updating & Upgrading Ubuntu:
+
+Method 1: Using the Terminal (Recommended)
+
+Step 1: Update the Package List
+sudo apt update
+Fetches the latest list of available updates.
+
+Step 2: Upgrade Installed Packages
+sudo apt upgrade -y
+Installs updates for all installed software.
+
+Step 3: Full System Upgrade (Optional)
+sudo apt full-upgrade -y
+Upgrades everything, including dependencies.
+
+Step 4: Clean Unnecessary Files
+sudo apt autoremove -y
+sudo apt clean
+Removes old, unused packages and clears the package cache.
+
+Step 5: Reboot the System
+sudo reboot
+Restart the system to apply updates properly.
+
+
+Method 2: Using the GUI (Graphical Interface)
+
+Open Software Updater.
+Wait for it to check for updates.
+Click Install Now if updates are available.
+Enter your password when prompted.
+Restart if required.
+
+
+---------------------------------------------
+ - Managing Users & Permissions:
+
+ - User Management:
+
+whoami → Shows the currently logged-in user.
+sudo adduser username → Create a new user.
+sudo usermod -aG sudo username → Grant admin privileges.
+su - username → Switch user.
+sudo deluser username → Remove a user.
+
+
+---------------------------------------------
+ - File Permissions:
+
+ls -l → View file permissions.
+chmod 755 filename → Change file permissions.
+sudo chown user:group filename → Change file ownership.
+
+
+---------------------------------------------
+ - Installing and Managing Software:
+
+sudo apt install package_name -y → Install software.
+sudo apt remove package_name -y → Uninstall software.
+apt search package_name → Search for software.
+dpkg --list → List installed software.
+
+
+---------------------------------------------
+ - System Monitoring & Logs:
+
+df -h → Check disk space.
+free -h → Check memory usage.
+top → Monitor system processes.
+sudo journalctl -xe → View system logs.
+
+
+---------------------------------------------
+ - Introduction to Proxmox & Virtualization:
+
+What is Proxmox?
+Proxmox is an open-source virtualization platform used to run virtual machines (VMs) and containers.
+It is a great alternative to VMware and VirtualBox.
+
+Installing Proxmox
+Download Proxmox from proxmox.com.
+Create a bootable USB and boot from it.
+Follow the installation instructions.
+Access the web interface by entering https://your-server-ip:8006 in a browser.
+Create and manage virtual machines.
+
+
+---------------------------------------------
+ - Automating Updates:
+
+sudo apt install unattended-upgrades -y
+sudo dpkg-reconfigure --priority=low unattended-upgrades
+
+
+========================================================================================
+
+
+
+
+
+Mastering **Linux, Bash, and Networking** is crucial for **Cloud Engineers & DevOps Engineers** since most cloud environments run on **Linux-based servers**. Below, I’ll break down **each topic** with a **structured learning path** and **YouTube search titles** to help you learn effectively.  
+
+---
+
+# **💻 1. Linux – Mastering Cloud Server OS**  
+Linux is the **most widely used OS in cloud computing**. Learning **command-line operations** and **server management** is essential.  
+
+## **📌 Learning Path (Linux Basics → Advanced)**  
+
+### **📍 Phase 1: Linux Basics (1-2 Weeks)**  
+🔹 **Search on YouTube:**  
+✅ `"Linux for Beginners Full Course"`  
+✅ `"Basic Linux Commands for DevOps & Cloud Engineers"`  
+✅ `"Linux File System Explained - Everything You Need to Know"`  
+✅ `"How to Install and Use Linux Terminal on Windows (WSL)"`  
+
+🎥 **Recommended Video:**  
+[Linux Full Course (Free)](https://www.youtube.com/watch?v=wBp0Rb-ZJak)  
+
+📌 **Practice Tasks:**  
+1️⃣ Learn and use **basic Linux commands** (`ls`, `cd`, `cp`, `mv`, `rm`, `mkdir`, `pwd`, `chmod`, `chown`, `cat`, `echo`, `nano`)  
+2️⃣ Understand **file permissions & ownership** (`chmod`, `chown`)  
+3️⃣ Explore the **Linux directory structure** (`/home`, `/etc`, `/var`, `/usr`, `/opt`, `/tmp`, `/dev`)  
+
+---
+
+### **📍 Phase 2: Linux Server Administration (2-3 Weeks)**  
+🔹 **Search on YouTube:**  
+✅ `"Linux User Management & Permissions Explained"`  
+✅ `"Linux Process Management - How to Use ps, top, htop, kill"`  
+✅ `"Linux System Monitoring - Best Commands to Check Server Health"`  
+✅ `"Linux Logs & Troubleshooting - How to Read Log Files"`  
+
+🎥 **Recommended Video:**  
+[Linux System Administration Course](https://www.youtube.com/watch?v=BIcJ8-7FHpI)  
+
+📌 **Practice Tasks:**  
+1️⃣ Manage **users and groups** (`adduser`, `usermod`, `passwd`, `groupadd`)  
+2️⃣ Set up **Linux firewall rules** (`ufw`, `iptables`)  
+3️⃣ Monitor **processes & system performance** (`top`, `htop`, `ps`, `free`, `df`, `du`)  
+
+---
+
+### **📍 Phase 3: Advanced Linux for DevOps (3+ Weeks)**  
+🔹 **Search on YouTube:**  
+✅ `"Linux Hardening & Security - Best Practices"`  
+✅ `"How to Set Up a Web Server (Apache/Nginx) on Linux"`  
+✅ `"Automate Server Tasks with Bash & Cron Jobs"`  
+✅ `"Linux Network Configuration - How to Set Static & Dynamic IP"`  
+
+🎥 **Recommended Video:**  
+[Advanced Linux Security & Hardening](https://www.youtube.com/watch?v=XBwD_xVDhT4)  
+
+📌 **Advanced Projects:**  
+1️⃣ Set up **a Linux server on AWS/Google Cloud**  
+2️⃣ Configure and secure **SSH access** (`ssh-keygen`, `sshd_config`)  
+3️⃣ Automate **server updates & monitoring** using cron jobs  
+
+---
+
+# **🖥️ 2. Bash & Shell Scripting – Automate Cloud Tasks**  
+Bash scripting is used to **automate cloud tasks, deployments, and server management**.
+
+## **📌 Learning Path (Bash Scripting Basics → Advanced Automation)**  
+
+### **📍 Phase 1: Bash Basics (1-2 Weeks)**  
+🔹 **Search on YouTube:**  
+✅ `"Bash Scripting for Beginners - Full Course"`  
+✅ `"Shell Scripting vs Python for Automation"`  
+✅ `"How to Write Your First Bash Script"`  
+
+🎥 **Recommended Video:**  
+[Bash Scripting Full Course](https://www.youtube.com/watch?v=e7BufAVwDiM)  
+
+📌 **Practice Tasks:**  
+1️⃣ Create a **basic shell script** (`.sh` file)  
+2️⃣ Use **variables, loops, and functions** in Bash scripts  
+3️⃣ Automate **log file cleaning & server updates**  
+
+---
+
+### **📍 Phase 2: Advanced Bash Automation (2-3 Weeks)**  
+🔹 **Search on YouTube:**  
+✅ `"Automate AWS EC2 Management with Bash Scripts"`  
+✅ `"Bash Scripting for Cloud & DevOps Engineers"`  
+✅ `"Best Shell Scripting Practices for System Admins"`  
+
+📌 **Advanced Projects:**  
+1️⃣ Automate **server backup & restore processes**  
+2️⃣ Write a **script to check server uptime and send alerts**  
+3️⃣ Deploy **a cloud infrastructure using a Bash script**  
+
+🎥 **Recommended Video:**  
+[Advanced Bash Scripting & Automation](https://www.youtube.com/watch?v=I4EWvMFj37g)  
+
+---
+
+# **🌐 3. Networking – Essential for Cloud & DevOps Engineers**  
+Networking knowledge is critical for **cloud deployments, security, and troubleshooting**.
+
+## **📌 Learning Path (Networking Basics → Cloud Networking)**  
+
+### **📍 Phase 1: Networking Fundamentals (1-2 Weeks)**  
+🔹 **Search on YouTube:**  
+✅ `"Networking Basics for Beginners - Full Course"`  
+✅ `"How DNS Works - Complete Explanation"`  
+✅ `"HTTP vs HTTPS Explained - How Web Communication Works"`  
+✅ `"Understanding TCP/IP Networking - A Beginner's Guide"`  
+
+🎥 **Recommended Video:**  
+[Networking Basics Full Course](https://www.youtube.com/watch?v=qiQR5rTSshw)  
+
+📌 **Practice Tasks:**  
+1️⃣ Learn **how DNS works** (domain resolution, name servers)  
+2️⃣ Understand **how HTTP & HTTPS work** (status codes, requests, responses)  
+3️⃣ Set up a **simple local web server using Nginx**  
+
+---
+
+### **📍 Phase 2: Advanced Networking (3+ Weeks)**  
+🔹 **Search on YouTube:**  
+✅ `"VPNs Explained - How Do They Work?"`  
+✅ `"Firewalls & Network Security - Best Practices"`  
+✅ `"AWS VPC Explained - How to Set Up Secure Cloud Networking"`  
+✅ `"Load Balancers vs Reverse Proxies - When to Use What?"`  
+
+🎥 **Recommended Video:**  
+[Advanced Networking & Security](https://www.youtube.com/watch?v=J25E-IRzqDc)  
+
+📌 **Advanced Projects:**  
+1️⃣ Set up a **VPN server** on AWS/Linux  
+2️⃣ Configure **a firewall with iptables/UFW**  
+3️⃣ Deploy **a Load Balancer & Reverse Proxy**  
+
+---
+
+# **🚀 Next Steps & Suggested Learning Order**  
+1️⃣ **Start with Linux** – Master CLI, server management, and security  
+2️⃣ **Learn Bash Scripting** – Automate cloud tasks  
+3️⃣ **Master Networking** – Understand how cloud services communicate  
+
+📌 **Would you like more hands-on project ideas, GitHub repositories, or certification recommendations?** 😊
+
+
+
+
+
+
+
+
+
