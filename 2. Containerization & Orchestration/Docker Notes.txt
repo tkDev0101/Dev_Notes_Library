@@ -5,7 +5,7 @@ The following Text File is made up of the following Docs:
 
  - Docker for Beginners: A Comprehensive Guide
  - Docker for Beginners: The Ultimate Audio Guide
- - 
+
 
 ===================================================================================================================================================================
 
@@ -20,8 +20,6 @@ Think of a container as a small, self-contained package that holds everything yo
 The beauty of containers lies in their portability and consistency. They run exactly the same on your laptop, a colleague's machine, or even a production server in the cloud. With Docker, you can eliminate the age-old "it works on my machine" problem.
 
 But why is this important? Imagine you’re a developer working on multiple projects. Each project might require different versions of programming languages, libraries, or databases. Without containers, managing these dependencies can be a nightmare. Docker solves this by isolating each project in its own container, so they never interfere with one another.
-
-
 
 
 ============================================================================================
@@ -76,53 +74,30 @@ A tool which abstracts away the OS kernel layer to make it possible for your hos
 
 Chapter 3: Core Concepts
 
-To work with Docker effectively, it’s important to understand a few key concepts. Let’s break them down:
+
+Dockerfile:
+ - This is a text file that contains a set of instructions for creating a Docker image.
+ - Think of it as the recipe for creating your application’s environment.
 
 
- - Dockerfile:
-This is a text file that contains a set of instructions for creating a Docker image.
-Think of it as the recipe for creating your application’s environment.
-
----------------------------------------------
-An example of a simple Dockerfile:
+ Image:
+ - An image is a snapshot of an application’s environment, built using a Dockerfile. 
+ - Images are read-only and can be shared with others through Docker Hub or private repositories.
 
 
-	# Use an official Python image as the base
-	FROM python:3.9-slim  
-
-	# Set the working directory in the container
-	WORKDIR /app  
-
-	# Copy application files into the container
-	COPY . .  
-
-	# Install dependencies
-	RUN pip install -r requirements.txt  
-
-	# Command to run the application
-	CMD ["python", "app.py"]  
-
----------------------------------------------
-
- - Image:
-An image is a snapshot of an application’s environment, built using a Dockerfile. 
-Images are read-only and can be shared with others through Docker Hub or private repositories.
+Container:
+ - A container is a running instance of an image. 
+ - A container is the running environment of an image
+ - It’s where your application lives and operates. Containers are isolated from one another but share the host OS kernel.
 
 
- - Container:
-A container is a running instance of an image. 
-A container is the running environment of an image
-It’s where your application lives and operates. Containers are isolated from one another but share the host OS kernel.
+Volumes:
+ - Volumes are used to persist data outside of containers. 
+ - Without volumes, any data inside a container would be lost once the container stops.
 
 
- - Volumes:
-Volumes are used to persist data outside of containers. 
-Without volumes, any data inside a container would be lost once the container stops.
-
-
- - Docker Hub:
-This is a public repository where you can find and share Docker images. 
-
+Docker Hub:
+ - This is a public repository where you can find and share Docker images. 
 
 
 ============================================================================================
@@ -197,7 +172,7 @@ Run a Container with Port Mapping:
 • Docker run -v <host_path>:<container_path> <image_name>
 Mount a Volume:
 
-
+---------------------------------------------
 Debugging Commands
 
 • Docker logs (container ID)
