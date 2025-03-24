@@ -152,6 +152,7 @@ TCP/IP Model
 
 
 Network Analogy
+
 Suburb = Network
 External Ip Adrs = Town
 Router = Post shop
@@ -159,9 +160,9 @@ Switch = Postman
 Computers = Houses
 Internal IP Adrs = House name
 MAC Address = Street Number
-computer Apps = Perosn in house
+computer Apps = Person in house
 
-Subneting
+Subnetting
 Summarizing subnets - Subnets are sub-networks. Subnet defines the allowed IP addresses
 
 in a network. It can be thought of as a boundary wall for allowed IPs in your network. Subnets are either
