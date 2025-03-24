@@ -168,3 +168,8 @@ Finally, a device applies a subnet mask to its own IP address to check if one pa
 
 of its own local subnet. 
 
+
+
+consider the followi g notes
+
+make vetter notes based on the notes
