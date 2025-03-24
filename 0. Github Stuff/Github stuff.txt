@@ -1,0 +1,165 @@
+Github stuff
+
+ - git clone https://github.com/username/project.git	-> clone repo using url
+ - cd project						-> change directory into project
+ - git checkout -b feature-branch				-> checkout; switch to and create a new branch 
+# Make changes, then:					-> 
+ - git add .						-> add all changes
+ - git commit -m "Added new feature"			-> 
+ - git push -u origin feature-branch				-> uploads(pushes) your branch changes(feature-branch) 
+								to origin(remote repo)
+
+-------------------------------------
+Git commands
+
+ - git branch		-> list all branches 
+ - git checkout xyz	-> switch branches
+ - git status		-> self explainatory
+ - git log		-> 
+			
+ - git add .						
+ - git commit -m "Added new feature"			 
+ - git push -u origin feature-branch
+
+ - git push		-> Sends(uploads) your code changes to the remote repository
+ - git pull		-> Gets(downloads) the latest changes from the remote repository
+
+
+ - Branching and Navigation
+git branch 			→ Lists all local branches
+git branch <branch-name> 	→ Creates a new branch
+git checkout <branch-name> 	→ Switches to another branch
+git checkout -b <branch-name> 	→ Creates and switches to a new branch
+git branch -d <branch-name> 	→ Deletes a branch
+
+ - Committing Changes
+git add . 			→ Adds all changes to staging
+git add <file> 			→ Adds a specific file to staging
+git commit -m "Thandaza"	→ Commits changes with a message
+
+ - Pushing and Pulling
+git push origin <branch-name> 		→ Pushes branch to remote
+git push -u origin <branch-name> 	→ Pushes branch and sets upstream
+git pull origin <branch-name> 		→ Fetches and merges changes from remote
+git fetch 				→ Fetches latest changes but does not merge
+
+ - Checking History
+git log 				→ Shows commit history
+git diff 				→ Shows changes not staged for commit
+git diff --staged 			→ Shows changes staged for commit
+
+ - Undo & Reset Changes
+git reset --soft HEAD~1 		→ Undo last commit, keep changes staged
+git reset --mixed HEAD~1 		→ Undo last commit, keep changes unstaged
+git reset --hard HEAD~1 		→ Undo last commit and discard changes
+git checkout -- <file> 			→ Discards changes in a file
+git revert <commit-hash> 		→ Creates a new commit that undoes the changes of a specific commit
+
+ - Working with Remote Repositories
+git remote -v 				→ Shows remote repository URLs
+git remote add origin <repo-url> 	→ Links local repo to remote
+git remote remove origin 		→ Removes remote repository link
+
+ - Stashing Changes (Temporary Save)
+git stash 			→ Saves uncommitted changes temporarily
+git stash pop 			→ Applies last stashed changes
+git stash list 			→ Shows stashed changes
+git stash drop 			→ Deletes a stash
+
+ - Tagging Commits
+git tag <tag-name> 			→ Creates a tag
+git tag -a <tag-name> -m "Thandaza" 	→ Creates an annotated tag
+git tag 				→ Lists all tags
+git push origin <tag-name> 		→ Pushes a tag to remote
+
+ - Bonus Commands
+git show <commit-hash> 		→ Shows details of a specific commit
+git shortlog 			→ Summarizes commit history per author
+git blame <file> 		→ Shows who last modified each line of a file
+
+
+
+
+
+
+
+-------------------------------------
+Typical workflow:
+
+1. Clone the repositry
+2. Create a new branch from the *MAIN* or another branch
+3. Make your changes
+4. Push the branch to the remote repo
+5. Open a Pull Request
+6. Merge the changes
+7. Pull the merged changes into your local *MAIN* branch
+8. Repeat from Step 2
+
+-------------------------------------
+
+
+
+
+
+git config --global user.name "Mthokozisi_tk2"
+git config --global user.email "mthokozisi.gofourit@gmail.com"
+
+
+git clone https://github.com/tkdev-02/Test-Branch-Merge-Conflicts.git
+
+
+
+
+Adding a Collaborator
+1️. Go to your repository Settings.
+2️. Click Manage Access → Invite a collaborator.
+3️. Assign roles (Read, Write, Admin).
+
+-------------------------------------
+How to resolve Merge Conflicts
+
+1. Checkout Main branch
+ - git checkout main
+
+2. pull latest changes from Main branch
+ - git pull
+ - Now local main branch and remote main branch are ==
+
+3. Now checkout to your branch
+ - git checkout branch-name
+
+4. 
+ - git merge main
+
+ - Now merged MAIN branch into YOUR branch
+ - initial aim was to merge your branch into the main
+ - but due to merge conflict, it didnt work
+ - so we must first resolve the issue
+ - -> merge the main into our branch to Identify the problem
+
+ - 'git merge branch-name', merges branch-name into the branch your currenlty in(last checked into)
+
+
+5. Code editor 
+
+6. 
+ - git add .
+ - git commit -m 'resolve merge conflicts'
+ - git push
+
+-------------------------------------
+
+
+
+
+
+
+
+🎯 Next Steps: Practice Collaboration!
+🔹 Try forking a repository and making a Pull Request.
+🔹 Work with a friend on feature branches in a shared project.
+🔹 Set up GitHub Actions to test your code automatically.
+
+Want a step-by-step guide on setting up a real GitHub team workflow? 
+
+yes please, I want
