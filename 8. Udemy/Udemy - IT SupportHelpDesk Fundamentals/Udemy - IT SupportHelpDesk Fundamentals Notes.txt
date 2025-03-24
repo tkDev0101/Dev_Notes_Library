@@ -14,11 +14,11 @@ Hardware
 
 ----------------------------------------
 
-Common issues of  
+Common issues of:  
 
 Motherboard
  - Power surge damage
- - Dmaged or broken Pins
+ - Damaged or broken Pins
 
 
 CPU
@@ -34,7 +34,7 @@ Magnetic
  - HDD
 Transistor(no moving parts, quite)
  - SSD
- - Flash Dirve
+ - Flash Drive
 
 Optical
  - CD/DVD/Blue-ray
@@ -53,8 +53,7 @@ Power Supply
  - Power ratings - 200-1800W
  - Overheating
  - Dead PSU
- - Dmaged/noisy fans
-
+ - Damaged/noisy fans
 
 
 ----------------------------------------
@@ -86,8 +85,7 @@ UEFI
  - gen 2 firmware standard
 
 
-
-
+----------------------------------------
 Operating System(OS)
 
 Application
@@ -110,7 +108,6 @@ when u restart - a new fresh process is created
 
 
 OS Work
-
  - Install OS
  - Troubleshoot issues with OS
  - Install and troubleshoot Applications
@@ -163,9 +160,7 @@ MAC Address = Street Number
 computer Apps = Person in house
 
 Subnetting
-Summarizing subnets - Subnets are sub-networks. Subnet defines the allowed IP addresses
-
-in a network. It can be thought of as a boundary wall for allowed IPs in your network. Subnets are either
+Subnets - Subnets are sub-networks. Subnet defines the allowed IP addresses in a network. It can be thought of as a boundary wall for allowed IPs in your network. Subnets are either
 
 represented in decimal format or in CIDR notation.
 
