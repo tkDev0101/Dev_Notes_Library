@@ -50,7 +50,7 @@ change other n0 4
 6. Infrastructure as Code (IaC)
    • Terraform 
 
-
+ 
 7. Cloud Platforms
    • Azure 
 
