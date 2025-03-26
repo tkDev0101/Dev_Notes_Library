@@ -74,7 +74,7 @@ change other n0 4
    • Containers & Orchestration (Docker, Podman, Kubernetes)
 
 4. Cloud Computing & Automation
-   • Cloud Platforms (AWS, Azure, GCP – focus on Azure for your career goals)
+   • Cloud Platforms (AWS, Azure, GCP )
    • Infrastructure as Code (IaC) (Terraform, Ansible, CloudFormation)
    • Automation & Scripting (PowerShell, Bash, Python)
    • CI/CD & DevOps Tools (Jenkins, GitHub Actions, Azure DevOps)
