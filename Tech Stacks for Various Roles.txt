@@ -235,7 +235,7 @@ Logging & Monitoring:
 
 
 5. Networking & Security
-   • CCNA Networking Academy Certifications
+   • Cisco Networking Academy Certifications
    • CompTIA Network+ Certification
 
 
