@@ -1,0 +1,3 @@
+4. Scripting & Automation
+   • Bash & PowerShell 
+   • Python 
