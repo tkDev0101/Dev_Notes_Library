@@ -1,3 +1,23 @@
 3. Operating Systems & System Administration
    • Linux Administration 
    • Windows Server Administration (Active Directory, PowerShell, Group Policy)
+
+
+
+Operating Systems & System Administration:
+
+Skills: Linux Administration, Windows Server Administration (Active Directory, PowerShell, Group Policy)​
+
+Certifications:
+
+Red Hat Certified System Administrator (RHCSA)
+
+Description: Validates skills in Linux system administration.
+
+Cost: $400 USD
+
+Microsoft Certified: Windows Server Hybrid Administrator Associate
+
+Description: Demonstrates expertise in managing Windows Server in hybrid environments.
+
+Cost: $165 USD per exam (two exams required)

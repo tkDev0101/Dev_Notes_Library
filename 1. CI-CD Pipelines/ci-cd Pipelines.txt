@@ -3,3 +3,25 @@
    • GitLab CI/CD
    • Jenkins
    • Azure DevOps
+
+
+
+CI/CD (Continuous Integration/Continuous Deployment):
+
+Tools: GitHub Actions, GitLab CI/CD, Jenkins, Azure DevOps​
+
+Certifications:
+
+Azure DevOps Engineer Expert
+
+Description: Validates expertise in designing and implementing DevOps practices using Azure DevOps and other tools.
+
+Exam: AZ-400: Designing and Implementing Microsoft DevOps Solutions
+
+Cost: $165 USD
+
+Jenkins Engineer Certification
+
+Description: Demonstrates proficiency in using Jenkins for CI/CD pipelines.
+
+Cost: $150 USD

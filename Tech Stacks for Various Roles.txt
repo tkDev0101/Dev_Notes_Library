@@ -21,15 +21,18 @@ change other n0 4
 
 
 1. CI/CD:
-   • Tools: GitHub Actions
+   • GitHub Actions
    • GitLab CI/CD
    • Jenkins
    • Azure DevOps
 
 
+
+
 2. Containerization & Orchestration
    • Docker 
-   • Kubernetes 
+   • Kubernetes  
+	- (consider K3s for lightweight Kubernetes in small projects)
 
 
 3. Operating Systems & System Administration
@@ -38,8 +41,10 @@ change other n0 4
 
 
 4. Scripting & Automation
-   • Bash & PowerShell 
-   • Python 
+   • Bash (for Linux automation)
+   • PowerShell (for Windows automation)
+   • Python (for cross-platform automation & API scripting)
+
 
 
 5. Networking & Security
@@ -49,6 +54,7 @@ change other n0 4
 
 6. Infrastructure as Code (IaC)
    • Terraform 
+   • Ansible (simplifies server config management)
 
  
 7. Cloud Platforms
