@@ -1,0 +1,5 @@
+1. CI/CD:
+   • Tools: GitHub Actions
+   • GitLab CI/CD
+   • Jenkins
+   • Azure DevOps
