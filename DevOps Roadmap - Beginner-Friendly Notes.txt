@@ -1,10 +1,10 @@
 Here are beginner-friendly, detailed, and structured notes based on the "DevOps Roadmap - TechWorld with Nana" transcript:
 
----
 
-# **DevOps Roadmap - Beginner-Friendly Notes**
 
-## **Overview**
+DevOps Roadmap - Beginner-Friendly Notes
+
+**Overview**
 - DevOps is a combination of development (Dev) and operations (Ops) focused on automating and improving the software development lifecycle.
 - A structured approach is required to master DevOps.
 - This roadmap assumes a **15-hour per week** learning schedule.
@@ -13,7 +13,9 @@ Here are beginner-friendly, detailed, and structured notes based on the "DevOps 
 ---
 
 ## **📌 Month 1: DevOps Essentials**
-### **1️⃣ Linux & Operating Systems (Week 1-2)**
+### **
+
+1️⃣ Linux & Operating Systems (Week 1-2)**
 ✅ Why learn Linux?
 - DevOps Engineers work extensively with **Linux servers**.
 - Almost all DevOps tools and cloud platforms run on Linux.
@@ -29,7 +31,9 @@ Here are beginner-friendly, detailed, and structured notes based on the "DevOps 
 
 ---
 
-### **2️⃣ Git & Version Control (Week 3)**
+### **
+
+2️⃣ Git & Version Control (Week 3)**
 ✅ Why learn Git?
 - Git is the industry-standard version control system.
 - Used in **collaborative software development** and **CI/CD pipelines**.
