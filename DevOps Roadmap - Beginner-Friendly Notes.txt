@@ -15,7 +15,8 @@ DevOps Roadmap - Beginner-Friendly Notes
 
 =======================================================================
 
-1️⃣ Linux & Operating Systems (Week 1-2)**
+1️⃣ Linux & Operating Systems
+
 ✅ Why learn Linux?
 - DevOps Engineers work extensively with **Linux servers**.
 - Almost all DevOps tools and cloud platforms run on Linux.
@@ -33,7 +34,8 @@ DevOps Roadmap - Beginner-Friendly Notes
 
 =======================================================================
 
-2️⃣ Git & Version Control (Week 3)**
+2️⃣ Git & Version Control 
+
 ✅ Why learn Git?
 - Git is the industry-standard version control system.
 - Used in **collaborative software development** and **CI/CD pipelines**.
@@ -48,7 +50,8 @@ DevOps Roadmap - Beginner-Friendly Notes
 
 =======================================================================
 
-3️⃣ Build Tools & Packaging (Week 4)**
+3️⃣ Build Tools & Packaging 
+
 ✅ Why learn build tools?
 - DevOps Engineers interact with software developers.
 - Understanding how applications are packaged is **critical** for CI/CD.
@@ -63,7 +66,8 @@ DevOps Roadmap - Beginner-Friendly Notes
 
 =======================================================================
 
-4️⃣ Cloud Computing Basics (Week 5)**
+4️⃣ Cloud Computing Basics
+
 ✅ Why learn cloud computing?
 - Modern DevOps is **cloud-centric**.
 - Knowledge of cloud services is a must for **scalability and deployment**.
@@ -78,7 +82,8 @@ DevOps Roadmap - Beginner-Friendly Notes
 
 =======================================================================
 
-5️⃣ Nexus - Artifact Repository (Week 6)**
+5️⃣ Nexus - Artifact Repository 
+
 ✅ Why learn artifact repositories?
 - Stores **binaries and packages** used in DevOps pipelines.
 - Ensures efficient version control and deployment.
@@ -93,7 +98,8 @@ DevOps Roadmap - Beginner-Friendly Notes
 
 =======================================================================
 
-6️⃣ Docker - Containerization (Week 7-9)**
+6️⃣ Docker - Containerization 
+
 ✅ Why learn Docker?
 - Containers allow applications to run **consistently across environments**.
 - Essential for **microservices** and cloud deployment.
@@ -109,7 +115,8 @@ DevOps Roadmap - Beginner-Friendly Notes
 
 =======================================================================]
 
-7️⃣ Jenkins - CI/CD Pipelines (Week 10-12)**
+7️⃣ Jenkins - CI/CD Pipelines
+
 ✅ Why learn Jenkins?
 - **Continuous Integration/Continuous Deployment (CI/CD)** is the backbone of DevOps.
 - Jenkins automates testing, building, and deployment.
@@ -125,7 +132,8 @@ DevOps Roadmap - Beginner-Friendly Notes
 
 =======================================================================
 
-8️⃣ AWS & Cloud Deployments (Week 13)**
+8️⃣ AWS & Cloud Deployments 
+
 ✅ Why learn AWS?
 - Many companies use **AWS** for cloud infrastructure.
 - Understanding cloud networking, security, and IAM is critical.
@@ -140,7 +148,8 @@ DevOps Roadmap - Beginner-Friendly Notes
 
 =======================================================================
 
-9️⃣ Kubernetes - Orchestration (Week 14-16)**
+9️⃣ Kubernetes - Orchestration
+
 ✅ Why learn Kubernetes?
 - Used to **orchestrate** and manage containerized applications.
 - Essential for **scalability and high availability**.
@@ -156,7 +165,8 @@ DevOps Roadmap - Beginner-Friendly Notes
 
 =======================================================================
 
-🔟 Terraform - Infrastructure as Code (Week 17-20)**
+🔟 Terraform - Infrastructure as Code
+
 ✅ Why learn Terraform?
 - Automates **infrastructure provisioning**.
 - Used to define cloud resources using code.
@@ -171,7 +181,8 @@ DevOps Roadmap - Beginner-Friendly Notes
 
 =======================================================================
 
-1️⃣1️⃣ Ansible - Configuration Management (Week 21-23)**
+1️⃣1️⃣ Ansible - Configuration Management 
+
 ✅ Why learn Ansible?
 - Automates **server configuration and deployments**.
 - Helps maintain **consistent environments**.
@@ -186,7 +197,8 @@ DevOps Roadmap - Beginner-Friendly Notes
 
 =======================================================================
 
-1️⃣2️⃣ Monitoring & Logging (Week 24-26)**
+1️⃣2️⃣ Monitoring & Logging 
+
 ✅ Why learn Monitoring?
 - Ensures application **stability, performance, and security**.
 - Helps detect issues before they become **critical failures**.
