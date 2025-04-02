@@ -12,7 +12,6 @@ DevOps Roadmap - Beginner-Friendly Notes
 - This roadmap assumes a **15-hour per week** learning schedule.
 - It is designed for **complete beginners** and assumes no prior knowledge.
 
-
 =======================================================================
 
 1️⃣ Linux & Operating Systems
