@@ -1,9 +1,25 @@
 Imichabango 
 
 ====================================================
-refined DevOps tech stack and roadmap
+refined Cloud tech stack and roadmap
 
-Cloud
+
+
+1. Cloud Platforms & Core Services
+
+2. Operating Systems & System Administration
+
+3.  Networking & Security (Cloud-Focused)
+
+4. Scripting & Automation
+
+5. Infrastructure as Code (IaC) & Configuration Management
+
+6. CI/CD & DevOps Tools
+
+7. Containerization & Orchestration
+
+8.  Cloud Security & Monitoring
 
 
 
