@@ -1,0 +1,45 @@
+Imichabango 
+
+====================================================
+refined DevOps tech stack and roadmap
+
+Cloud
+
+
+
+
+====================================================
+
+refined DevOps tech stack and roadmap
+
+DevOps tech stack
+
+1. System Admin
+
+1.2 Linux
+
+2. Docker
+
+3. CI/CD - Github actions
+
+4. Bash - Scripting & Automation
+
+5. Networking & Security
+
+6. Infrastructure as Code (IaC)
+
+7.  Cloud Platforms
+
+====================================================
+Cisco Networking Academy:
+
+create overviews of Linux courses
+ - OS BASICS - actually do
+ - Networking basics
+ - Linux one - actually do
+
+====================================================
+Udemy courses
+
+
+
