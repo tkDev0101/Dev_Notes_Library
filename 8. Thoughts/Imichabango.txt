@@ -1,27 +1,32 @@
 Imichabango 
 
+
+ - Udemy courses
+ - CI/CD Pipelines
+
+ - search for certs on cisco for badges and courses
+ - copy paste overviews for linkedin
+
 ====================================================
 refined Cloud tech stack and roadmap
 
+1. Operating Systems & System Administration
 
+2. Docker
 
-1. Cloud Platforms & Core Services
-
-2. Operating Systems & System Administration
-
-3.  Networking & Security (Cloud-Focused)
+3. CI/CD & DevOps Tools
 
 4. Scripting & Automation
 
-5. Infrastructure as Code (IaC) & Configuration Management
+5.  Networking & Security (Cloud-Focused)
 
-6. CI/CD & DevOps Tools
+6. Infrastructure as Code (IaC) & Configuration Management
 
 7. Containerization & Orchestration
 
-8.  Cloud Security & Monitoring
+8. Cloud Platforms & Core Services
 
-
+9. Cloud Security & Monitoring
 
 
 ====================================================
@@ -31,8 +36,8 @@ refined DevOps tech stack and roadmap
 DevOps tech stack
 
 1. System Admin
-
-1.2 Linux
+ - Linux
+ - Windows Server Administration
 
 2. Docker
 
@@ -56,6 +61,14 @@ create overviews of Linux courses
 
 ====================================================
 Udemy courses
+
+
+====================================================
+CI/CD Pipelines
+
+
+====================================================
+
 
 
 
