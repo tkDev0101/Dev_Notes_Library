@@ -4,8 +4,6 @@ Imichabango
  - Udemy courses
  - CI/CD Pipelines
 
- - search for certs on cisco for badges and courses
- - copy paste overviews for linkedin
 
 ====================================================
 refined Cloud tech stack and roadmap
