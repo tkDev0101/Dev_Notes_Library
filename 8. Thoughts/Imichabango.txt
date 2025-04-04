@@ -3,7 +3,7 @@ Imichabango
 
  - Udemy courses
  - CI/CD Pipelines
-
+ - compare TECH STcks
 
 ====================================================
 refined Cloud tech stack and roadmap
