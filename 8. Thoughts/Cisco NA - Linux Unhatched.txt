@@ -2,6 +2,13 @@ Cisco NA - Linux Unhatched Overview
 
 
 
+Want to start a career at the cutting edge of innovation? Linux is an open-source operating system used by organizations worldwide, and it is the driving force behind technological progress in supercomputers, cloud computing, and much more.
+
+In as little as eight hours, you can learn the essentials of Linux while being guided step-by-step through a series of hands-on virtual machine activities. After completing this course, you are already on your way to getting certified. Continue on to the Linux Essentials or Linux 1 courses to keep learning and prepare for a Linux certification.
+
+This course is developed in collaboration with Network Development Group (NDG).
+
+
 God be with us
 
 
