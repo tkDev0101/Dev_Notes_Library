@@ -1,0 +1,228 @@
+DevOps - Tech Stack & Roadmap 
+
+  From: DevOps Roadmap - TechWorld with Nana
+
+------------------------------------------------------------------------
+  Overview
+
+- DevOps is a combination of development (Dev) and operations (Ops) focused 
+   on automating and improving the software development lifecycle.
+- A structured approach is required to master DevOps.
+- This roadmap assumes a **15-hour per week** learning schedule.
+- It is designed for **complete beginners** and assumes no prior knowledge.
+
+=======================================================================
+
+1️⃣ Linux & Operating Systems
+
+✅ Why learn Linux?
+- DevOps Engineers work extensively with **Linux servers**.
+- Almost all DevOps tools and cloud platforms run on Linux.
+- Command-line proficiency is essential.
+
+✅ Key Concepts:
+- Linux distributions (Ubuntu, CentOS, etc.)
+- Bash scripting and command-line operations.
+- File and user management.
+- SSH key management and secure access.
+- Installing software using package managers (`apt`, `yum`).
+- Setting up and managing virtual machines.
+
+
+
+=======================================================================
+
+2️⃣ Git & Version Control 
+
+✅ Why learn Git?
+- Git is the industry-standard version control system.
+- Used in **collaborative software development** and **CI/CD pipelines**.
+
+✅ Key Concepts:
+- Git basics: repositories, commits, branches, merges.
+- Cloning, forking, and creating repositories.
+- Resolving conflicts and managing branches.
+- Git configuration and best practices.
+
+
+
+=======================================================================
+
+3️⃣ Build Tools & Packaging 
+
+✅ Why learn build tools?
+- DevOps Engineers interact with software developers.
+- Understanding how applications are packaged is **critical** for CI/CD.
+
+✅ Key Concepts:
+- **Build automation tools** (Maven, Gradle, npm).
+- Packaging applications for deployment.
+- Configuring and managing dependencies.
+- Understanding the software development lifecycle (SDLC).
+
+
+
+=======================================================================
+
+4️⃣ Cloud Computing Basics
+
+✅ Why learn cloud computing?
+- Modern DevOps is **cloud-centric**.
+- Knowledge of cloud services is a must for **scalability and deployment**.
+
+✅ Key Concepts:
+- Creating virtual machines on AWS.
+- Configuring firewalls, SSH, and networking.
+- Deploying applications to cloud environments.
+- Introduction to **Infrastructure as a Service (IaaS)**.
+
+
+
+=======================================================================
+
+5️⃣ Nexus - Artifact Repository 
+
+✅ Why learn artifact repositories?
+- Stores **binaries and packages** used in DevOps pipelines.
+- Ensures efficient version control and deployment.
+
+✅ Key Concepts:
+- Understanding **artifacts** and artifact repositories.
+- Publishing different types of artifacts (JAR, ZIP, Docker images).
+- Installing and configuring **Nexus** for managing artifacts.
+- Automating repository tasks using **Nexus API**.
+
+
+
+=======================================================================
+
+6️⃣ Docker - Containerization 
+
+✅ Why learn Docker?
+- Containers allow applications to run **consistently across environments**.
+- Essential for **microservices** and cloud deployment.
+
+✅ Key Concepts:
+- Docker fundamentals: Images, Containers, Dockerfiles.
+- Running, stopping, and managing containers.
+- Docker Networking and Storage.
+- Using Docker in **CI/CD pipelines**.
+- Deploying Dockerized applications.
+
+
+
+=======================================================================]
+
+7️⃣ Jenkins - CI/CD Pipelines
+
+✅ Why learn Jenkins?
+- **Continuous Integration/Continuous Deployment (CI/CD)** is the backbone of DevOps.
+- Jenkins automates testing, building, and deployment.
+
+✅ Key Concepts:
+- Installing and configuring **Jenkins**.
+- Writing **Jenkinsfiles** for pipeline automation.
+- Automating **builds, tests, and deployments**.
+- Integrating **Git, Docker, Nexus, and Cloud** with Jenkins.
+- Creating reusable **Jenkins Shared Libraries**.
+
+
+
+=======================================================================
+
+8️⃣ AWS & Cloud Deployments 
+
+✅ Why learn AWS?
+- Many companies use **AWS** for cloud infrastructure.
+- Understanding cloud networking, security, and IAM is critical.
+
+✅ Key Concepts:
+- AWS **IAM** (Identity & Access Management).
+- AWS networking and security groups.
+- Automating deployments to AWS from **Jenkins**.
+- Managing **multiple environments (Dev, Test, Prod)**.
+
+
+
+=======================================================================
+
+9️⃣ Kubernetes - Orchestration
+
+✅ Why learn Kubernetes?
+- Used to **orchestrate** and manage containerized applications.
+- Essential for **scalability and high availability**.
+
+✅ Key Concepts:
+- Kubernetes architecture: Nodes, Pods, Services.
+- Writing **YAML manifests** for deployments.
+- Configuring **Kubernetes networking and storage**.
+- Deploying applications using **Helm Charts**.
+- Automating Kubernetes deployments with **Jenkins**.
+
+
+
+=======================================================================
+
+🔟 Terraform - Infrastructure as Code
+
+✅ Why learn Terraform?
+- Automates **infrastructure provisioning**.
+- Used to define cloud resources using code.
+
+✅ Key Concepts:
+- Terraform basics: **Providers, Modules, State Management**.
+- Writing Terraform scripts to **provision AWS resources**.
+- Automating infrastructure deployment.
+- Integrating Terraform with **Jenkins and Kubernetes**.
+
+
+
+=======================================================================
+
+1️⃣1️⃣ Ansible - Configuration Management 
+
+✅ Why learn Ansible?
+- Automates **server configuration and deployments**.
+- Helps maintain **consistent environments**.
+
+✅ Key Concepts:
+- Writing **Ansible Playbooks** for automation.
+- Configuring **servers, networking, and security**.
+- Managing **application deployments** with Ansible.
+- Differences between **Terraform vs. Ansible vs. Python Automation**.
+
+
+
+=======================================================================
+
+1️⃣2️⃣ Monitoring & Logging 
+
+✅ Why learn Monitoring?
+- Ensures application **stability, performance, and security**.
+- Helps detect issues before they become **critical failures**.
+
+✅ Key Concepts:
+- Using **Prometheus** for monitoring.
+- Setting up **Grafana** for data visualization.
+- Implementing **alerting with AlertManager**.
+- Monitoring **cloud services, Kubernetes, and applications**.
+
+
+
+=======================================================================
+
+🔵 Summary: The DevOps Learning Path
+
+🛠️ Skills Gained
+✅ Linux & Bash  
+✅ Git & Version Control  
+✅ Build Tools & Packaging  
+✅ Cloud Computing Basics  
+✅ Docker & Containerization  
+✅ CI/CD with Jenkins  
+✅ AWS & Cloud Deployments  
+✅ Kubernetes & Helm  
+✅ Infrastructure as Code (Terraform)  
+✅ Configuration Management (Ansible)  
+✅ Monitoring & Logging  
+
