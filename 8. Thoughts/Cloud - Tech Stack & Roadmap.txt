@@ -164,6 +164,8 @@ Security (Cloud Security Posture Management, SIEM)
 =======================================================================
 
 📌 Optimized Cloud Engineer Roadmap (Step-by-Step)
+
+
 🔹 Step 1: Cloud & Computing Fundamentals (2-4 Weeks)
 🔹 Learn about cloud computing concepts (IaaS, PaaS, SaaS).
 🔹 Get hands-on with AWS, Azure, or Google Cloud free tier.
@@ -205,6 +207,7 @@ Security (Cloud Security Posture Management, SIEM)
 =======================================================================
 
 🔥 Summary: The Best Learning Path for Cloud Engineers
+
 ✅ Cloud Fundamentals (AWS, Azure, GCP) → 2-4 weeks
 ✅ Linux & Windows System Administration → 2-4 weeks
 ✅ Networking & Security → 3-4 weeks
@@ -221,6 +224,7 @@ Security (Cloud Security Posture Management, SIEM)
 =======================================================================
 
 📌 Best Cloud Certifications for a Strong Resume
+
 1️⃣ AWS Certified Cloud Practitioner ($100)
 2️⃣ Microsoft Certified: Azure Fundamentals (AZ-900) ($99)
 3️⃣ Google Associate Cloud Engineer ($125)
