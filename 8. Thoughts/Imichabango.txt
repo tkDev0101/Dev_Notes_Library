@@ -2,8 +2,29 @@ Imichabango
 
 
  - Udemy courses
- - CI/CD Pipelines
- - compare TECH STcks
+
+
+====================================================
+refined DevOps tech stack and roadmap
+
+DevOps tech stack
+
+1. System Admin
+ - Linux
+ - Windows Server Administration
+
+2. Docker
+
+3. CI/CD - Github actions
+
+4. Scripting & Automation - Bash
+
+5. Networking & Security
+
+6. Infrastructure as Code (IaC)
+
+7.  Cloud Platforms
+
 
 ====================================================
 refined Cloud tech stack and roadmap
@@ -14,7 +35,7 @@ refined Cloud tech stack and roadmap
 
 3. CI/CD & DevOps Tools
 
-4. Scripting & Automation
+4. Scripting & Automation - Bash
 
 5.  Networking & Security (Cloud-Focused)
 
@@ -29,25 +50,35 @@ refined Cloud tech stack and roadmap
 
 ====================================================
 
-refined DevOps tech stack and roadmap
 
-DevOps tech stack
+🔵 The DevOps Learning Path
 
-1. System Admin
- - Linux
- - Windows Server Administration
+🛠️ Skills Gained
+✅ Linux & Bash  
+✅ Git & Version Control  
+✅ Build Tools & Packaging  
+✅ Cloud Computing Basics  
+✅ Docker & Containerization  
+✅ CI/CD with Jenkins  
+✅ AWS & Cloud Deployments  
+✅ Kubernetes & Helm  
+✅ Infrastructure as Code (Terraform)  
+✅ Configuration Management (Ansible)  
+✅ Monitoring & Logging  
 
-2. Docker
 
-3. CI/CD - Github actions
+🔵 The Cloud Learning Path
 
-4. Bash - Scripting & Automation
+🔹 1: Cloud & Computing Fundamentals 
+🔹 2: Linux & Windows Administration 
+🔹 3: Networking & Security Basics 
+🔹 4: Infrastructure as Code (IaC) 
+🔹 5: Automation & Scripting 
+🔹 6: CI/CD & DevOps 
+🔹 7: Containers & Kubernetes 
+🔹 8: Cloud Security & Monitoring 
 
-5. Networking & Security
 
-6. Infrastructure as Code (IaC)
-
-7.  Cloud Platforms
 
 ====================================================
 Cisco Networking Academy:

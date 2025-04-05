@@ -17,34 +17,30 @@ Goal -> Lucky No. 4
 4. DevOps -tk
 
 
-change other n0 4
+Change other No. 4
 
 
-1. CI/CD:
+1. Operating Systems & System Administration
+   • Linux Administration 
+   • Windows Server Administration (Active Directory, PowerShell, Group Policy)
+
+
+2. Containerization & Orchestration
+   • Docker 
+   • Kubernetes  
+
+
+3. CI/CD:
    • GitHub Actions
    • GitLab CI/CD
    • Jenkins
    • Azure DevOps
 
 
-
-
-2. Containerization & Orchestration
-   • Docker 
-   • Kubernetes  
-	- (consider K3s for lightweight Kubernetes in small projects)
-
-
-3. Operating Systems & System Administration
-   • Linux Administration 
-   • Windows Server Administration (Active Directory, PowerShell, Group Policy)
-
-
 4. Scripting & Automation
    • Bash (for Linux automation)
    • PowerShell (for Windows automation)
    • Python (for cross-platform automation & API scripting)
-
 
 
 5. Networking & Security

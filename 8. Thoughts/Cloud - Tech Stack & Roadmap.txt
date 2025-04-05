@@ -1,10 +1,6 @@
 Cloud - Tech Stack & Roadmap 
 
 
-
-
-
-
 =======================================================================
 
 1️⃣ Cloud Platforms & Core Services
@@ -25,14 +21,11 @@ Security (IAM, Role-Based Access Control)
 
 ☁ Google Cloud (GCP) → Best for AI/ML & analytics
 
+
 📜 Certifications:
-
 🏆 AWS Certified Cloud Practitioner ($100)
-
 🏆 Microsoft Certified: Azure Fundamentals (AZ-900) ($99)
-
 🏆 Google Associate Cloud Engineer ($125)
-
 
 
 =======================================================================
@@ -45,12 +38,10 @@ Linux (Ubuntu, CentOS, RedHat) & Windows Server
 Basic Shell Scripting (Bash, PowerShell)
 ✔ Why? Most cloud workloads run on Linux, and Windows Server is essential for hybrid environments.
 
+
 📜 Certifications:
-
 🏆 Linux LPIC-1 ($200 per exam, 2 exams)
-
 🏆 Microsoft Certified: Windows Server Administrator ($165)
-
 
 
 =======================================================================
@@ -65,14 +56,11 @@ DNS, Load Balancing, VPNs
 Identity & Access Management (IAM), MFA, SSO
 ✔ Why? Cloud security & networking are crucial for infrastructure management.
 
+
 📜 Certifications:
-
 🏆 CompTIA Network+ ($338)
-
 🏆 CCNA (Cisco Certified Network Associate) ($300)
-
 🏆 AWS Certified Security – Specialty ($300)
-
 
 
 =======================================================================
@@ -85,12 +73,10 @@ PowerShell & Bash (for automation)
 Python (for cloud automation & APIs)
 ✔ Why? Automating cloud tasks saves time and ensures consistency.
 
+
 📜 Certifications:
-
 🏆 Certified Entry-Level Python Programmer (PCEP) ($59)
-
 🏆 Microsoft PowerShell Certification ($99)
-
 
 
 =======================================================================
@@ -103,10 +89,9 @@ Terraform (Multi-cloud IaC)
 AWS CloudFormation, Azure Bicep, Google Deployment Manager
 ✔ Why? IaC ensures infrastructure can be created, managed, and destroyed programmatically.
 
+
 📜 Certifications:
-
 🏆 HashiCorp Certified: Terraform Associate ($70)
-
 
 
 =======================================================================
@@ -117,12 +102,10 @@ AWS CloudFormation, Azure Bicep, Google Deployment Manager
 GitHub Actions, GitLab CI/CD, Jenkins, Azure DevOps
 ✔ Why? Automating software deployment & infrastructure changes is crucial for cloud environments.
 
+
 📜 Certifications:
-
 🏆 AWS Certified DevOps Engineer – Professional ($300)
-
 🏆 Microsoft Certified: DevOps Engineer Expert (AZ-400) ($165)
-
 
 
 =======================================================================
@@ -135,12 +118,10 @@ Docker (Containerization)
 Kubernetes (Orchestration)
 ✔ Why? Containers are widely used in cloud-native environments.
 
+
 📜 Certifications:
-
 🏆 Docker Certified Associate ($195)
-
 🏆 Certified Kubernetes Administrator (CKA) ($395)
-
 
 
 =======================================================================
@@ -153,12 +134,10 @@ Cloud Monitoring (AWS CloudWatch, Azure Monitor, GCP Stackdriver)
 Security (Cloud Security Posture Management, SIEM)
 ✔ Why? Monitoring & security are critical for cloud reliability.
 
+
 📜 Certifications:
-
 🏆 Certified Information Systems Security Professional (CISSP) ($749)
-
 🏆 AWS Certified Security – Specialty ($300)
-
 
 
 =======================================================================
