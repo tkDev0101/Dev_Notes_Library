@@ -57,6 +57,83 @@ Change other No. 4
    • Azure 
 
 
+====================================================
+refined DevOps tech stack and roadmap
+
+DevOps tech stack
+
+1. System Admin
+ - Linux
+ - Windows Server Administration
+
+2. Docker
+
+3. CI/CD - Github actions
+
+4. Scripting & Automation - Bash
+
+5. Networking & Security
+
+6. Infrastructure as Code (IaC)
+
+7.  Cloud Platforms
+
+
+====================================================
+refined Cloud tech stack and roadmap
+
+1. Operating Systems & System Administration
+
+2. Docker
+
+3. CI/CD & DevOps Tools
+
+4. Scripting & Automation - Bash
+
+5.  Networking & Security (Cloud-Focused)
+
+6. Infrastructure as Code (IaC) & Configuration Management
+
+7. Containerization & Orchestration
+
+8. Cloud Platforms & Core Services
+
+9. Cloud Security & Monitoring
+
+
+====================================================
+
+
+🔵 The DevOps Learning Path
+
+🛠️ Skills Gained
+✅ Linux & Bash  
+✅ Git & Version Control  
+✅ Build Tools & Packaging  
+✅ Cloud Computing Basics  
+✅ Docker & Containerization  
+✅ CI/CD with Jenkins  
+✅ AWS & Cloud Deployments  
+✅ Kubernetes & Helm  
+✅ Infrastructure as Code (Terraform)  
+✅ Configuration Management (Ansible)  
+✅ Monitoring & Logging  
+
+
+🔵 The Cloud Learning Path
+
+🔹 1: Cloud & Computing Fundamentals 
+🔹 2: Linux & Windows Administration 
+🔹 3: Networking & Security Basics 
+🔹 4: Infrastructure as Code (IaC) 
+🔹 5: Automation & Scripting 
+🔹 6: CI/CD & DevOps 
+🔹 7: Containers & Kubernetes 
+🔹 8: Cloud Security & Monitoring 
+
+
+
+
 
 ============================================================================================
 1. Systems Administrator (SysAdmin) 
