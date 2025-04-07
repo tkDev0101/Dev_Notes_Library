@@ -13,6 +13,33 @@ Tech Stacks
 Goal -> Lucky No. 4
 
 
+====================================================
+🌐 Refined Cloud & DevOps Tech Stack & Roadmap
+
+1. Operating Systems & System Administration
+  • Linux
+  • Windows Server
+
+2. Containerization & Orchestration
+  • Docker
+
+3. CI/CD & DevOps Tools
+  • GitHub Actions
+
+4. Scripting & Automation
+  • Bash
+
+5. Networking & Security
+  • Cloud-Focused Networking
+  • System Security Basics
+
+6. Infrastructure as Code (IaC) & Configuration Management
+
+7. Cloud Platforms & Core Services
+ • Azure / AWS / GCP
+
+8. Cloud Security & Monitoring
+
 ----------------------------------------------------------------------------------------------
 4. DevOps -tk
 
