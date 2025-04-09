@@ -34,7 +34,6 @@ Imichabango
 8. Cloud Security & Monitoring
 
 
-
 ====================================================
 Cisco Networking Academy:
 
