@@ -46,6 +46,29 @@ Cisco Networking Academy:
 Udemy courses
 
 
+1. Sys Admin
+ - IT Fundamentals - Everything you need to know about IT
+
+
+2. Docker
+ - 
+ - Docker - SWARM - Hands-on - DevOps
+ - 
+
+
+3. CI/CD Pipelines
+ - 
+ - 
+ - 
+ - 
+
+
+
+
+Dev Interns
+
+
+
 ====================================================
 CI/CD Pipelines
 
