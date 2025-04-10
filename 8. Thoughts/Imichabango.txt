@@ -47,7 +47,8 @@ Udemy courses
 
 
 1. Sys Admin
- - IT Fundamentals - Everything you need to know about IT
+ - IT Fundamentals - Everything you need to know about IT (13 April)
+
 
 
 2. Docker
