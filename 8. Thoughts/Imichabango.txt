@@ -52,9 +52,11 @@ Udemy courses
 
 
 2. Docker
- - 
- - Docker - SWARM - Hands-on - DevOps
- - 
+ - Docker for the Absolute Beginner - Hands On - DevOps (4.5 hours)
+ - Docker: A Project-Based Approach to Learning (4.5 hours)
+ - Docker - SWARM - Hands-on - DevOps (4 hours)
+
+
 
 
 3. CI/CD Pipelines
@@ -66,6 +68,8 @@ Udemy courses
 
 
 Dev Interns
+
+
 
 
 
