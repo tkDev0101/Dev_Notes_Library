@@ -41,15 +41,31 @@ Cisco Networking Academy:
  - Net BASICS (06 April)
  - OS BASICS (24 April)
  - Linux one
- 
+
+
 ====================================================
 Udemy courses
 
 
+
+------------------------------------
+
 1. Sys Admin
  - IT Fundamentals - Everything you need to know about IT (13 April)
 
+ - Introduction to Linux - 90 Minute Crash Course, Hands on! (1.5 hours)
+ - Linux for DevOps, Cloud, and SRE Engineers (5.5 hours)
+ - Linux - The Complete Linux Guide (6 hours)
+ - Linux for Beginners (8 hours)
+ - IT System Engineer & Cloud System Administration (7.5 hours)
+ - Linux Administration Bootcamp: Go from Beginner to Advanced (9.5 hours)
 
+ - LPI Linux Essentials (010-160) Complete Course and Exams (7.5 hours)
+ - CompTIA Linux+ (XK0-005) Complete Course & Exam (21 hours)
+ - Windows Server 2022 Administration (24.5 hours)
+
+
+------------------------------------
 
 2. Docker
  - Docker for the Absolute Beginner - Hands On - DevOps (4.5 hours)
@@ -59,18 +75,24 @@ Udemy courses
 
 
 
+------------------------------------
+
 3. CI/CD Pipelines
  - 
+ - GitHub Actions - The Complete Guide (10.5 hours)
+ - Learn Github Actions for CI/CD DevOps Pipelines (4 hours)
+
+
+ - Azure DevOps Fundamentals for Beginners (3.5 hours)
+
+ - Ansible for the DevOps Beginners & System Admins (5 hours)
+
+
+------------------------------------
+
+9. DevOps
  - 
  - 
- - 
-
-
-
-Dev Interns
-
-
-
 
 
 ====================================================
