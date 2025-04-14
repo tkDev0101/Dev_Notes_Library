@@ -1,0 +1,55 @@
+Microsoft Certified: Azure
+
+
+------------------------------------
+1. AZ-900 fundamentals
+
+2. AZ-104 Administrator Associate 
+3. AZ-204 Developer Associate 
+
+4. AZ-305 Solutions Architect Expert 
+5. AZ-400 DevOps Engineer Expert 
+
+
+------------------------------------
+1. https://learn.microsoft.com/en-us/credentials/certifications/azure-fundamentals/?practice-assessment-type=certification
+2. https://learn.microsoft.com/en-us/credentials/certifications/azure-administrator/?practice-assessment-type=certification
+3. https://learn.microsoft.com/en-us/credentials/certifications/azure-developer/?practice-assessment-type=certification
+4. https://learn.microsoft.com/en-us/credentials/certifications/azure-solutions-architect/
+5. https://learn.microsoft.com/en-us/credentials/certifications/devops-engineer/
+
+
+
+
+------------------------------------
+====================================================
+
+
+I just completed 3 Udemy Cert's on Udemy that focus mainly on the AZ-900 fundamentals certification
+
+
+1. AZ-900 Azure Fundamentals: Crash
+Course
+2. AZ-900: Microsoft Azure Fundamentals
+Exam Prep in 3 Days!
+3. Azure Crash Course - The basics with
+Hands-On in 3 hours!
+
+
+
+
+
+
+
+i want to become a cloud developer / DevOps engineer later down the line and i hope to complete
+
+so I'm currently learning AZ-900
+
+
+
+
+now considering the above write a LinkedIn Post about:
+
+
+1. celebrating my completed certifications from Udemy
+2. mention how I am leanring this as part of my personal learning journey to become a cloud developer / DevOps engineer
