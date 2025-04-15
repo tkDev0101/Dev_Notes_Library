@@ -27,29 +27,21 @@ Microsoft Certified: Azure
 
 I just completed 3 Udemy Cert's on Udemy that focus mainly on the AZ-900 fundamentals certification
 
+1. AZ-900 Azure Fundamentals: Crash Course
+2. AZ-900: Microsoft Azure Fundamentals Exam Prep in 3 Days!
+3. Azure Crash Course - The basics with Hands-On in 3 hours!
 
-1. AZ-900 Azure Fundamentals: Crash
-Course
-2. AZ-900: Microsoft Azure Fundamentals
-Exam Prep in 3 Days!
-3. Azure Crash Course - The basics with
-Hands-On in 3 hours!
-
-
-
-
-
-
-
-i want to become a cloud developer / DevOps engineer later down the line and i hope to complete
+I want to become a cloud developer / DevOps engineer later down the line and I hope to complete my AZ-900 fundamentals and AZ-104 Administrator Associate in the next couple of months
 
 so I'm currently learning AZ-900
-
-
-
 
 now considering the above write a LinkedIn Post about:
 
 
 1. celebrating my completed certifications from Udemy
-2. mention how I am leanring this as part of my personal learning journey to become a cloud developer / DevOps engineer
+2. mention how I am learning this as part of my personal learning journey to become a cloud developer / DevOps engineer
+
+
+
+
+
