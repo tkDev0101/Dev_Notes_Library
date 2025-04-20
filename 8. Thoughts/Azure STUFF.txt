@@ -32,11 +32,11 @@ Resources
 	- https://youtube.com/playlist?list=PLlVtbbG169nED0_vMEniWBQjSoxTsBYS3
 
 
-2.
+2. Microsoft Certified: Azure Fundamentals
 	- https://learn.microsoft.com/en-us/credentials/certifications/azure-fundamentals/
 
 
-
+------------------------------------
 NOTES
 
 1. Microsoft likes to be extremely particular with their questions and has a style of asking them, they also like to, in my opinion, ask things in a very stupid manner to try and trick you on occasion
