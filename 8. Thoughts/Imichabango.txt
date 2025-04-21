@@ -4,6 +4,14 @@ Imichabango
  - Udemy courses
  - CV update
 
+ - IT Fundamentals - Everything you need to know about IT (21 April)
+ - OS BASICS (24 April)
+
+
+6. Azure
+1. https://www.udemy.com/course/microsoft-azure-fundamentals-course/learn/lecture/38829044?start=120#overview
+2. https://www.udemy.com/course/introtoazure/learn/lecture/45640121#overview
+3. https://www.udemy.com/course/az900_azure/learn/lecture/39833996?start=1#overview
 
 
 ====================================================
@@ -51,7 +59,7 @@ Udemy courses
 ------------------------------------
 
 1. Sys Admin
- - IT Fundamentals - Everything you need to know about IT (13 April)
+ - IT Fundamentals - Everything you need to know about IT (21 April)
 
  - Introduction to Linux - 90 Minute Crash Course, Hands on! (1.5 hours)
  - Linux for DevOps, Cloud, and SRE Engineers (5.5 hours)
