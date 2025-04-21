@@ -1,29 +1,8 @@
 Microsoft Certified: Azure
 
 
-------------------------------------
-1. AZ-900 fundamentals
-
-2. AZ-104 Administrator Associate 
-3. AZ-204 Developer Associate 
-
-4. AZ-305 Solutions Architect Expert 
-5. AZ-400 DevOps Engineer Expert 
-
 
 ------------------------------------
-1. https://learn.microsoft.com/en-us/credentials/certifications/azure-fundamentals/?practice-assessment-type=certification
-2. https://learn.microsoft.com/en-us/credentials/certifications/azure-administrator/?practice-assessment-type=certification
-3. https://learn.microsoft.com/en-us/credentials/certifications/azure-developer/?practice-assessment-type=certification
-4. https://learn.microsoft.com/en-us/credentials/certifications/azure-solutions-architect/
-5. https://learn.microsoft.com/en-us/credentials/certifications/devops-engineer/
-
-
-
-
-------------------------------------
-====================================================
-
 
 Resources
 
@@ -49,6 +28,30 @@ NOTES
 3. Once you're confident you can score 80-90% consistently, book your exam (you need 70% to pass)
 
 4. But this is the most important thing, once you're confident with the practice exams, you're set 
+
+
+
+====================================================
+
+1. AZ-900 fundamentals
+
+2. AZ-104 Administrator Associate 
+3. AZ-204 Developer Associate 
+
+4. AZ-305 Solutions Architect Expert 
+5. AZ-400 DevOps Engineer Expert 
+
+
+------------------------------------
+
+1. https://learn.microsoft.com/en-us/credentials/certifications/azure-fundamentals/?practice-assessment-type=certification
+2. https://learn.microsoft.com/en-us/credentials/certifications/azure-administrator/?practice-assessment-type=certification
+3. https://learn.microsoft.com/en-us/credentials/certifications/azure-developer/?practice-assessment-type=certification
+4. https://learn.microsoft.com/en-us/credentials/certifications/azure-solutions-architect/
+5. https://learn.microsoft.com/en-us/credentials/certifications/devops-engineer/
+
+
+------------------------------------
 
 
 
