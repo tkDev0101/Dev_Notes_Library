@@ -7,7 +7,7 @@ Microsoft Certified: Azure
 Resources
 
 1. AZ-900 Azure Fundamentals Certification Course 
-	- by John Savill's Technical Trainin
+	- by John Savill's Technical Training
 	- https://youtube.com/playlist?list=PLlVtbbG169nED0_vMEniWBQjSoxTsBYS3
 
 
