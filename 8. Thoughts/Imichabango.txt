@@ -2,16 +2,14 @@ Imichabango
 
 
  - Udemy courses
- - CV update
+ - *CV update*
 
- - IT Fundamentals - Everything you need to know about IT (21 April)
- - OS BASICS (24 April)
-
-
-6. Azure
+ - Azure
 1. https://www.udemy.com/course/microsoft-azure-fundamentals-course/learn/lecture/38829044?start=120#overview
 2. https://www.udemy.com/course/introtoazure/learn/lecture/45640121#overview
 3. https://www.udemy.com/course/az900_azure/learn/lecture/39833996?start=1#overview
+
+
 
 
 ====================================================
@@ -42,38 +40,23 @@ Imichabango
 8. Cloud Security & Monitoring
 
 
-====================================================
-Cisco Networking Academy:
-
- - HW BASICS (24 Mar)
- - Net BASICS (06 April)
- - OS BASICS (24 April)
-
 
 ====================================================
 Udemy courses
 
 
 
-------------------------------------
-
 1. Sys Admin
- - IT Fundamentals - Everything you need to know about IT (23 April)
 
  - Complete Windows Server Administration Course (28 April)
-
-
  - Introduction to Linux - 90 Minute Crash Course, Hands on! (1.5 hours)
- - Linux for DevOps, Cloud, and SRE Engineers (5.5 hours)
- - Linux - The Complete Linux Guide (6 hours)
- - Linux for Beginners (8 hours)
- - IT System Engineer & Cloud System Administration (7.5 hours)
  - Linux Administration Bootcamp: Go from Beginner to Advanced (9.5 hours)
-
+ - Linux for DevOps, Cloud, and SRE Engineers (5.5 hours)
  - LPI Linux Essentials (010-160) Complete Course and Exams (7.5 hours)
  - CompTIA Linux+ (XK0-005) Complete Course & Exam (21 hours)
+ - Linux - The Complete Linux Guide (6 hours)
+ - IT System Engineer & Cloud System Administration (7.5 hours)
 
- - Windows Server 2022 Administration (24.5 hours)
 
 
 ------------------------------------
@@ -82,36 +65,45 @@ Udemy courses
 
  - Docker for the Absolute Beginner - Hands On - DevOps (4.5 hours)
  - Docker: A Project-Based Approach to Learning (4.5 hours)
+ - Docker Training: Learn Docker from Zero to Cloud (5.5 hours)
  - Docker - SWARM - Hands-on - DevOps (4 hours)
-
-
 
 
 ------------------------------------
 
 3. CI/CD Pipelines	( June May 8, May 15, May 22, May 29)
 
- - 
  - GitHub Actions - The Complete Guide (10.5 hours)
  - Learn Github Actions for CI/CD DevOps Pipelines (4 hours)
-
-
  - Azure DevOps Fundamentals for Beginners (3.5 hours)
-
  - Ansible for the DevOps Beginners & System Admins (5 hours)
-
-
-
 
 
 ------------------------------------
 
 4. Bash scripting	( July May 8, May 15, May 22, May 29)
 
+ - Bash Scripting and Shell Programming (Linux Command Line) (2.5 hours)
+ - Linux Shell Scripting: A Project-Based Approach to Learning (12.5 hours)
+ - Complete Linux Bash Shell Scripting with Real Life Examples (14.5 hours)
+
+
  - 
  - 
  - 
 
+
+------------------------------------
+5. Networking & Security
+
+ - 
+ - 
+ - 
+
+
+------------------------------------
+
+6. Infrastructure as Code (IaC) & Configuration Management
 
 
 ------------------------------------
@@ -129,20 +121,54 @@ Udemy courses
  - 
  - 
 
-
-====================================================
-CI/CD Pipelines
-
-
 ====================================================
 
+ - *CV update*
+
+1. Windows Server Basics
+
+Version Control (Git and GitHub)
+
+2. Docker 
+
+3. CI/CD Pipelines (GitHub Actions)s
+
+4. Scripting (Bash)
+
+Microsoft Certified: Azure Fundamentals - Certification
+
+
+====================================================
+LinkedIn Post
+
+🎉 Another Step Forward on My DevOps Journey! 🎉
+
+I'm excited to share that I’ve completed the Cisco Networking Academy - Operating Systems Basics course and earned my Certificate of Completion & Badge! 🏅
+
+This course helped me strengthen my foundational knowledge of operating systems—including Windows, Linux, mobile OS, and essential topics like security, network configuration, and device connectivity.
+
+
+Proud to keep growing and building skills in DevOps, Cloud Computing, and Azure!
+
+#DevOps #DevOpsEngineer #CloudComputing #Azure #Linux #Windows #CiscoNetworkingAcademy #TechLearning #CareerGrowth #ITSkills #OperatingSystems #MicrosoftAzure #CloudJourney #FutureInTech
+
+
+Consider the above post
+
+I completed the following courses from Udemy
+ - 
+ - 
+
+Course CONTENT & Overviews
+
+
+now considering the above write a LinkedIn Post celebrating this
+
+Also mention this is part of my learning journey towards DevOps engineer, include some cloud, azure and DevOps hashtags
 
 
 
-
-
-
-
+====================================================
 
 
 
