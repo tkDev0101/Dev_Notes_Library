@@ -147,6 +147,7 @@ I'm excited to share that I’ve completed the Cisco Networking Academy - Operat
 
 This course helped me strengthen my foundational knowledge of operating systems—including Windows, Linux, mobile OS, and essential topics like security, network configuration, and device connectivity.
 
+This achievement is part of my ongoing learning path toward becoming a DevOps Engineer, where a strong understanding of operating systems, cloud platforms, and automation is crucial.
 
 Proud to keep growing and building skills in DevOps, Cloud Computing, and Azure!
 
