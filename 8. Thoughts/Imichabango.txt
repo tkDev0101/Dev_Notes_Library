@@ -10,6 +10,15 @@ Imichabango
 3. https://www.udemy.com/course/az900_azure/learn/lecture/39833996?start=1#overview
 
 
+https://www.udemy.com/course/microsoft-azure-az-900-practice-tests-latest-2020/?couponCode=APRIL_2025
+
+
+https://www.udemy.com/certificate/UC-425c17fc-c99e-4a2b-a29b-802f7d634790/
+
+
+
+
+https://www.udemy.com/certificate/UC-a4aa5f23-cfb3-41aa-8546-4f875a6e449a/
 
 
 ====================================================
@@ -48,7 +57,7 @@ Udemy courses
 
 1. Sys Admin
 
- - Complete Windows Server Administration Course (28 April)
+ - Complete Windows Server Administration Course (30 April)
  - Introduction to Linux - 90 Minute Crash Course, Hands on! (1.5 hours)
  - Linux Administration Bootcamp: Go from Beginner to Advanced (9.5 hours)
  - Linux for DevOps, Cloud, and SRE Engineers (5.5 hours)
