@@ -11,6 +11,8 @@ https://www.udemy.com/course/microsoft-azure-az-900-practice-tests-latest-2020/?
 
 
 
+AZ-900 : Microsoft Azure Fundamentals Practice Tests 2025
+https://www.udemy.com/course/microsoft-azure-az-900-practice-tests-latest-2020/?couponCode=APRIL_2025
 
 
 
@@ -131,6 +133,7 @@ Udemy courses
 1. Windows Server Basics
 
 Version Control (Git and GitHub)
+Java and C# Programming Languages
 
 2. Docker 
 
@@ -139,6 +142,29 @@ Version Control (Git and GitHub)
 4. Scripting (Bash)
 
 Microsoft Certified: Azure Fundamentals - Certification
+
+
+------------------------------------
+
+CI/CD tools & pipelines (e.g., GitHub Actions, GitLab CI/CD, Jenkins)
+
+0. Version control systems – Git, GitHub
+
+0. Basic programming knowledge – .NET, C#, JavaScript, Angular, React (even basic exposure counts)
+
+1. Basic Linux/Server administration – managing files, processes, users, networking
+
+Basic networking concepts – IP, DNS, firewalls, ports, HTTP/S
+
+2. Containerization – Docker (and basic Kubernetes is a bonus)
+
+Infrastructure fundamentals – understanding middleware, databases, and app environments
+
+Monitoring & logging basics – awareness of tools like Prometheus, Grafana, ELK, etc. (even if only beginner knowledge)
+
+Agile & SDLC knowledge – understanding how software projects are planned and executed
+
+------------------------------------
 
 
 ====================================================
