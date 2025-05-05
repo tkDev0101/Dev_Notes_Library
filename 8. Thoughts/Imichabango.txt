@@ -16,6 +16,12 @@ https://www.udemy.com/course/microsoft-azure-az-900-practice-tests-latest-2020/?
 
 
 
+git config --global user.name
+tkDev
+
+git config --global user.email
+tkdev0101@gmail.com
+
 
 
 ====================================================
