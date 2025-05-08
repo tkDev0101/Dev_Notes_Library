@@ -59,13 +59,13 @@ Udemy courses
 
 1. Sys Admin
 
- - Complete Windows Server Administration Course (30 April)
- - Introduction to Linux - 90 Minute Crash Course, Hands on! (1.5 hours)
+ - Complete Windows Server Administration Course ( May )
+ - Introduction to Linux - 90 Minute Crash Course, Hands on! (1 May ?)
  - Linux Administration Bootcamp: Go from Beginner to Advanced (9.5 hours)
- - Linux for DevOps, Cloud, and SRE Engineers (5.5 hours)
+ - Linux - The Complete Linux Guide (6 hours)
  - LPI Linux Essentials (010-160) Complete Course and Exams (7.5 hours)
  - CompTIA Linux+ (XK0-005) Complete Course & Exam (21 hours)
- - Linux - The Complete Linux Guide (6 hours)
+ - Linux for DevOps, Cloud, and SRE Engineers (5.5 hours)
  - IT System Engineer & Cloud System Administration (7.5 hours)
 
 
@@ -205,6 +205,56 @@ Also mention this is part of my learning journey towards DevOps engineer, includ
 
 
 ====================================================
+
+
+cloud developer Projects 
+
+
+I want to become a cloud developer, please help me build project that will help me implement my skills, this is my tech stack
+
+i want to do projects that will help my cloud journey
+
+
+
+
+
+------------------------------------
+
+How I Would Learn Cloud Engineering If I Could Start Over In 2024
+ -> https://youtu.be/5PBYlW1GTcU?si=timyLNCR5FA0DFjr
+
+5:42 - 7:23
+
+consider the following cloud developer project from this transcript, i want to do this, so please provide me a guide and step by step manual that will help me do this, i am working in Azure
+
+
+
+------------------------------------
+
+
+
+
+------------------------------------
+
+
+
+
+====================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
