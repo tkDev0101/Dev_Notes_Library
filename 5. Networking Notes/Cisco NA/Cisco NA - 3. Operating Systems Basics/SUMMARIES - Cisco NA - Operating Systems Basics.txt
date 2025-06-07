@@ -1,0 +1,333 @@
+
+Cisco NA - Operating Systems Basics SUMMARIES
+
+
+===================================================================
+
+Module 1: The Windows Operating System Summary
+
+
+------------------------------------
+
+1. Windows History
+
+ - The first computers required a Disk Operating System (DOS) to create and manage files. 
+ - Microsoft developed MS-DOS as a command line interface (CLI) to access the disk drive and load the operating system files. 
+ - Early versions of Windows consisted of a Graphical User Interface (GUI) that ran over MS-DOS. 
+ - However, modern Windows versions are in direct control of the computer and its hardware and support multiple user processes. 
+ - This is much different than the single process, single user MS-DOS. 
+ - Since 1993, there have been more than 20 releases of Windows that are based on the NT operating system. 
+ - Users use a Windows GUI to work with data files and software. 
+ - The GUI has a main area that is known as the Desktop and a Task Bar situated below the desktop. 
+ - The Task Bar includes the Start menu, quick launch icons, and a notification area. 
+ - Windows has many vulnerabilities. 
+ - Recommendations to secure the Windows OS include use of
+   -> virus or malware protection, use of strong passwords, use of firewall, and limited use of the administrator account, among others.
+
+
+
+------------------------------------
+
+2. Windows Architecture and Operations
+
+ - Windows consists of a hardware abstraction layer (HAL) that is software that handles all of the communication between the hardware and the kernel. 
+ - The kernel has control over the entire computer and handles input and output requests, memory, and all of the peripherals connected to the computer. 
+ - Windows operates in two different modes. The first is user mode. Most Windows programs run in user mode. 
+ - The second is kernel mode. It allows operating system code direct access to the computer hardware. 
+ - Windows supports several different file systems, but NTFS is the most widely used. 
+ - NTFS volumes include the partition boot sector, master file table, system files and the file area. 
+ - When a computer boots, it first accesses system information and code that is stored in BIOS hardware. 
+ - The BIOS boot code performs a system self-test called POST, locates and loads the Windows OS, and loads other associated programs to start the operating system. 
+ - Windows should always be shutdown properly.
+
+ - A computer works by storing instructions in RAM until the CPU processes them. 
+ - Each process in a 32-bit Windows computer supports a virtual address space that enables addressing up to 4 gigabytes. 
+ - Each process in a 64-bit Windows computer supports a virtual address space of up to 8 terabytes. 
+ - Windows stores all of the information about hardware, applications, users, and system settings in a large database known as the registry. 
+ - The registry is a hierarchical database where the highest level is known as a hive, below that there are keys, followed by subkeys. 
+ - There are five registry hives that contain data regarding the configuration and operation of Windows. 
+ - There are hundreds of keys and subkeys.
+
+
+
+------------------------------------
+
+3. Windows Configuration and Monitoring
+
+ - For security reasons, it is not advisable to log on to Windows using the Administrator account or an account with administrative privileges. 
+ - Do not give standard users administrative privileges. 
+ - Do not enable the Guests account unless the computer is going to be used by many different people who do not have accounts. 
+ - Use Windows groups to make administration of users easier. 
+ - Local users and groups are managed with the lusrmgr.msc control panel applet.
+
+ - You can use the CLI or the Windows PowerShell to execute commands. 
+ - PowerShell can be used to create scripts to automate tasks that the regular CLI is unable to automate. 
+ - Windows Management Instrumentation (WMI) is used to manage remote computers. 
+ - The net command can be combined with switches to focus on specific output. 
+ - Task Manager provides a lot of information about what is running, and the general performance of the computer. 
+ - The Resource Monitor provides more detailed information about resource usage. 
+ - The Network and Sharing Center is used to configure Windows networking properties and test networking settings. 
+ - The Server Message Block (SMB) protocol is used to share network resources such as files on remote hosts. 
+ - The Universal Naming Convention (UNC) format is used to connect to resources. 
+ - Windows Server is an edition of Windows that is mainly used in data centers. 
+ - It provides network, file, web, and management services to a Windows network or domain.
+
+
+
+------------------------------------
+
+4. Windows Security
+
+ - Malware can open communication ports to communicate and spread. 
+ - The Windows netstat command displays all open communication ports on a computer and can also display the software processes that are associated with the ports. 
+ - This enables unknown potentially malicious software to be identified and shutdown. 
+ - Windows Event Viewer provides access to numerous logged events regarding the operation of a computer. 
+ - Windows logs Windows events and applications and services events. 
+ - Logged event severity levels range through the information, warning, error, or critical levels. 
+ - It is very important to keep Windows up to date to guard against new security threats. 
+ - Software patches, updates, and service packs address security vulnerabilities as they are discovered. 
+ - Windows should be configured to automatically download and install updates as they become available. 
+ - Windows can be configured to only install and restart a computer at specified times of day.
+
+
+
+===================================================================
+
+Module 2: Linux Overview Summary
+
+
+1. Linux Basics
+
+ - Linux is a fast, reliable, and small open-source operating system. 
+ - It requires few hardware resources to run and is highly customizable. 
+ - It is designed to be used on networks. 
+ - The Linux kernel is distributed by different organizations with different tools and software packages. 
+ - A customized version of Linux that is called Security Onion contains software and tools that are designed for use in network security monitoring by cybersecurity analysts. 
+ - Kali Linux is another customized Linux distribution that has numerous tools that are designed for network security penetration testing.
+
+
+2. Working in the Linux Shell
+
+ - In Linux, the user communicates with the operating system through a GUI or a command-line interface (CLI), or shell. 
+ - If a GUI is running, the shell is accessed through at terminal application such as xterm or gnome terminal. 
+ - Linux commands are programs that perform a specific task. 
+ - The man command, followed by a specific command, provides documentation for that command. 
+ - It is important to know at least basic Linux commands, file and directory commands, and commands for working with text files. 
+ - In Linux everything is treated is if it were a file, including the memory, disks, monitor, and directories.
+
+
+3. Linux Servers and Clients
+
+ - Servers are computers that have software installed that enables them to provide services to client computers across the network. 
+ - Some services provide access to external resources such as files, email, and web pages, to clients upon request. 
+ - Other services run internally and perform tasks such as log management, memory management, or disk scanning. 
+ - To enable a computer to provide multiple services, ports are used. 
+ - A port is a reserved network resource that “listens” for requests by clients. 
+ - While the port number that is used by a service can be configured, most services listen on default “well-known” ports. 
+ - Client software applications are designed to communicate with specific types of servers. 
+ - Web browsers are designed to communicate with web servers by using the HTTP protocol on port 80. 
+ - FTP clients communicate with FTP servers to transfer files.
+
+
+4. Basic Server Administration
+
+ - In Linux, servers are managed by using configuration files. 
+ - Various settings can be modified and saved in configuration files. 
+ - When a service is started, it looks at its configuration file(s) to know how it should run. 
+ - There is no rule for the way configuration files are written. 
+ - Configuration file formatting depends on the creator of the server software. 
+ - Linux devices should be secured by using proven methods to protect the device and administrative access. 
+ - This is known as hardening devices. One way to harden a device is to maintain passwords, configure enhanced login features, and implement secure remote login with SSH. It is also very important to keep the operating system up to date. Other ways to harden a device are to force periodic password changes, enforce strong passwords, and to prevent reuse of passwords. Finally, Linux clients and servers use logfiles to record the operation of the system and important events. A number of different logfiles are maintained including application logs, event logs, service logs, and system logs. Server logs record activities that are conducted by remote users who access system services. It is important to know the location of different logs in the Linux file system so that they can be accessed and monitored for problems.
+
+
+5. The Linux File System
+
+ - Linux supports a number of different file systems that vary by speed, flexibility, security, size, structure, logic, and more. 
+ - Some of the file systems that are supported by Linux are ext2, ext3, ext4, NFS, and CDFS. File systems are mounted on partitions and accessed through mounting points, or directories. 
+ - Windows drive letters are examples of mounting points. 
+ - The mount command can be used to display details of the file systems that are currently mounted on a Linux computer. 
+ - The root file system is represented by the “/” symbol. 
+ - It contains all of the files in the computer by default. 
+ - Linux uses file permissions to control who is permitted to have different types of access to files and directories. 
+ - Permissions include read (r), write (w), and execute (x). Files and directories have permissions that are assigned for users, groups, and others. The permissions for files and folders are displayed with the ls -l command. This command also displays the links for a file. Hard links create another file with a different name that is linked to the same place in the file system. 
+ - The owner of the file and the group for the file are also displayed along with the date and time of the last modification to the file. File permissions are powerful features of the Linux file system and can’t be violated. Only the root user can override file permissions. Because of the power of the root user, root access should be carefully controlled. Hard links are created with the ln command. Changes to one of the hard-linked files are also made to the original file. Symbolic links, or symlinks, are similar to hard links in that a change to the linked file is reflected in the original file. Symbolic links have several advantages over hard links.
+
+
+6. Working with Linux GUI
+
+ - The X Windows, or X11, system is a basic software framework that includes functions for creating, controlling, and configuring a windows GUI in a point-and-click interface. 
+ - Different vendors use the X Windows system to create different windows manager GUIs for Linux. Examples of windows managers are Gnome and KDE. 
+ - The Ubuntu Linux distribution uses Gnome 3 by default. 
+ - The Gnome 3 desktop consists of the Apps Menu, Ubuntu Dock, Top Bar, Calendar and System Message tray, the Activities area, and the Status Menu.
+
+
+7. Working on a Linux Host
+
+ - In order to install applications on Linux hosts, programs called package managers are used. 
+ - Packages are software applications and all of their supporting files. 
+ - Package managers are extremely helpful for installing complex software applications from centralized package repositories that are accessible over the internet. 
+ - Different Linux distributions use different package managers. 
+ - For example, Arch Linux uses pacman, Debian uses dpkg as the base package manager and apt to communicate with dpkg. 
+ - Ubuntu also uses apt. Package manager CLI commands are used to install, remove, and update software packages. 
+ - Upgrade commands upgrade all currently installed packages. Package management can also be performed in a GUI. 
+ - Software processes are instances of computer programs that are running. Multitasking operating systems can run many processes at the same time. 
+ - Forking is a method that the kernel uses to allow a running process to copy itself. 
+ - The ps command lists the running processes, top displays information about running processes dynamically, and kill is used to remove, restart, or pause running processes. 
+ - While Linux is considered to be better protected against malicious software (malware) than other operating systems, it is still susceptible to Trojan horses, worms, and other types of malware. 
+ - Linux is usually attacked through its services and processes. Out of date software is often vulnerable to attack. 
+ - Threat actors can probe a device for open ports that are linked to out of date server processes. 
+ - With this knowledge, attacks can be launched. 
+ - It is important to keep the operating system and its components and applications up to date. 
+ - The chkrootkit program is designed to detect rootkit malware. 
+ - Rootkits are deep level malware programs that are very difficult to detect and remove. 
+ - They can change the fundamental operation of the operating system itself and can be used to create unauthorized access to systems. 
+ - Piping commands uses the “|” symbol to chain different commands together by using the output of one command as the input for another.
+
+
+===================================================================
+
+Module 3: Mobile Device Connectivity
+
+
+------------------------------------
+
+1. Wireless and Cellular Data Network
+
+Topic Objective: Explain how to configure wireless and cellular data settings.
+
+
+
+
+------------------------------------
+
+2. Bluetooth
+
+Topic Objective: Explain how to pair Bluetooth devices.
+
+
+
+
+------------------------------------
+
+3. Email Configuration
+
+Topic Objective: Explain how to configure email settings.
+
+
+
+
+------------------------------------
+
+4. Mobile Device Synchronization
+
+Topic Objective: Explain how to synchronize data.
+
+
+
+
+
+
+
+
+===================================================================
+
+
+
+Module 4: Mobile Operating Systems and Security
+
+
+------------------------------------
+
+1. Android Versus iOS
+
+Topic Objective: Compare the Android and iOS operating systems.
+
+
+
+
+------------------------------------
+
+2. Mobile Touch Interface
+
+Topic Objective: Describe the features of the Android and iOS touch interfaces.
+
+
+
+
+------------------------------------
+
+3. Common Mobile Device Features
+
+Topic Objective: Describe operating system features that are common among mobile devices.
+
+
+
+
+------------------------------------
+
+4. Passcode Locks
+
+Topic Objective: Explain how to configure various types of passcode locks.
+
+
+
+
+------------------------------------
+
+5. Cloud-Enabled Services for Mobile Devices
+
+Topic Objective: Describe Cloud-enabled services for mobile devices.
+
+
+
+
+------------------------------------
+
+6. Mobile Device Software Security
+
+Topic Objective: Describe software security for mobile devices.
+
+
+
+
+
+===================================================================
+
+
+QUESTIONS FOR EXAM
+
+
+
+Cisco NA - Operating Systems Basics Overview
+
+
+God be with us
+
+
+Every smart device uses an operating system (OS) - smart devices like personal computers, smartphones, game consoles, smart TVs, and the list continues. 
+Whether the OS used is Windows, Linux, macOS, Android, or iOS, knowing how it works is a key digital skill you will need. 
+Take this course to build your foundational knowledge for success in any IT career.
+
+Operating Systems Basics teaches the fundamentals of operating systems. 
+It covers basic concepts and skills needed to understand the purpose and characteristics of operating systems, the implementation of basic OS security, and how to configure mobile device network connectivity and email.
+
+Module 1: The Windows Operating System
+Module 2: Linux Overview
+Module 3: Mobile Device Connectivity
+Module 4: Mobile Operating Systems and Security
+Operating Systems Basics Final Exam
+
+
+I am currently doing the above course, 
+
+
+
+→
+
+ • 
+   -> 
+
+
+
+
+

@@ -1,0 +1,61 @@
+GitHub Actions Notes
+
+
+-------------------------------------------------------------------------------
+The Flow of GitHub Actions
+
+1. Trigger the Workflow (Event)
+ - Workflows in GitHub Actions start when a trigger event happens.
+
+These can be:
+   •  Push → When you push code to the repository
+   •  Pull Request → When a PR is opened or updated
+   •  Scheduled Runs → Automatically run at set times
+   •  Manual Runs → Manually trigger workflows 
+   •  Issue/Comment Events → Reacts to GitHub activities
+
+
+2. Define Jobs (Tasks to Execute) 
+   •  A workflow consists of one or more jobs. 
+   •  Jobs are independent tasks that run on separate virtual machines. 
+   •  Jobs can run in parallel or depend on other jobs. 
+
+
+3. Define Steps (Instructions in a Job) 
+ - Each job contains steps, which are individual instructions.
+ - Steps can include: 
+   •  Checkout code from the repository 
+   •  Install dependencies 
+   •  Run tests 
+   •  Deploy the application 
+
+
+4. Use Pre-Made Actions (Reusable Tasks)   
+   •  Actions come from GitHub Marketplace or custom scripts. 
+   •  Instead of writing everything manually, you can use pre-built actions.
+
+5. Running Workflows on Different Environments (Runners)
+ - GitHub-hosted runners run workflows on different OS
+
+6. Define Job Dependencies (Sequential Execution)
+ - By default, jobs run in parallel.
+ - To run a job only after another one finishes, use 'needs'
+
+7. Deploy the Application (Final Step in CI/CD)
+ - Once the tests pass, you deploy the code to production.
+ - Deployment can be to AWS, Azure, Google Cloud, or a custom server.
+
+
+8. Monitor Workflow Results
+ - After execution, GitHub provides logs showing each step’s status.
+ - You can view success/failure logs in the "Actions" tab in GitHub.
+
+
+GitHub Actions Flow
+1️⃣ Developer pushes code to GitHub (or another trigger event occurs).
+2️⃣ GitHub Actions detects the change and starts the workflow.
+3️⃣ Jobs are executed (e.g., code is built, tested, or deployed).
+4️⃣ Steps within each job execute actions (e.g., install, test, deploy).
+5️⃣ If all jobs succeed, the code is deployed to production.
+6️⃣ If a failure occurs, logs help troubleshoot the issue.
+7️⃣ Notifications can be sent to alert the team.

@@ -1,0 +1,1228 @@
+YT Script - The Best Cloud Projects To Get Hired For Beginners
+
+
+1. How to Document Your AWS Cloud Projects (To Get Hired)
+ - Tech with Lucy
+
+2. The Best Cloud Projects To Get Hired For Beginners
+	- Tech with Soleyman
+
+====================================================
+
+1. How to Document Your AWS Cloud Projects (To Get Hired)
+ - Tech with Lucy
+
+Hi everyone! 👋 As a cloud learner, one question you may have is: "How do I document my projects"? 
+
+In this video, I share 3 of the best ways to showcase your cloud projects and get hired. If you find this type of content, please let me know in the comments below! ⬇️
+
+Introduction
+0:00
+hey everyone this is Lucy and in this
+0:02
+video we're going to be covering a
+0:03
+highly requested video topic which is
+0:05
+how to document your AWS Cloud projects
+0:07
+many of you who are learning AWS know
+0:09
+that cloud projects are a great way to
+0:11
+build your technical skills but the
+0:13
+question that often comes up is how do
+0:15
+you showcase these projects when
+0:17
+applying to a job well there are a few
+0:19
+ways to do this and here are the three
+0:21
+methods we'll be covering in today's
+0:22
+video the first one is by showcasing
+0:24
+your projects on a personal portfolio
+0:26
+website the second one is by creating a
+0:28
+GitHub repository for your projects and
+0:30
+the third one is by using social media
+0:32
+platforms like medium and Linkedin for
+0:34
+each of these I'll provide step-by-step
+0:36
+instructions on how you can get started
+0:37
+as well as some examples of how other
+0:39
+people have used these methods to
+0:41
+document their Cloud projects let's get
+Method 1
+0:43
+into it so method number one is to
+0:45
+document your Cloud projects through a
+0:47
+personal portfolio website this is one
+0:49
+of the most common ways to Showcase your
+0:50
+projects because it will not only help
+0:52
+you build a personal brand but also
+0:54
+maximize your chances of getting hired
+0:56
+into a cloud role you can kind of think
+0:57
+of a portfolio website as the central
+0:59
+place for you to store and Link
+1:01
+everything together this could include
+1:03
+your resume AWS Cloud projects as well
+1:05
+as any blog articles you've written
+1:07
+pretty much anything that can help
+1:09
+showcase your skills and experiences for
+1:11
+instance if you create a 3T web
+1:13
+application on AWS you could include a
+1:15
+project section in your portfolio and
+1:17
+document it there but at this point some
+1:19
+of you might be thinking okay Lucy what
+1:21
+exactly do you mean by document what are
+1:24
+the key components I should include well
+1:26
+it's really up to you because there's no
+1:27
+one correct way of doing this but what I
+1:30
+would recommend is to start by writing a
+1:31
+summary of what you built the steps you
+1:33
+took and what services used you could
+1:35
+also include an architectural diagram
+1:37
+and any screenshots of the process and
+1:40
+if you want to go a step further one
+1:41
+more option is to create a YouTube video
+1:43
+to demonstrate how the application works
+1:45
+the main point is to make sure the
+1:47
+documentation is clear and easy to
+1:49
+understand okay let me show you some
+1:50
+examples I came across where people have
+1:52
+added Cloud projects to their portfolio
+1:54
+so this first example is from adita
+1:57
+pretama he's a site reliability engineer
+1:59
+based in Indonesia and does a really
+2:01
+good job at showcasing all of his
+2:03
+experiences in cloud and it if we click
+2:06
+on the project section you can see that
+2:07
+a data has created a list of personal
+2:09
+projects that he's worked on in the past
+2:11
+let's take a look at this AWS serverless
+2:13
+web application project so in this
+2:16
+article there's a little introduction
+2:17
+section explaining why the project was
+2:19
+built and if we scroll down a bit more
+2:22
+we can see the diagram of the
+2:24
+architecture and the services used this
+2:26
+is Then followed by a step-by-step
+2:28
+summary of how the project was built so
+2:30
+that if someone were to try and build
+2:31
+the exact same project they'll be able
+2:33
+to follow along the instructions I'll
+2:35
+leave a link down below if you'd like to
+2:37
+check out adita's website and let's move
+2:39
+on to another example of a portfolio
+2:41
+website this next example is a portfolio
+2:44
+website created by Marika Bergman Marika
+2:47
+is a freelance full stack developer and
+2:49
+on her website she documents her AWS
+2:51
+Cloud projects and certification badges
+2:53
+in the project section she highlights
+2:55
+two technical projects one of them being
+2:57
+the cloud resume challenge if we hover
+2:59
+over the box you can see that she has a
+3:01
+blog post about the project as well as
+3:03
+the front end and back end of the
+3:05
+projects stored on GitHub let's take a
+3:07
+look at her blog post about the cloud
+3:09
+resume challenge so similar to the
+3:11
+previous example Marika also shares some
+3:13
+context on why she decided to build the
+3:15
+project and she also included an
+3:17
+architectural diagram of what she built
+3:19
+but what I really like about this post
+3:21
+in particular is that she takes more of
+3:24
+a personal approach and talks about
+3:25
+things that she found challenging for
+3:27
+example having to choose between a rest
+3:29
+API and a HTTP API to create your own
+3:32
+portfolio website I'll recommend using a
+3:34
+website builder instead of trying to
+3:36
+build it from scratch so that you can
+3:37
+hover up and running much faster let me
+3:39
+show you a quick demo of how to get
+3:41
+started so I'm using hostinger one of my
+3:44
+favorite web hosting platforms and if
+3:45
+you click on the link below you'll be
+3:47
+able to get a special discount on their
+3:49
+annual subscription okay let's click on
+3:51
+claim deal and here I'd recommend going
+3:53
+with the premium web hosting option this
+3:55
+one lets you create up to 100 websites
+3:57
+and also provides you with a free custom
+3:59
+domain which I find quite useful let's
+4:01
+click add to cart and choose a period
+4:03
+I'm going to choose the 48 month option
+4:06
+since it offers the best value and also
+4:08
+because I want my websites to be up and
+4:09
+running in the long term and before you
+4:12
+make the purchase remember to use the
+4:13
+code Tech with Lucy in this coupon code
+4:15
+section over here to get an even bigger
+4:17
+discount now once you've signed up
+4:19
+you'll see this hostinger dashboard and
+4:21
+the option to claim your free domain I'm
+4:24
+going to type in Lucy awsproject.com and
+4:27
+you can choose any domain name you'd
+4:29
+like check for the availability and
+4:31
+complete registration cool so now I'm
+4:34
+ready to build my portfolio website and
+4:36
+what's really great about hostinger is
+4:38
+that they now have an AI website builder
+4:40
+option so you can just type in what
+4:42
+website you need and they will generate
+4:44
+something that's tailored to what you're
+4:45
+looking for okay so here I'll type in
+4:48
+personal portfolio website for AWS
+4:51
+projects
+4:52
+awesome so here's the website they
+4:54
+generated and I can customize it to make
+4:57
+it look exactly the way I want if you'd
+4:59
+like to build your own website using
+5:00
+hostinger you can head to hostinger.com
+5:02
+forward slash Tech with Lucy to get a
+5:04
+limited time discount on all the yearly
+5:06
+plans but yeah overall I'd highly
+5:08
+recommend building a portfolio website
+5:10
+because it would not only help you keep
+5:11
+track of everything you built but also
+5:13
+make it easier for you to present your
+5:15
+projects to potential employers the
+Method 2
+5:17
+second way to document your AWS Cloud
+5:19
+projects is by using GitHub GitHub is
+5:21
+widely used in the tech industry and is
+5:23
+a great way to document your AWS card
+5:25
+projects now instead of walking you
+5:27
+through the stages of creating a GitHub
+5:28
+account and storing your projects let me
+5:31
+show you a great example of one so here
+5:33
+we have the GitHub page of verbal Junior
+5:35
+devops engineer if we click on the
+5:37
+repositories tab you can see that he has
+5:39
+a repository named AWS projects where he
+5:42
+stores a copy of all the cloud projects
+5:44
+that he has worked on there's five Cloud
+5:45
+projects in this repo for example one of
+5:48
+them is a data migration project and
+5:51
+another is a web app project let's take
+5:53
+a look at the web app project folder and
+5:55
+see what's inside Okay cool so Robo has
+5:58
+created a web application for an example
+6:00
+organization called Holden school and
+6:02
+has packaged up his project in a cloud
+6:04
+formation template he included the
+6:06
+architectural diagram as well as
+6:07
+detailed instructions on how to
+6:09
+configure the project if you'd like to
+6:11
+check out the rest of his GitHub repo
+6:13
+I'll leave a link to it in the
+6:14
+description below now the third way to
+Method 3
+6:16
+document your AWS Cloud projects is by
+6:18
+leveraging platforms like medium and
+6:20
+Linkedin this is one of my favorite ways
+6:22
+that I've seen people document the AWS
+6:24
+Car Projects because with those
+6:25
+platforms you can reach a broader
+6:27
+audience which then of course may lead
+6:28
+to more job opportunities similar to the
+6:31
+previous two methods I would recommend
+6:32
+including a description of the project
+6:34
+the AWS Services you used as well as any
+6:37
+relevant diagrams or screenshots and
+6:39
+again don't shy away from discussing any
+6:41
+challenges you faced and how you tackled
+6:43
+them here's an example of someone who
+6:45
+followed one of my YouTube tutorials and
+6:47
+published a LinkedIn article to document
+6:48
+it so this article is written by Sachin
+6:51
+ADI and he talks about how he visualized
+6:54
+data with Amazon quickside and Amazon S3
+6:56
+at the very top of the article we can
+6:58
+straight away see the architectural
+7:00
+diagram and as we scroll down a bit more
+7:02
+we can find a step-by-step walkthrough
+7:04
+with screenshots to Showcase every stage
+7:06
+what I like about his screenshots is
+7:08
+that they provide extra detail through
+7:10
+red boxes and numbers and what that does
+7:12
+is it shows people what exactly they
+7:14
+need to click on at each step alright
+Cloud Resume
+7:16
+something we haven't covered in this
+7:17
+video yet is how to add Cloud projects
+7:19
+onto your resume this is a cloud
+7:21
+computing resume template that I've
+7:23
+shared in previous videos and I'll
+7:25
+include a link to it in the description
+7:26
+below but as you can see here all you
+7:29
+really have to do is include the name of
+7:31
+your project and a short description of
+7:33
+what you built you could also include a
+7:35
+hyperlink to your GitHub or portfolio
+7:36
+page in order to provide more details so
+7:39
+there you have it three effective ways
+7:41
+to document your AWS Cloud projects and
+7:43
+build a strong portfolio if you found
+7:44
+this video helpful please remember to
+7:46
+give it a like and as always I'll see
+7:48
+you in the comments below alright bye
+7:50
+for now
+
+
+====================================================
+
+2. The Best Cloud Projects To Get Hired For Beginners
+	- Tech with Soleyman
+
+Intro
+0:00
+best way to get hired as a cloud
+0:02
+engineer is by building Cloud projects
+0:05
+now what are the best cloud projects to
+0:07
+build this a question that I get asked
+0:09
+all of the time and one that I'm going
+0:11
+to answer in this video now most
+0:13
+beginners just build a random Cloud
+0:16
+projects they have no relevancy to what
+0:19
+they are learning the method that you
+0:21
+want to use to build Cloud projects and
+0:23
+get hired as a cloud engineer is called
+0:26
+the cloud Mac model now I know what
+0:29
+you're thinking what on Earth is the
+0:31
+cloud Mac model don't worry I'm going to
+0:34
+explain this in a second the truth is
+0:36
+that passing a cloud certification is
+0:38
+not going to get you hired in fact Cloud
+0:41
+certifications are pointless if you have
+0:44
+no practical hands-on experience because
+0:47
+being a cloud engineer is all about
+0:49
+building projects for clients to get
+0:51
+hired you have to follow the cloud Mac
+0:54
+model now I've been working in the cloud
+Certifications
+0:56
+for the past 7 years and I work for
+0:59
+myself myself as a freelance Cloud
+1:01
+engineer and I hold the solution
+1:03
+architect associate and the solution
+1:05
+architect professional AWS
+1:07
+certifications and I can tell you with
+1:09
+ease that these certifications did not
+1:12
+help me secure jobs it's actually my
+1:15
+practical and project experience that
+1:18
+took me further to get multiple job
+1:21
+offers therefore I always suggest not
+1:23
+wasting your time passing foundational
+1:25
+certifications that give you no hands-on
+1:28
+experience and as a beginner looking to
+The Cloud Mac Model
+1:30
+break into the cloud you have to focus
+1:33
+on building Cloud projects now I'm going
+1:36
+to share the best cloud projects to get
+1:38
+hired for cloud Engineers but before I
+1:40
+do that you should check out my weekly
+1:43
+Cloud newsletter where I share free
+1:45
+resources tutorials boot camps and so
+1:48
+much more to help you make your Cloud
+1:50
+move so what is the cloud Mac model this
+1:54
+model is the way to actually build
+1:57
+projects and get hired not only am I
+1:59
+going to tell you what this model is but
+2:01
+I'm also going to give you the seven
+2:03
+best cloud projects to build as a cloud
+2:06
+engineer to get hired and trust me once
+2:09
+these interviewers see the projects that
+2:11
+you've built they will hire you in no
+2:14
+time now being a cloud engineer means
+2:16
+that you work across the board and you
+2:18
+mix and match different skills together
+2:20
+from cloud architecture cicd infrastruct
+2:24
+code server management networking
+2:27
+security and more you are the back of
+2:30
+all trades and you can do it all it's
+2:32
+obviously going to take time for you to
+2:34
+be able to do all of this but you need
+2:35
+to start somewhere therefore you have to
+2:38
+build a portfolio of projects that are
+2:40
+more than just beginner friendly and
+2:41
+expose you to these different Cloud
+2:44
+Concepts and tooling so take that into
+2:46
+account and here are the projects that
+2:48
+you should build now the cloud Mac model
+2:50
+is focused on building Cloud projects
+2:52
+you want to think and design how you can
+2:54
+use different cloud services together to
+2:56
+build Solutions this is what you would
+2:58
+do within your cloud engineer job
+3:01
+working with customers when you are
+3:02
+starting out focus on the breadth of
+3:05
+services to build projects so you can
+3:07
+get exposed to as many cloud services as
+3:10
+possible and then be able to connect
+3:13
+them together the cloud Mac model is all
+3:15
+about putting into practice the theory
+3:18
+that you are learning don't just watch
+3:20
+tutorials start right away using what
+3:23
+you've learned and apply them to
+3:25
+projects and just for Simplicity as I
+3:28
+have an AWS background I'm I'm going to
+3:30
+focus these Cloud projects onto AWS but
+3:32
+they are applicable for all Cloud
+3:34
+platforms some of these projects are
+3:37
+Advanced and I don't expect you to be
+3:38
+able to complete them but you just have
+3:40
+to try and see how far you can go to
+3:43
+building more complex projects because
+3:45
+you will learn a lot more doing the hard
+3:48
+things than the other advice out there
+3:50
+on YouTube which is to host a static
+3:53
+website using the console that's
+3:55
+something you will never do as a cloud
+3:58
+engineer working in an actual job one of
+Cloud Architecture
+4:01
+the best projects to always start with
+4:03
+is an architecture focused project
+4:05
+architecture is simply the most
+4:07
+important part of any project it's the
+4:09
+floor plan of the solution that you're
+4:12
+building it breaks down the different
+4:13
+components and layers of the problem
+4:16
+that you're solving using cloud services
+4:19
+a great Cloud architecture project to
+4:21
+work on is designing a highly available
+4:23
+and scalable architecture that can host
+4:26
+a web application like a react app you
+4:29
+also want to add a database layer that
+4:31
+your react app interacts with firstly
+4:33
+you want to research into what makes a
+4:35
+cloud architecture highly available and
+4:37
+scalable and then you want to apply
+4:39
+those Concepts into your architecture
+4:41
+the best part of cloud architecture is
+4:43
+there's no one site fit Source solution
+4:46
+you can design an architecture for a web
+4:48
+application in so many ways using lots
+4:51
+of different AWS services for example
+4:53
+you first need to think about the
+4:55
+networking layer and then your
+4:56
+application layer and then your database
+4:59
+layer I also recommend documenting every
+5:02
+single project that you're working on
+5:04
+and using it to Showcase all future
+5:06
+employers and there are so many design
+5:08
+tools that you can use to build this
+5:10
+Cloud architecture I use exal draw and
+5:13
+it's my go-to for any Cloud design work
+Cloud Infrastructure
+5:16
+the next Cloud project that you should
+5:17
+build to get hired as a cloud engineer
+5:20
+is getting started and building with
+5:22
+infrastructures code tools like
+5:24
+terraform this is because for all
+5:27
+upcoming projects I'm going to share you
+5:29
+you do not want to click and create the
+5:31
+cloud services on the cloud console
+5:34
+everything you build needs to be via
+5:36
+code and terraform is the most popular
+5:38
+infrastructur code tool out there this
+5:41
+will help you prepare for your actual
+5:43
+job and develop your handson Cloud
+5:46
+engineering skills with infrastructures
+5:48
+code you can repeatedly and reliably
+5:50
+deploy entire infrastructures without
+5:54
+manual errors for beginners this
+5:56
+consistency is invaluable ensuring that
+5:59
+you can can recreate environments for
+6:01
+testing and learning without any
+6:03
+discrepancies one of terraforms standup
+6:05
+features is its ability to work across
+6:08
+various Cloud platforms AWS gcp and
+6:13
+Azure for beginners this means that they
+6:15
+can learn one tool but apply their
+6:17
+knowledge across multiple Cloud
+6:19
+environments making them more versatile
+6:21
+as Cloud Engineers although I recommend
+6:24
+picking AWS cloud and building
+6:26
+infrastructure with terraform onto that
+6:28
+cloud infr structure is complex and
+6:30
+there are hundreds of services available
+6:33
+but having a structured code driven
+6:35
+approach to provisioning and managing
+6:37
+infrastructure is a game changer and I
+6:40
+recommend First Learning terraform
+6:42
+syntax and then looking at how to use it
+6:45
+and apply it with AWS and making use of
+6:48
+the most common AWS services like VPC S3
+6:53
+ec2 and I am now if you want to get
+6:55
+started with the cloud and become a
+6:57
+cloud engineer then you should check out
+6:59
+my cloud engineer handbook where I'll
+7:02
+provide you with a structured way of
+7:04
+learning projects to build and guiding
+7:07
+you to go from zero to Cloud engineer
+7:10
+hero covering the fundamentals tools
+7:12
+Technologies to learn and become a cloud
+7:15
+engineer through texts diagrams and
+7:18
+short videos right now it's a 50%
+7:21
+discount for pre-order so move fast
+7:24
+before the actual launch price I drop
+Networking Layer
+7:26
+the link in the video description below
+7:27
+the next Cloud project that you should
+7:29
+be able to get hired as a cloud engineer
+7:31
+is creating a networking layer using
+7:33
+terraform networking is the backbone of
+7:36
+any Cloud infrastructure by setting up a
+7:39
+VPC subnet and routing you're
+7:41
+essentially building the foundational
+7:43
+layer upon which all the other cloud
+7:46
+services operate on and demonstrating a
+7:48
+solid understanding of these
+7:50
+fundamentals is vital for any Cloud
+7:52
+engineering role using terraform to
+7:54
+script and manage your networking layer
+7:57
+reinforces the principles of
+7:59
+infrastructure as code this shows
+8:01
+employers that not only do you
+8:03
+understand Cloud networking but you also
+8:05
+know how to manage it as code which is a
+8:07
+well- needed skill in the modern Cloud
+8:10
+engineering world the networking layer
+8:12
+will be part of your Cloud architecture
+8:14
+in Project one therefore you can then go
+8:17
+ahead and build it with using
+8:19
+infrastructures code for example for
+8:21
+this project you want to build a VPC
+8:24
+create availability zones Define free
+8:26
+subnets in each availability Zone update
+8:29
+the rotables to allow communication
+8:31
+between the subnets and finally when you
+8:34
+deploy your ec2 or your beant stalk
+8:37
+service you can also update the security
+8:40
+groups for those instances Now by
+8:42
+defining free subnets in each
+8:44
+availability Zone you're essentially
+8:46
+setting up the structure that supports
+8:48
+High availability and fault tolerance
+8:50
+this reflects your understanding of
+8:52
+Designing robust and resilient Cloud
+8:54
+infrastructures now the next Cloud
+Web Application
+8:56
+project that you should build to get
+8:58
+hired as a Cloud engineer is deploying a
+9:01
+web application and you can do this
+9:03
+using the AWS elastic beant stalk
+9:06
+service which automates the process of
+9:08
+deploying scaling and managing web
+9:10
+applications and services whilst elastic
+9:13
+beant stalk abstracts a lot of the
+9:15
+underlying infrastructure you still get
+9:18
+exposed to various AWS services like ec2
+9:22
+RDS S3 and cloudwatch under the hood
+9:25
+giving you a real taste of the AWS
+9:28
+ecosystem you can create a simple react
+9:31
+app boiler plate and deploy it onto
+9:33
+beant don't forget to create the beant
+9:35
+stalk service with terraform and not
+9:38
+using the AWS console this project is a
+9:41
+nice intro into hosting applications on
+9:44
+AWS and it's one of the ways that you
+9:46
+can do this the next Cloud project that
+9:49
+you should build to get hired as a cloud
+9:51
+engineer is containerizing an
+9:53
+application containerization has become
+9:55
+one of the most core ways to ensure
+9:58
+consistent environment IR Ms from
+9:59
+development to production by packaging
+10:02
+your application and its dependencies
+10:04
+into a container you're essentially
+10:06
+creating a portable unit that you can
+10:08
+run reliably across multiple Computing
+10:12
+environments now the good thing is you
+10:13
+can just containerize your react app
+10:16
+using Docker and just deploy it onto AWS
+10:19
+containerization carries many principles
+10:21
+of cloud engineering values efficiency
+10:24
+consistency repeatability and
+10:26
+scalability as Cloud platforms continue
+10:28
+to evolve it's clear that containers
+10:31
+will be a big part of how applications
+10:33
+are developed deployed and managed in
+10:36
+the cloud therefore working with
+10:37
+containers is key as a cloud engineer
+10:39
+and this is a slightly Advanced project
+10:42
+but don't worry when you getting started
+10:44
+as a beginner you want to get familiar
+10:46
+with as much as possible and practice
+10:48
+your Hands-On Cloud skills now the next
+10:51
+Cloud project that you should build is a
+10:53
+big part of a cloud engineer role and
+10:55
+that is building a cicd pipeline now
+10:58
+there are many many cicd pipeline tools
+11:01
+that you can use such as genkins gitlab
+11:04
+GitHub actions and I'm most familiar
+11:06
+with GitHub actions and AWS code
+11:09
+pipeline for this project you want to
+11:10
+create a continuous integration and
+11:12
+continuous deployment pipeline that
+11:14
+automates to build the test and the
+11:16
+deployment process for your application
+11:19
+using GitHub actions and AWS code
+11:21
+pipeline again you can just use your
+11:23
+react app and build a cicd pipeline to
+11:27
+deploy it onto your beant stalk server
+11:29
+in AWS cicd is crucial for software
+11:32
+development teams allowing them to
+11:33
+automate test and deploy and resting a
+11:36
+quicker and more reliable releases
+11:39
+learning how to set up cicd Pipeline
+11:41
+with AWS and gearhub actions is highly
+11:44
+valuable for cloud Engineers working in
+11:46
+cloud and software environments the next
+Text to Speech
+11:49
+Cloud project to get hired as a cloud
+11:51
+engineer is a text to speech converter
+11:54
+using AWS Lambda and AWS poly a powerful
+11:58
+textto speech conversion service this
+12:00
+project allows you to create an
+12:02
+application that can transform written
+12:05
+text into natural sounding spoken audio
+12:08
+in multiple languages and voices
+12:11
+developing a text to speech converter is
+12:13
+not only valuable as a skill but also a
+12:16
+feature in high demand for modern
+12:18
+applications and websites learning the
+12:20
+capabilities of AWS Lambda and AWS poly
+12:23
+provides you with hands-on experience
+12:25
+using AI powered services for practical
+12:28
+application
+12:29
+Lambda is also super popular and I think
+12:32
+the future of cloudware applications AWS
+12:35
+Lambda is also one of the most common
+12:37
+services and a service that I see being
+12:40
+used in almost every single project that
+12:43
+I've worked with and it's super cool and
+12:45
+a serverless AWS service and one that
+12:49
+you should definitely get familiar with
+12:51
+the next Cloud project to get hired as a
+12:53
+cloud engineer is a cloudbased chatbot a
+12:56
+chatbot is an AI software that can
+12:58
+simulate a conversation with users in a
+13:01
+natural language just like how we are
+13:03
+speaking right now by using AWS Lex
+13:06
+you'll be creating a chatbot that can
+13:08
+recognize the intent of the user's input
+13:10
+and respond appropriately AWS Lex
+13:13
+actually provides a deep learning
+13:15
+functionality of automatic speech
+13:17
+recognition for converting speech to
+13:19
+text now once you've created your chat B
+13:21
+you can actually integrate this into a
+13:23
+website mobile app or other platforms
+13:25
+using the AWS cdk now creating a chat
+13:28
+what introduces you to the concepts of
+13:31
+AI and ml especially in the realm of
+13:34
+natural language processing for a cloud
+13:36
+engineer understanding how these
+13:38
+Services work is crucial as Ai and ml is
+13:42
+rapidly growing in the cloud remember
+13:44
+this will be a difficult project but
+13:46
+even attempting this is a credit to you
+13:49
+and you should document how you've done
+13:50
+it also don't get discouraged if you
+13:52
+can't finish it you want to throw
+13:54
+yourself in the deep end and see how far
+13:57
+you can go building Cloud projects now
+13:59
+those were the seven Cloud projects to
+14:02
+get you hired as a cloud engineer drop a
+14:04
+comment below which project that you're
+14:06
+doing first and as always thank you so
+14:08
+much for watching and I'll see you on
+14:11
+the next
+14:15
+[Music]
+14:27
+one
+
+====================================================

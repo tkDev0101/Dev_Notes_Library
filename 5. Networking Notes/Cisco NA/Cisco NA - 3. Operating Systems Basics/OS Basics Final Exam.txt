@@ -1,0 +1,295 @@
+Operating Systems Basics Final Exam
+
+
+------------------------------------
+
+ • Welcome to the Operating Systems Basics Final Exam.
+ • This assessment covers the core concepts and skills presented in the Operating Systems Basics (OSB) course.
+ • There are 30 questions in total. You must achieve 70% to pass this exam.
+ • You have unlimited attempts to pass the exam. Feedback is provided to direct you to areas that may require additional attention.
+ • Cisco Networking Academy content is copyrighted and the unauthorized posting, distribution or sharing of this exam content is prohibited.
+
+
+
+→
+
+ • 
+   -> 
+
+------------------------------------
+
+Question 1
+Match the tabs of the Windows 10 Task Manager to their functions.
+
+ - Performance		- 
+ - Startup		- 
+ - Services		- 
+ - Details		- 
+
+
+
+Question 2
+A technician notices that an application is not responding to commands and that the computer seems to respond slowly when applications are opened. What is the best administrative tool to force the release of system resources from the unresponsive application?
+
+ - Task Manager
+ - Use the Task Manager Performance tab to see a visual representation of CPU and RAM utilization. This is helpful in determining if more memory is needed. Use the Applications tab to halt an application that is not responding.
+
+
+Question 3
+Which two commands could be used to check if DNS name resolution is working properly on a Windows PC? (Choose two.)
+
+ - nslookup cisco.com
+ - ping cisco.com
+ - The ping command tests the connection between two hosts. When ping uses a host domain name to test the connection, the resolver on the PC will first perform the name resolution to query the DNS server for the IP address of the host. If the ping command is unable to resolve the domain name to an IP address, an error will result.
+
+Nslookup is a tool for testing and troubleshooting DNS servers.
+
+
+Question 4
+What would be a reason for a computer user to use the Task Manager Performance tab?
+
+ - to check the CPU usage of the PC
+ - The Performance tab is commonly used to check current computer performance. Two key areas that are shown are memory and CPU usage.
+
+
+Question 5
+A technician has installed a third party utility that is used to manage a Windows 7 computer. However, the utility does not automatically start whenever the computer is started. What can the technician do to resolve this problem?
+
+ - Change the startup type for the utility to Automatic in Services.
+ - The Services console in Windows OS allows for the management of all the services on the local and remote computers. The setting of Automatic in the Services console enables the chosen service to start when the computer is started.
+
+
+Question 6
+What are two advantages of the NTFS file system compared with FAT32? (Choose two.)
+
+ - NTFS provides more security features.
+ - NTFS supports larger files.
+ - The file system has no control over the speed of access or formatting of drives, and the ease of configuration is not file system-dependent.
+
+
+Question 7
+A PC user issues the netstat command without any options. What is displayed as the result of this command?
+
+ - a list of all established active TCP connections
+ - When used by itself (without any options), the netstat command will display all the active TCP connections that are available.
+
+
+Question 8
+Match the Linux command to the function.
+
+ - ps
+ - sudo
+ - chmod
+ - pwd
+
+
+Question 9
+What is the outcome when a Linux administrator enters the man man command?
+
+ - The man man command provides documentation about the man command
+ - The man command is short for manual and is used to obtain documentation about a Linux command. The command man man would provide documentation about how to use the manual.
+
+
+Question 10
+What term describes a set of software tools designed to increase the privileges of a user or to grant access to the user to portions of the operating system that should not normally be allowed?
+
+ - rootkit
+ - A rootkit is used by an attacker to secure a backdoor to a compromised computer, grant access to portions of the operating system normally not permitted, or increase the privileges of a user.
+
+
+Question 11
+Match the commonly used ports on a Linux server with the corresponding service.
+
+ - 53		- DNS
+ - 23		- Telnet
+ - 25		- SMTP
+ - 443		- HTTPS
+
+
+Question 12
+Which two options are window managers for Linux? (Choose two.)
+
+ - Gnome
+ - KDE
+ - The X Window System provides the basic framework for a GUI, but the GUI itself varies greatly between different distributions. Two window managers are Gnome and KDE.
+
+
+Question 13
+Match typical Linux log files to the function.
+
+ - /var/log/messages
+ - /var/log/secure
+ - /var/log/auth.log
+ - /var/log/dmesg	
+
+
+Question 14
+Consider the result of the ls -l command in the Linux output below. What are the file permissions assigned to the sales user for the analyst.txt file?
+
+ls –l analyst.txt
+-rwxrw-r-- sales staff 1028 May 28 15:50 analyst.txt
+
+ - read, write, execute
+ - The file permissions are always displayed in the User, Group and Other order. In the example displayed, the file has the following permissions:
+	 • The dash (-) means that this is a file. For directories, the first dash would replaced with a "d".
+	 • The first set of characters is for user permission (rwx). The user, sales, who owns the file can read, write and execute the file.
+	 • The second set of characters is for group permissions (rw-). The group, staff, who owns the file can read and write to the file.
+	 • The third set of characters is for any other user or group permissions (r--). Any other user or group on the computer can only read the file.
+
+
+Question 15
+A client device has initiated a secure HTTP request to a web browser. Which well-known port address number is associated with the destination address?
+
+ - 443
+ - Port numbers are used in TCP and UDP communications to differentiate between the various services running on a device. The well-known port number used by HTTPs is port 443.
+
+
+Question 16
+A salesperson wants to embed the location on a digital photograph to record where it was taken. What technology, product, or setting allows this task to be accomplished?
+
+ - geotagging
+
+
+Question 17
+Which protocol enables mail to be downloaded from an email server to a client and then deletes the email from the server?
+
+ - POP3
+ • With POP, mail is downloaded from the server to the client and then deleted on the server.
+ • SMTP is used for sending or forwarding email.
+ • Unlike POP, when a user connects via IMAP, copies of the messages are downloaded to the client application and the original messages are kept on the server until manually deleted.
+ • HTTP is used for web traffic data and is considered insecure.
+
+
+Question 18
+A user wants to synchronize some apps, movies, music, and ebooks between mobile devices. What are the two types of connections used to synchronize this type of data? (Choose two.)
+
+ - Wi-Fi
+ - USB
+ - Because of the amount of data transferred during video synchronization, synchronization occurs through either a Wi-Fi connection or a wired USB connection.
+
+
+Question 19
+What are three reasons that users of iOS devices might use iCloud? (Choose three.)
+
+ - to store documents and photos on remote servers
+ - to make a backup copy of all of the data on their mobile device
+ - 
+ - An Apple ID allows a user to create an iCloud email account. iCloud can be used to store personal documents, music, and photos. iCloud is also used for device synchronization and backup copies of personal data in case the mobile device is damaged or lost.
+
+
+Question 20
+A traveling sales representative uses a cell phone to interact with the home office and customers, track samples, make sales calls, log mileage, and upload/download data while at a hotel. Which internet connectivity method would be a preferred method to use on the mobile device due to the low cost?
+
+ - Wi-Fi
+ - Mobile devices typically use either the cellular network or a Wi-Fi network to connect to the internet. The Wi-Fi connection is preferred because it uses less battery power and is free in many places.
+
+
+Question 21
+Which cellular technology supports speeds up to 20 Gbps?
+
+ - 5G
+ - Cellular technology standards are 1G, 2G, 3G, 4G, LTE, and 5G. 5G technology supports speeds up to 20 Gbps and is more efficient.
+
+
+Question 22
+Which two tasks can be done with the iOS device Home button? (Choose two.)
+
+ - return to the home screen
+ - wake the device
+ - The physical Home button on an iOS device can perform many functions depending on how it is used. Pressing the button while the device screen is turned off will wake the device. While an app is in use, pressing the Home button will return the user to the Home screen.
+
+
+Question 23
+An employee wants to keep a local backup of iPhone data on a Windows laptop. What type of software does the employee need on the laptop to create this backup?
+
+ - iTunes
+ - Apple mobile devices can be backed up to a Windows PC or Laptop. iOS supports backups on iTunes running on a PC.
+
+
+Question 24
+What are two potential risks that could result from rooting or jailbreaking a mobile device? (Choose two.)
+
+ - not properly creating or maintaining sandboxing features
+ - enabling app access to the root directory
+ - Rooting and jailbreaking mobile devices allows customization of the OS which enables user and app access to the root directory. In addition, rooting and jailbreaking may cause a device to not properly create or maintain sandboxing features. Both of these can create security risks to the device. The three incorrect options are all considered potential benefits of rooting and jailbreaking mobile devices
+
+
+
+Question 25
+Which navigation icon on the system bar of an Android device is used to return to the previous screen?
+
+ - Back
+ - The Back icon, if pressed, returns to the previous screen.
+
+
+Question 26
+Which two location-specific services can the GPS feature on a mobile device offer? (Choose two.)
+
+ - delivering local advertising
+ - 
+ - GPS services allow app vendors and websites to know the location of a device and offer location-specific services such as local weather and advertising.
+
+
+Question 27
+Android apps run primarily based on privileges enabled by the user. Sometimes an Android app requires extra privileges to access system components. How do Android apps run to accomplish both situations?
+
+ - Android apps run in a sandbox.
+ - Android apps run in a sandbox and have only the privileges enabled by the user. If an app needs to obtain permissions, a prompt will appear and the user can grant permissions through settings.
+
+
+Question 28
+Which statement describes the Touch ID in iOS devices?
+
+ - It is the hash value of the user fingerprint.
+ - Apple uses a technology known as Touch ID in which the user sets up a template fingerprint scan that is converted into a unique hash and stored within a secure cache on the iOS device. The hash is used to authenticate with the user.
+
+
+Question 29
+What is the purpose of running mobile device apps in a sandbox?
+
+ - to prevent malicious programs from infecting the device
+ - Mobile device apps are run in a sandbox that isolates them from other resources. Bypassing the phone carrier from preventing access to unauthorized apps is jailbreaking or rooting the device.
+
+
+Question 30
+What are two features of the Android operating system? (Choose two.)
+
+ - Android is open source and allows anyone to contribute to its development and evolution.
+ - Android has been implemented on devices such as cameras, smart TVs, and e-book readers.
+ - As an open source operating system, Android allows anyone to contribute to the development and evolution of compatible software. Android has been implemented on a wide range of devices and platforms including cameras, smart TVs, and e-book readers. Royalties are not payable to Google, and Google has not tested and approved all available Android applications. Android applications are available from a range of sources.
+
+
+
+
+
+ - 
+ - 
+
+
+
+
+
+ - 
+ - 
+
+
+
+
+
+ - 
+ - 
+
+
+
+
+
+
+
+
+=======================================================================
+
+
+
+
+
+

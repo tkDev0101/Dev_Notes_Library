@@ -1,0 +1,51 @@
+Cisco NA - Operating Systems Basics Overview
+
+
+God be with us
+
+Syabonga.
+
+OS Basics Badge: 
+https://www.credly.com/badges/e165a4ab-fca1-4a4a-a95b-1eae302a9f9a
+
+
+
+🎉 Another Step Forward on My DevOps Journey! 🎉
+
+I'm excited to share that I’ve completed the Cisco Networking Academy - Operating Systems Basics course and earned my Certificate of Completion & Badge! 🏅
+
+This course helped me strengthen my foundational knowledge of operating systems—including Windows, Linux, mobile OS, and essential topics like security, network configuration, and device connectivity.
+
+This achievement is part of my ongoing learning path toward becoming a DevOps Engineer, where a strong understanding of operating systems, cloud platforms, and automation is crucial.
+
+Proud to keep growing and building skills in DevOps, Cloud Computing, and Azure!
+
+#DevOps #DevOpsEngineer #CloudComputing #Azure #Linux #Windows #CiscoNetworkingAcademy #TechLearning #CareerGrowth #ITSkills #OperatingSystems #MicrosoftAzure #CloudJourney #FutureInTech
+
+
+
+
+
+
+Every smart device uses an operating system (OS) - smart devices like personal computers, smartphones, game consoles, smart TVs, and the list continues. 
+Whether the OS used is Windows, Linux, macOS, Android, or iOS, knowing how it works is a key digital skill you will need. 
+Take this course to build your foundational knowledge for success in any IT career.
+
+Operating Systems Basics teaches the fundamentals of operating systems. 
+It covers basic concepts and skills needed to understand the purpose and characteristics of operating systems, the implementation of basic OS security, and how to configure mobile device network connectivity and email.
+
+Module 1: The Windows Operating System
+Module 2: Linux Overview
+Module 3: Mobile Device Connectivity
+Module 4: Mobile Operating Systems and Security
+Operating Systems Basics Final Exam
+
+
+
+=======================================================================
+Operating Systems Basics FINAL EXAM
+
+
+
+
+=======================================================================

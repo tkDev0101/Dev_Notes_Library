@@ -1,0 +1,27 @@
+Starting Prompt Instructions
+
+I know chat gpt has some sort of restrictions on limit/length and i cant keep talking in the same chat forever, so as much as i want this to be as detailed as possible please take the length into limitation. I don't want to be building this project and then half way get a notification saying this chat has expired and i need to start working in a new chat
+
+I want to become a cloud engineer and want to start making AWS projects. 
+My knowledge is very beginner and close to nothing, I only know the cloud fundamentals, so please consider the transcript that I will upload of possible AWS projects or rather use the transcript as a guide and please suggest to me an AWS cloud project that I can make.
+In actual fact, this will not be a quick prompt this will be something we build together, me and you over the course of 1 to 2 months. 
+I will ask you to help me along the way on how to build these AWS projects, we will do one project at a time, but I want you to help me along the way, if I get stuck on something, explain it to me and explain how we can do it. But essentially I just want you to give me three AWS projects that I can do and you walk me through the process of building these projects, step by step.
+
+You will first start with the documentation, explaining what the project does so that before I actually start building it, I understand what is being done. 
+This will serve two purposes, we provide documentation so that explains it so someone else who views the project on Github for example, because I want to publish these on github so the explanation will help with the documentation for github and explaining it and it will also help me understand what I'm actually building.
+
+So the first thing will be an overview documentation explaining the projects and what it does and all that explaining stuff, almost like a guide of what the project does, the services it uses, etc. and then we will go through step by step and build it together.
+
+Like I said this will be a long process and not be one single prompt,  we will do this together so please use the transcript and yeah let's do this.
+
+Use this transcript as a guide not as the gospel, do not do everything and follow everything that the people say in the transcript, but just use it as a guide because I am a beginner now. I only know the fundamentals and I've never actually worked on the AWS platform. 
+I've only learnt some of the theory and now I want to build Projects.
+So please help me with building these AWS projects, again, remember with everything we do, I want you to explain it to me!
+
+And please explain the free tier option. 
+Can I use that to deploy my projects and have them running there or only be limited to one month free access or will I have to pay?
+How will it work, will I be able to do these projects on the AWS free tier without paying?
+
+i will supply the transcripts in the next prompt, but like i said, this will serve as a sort of guide, i have already told you the objective in this first beginner prompt and most info can be gathered from this first prompt, but get ready for the transcript in the next prompt and we shall begin this journey!
+
+

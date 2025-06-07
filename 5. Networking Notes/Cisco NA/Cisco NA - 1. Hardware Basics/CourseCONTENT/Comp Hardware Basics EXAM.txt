@@ -1,0 +1,482 @@
+Networking Basics EXAM
+
+
+Question 1
+Which two computer components require separate cabling for power? (Choose two.)
+
+
+wireless network adapter
+
+USB keyboards
+
+done
+case and CPU fans
+
+done
+internal SATA hard drives
+
+USB flash drives
+Case and CPU fans, and internal hard drives require separate power cabling from the motherboard. Wireless network adapters, keyboards, and USB flash drives do not require separate power connections.
+
+Question 2
+Which three PC desktop functions are typically provided on the front panel and must be connected to the motherboard? (Choose three.)
+
+
+network activity light
+
+done
+PC power button
+
+done
+drive activity light
+
+done
+USB connectors
+
+CPU temperature indicator
+
+audio power button
+USB connectors, PC power button, and drive activity light are the most common PC front panel functions. If available, the network activity light, CPU temperature indicator, and audio power button are not typically located on the front panel of the computer.
+
+Question 3
+When a PC is being assembled, which component is connected to the motherboard with a SATA data cable?
+
+
+the power supply
+
+done
+the internal solid-state drive
+
+the video card
+
+the network interface card
+Internal SSD and HDD storage drives connect to the motherboard with a SATA data cable. Video cards and network interface cards connect to the motherboard through expansion slots. The power supply does not usually have a data connection to the motherboard.
+
+Question 4
+Which statement describes the proper use of an anti-static wrist strap?
+
+
+An anti-static wrist strap should not be used in conjunction with an antistatic mat.
+
+For optimum grounding, the clip should be attached to a painted section of the computer case.
+
+done
+An anti-static wrist strap should make contact with the skin.
+
+The anti-static wrist strip should not be attached to any grounded object.
+ESD can cause permanent damage to electrical components. An anti-static wrist strap must be worn and grounded when working on a PC. Computer case paints may not be conductive and thus it is better to ground the bare section of a computer case.
+
+Question 5
+What is the purpose of thermal paste being applied to the top of the CPU when the heatsink and CPU fan are being installed?
+
+
+done
+to improve the transfer of heat from the CPU to the heatsink
+
+to ensure that the heatsink adheres to the CPU
+
+to make it easier to remove and clean the heatsink
+
+to simplify aligning the heatsink and fan with the mounting screws
+The application of thermal paste to the top of the CPU improves the transfer of heat from the CPU to the heatsink.
+
+Question 6
+Which sequence of steps is required to correctly install a heat sink and fan assembly onto a CPU in a desktop PC?
+
+
+done
+1. Apply a small amount of thermal compound to the CPU.
+2. Align the heat sink and fan assembly retainers with the holes on the motherboard.
+3. Place the fan and heat sink assembly onto the CPU socket.
+4. Tighten the fan and heat sink assembly retainers to secure the assembly in place.
+5. Connect the assembly power cable to the CPU fan connector on the motherboard.
+
+1. Connect the assembly power cable to the CPU fan connector on the motherboard.
+2. Align the heat sink and fan assembly retainers with the holes on the motherboard.
+3. Place the fan and heat sink assembly onto the CPU socket.
+4. Tighten the fan and heat sink assembly retainers to secure the assembly in place.
+5. Place the correctly aligned CPU gently into the socket.
+
+1. Place the correctly aligned CPU gently into the socket.
+2. Align the heat sink and fan assembly retainers with the holes on the motherboard.
+3. Place the fan and heat sink assembly onto the CPU socket.
+4. Tighten the fan and heat sink assembly retainers to secure the assembly in place.
+5. Connect the assembly power cable to the CPU fan connector on the motherboard.
+
+1. Apply a small amount of thermal compound to the CPU.
+2. Align the heat sink and fan assembly retainers with the holes on the motherboard.
+3. Place the correctly aligned CPU gently into the socket.
+4. Tighten the fan and heat sink assembly retainers to secure the assembly in place.
+5. Connect the assembly power cable to the CPU fan connector on the motherboard.
+The CPU must be securely installed in its socket on the mother board before the thermal paste is applied, the heat sink and fan assembly is installed, and the fan is connected to the CPU fan power connector on the motherboard.
+
+Question 7
+Refer to the exhibit. Which type of expansion slot is shown?
+
+
+AGP
+
+PCI
+
+PCIe x16
+
+close
+memory
+The four expansion slots shown in the exhibit from left to right are the PCIe x1, PCI, PCIe x16, and PCIx1.
+
+
+Question 8
+Which component requires a technician to install screws externally through the PC case?
+
+
+RAM
+
+CPU
+
+motherboard
+
+done
+power supply
+The power supply commonly has four screws that attach from outside the case through case holes into screw holes on the power supply.
+
+Question 9
+What are three important considerations when installing a CPU on a motherboard? (Choose three.)
+
+
+done
+Antistatic precautions are taken.
+
+done
+The CPU is correctly aligned and placed in the socket.
+
+The CPU contacts are first cleaned with isopropyl alcohol.
+
+done
+The CPU heat sink and fan assembly are correctly installed.
+
+The CMOS EPROM battery is removed prior to installing the CPU.
+
+Maximum insertion force is applied to the load lever so the CPU is locked in place.
+The CPU is sensitive to static discharges. Its pins are very delicate and it works at high temperatures, so precautions must be taken. If the CPU has been used in another machine or if the fan is being replaced, you might need to remove the old thermal compound using isopropyl alcohol (not on the CPU contacts). The battery does not need to be removed from the motherboard during the CPU installation. This would cause the saved BIOS settings to be lost. Minimum force should be needed to lock the CPU load lever into place.
+
+Question 10
+Which statement describes the purpose of an I/O connector plate?
+
+
+done
+It makes the I/O ports of the motherboard available for connection in a variety of computer cases.
+
+It plugs into the motherboard and expands the number of available slots for adapter cards.
+
+It provides multiple connections for SATA hard drives to connect to the motherboard.
+
+It connects the PCIe adapter slots used for video directly to the CPU for faster processing.
+The I/O plate connects to the back of the case and has holes for each of the ports on the motherboard to push through, allowing the motherboard to be used in many different cases regardless of the number of ports on the board or their layout.
+
+Question 11
+Why are SODIMMs well suited for laptops?
+
+
+done
+They have a small form factor.
+
+They connect to external ports.
+
+They do not produce heat.
+
+They are interchangeable with desktops.
+Small Outline Dual In-line Memory Modules, or SODIMMs, are designed for the space restrictions of laptops.
+
+Question 12
+A user needs to connect a Bluetooth device to a laptop. Which type of cable is needed to accomplish this?
+
+
+done
+None. Bluetooth connections are wireless.
+
+VGA cable
+
+USB cable
+
+EIA/TIA 232 cable​
+
+Parallel cable
+Bluetooth technology is wireless and a Bluetooth device can be used to connect up to seven other devices over a short distance.
+
+Question 13
+A technician needs to configure a Bluetooth headset for a laptop user. Which two steps should the technician take before installing the headset? (Choose two.)
+
+
+Remove the battery.
+
+Disconnect AC power.
+
+done
+Enable Bluetooth in BIOS Setup.
+
+Ensure that the antistatic wrist strap is attached to a nonpainted portion of the laptop.
+
+done
+Ensure that the laptop Bluetooth switch is enabled.
+When attaching any wireless device to a laptop, power does not have to be removed (either AC or the DC battery). Also, you do not have to worry about ESD when installing a wireless device.
+
+Question 14
+What information may be requested when pairing devices over Bluetooth?
+
+
+done
+a PIN
+
+the SSID
+
+an IP address
+
+a username
+During the pairing process, a personal identification number (PIN) may be requested for authentication.
+
+Question 15
+Which laptop Wi-Fi adapter type is commonly used in smaller mobile devices?
+
+
+close
+Mini-PCI
+
+Mini-PCIe
+
+PCI Express Micro
+
+USB
+The PCI Express Micro cards have 54 pins and support all wireless standards. These cards do not use the old PC card slot like the older cellular WAN cards. These cards are commonly found in smaller mobile devices as they are half the size of Mini-PCIe cards. USB is not commonly used for wireless adapters on small mobile devices, and Mini-PCI is older technology used for laptops.
+
+Question 16
+A landscape photographer is taking pictures in a countryside location and needs to send some pictures already processed on the laptop to the hiring agency. Which technology would allow the laptop to access the internet to complete the task?
+
+
+satellite connection
+
+done
+tethering through a smartphone
+
+DSL connection through a modem
+
+WAN connection through a Wi-Fi network
+A countryside location is unlikely to have common internet connections, such as Wi-Fi, DSL, and cable. A smartphone can provide the laptop internet access via tethering. Internet access through satellite is possible. However, the upload speed through a satellite connection is very much limited.
+
+Question 17
+Which two internal expansion slots in laptops are commonly used to install wireless adapter cards? (Choose two.)
+
+
+done
+Mini-PCIe
+
+done
+PCI Express Micro
+
+PCI
+
+PCIe
+
+ISA
+PCI and PCIe slots are found on desktop motherboards. ISA slots are found on older desktop motherboards. Laptops support Mini-PCI, Mini-PCIe, and PCI Express Micro which can be used to support wireless adapters.
+
+Question 18
+Which type of networking technology is used to share an Internet connection wirelessly between two mobile devices?
+
+
+Ethernet
+
+done
+Bluetooth
+
+Cellular
+
+Satellite
+Bluetooth tethering is a convenient way to share an Internet connection wirelessly between multiple mobile devices or between a mobile device and a computer.
+
+Question 19
+A technician has installed a wireless Ethernet card in a Windows 7 laptop. Where would the technician configure a new wireless connection?
+
+
+done
+Control Panel > Networking and Sharing Center > Set up a new connection or network
+
+Control Panel > Administrative Tools > Services
+
+Control Panel > Internet Options
+
+Control Panel > System > Device Manager
+Wireless connections are configured within the Network and Sharing Center. A technician would have to configure the laptop to connect to the SSID of the wireless network that is to be joined, along with any security parameters which apply to that network.
+
+Question 20
+What type of laptop small form factor component is used to store data that can be accessed at high speeds?
+
+
+SODIMM
+
+SATA drive
+
+done
+M.2 drive
+
+Firewire
+M.2 drives are a type of a very small form factor Solid State Drives (SSD) which are designed for speed and high performance in small power constrained devices.
+
+Question 21
+Why are e-readers commonly preferred over tablets to read books?
+
+
+An e-reader only supports Wi-Fi connectivity, but a tablet can support both Wi-Fi and cellular connectivity.
+
+done
+An e-reader commonly has longer battery life than a tablet device.
+
+A tablet device usually weighs less than an e-reader.
+
+A tablet uses an electronic paper technology that provides better performance than an e-reader.
+E-readers are optimized for reading electronic documents and are commonly lighter, have longer battery life, and are more readable in direct sunlight than tablets.
+
+Question 22
+Which statement describes Augmented Reality (AR) technology?
+
+
+It always requires a headset.
+
+done
+It superimposes images and audio over the real world in real time.
+
+The headset closes off any ambient light to users.
+
+It does not provide users with immediate access to information about their real surroundings.
+Augmented Reality (AR) superimposes images and audio over the real world in real time. It does allow ambient light and does not require headsets all the time.
+
+Question 23
+A teenager has asked the grandparents for a specific type of mobile technology. The grandparents do not remember the specific name of the device, but remember that the teenager wants to receive a cell phone call on it. Which technology is likely to be the one the teenager wants?
+
+
+e-reader
+
+GPS
+
+done
+Smart watch
+
+VR headset
+A smart watch commonly has many of the same functions of a smart phone such as receiving/placing calls, playing online games, and using applications such as a calculator or geolocator.
+
+Question 24
+A system analyst wants to communicate with the company while jogging and also be able to track personal physical activity. What technology is best suited to perform this task?
+
+
+tablet
+
+e-reader
+
+laptop
+
+done
+smartwatch
+Smartwatches are a type of wearable that includes a microprocessor, a special operating system, and apps. Sensors in the smartwatch can gather data about various aspects of the body and use Bluetooth to report this information back to another device, such as a smartphone. Some smartwatches can also connect directly to a cellular network, serve as convenient displays for notifications from apps, can include GPS location services, and the ability to store and play music and playlists.
+
+Question 25
+Which scenario or situation would prevent a user from upgrading the OS on an Android device?
+
+
+done
+The hardware does not meet specifications.
+
+The correct patches were not installed.
+
+Permission was not obtained from the manufacturer.
+
+The software copyright was not obtained before the installation.
+Because there are so many different Android operating systems and mobile devices, there are updates and patches for each device. Sometimes, a new version of Android will not install on older devices where the hardware does not meet the minimum requirements. These devices may receive patches to fix known issues, but will not receive an operating system upgrade. Operating systems updates and patches for Android use an automated process for delivery. When a carrier or manufacturer has an update for a device, the update will appear as a notification on the device.
+
+Question 26
+What are two methods typically used on a mobile device to provide internet connectivity? (Choose two.)
+
+
+done
+Cellular
+
+Zigbee
+
+done
+Wi-Fi
+
+Z-Wave
+
+GPS
+Mobile devices commonly use Wi-Fi and cellular to connect to the internet. The cellular connection uses the cellular data network for a fee. The Wi-Fi connection uses an 802.11 wireless network in the area to connect to the internet.
+
+Question 27
+Which two operating systems are commonly found on mobile devices? (Choose two.)
+
+
+done
+Android
+
+done
+iOS
+
+Google
+
+FitBit
+
+Apple
+Android is the mobile operating system developed by Google. iOS is the mobile operating system developed by Apple. FitBit is a fitness tracker that monitors heart rate and the number of steps taken.
+
+Question 28
+What are three features of GPS on mobile devices? (Choose three.)
+
+
+phone number lookup
+
+done
+navigation
+
+specialized search results
+
+done
+device tracking
+
+remote wipe
+
+close
+gas mileage calculations
+Navigation, specialized search results, and device tracking are features of GPS on mobile devices. Remote wipe may be a feature on some mobile devices, but is not related to GPS. Phone number lookup and gas mileage calculations are not GPS features.
+
+Question 29
+A person is running in the park and does not have a smartwatch but wants to upload fitness tracker data to the Internet. Which mobile device is the best alternative to perform this task?
+
+
+tablet
+
+e-reader
+
+laptop
+
+done
+smartphone
+A smartphone can act as a gateway to the Internet for devices that can connect to the phone over Bluetooth.
+
+Question 30
+Which two methods are used to directly connect mobile devices such as tablets and smartphones to a data network? (Choose two.)
+
+
+WiMax
+
+done
+Cellular communications
+
+Bluetooth
+
+Wired Ethernet
+
+done
+Wi-Fi
+Mobile devices connect wirelessly to data networks using either Wi-Fi or a telecommunication provider cellular network. Bluetooth is used to connect to peripherals or other local devices over very short distances. Ethernet is a wired network access technology and is not used by mobile devices. Mobile devices do not typically implement WiMAX technology.
+
+You've submitted your answers!
+done
+Reset
+Review Assessment

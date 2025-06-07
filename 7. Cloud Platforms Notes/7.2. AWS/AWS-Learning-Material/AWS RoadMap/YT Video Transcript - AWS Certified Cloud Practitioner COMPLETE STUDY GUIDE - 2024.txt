@@ -1,0 +1,2891 @@
+ - YT Video Transcript - AWS Certified Cloud Practitioner COMPLETE STUDY GUIDE - 2024 
+
+
+0:00
+all right what's going on everybody it's Derek here and today we're going to be
+0:06
+going through the cloud practitioner a foundational complete study guide
+0:12
+and of course this is just sort of the the guide itself uh doesn't necessarily
+0:17
+include the practice Labs uh or practice quizzes and Hands-On Labs rather that
+0:23
+you can find and the links in the description uh you know if you're watching this on YouTube and uh you know
+0:30
+of course if you find me on my site then you can find the links to those there as well but this course in particular is
+0:39
+designed to be your introduction to cloud computing and we're going to be using aws's
+0:45
+context and I like AWS because it's a very user-friendly platform and that you
+0:51
+know they have a lot of labs and documentation that's really well uh well
+0:57
+written and constructed kind of easy to follow along with so you know as you continue through your Cloud journey and
+1:04
+you're referencing you know resources from whatever cloud provider you're using in the case of AWS it's again very
+1:11
+user friendly and I think you'll be happy with it so uh in this guide we're going to just be
+1:16
+going through basically what you need to know for the cloud practitioner exam so
+1:22
+that you can get that under your belt and you know begin to make yourself more valuable and more marketable okay
+1:29
+so uh let's make sure I click on the screen here
+1:34
+so again my name is Derek I'm a 3X AWS certified as a cloud practitioner a
+1:40
+Solutions architect and assist Ops admin I've got some Azure certifications but
+1:45
+those aren't really applicable here I'm currently an I.T support engineer and I work with a company that makes Erp
+1:52
+applications so enterprise resource planning I've got about four years industry experience and I write a lot
+1:59
+about AWS uh on my medium site which you can find there if you're interested
+2:06
+um you know you'll find links to like some labs and other articles that you know you may
+2:12
+not find here that you know will definitely be interesting and helpful for you and all information this guide
+2:18
+has been triple checked for accuracy so as of this time right now of course Tech
+2:23
+changes rapidly I'll be sure to update it when I can but as of now uh everything in here is accurate it's
+2:29
+been double checked by myself and then I had another uh individual that I know that's uh actually a AWS hero uh check
+2:37
+this as well so know that you're getting good information so the objectives of this guide are to
+2:44
+introduce you to cloud computing and the business value that it brings again we're going to use aws's context and we
+2:52
+want to get you over prepared for the AWS certified Cloud practitioner test
+2:58
+so that you only have to take it once right we don't want to have to pay and sit for exams multiple times especially
+3:04
+if it's the same one so let's just do it right the first time you know we may talk about some stuff
+3:10
+that will help you down the road but you don't necessarily need right away for the cloud practitioner exam okay
+3:17
+we're going to conceptually understand the major services that AWS offers
+3:22
+because a lot of this exam is kind of just that you know understanding AWS kind of as a whole and again what
+3:28
+business value it can bring and of course we're going to look into uh boosting your confidence and test taking
+3:36
+skills you know personally I'm not the best test taker uh but I always manage
+3:41
+to pass and that's at the end of the day all that matters right when you're getting an interview for a job nobody asks you what your score was on your
+3:47
+certification they just want to see that you have it all right so that was kind of crazy bird I've
+3:54
+never seen before flying around in the backyard all right anyways what will you be tested on
+4:00
+so it's important to know you know what we'll expect to see on this test so we can narrow our Focus so we're not you
+4:07
+know kind of branching out and looking at too much uh or too many unrelated things
+4:12
+so for this exam uh you know you should be able to explain the value of the AWS cloud
+4:18
+and this uh you know particular certification is applicable to not only you know technical professionals
+4:24
+professionals but it can be applied towards like sales uh could be applied
+4:30
+towards uh you know maybe uh sharing information with like executives
+4:37
+uh so you know there's definitely uh multiple kind of purposes here uh and
+4:42
+ways you can bring value to a business with the cloud and we want to be able to understand AWS
+4:48
+shared responsibility models though in a nutshell you know what are your responsibilities as an end kind of
+4:53
+customer and then what are aws's responsibilities we want to be able to understand the
+4:59
+five pillars of the well-architected framework and I put an asterisk there because technically now there are six
+5:06
+they added a sustainability pillar which you know it's like yeah we all
+5:12
+want to save the planet but you know it's not really going to be applicable for this uh this particular exam
+5:17
+and you want to be familiar again what the most commonly used AWS Services we're going to go through a list uh with
+5:24
+some definitions of those Services towards the end so that you can kind of narrow your focus down uh you know and
+5:31
+use that as kind of a reference when you have your test uh coming up pretty close to kind of reference and then we're
+5:37
+going to identify appropriate AWS Services uh you know for some common use cases all right
+5:44
+so what you will not be tested on are things related to coding actually designing Cloud architecture
+5:51
+troubleshooting common errors migrating from on-prem to the cloud or vice versa
+5:57
+load and performance testing like devops and how to actually sort of implement
+6:03
+workloads from concept to you know actual kind of uh production workloads
+6:08
+this stuff is of course you know important in its own scope but for this particular test we don't really need to
+6:13
+know anything here okay all right so some general tips to pass
+6:19
+the exam so it's important to note that uh you
+6:28
+can generally rule out one to two answers that's just going to be one of two answers that just don't make sense that don't fit the context of the
+6:34
+question uh so you know that's one of the first things I actually do after I read the question I'll just before I
+6:40
+really dive into each answer I'll just quickly go through them and see you know for example if the question is asking about a storage service but then some of
+6:48
+the answers are asked are referencing like compute Services then I know that I can kind of rule those out because I'm
+6:54
+looking for something storage related remember that answers are always real services
+7:00
+so if you see a uh answer to a question and it references you know
+7:06
+something called AWS ground station for example like that's an actual service that you know uses satellites and
+7:12
+whatnot um but they're not gonna like give you fake answers to try to trick you what
+7:18
+they do instead is they give you you know real services that AWS offers but they just want to see if you can select
+7:26
+the most appropriate answer uh you know for the context so that's important to keep in mind uh
+7:33
+you want to try to pick out one to two keywords in the question they're normally towards the end especially if
+7:39
+it's like a kind of a longer question but things like you know cost optimized
+7:45
+or most efficient or if something's asking for the most secure answer you
+7:51
+know in that case there will be times where there's technically more than one right answer but the key words you know
+7:58
+uh that are referenced in the question are going to point you to the right answer so really pay attention to those
+8:04
+uh be careful of answers that have always never and manually so always
+8:10
+never you know strong words in general not just uh you know when it comes to cloud computing
+8:17
+um but you know there's there's generally going to be a time and a place for anything
+8:23
+um so you know just try to stay away from those and then manually of course
+8:28
+uh you know one of the pillars of the well architecture framework is operational excellence which means
+8:35
+we want to try to automate things as much as possible which makes sense for multiple reasons so if something ever
+8:40
+says like hey you know manually start this instance or manually back that up it's generally not going to be correct
+8:46
+because most of the time there's a more efficient way to do something okay so again remember the pillars of cloud
+8:53
+computing just from a high level overview we've got operational excellence security reliability
+8:59
+performance efficiency and cost optimization okay
+9:04
+so uh speaking of uh pillars and sort of
+9:10
+overlying domains we're going to look at what your tests actually consists of right kind of the high level domains
+9:18
+that are going to be covered so 26 percent of your total score test is going to be
+9:23
+uh Cloud Concepts so just conceptually talking about cloud computing uh 25 of
+9:29
+your test is going to be from a security and compliance uh 33 percent of your total score is
+9:36
+going to be from the technology itself and then about 16 percent of this test is going to be scored based on billing
+9:43
+and pricing so of course billion pricing is you know the least weighted so we won't spend as
+9:49
+much time on that but it's of course very important because if you're working for a company and they have surprise costs then they might not be happy with
+9:55
+you all right speaking of personal experience that's a real thing all right
+10:01
+so cloud computing overview
+10:06
+and one more thing to mention guys we're going to use What's called the Pomodoro method so basically what that
+10:14
+is uh it's a technique you can use for studying that involves like 15 to 20
+10:21
+minute periods of work and then five minute rest period and then that's one interval you do about three intervals
+10:27
+then you take a like 10 15 minute rest period and it's really important when you're learning new things that maybe
+10:33
+aren't very straightforward and they're kind of complex and you know complicated it's really you know a really good way
+10:39
+to kind of cement things and not overwhelm your brain and you know burn yourself out trying to just sit here and
+10:45
+just absorb this all in one go okay um so we'll be doing that but uh anyways
+10:51
+let's get into what cloud computing uh actually is so some of the key Concepts to remember
+10:57
+here are that cloud computing is the on-demand delivery of it resources over
+11:04
+the Internet with pay-as-you-go pricing so that's kind of aws's definition of it and that's just in general a good
+11:11
+definition of what cloud computing is some of the common resources uh that
+11:16
+you're gonna you know work with and see are used for compute storage database and networking related tasks
+11:23
+and cloud computing has two parties to make possible so there's the provider which is the
+11:30
+party that actually purchases purchases and manages the hardware so the computers have to be somewhere
+11:36
+right we're not just like doing things in thin air and these are things or entities rather like AWS Azure Google
+11:43
+Cloud platform that set up servers all over the world in all these different countries and regions and locations
+11:49
+that you can then use you know we'll assuming you want to pay for it so the other party is the consumer or
+11:57
+the customer that's you and me and businesses anyone who sets up anything on any cloud provider is a customer
+12:04
+and you know we're the ones who actually pay the provider to use their physical resources
+12:10
+uh you want to remember that uh you know cloud computing allows consumers to
+12:15
+trade uh capex for Opex so capital x managers or operating expenditures so they can focus some more on their
+12:21
+business uh we'll talk a little bit more about that here in a minute uh and then of
+12:27
+course it can increase your business's speed agility and availability all right
+12:33
+so shared responsibility model like I alluded to earlier kind of draws the
+12:40
+boundary between what AWS is responsible for doing and what you as a consumer or
+12:48
+customer are responsible for doing to kind of make things work how they're supposed to
+12:53
+some examples of what AWS is responsible for are the hardware so the global
+13:00
+infrastructure like all the servers again and data centers just around the world just hundreds of them out there
+13:06
+and they're responsible for the software that you actually use to run these uh
+13:12
+servers for you know things like compute storage database networking services
+13:17
+so again all these uh sort of services that AWS offers are just based on
+13:23
+software running on their Hardware okay and some examples of what you as a
+13:29
+customer are responsible for would include securing your data via client and server-side encryption
+13:35
+so AWS offers mechanisms to do this but it's up to you to actually implement it and be responsible with your data uh
+13:43
+you're responsible for configuring your virtual infrastructure and systems so
+13:48
+AWS gives you all the potential in the world but it's up to you to actually configure things to meet your businesses
+13:54
+uh unique use case and you're responsible for the configuration of managed services or
+14:01
+third-party software that you load onto aws's instances or other resources all right
+14:06
+so it's very important to remember the shared responsibility model because you will get asked about it on the test it's
+14:12
+probably multiple times so you want to uh have a good idea of what that looks like and to help you get on any of what
+14:19
+that looks like we can use the shared responsibility model kind of as a picture so if you look at
+14:25
+the top you as a customer your responsibility is for security in the
+14:31
+cloud so again I've seen that as a question too right in the cloud versus of the cloud you're responsible for your
+14:37
+security in the cloud and again that includes like your customer data any kind of platform
+14:44
+applications and you know access management you're allowing into your applications and other resources and
+14:50
+then of course all levels of uh encryption so you know client-side and server side and then your networking
+14:56
+traffic you want to make sure that you know you're keeping these in mind so
+15:01
+that you're not compromised while using aws's resources because that could potentially be bad for both of you
+15:07
+because you're likely sharing AWS Hardware with thousands of other customers okay if not millions of other
+15:13
+customers actually uh but AWS is responsible for the security of the cloud so of the actual
+15:21
+servers and infrastructure that make up kind of AWS itself and as you can see
+15:26
+again the uh Hardware uh and AWS Global infrastructure like regions availability
+15:32
+zones and Edge locations which we'll talk more about in here in a bit those are the responsibility of AWS
+15:39
+obviously I mean you're not expected to show them to a Data Center and fix problems and then again the software
+15:44
+that falls under the domains of compute storage database and networking is also the responsibility of AWS
+15:50
+and if you for example go to set up an S3 bucket which is a storage service
+15:55
+we'll talk a lot about here in a bit uh and then it just doesn't work for some reason and that's on AWS because they're
+16:01
+offering a service that doesn't work okay it's really really rarely ever the case because AWS makes sure that they
+16:08
+are holding up their ends and it's just again up to you to hold up your end okay
+16:14
+so before we get into the benefits of using the cloud Let's uh take our first about
+16:21
+five minute break and then once we return from that then
+16:27
+we'll come right back here and we'll pick up with some benefits of using the
+16:33
+cloud
+19:50
+oh let's talk about some of the benefits of
+19:56
+using the cloud and why you know you would actually consider using the cloud
+20:01
+uh you know again this goes beyond just from a technical perspective okay so uh one of the primary benefits is
+20:09
+that you can increase the agility of your business so you can just you
+20:15
+know innovate and move faster you can start to utilize pays you go pricing which trades Capital expenses for
+20:22
+operating expenses so in a nutshell you know if you had a business requirement
+20:27
+that you needed a certain amount of computing power you could you know pay a bunch of money up front
+20:33
+to buy servers set them up whatever do all that uh so that would be a capital expense because it's kind of a large
+20:39
+expense for a physical server or set of servers or you could say hey AWS I need
+20:45
+this much compute power but I only need it for this amount of time and you could just provision it then and there and now
+20:51
+you have it no racking and stacking no you know dealing with physical Hardware none of that okay
+20:57
+you've got economies of scale which basically you know allows you to benefit from massive uh so it's kind of
+21:05
+repetitive but basically you know an economy of scale is because of the fact that there are millions of customers
+21:10
+using AWS as Hardware uh you can share those costs with each
+21:16
+other and it makes it super cheap Global reach so you can glow Global in minutes
+21:21
+because AWS has data centers everywhere uh security so reference that shared
+21:27
+responsibility model AWS does their best and so should you reliability is your
+21:32
+architecture will perform how you need it you know how it's kind of expected to kind of like all reliable that's kind of
+21:38
+how I think of it and availability so your architecture is accessible when
+21:43
+needed because if something say you know you had on-premise data centers and there was a fire well now all your data
+21:50
+center you know your whole data center is gone everything's gone it's not available scalability so you can grow your
+21:56
+infrastructure on demand uh based on you know how much demand you
+22:01
+know is being placed onto your infrastructure and your resources and then elasticity you can quickly add or
+22:07
+remove resources so that you need them you know on demand and you know you can
+22:12
+get rid of them when they're not needed so you're not paying for stuff you're not using okay so
+22:18
+there's six primary advantages that AWS kind of likes to reference uh and again
+22:24
+ask you about so we'll just kind of look at those real quick so you can trade Capital expenses for
+22:30
+variable expenses is one of the biggest ones because again there's uh you know
+22:36
+for the most part no upfront cost using your resources unless you like do reservations or something like that
+22:42
+which we'll talk about later and you only pay for what you use so again say like you spent you know 500 Grand on all
+22:50
+these servers because that was the estimated amount you would need to buy to support your workloads uh well say
+22:57
+you only are using like 50 of that well it's kind of like you just wasted like a quarter million dollars buying servers
+23:03
+you didn't actually need or if all you find out you need a million dollars you need double than what you actually got
+23:09
+in servers well then now you have to like scramble and get more and figure out how to set them up what you already have it's just a headache so you can let
+23:15
+AWS handle all that uh again you can benefit from massive economies of scale because you're sharing the same servers
+23:22
+that AWS has with millions of other customers uh which obviously if
+23:28
+everybody is pitching in to use that they can make it extremely cheap you can stop guessing capacity so again
+23:34
+because you're sharing costs of the resources that AWS provides with
+23:40
+thousands of other customers you know you can get unbeatable savings on the servers you actually need and you know again need to try to guess on how much
+23:47
+you need to pay up front how many servers you need to bring in okay you can increase the Speed and Agility of
+23:53
+your business so within minutes uh or faster sometimes depending on you know the scale of what you're setting up you
+24:00
+can add or remove resources uh and additionally a lot of this can be automated
+24:05
+so if all of a sudden save a business you know here in the United States but you start getting a high you know demand
+24:12
+in Asia where their hours are kind of the opposite of a United States time zones you know either you can get up in
+24:19
+you know the middle of the night two three a.m to figure that out or you can set up services within AWS to
+24:25
+automatically handle that increased demand as it happens okay you can stop spending money on data
+24:32
+centers which kind of already covered that but you know that just allows you to spend more time and money on your
+24:38
+business and you know Associated product instead of like it resources to support your business and again because uh AWS
+24:46
+has uh servers all around the world pretty much every continent except Antarctica
+24:52
+uh which you know wouldn't be surprising actually if they get there soon but because they have all these data centers
+24:58
+everywhere you can go Global as fast as you need to if you know there's another use case that you you know need to fill
+25:04
+okay all right so some Cloud architecture
+25:10
+principles uh we want to cover a few of these uh you know I mentioned you're not
+25:15
+going to be tested on actually you know architecting Solutions but I did also mention we're going to over prepare you
+25:21
+so we'll just dip our toe and uh you know the infrastructure of uh or the architecture and the infrastructure of
+25:28
+AWS kit so the global infrastructure is a term they you know throw around a
+25:34
+lot and for good reason because it refers to what makes the cloud possible
+25:39
+and it's basically the network of computers and servers and all the other Hardware all over the world that you pay
+25:46
+to use as you need it and it consists of the following okay and this is actually a really important
+25:52
+uh Point here so you'll want to make sure that you know you can uh really commit these to memory so
+26:00
+you've got uh regions which are geographical locations comprised of data
+26:06
+center clusters so it's going to be things like us East one Europe West uh
+26:11
+you know Asia Pacific things like that and it just denotes a certain geographical region where they have
+26:18
+things set up okay as of November 2022 there's 30 active regions uh
+26:25
+but they're you know likely going to add more in the future and then you have availability zones right so these are
+26:33
+one or more physical data centers within a region that have their own power networking connectivity to each other
+26:40
+within that region so basically what that means uh is each availability zone
+26:46
+is separated from each other so if Like An Earthquake were to happen at 1az it's not going to affect the entire region
+26:52
+it's just going to affect that one availability Zone and you still have others within that region that you could
+26:57
+put your resources on okay and then Edge locations uh are by far the most uh you
+27:05
+know quantity wise of what AWS actually has and they're just sites that are data
+27:10
+centers usually like crowded urban areas that are used to Cache copies of data for the fastest possible delivery to
+27:17
+your end users it's mostly used for cloudfront but there's like one or two other services uh that uh you know you
+27:23
+actually use it but in terms terms of setting up it resources using the cloud you're mostly really just going to be
+27:30
+referring to Regions and availability zones okay so the AWS well architected framework
+27:39
+is important to know because your architecture should be well thought out and designed otherwise there will be
+27:46
+flaws and it could affect you know potentially the whole thing right imagine you're riding a bike and all of
+27:51
+a sudden you blow a flat tire even though it's only that tire you know it affects kind of the whole bike and you
+27:56
+okay this is five pillars of the well architected framework there's the operational excellence
+28:03
+pillar which allows you to run and monitor systems which again preferably
+28:09
+automated and you know using your architecture uh you provide the most
+28:15
+business value right so you're only using what you need to meet a certain
+28:20
+amount of demand or meet a certain requirement and also not overpaying you know for things that you don't need that
+28:26
+you're not even using Okay security so this is actually priority uh
+28:32
+they call it Priority zero so you know programming that's kind of like the first index of a set or an array
+28:38
+whatever and security basically allows you to protect your data and systems and
+28:45
+you know it's just conceptually designed to mitigate risk right so you can't always really stop
+28:50
+things from happening but you can you know put the odds in your favor that things won't happen as often okay
+28:57
+uh reliability so you can mitigate and recover from disruptions so again if
+29:03
+something does happen your systems are still available when needed as expected performance efficiency
+29:10
+which means you just want to use your resources effectively to really get the most out of it so again you're not
+29:16
+wasting money and you're bringing value toward to your business cost optimization kind of
+29:23
+self-explanatory but basically you just want to be able to get the lowest price possible while still meeting your
+29:29
+businesses requirements okay with like why pay for things when you don't have to is kind of the the theme there all
+29:35
+right so to dive a little bit deeper in these pillars
+29:41
+um you know what let's actually uh it's been about 13 14 minutes I'd rather go through
+29:48
+these straight through so real quick let's just take like a quick uh you know four or five minute
+29:54
+break and then when we come back we'll get into the pillars and I go from there
+30:04
+okay
+33:17
+to it so when we think about the operational
+33:24
+excellence pillar what we want to really keep in mind is
+33:30
+that a lot of this is performing operations as code and that's basically a way to just
+33:36
+enable automation right because that's what computers use as code and it
+33:42
+improves your response time to events because computers will work significantly faster than you ever can I
+33:48
+mean let's be honest right try to outwork a computer in terms of you know doing tasks as they happen it's just not
+33:55
+feasible especially if you have you know any kind of business that's serving thousands or millions or more requests
+34:00
+okay so you want to be able to make small frequent reversible changes
+34:06
+so you know if something breaks you can easily pinpoint what caused it and then
+34:12
+revert or roll back your changes fix it and then re-roll it out and a lot of that comes from you know having an
+34:18
+architecture and components as opposed to a monolithic architecture you know so for example uh instead of having like
+34:26
+one uh Giant just one two three thousand uh line of
+34:32
+code that kind of is based on like all of your stuff all your resources depend on this one this one file okay if you
+34:40
+instead switch that over to you know uh say like 10 uh you know different uh
+34:48
+services or components that each do a specific job as opposed to this one monolithic architecture doing everything
+34:55
+then if something happens say to like a single web server maybe you still have
+35:01
+like three more web servers uh you know working as expected whereas if you had
+35:07
+just all of it in one lump you just had one giant server just huge tons of
+35:12
+resources but it was hosting everything if something broke then everything could potentially go down instead of just this
+35:18
+one little specific part of your application okay so hopefully that makes sense because AWS does ask you about you know
+35:25
+monolithic architecture versus like compartmentalized or sometimes they call like decoupled
+35:31
+architectures so it's important to keep in mind you should generally for the most part lean towards
+35:37
+um decoupled architectures okay so like I mentioned earlier or alluded
+35:44
+to things will break uh even the CTO of Amazon said this himself things will break so you should anticipate failure
+35:50
+and then when things do break analyze it right figure out why it happened figure
+35:55
+out the root cause and learn from it add it to your playbooks to your knowledge base wherever that is and then write
+36:01
+test code that's designed to break your architecture so that you can test your recovery procedures okay don't wait till
+36:08
+something happens to test you know your plans for when that thing happens be proactive instead of reactive okay
+36:15
+refine your operational procedures frequently so again just use past experience to
+36:21
+help you know manage and find continuous opportunities to improve your operations
+36:26
+now and in the future okay so the security pillar is probably the well listen cost optimization are
+36:34
+probably the most self-explanatory but for security you want to implement a strong identity Foundation
+36:40
+so centralize your identities and implement the principle of least privilege which essentially means that
+36:47
+anybody you know logging in to your resource or accessing your resources has
+36:52
+only enough prints uh privileges to do what they need to do whether it's for their job or as an end user and nothing
+36:58
+else okay you don't just want to like set everyone to admin users it's a horrible idea uh you want to enable traceability which
+37:06
+allows you to monitor actions and changes to your environment in real time uh you know by implementing logging and
+37:13
+Metric Collections and this also allows you to automate a lot because you can react based on events and certain you
+37:20
+know logs and actions or events so you can automate your
+37:25
+security best practices and generally this will involve utilizing policies and compliance rules
+37:32
+to automatically Grant permissions and check resource configuration okay so you want to protect the data you're
+37:40
+using in transit and at rest so in transit generally that's going to involve some kind of SSL or TLS and then
+37:47
+at rest it's going to involve a server and client-side encryption so server side would be like in you know your AWS
+37:53
+resources like an S3 for example it's encrypted there and then client-side is
+37:59
+you know an end user's computer encrypting it there as well keep people away from your data I mean that's a
+38:06
+really good best practice because you can reduce accidents and you can also reduce you know uh like malicious things
+38:13
+so I've I've definitely seen somebody get terminated before and then they try to Break Stuff let's just say and you
+38:20
+know if they maybe have elevated privileges then that would be something that they could do and kind of really
+38:26
+mess it up for everyone else right and again you want to anticipate security events to automate your
+38:32
+recovery procedures so again just being proactive instead of reactive okay
+38:39
+the reliability pillar uh is again things your architecture and your resources are reliable they do their job
+38:47
+as expected when expected so this means that you should be able to automatically recover
+38:53
+from failure because if you can't in a reply uh relies on you to manually do things and that's not going to be very
+38:59
+reliable because between the time that it breaks and you manually fixing it there's going to be a gap where it's you
+39:05
+know not available and not very reliable okay so uh to automatically recover from
+39:11
+failure you should really be monitoring your kpis so your key performance indicators and then trigger automation
+39:17
+when the threshold is breached so say for example you have an ec2 instance it's getting overloaded with traffic uh
+39:25
+say you you know you set a a rule to create another instance automatically if
+39:30
+your original one reaches 80 CPU utilization okay after that point it's
+39:36
+fair to assume end users are going to get latency and a bad experience so you can automatically spin something up at
+39:42
+that point okay test steel recovery procedures I kind of keep saying this
+39:47
+but it's very important you don't want to assume your recovery procedures will work when you know they're actually
+39:52
+needed simulate failures to prove that they actually work it'll make you feel better it'll make you know your security
+40:00
+team feel better it'll make everyone feel better okay scale horizontally to increase availability
+40:06
+so this kind of refers to that monolithic versus decoupled architecture we were talking about
+40:11
+so when you scale uh horizontally basically what you're doing is you're placing one large resource with multiple
+40:17
+small resources to reduce the impact of a single failure okay so if you only
+40:23
+have one large resource and something breaks or if there's a fire or whatever uh you know everything's down versus if
+40:29
+you have multiple small resources kind of collectively doing the job then if one of those breaks you can just
+40:35
+automatically fix it diagnose It Whatever while the others are continuing to function as expected okay
+40:43
+so stop guessing capacity so again this kind of means that you don't necessarily
+40:49
+need to buy a bunch of servers and compete resources to hopefully meet business demands you can just uh right
+40:57
+size your resources by adding and removing things on demand when needed okay
+41:03
+you want to really manage change via automation so again using infrastructure as code
+41:10
+it allows you to not only automate things but also you can better track things as and when they happen okay
+41:18
+so the performance efficiency pillar is going to uh you know Encompass
+41:24
+democratizing advanced technology which basically means that uh you know because AWS offers so much
+41:31
+uh you know give your people uh you know the permission to uh experiment try new
+41:37
+things and they might come onto something that makes your business more efficient and more valuable okay uh you can go Global in minutes so again
+41:45
+it's really uh gives your end users that aren't necessarily geographically close
+41:50
+to you a better experience because you could deploy your workloads to multiple AWS regions around the world uh that
+41:58
+again give you that better experience of lower latency okay uh if you can utilize serverless
+42:04
+architecture so that your applications and your services aren't reliant on one
+42:11
+you know specific uh physical designated piece of equipment or pieces of
+42:16
+equipment and basically serverless is going to remove the need to have that and uh it's
+42:23
+going to remove the need to manage your own physical servers on-prem as well uh
+42:29
+you know which of course involves time and money okay and like I alluded to earlier experiment often so AWS has over
+42:36
+200 Services as of now and they're really always trying to add more test stuff I mean try it out you know
+42:42
+configure some things differently it's it's not uncommon at all for companies to have
+42:47
+an AWS account for production a for test for development for staging so and you
+42:53
+know those test Dev environments you can try new things and see if you can come up with a cool Innovative solution all
+42:59
+right so cost optimization pillar you want to implement Cloud financial management
+43:05
+so you should dedicate time and resources to Building Systems that track costs and
+43:11
+notify you of them and one of the best way to do that is tags which we'll talk about uh in the future here at some
+43:17
+point but it just allows you to keep track of every resource you have to a t
+43:22
+so you can know exactly what you're paying for okay adopt a consumption model so only pay
+43:28
+for what you use and then get rid of stuff when you're not using it so you're not paying for it that just doesn't make
+43:33
+sense you can spend that money on your business okay measure overall efficiency so you know
+43:39
+measure the output of your workload and you know kind of weigh uh the cost what
+43:45
+it's costing to how much value it's providing your business and maybe kind of tweak like that ratio of you know how
+43:53
+much you're using versus how much value it's bringing you get uh so you can also stop spending money
+43:59
+on heavy lifting so again with servers you have to do things like rack and stack and cool and Patch them and secure
+44:06
+them and now there's a bunch of stuff related to it but you could just let AWS take care of all that right so you can
+44:13
+give up all that heavy lifting all right and uh you can analyze and attribute
+44:19
+your expenditures again to specific maybe accounts or resources or users or
+44:25
+whatever uh there's plenty of ways you can analyze your costs of all of your
+44:31
+different resources but ultimately you're just looking to measure your return on your investment Roi and act
+44:37
+accordingly based on which fine okay all right so
+44:45
+the five tenants of AWS architecture basically you know um like what uh what are the most
+44:53
+important uh five things to AWS okay so deliver to deliver the best possible
+44:59
+customer experience your AWS workloads should adhere to the following tenants okay High availability which involves
+45:07
+eliminating a single points of failure scalability which involves adding or
+45:13
+removing resources on demand elasticity lets you automate your workloads and
+45:19
+just kind of quickly add and remove stuff as needed automatically fault tolerance allows you
+45:27
+to handle failures well so that when something happens you're able to recover
+45:32
+quickly and high durability is again recovering from failures in an expected
+45:38
+manner uh you know this again comes from kind of testing procedures and having a
+45:44
+plan okay so high uh availability we'll go through
+45:49
+these five in one second break it's gonna be a little longer than 15 minutes but that's okay
+45:54
+so your services should be able to remain highly available by having no single point of failure right so again
+46:01
+if one server breaks it shouldn't bring down your whole business right this is primarily done by having your
+46:08
+Cloud workloads running in multiple regions and or availability zones okay
+46:14
+yeah which we talked about earlier right regions are the physical geographical locations and the availability zones are
+46:20
+clust different clusters of data centers within a region okay you can use a service like elastic load balancer to
+46:27
+distribute traffic across your different uh locations wherever they are and then
+46:32
+automatically reroute traffic if for whatever reason one of your locations fails okay
+46:38
+scalability so your ability to scale up or down of course depending on your budget how
+46:44
+much you actually want to pay for uh maybe the amount of traffic you're getting or the available Computing
+46:50
+memory that's on your instances for example or any other resource you want to track you can you know Set uh kind of
+46:57
+rules and policies on when you scale up and down which basically means you know
+47:02
+you add or remove resources okay so there's two types of scaling again you'll probably get asked about
+47:08
+this at least once on the test but there's vertical scaling otherwise known
+47:14
+as scaling up which uh means upgrading your current server to have more
+47:20
+resources right so a bigger box a bigger server whereas scaling out or horizontal
+47:26
+scaling is adding completely separate servers to complement your existing servers so again instead of adding just
+47:33
+continuing to add layers to the same server right now you have this server and then you can add this one over here
+47:39
+and now you can add this one and then you can add this one and now you have four different servers working together as opposed to just this one giant server
+47:46
+you're just praying nothing happens to okay so elasticity is the ability to
+47:51
+automatically increase or decrease your resources based on metrics you're tracking again that word automatically
+47:58
+is very important so utilize a service such as Auto scaling groups to automatically there it
+48:06
+is again add or remove resources reducing human error and lag time so you
+48:12
+can again if something breaks or needs to be changed in the middle of the night you
+48:18
+know Auto scaling groups potentially can have that already handled for you by the time you even like wake up to figure out
+48:24
+what's going on okay so fall tolerance is the ability to
+48:29
+ensure there's no single point of failure and if something does happen uh somewhere in your architecture you can
+48:36
+handle it appropriately and recover well okay uh it primarily utilizes what's
+48:42
+called failover strategies so for example you can have a secondary copy of your database that you're ready to start
+48:48
+using if your primary one and a different region fails for some reason obviously you want to keep your
+48:54
+databases up to date so that you know you're not out of sync there because that wouldn't be good for you or your
+49:00
+end users right and high durability is the uh ability to
+49:06
+recover from a disaster with minimal data loss and it's generally comprised of two
+49:12
+different business strategies that you'll want to consider so you've got your recovery time
+49:18
+objective your RTO which is the max amount of time your business can't afford to be offline
+49:25
+due to an incident without incurring a substantial loss so just think of this
+49:30
+one as measured uh in in time and how much time can your business spend
+49:35
+offline okay and Recovery Point objective is basically the max amount of
+49:41
+data that can be lost due to an incident so say for example you know your databases
+49:48
+go offline and you know you run a website that does a financial
+49:53
+transactions so you kind of need to be keeping track of those in your database well if you have end users doing
+49:59
+transactions over a period of five minutes where they're not recorded because your database is down you know
+50:04
+can your business handle that five minutes of data loss so it's kind of confusing because even though RPO is
+50:11
+also measured in time it relates more to data as opposed to time okay so
+50:17
+definitely remember those two there RTO and RPO you'll probably be asked about those
+50:23
+all right so we're going to look at some uh management and uh development tools
+50:29
+so basically just how you'll you know manage and kind of interact with your AWS resources but before we do that we
+50:36
+are coming up on about 50 minutes here 51 minutes so let's take a little longer break
+50:42
+let's just go for about 10 minutes uh and then we'll come back and we will uh
+50:48
+you know keep uh keep getting into it here all right
+50:55
+okay
+57:38
+so by the way guys I hope you're not just skipping over those breaks uh because they're very important and uh
+57:44
+you know I worked for before I was in tech rather I worked with people for about seven or eight years as a strength
+57:50
+and conditioning coach largely on Behavior changes so I know how the brain works I know how psychology works when we're doing
+57:57
+complex stuff like this it might be from unfamiliar to you and new it's very important to take breaks okay you'll
+58:03
+learn more remember more retain more which is obviously important when you're trying to pass a test
+58:09
+okay so we're just going to go over the three
+58:15
+main tools that you're going to see referenced uh that are used to manage AWS resources
+58:22
+and those three tools are the Management console which is what will pretty much
+58:27
+for you know these Labs anyways that you'll see is going to be what we're using because it's the most
+58:33
+user-friendly way to interact with the resources and it's just web-based you just go to the portal website for AWS
+58:41
+sign in and you can manage your whole architecture there you also have software development kits AKA sdks
+58:48
+which make your code compatible to run and manage AWS resources so for example there's one called boto3
+58:55
+which makes things compatible with python so your AWS apps compatible with python and then there's the command line
+59:02
+interface which you'll see if you're you know doing a lot of programming or if you're in the field of like devops or
+59:08
+any kind of development and it's basically used to programmatically make changes to your AWS resources
+59:14
+but you should always secure access and limit who can get to your resources
+59:19
+because if somebody you know has access to either of these three and they
+59:25
+potentially shouldn't then they you know could maybe change some stuff in your architecture and cause you to have a bad
+59:31
+day all right so AWS account IDs are unique 12 digit
+59:39
+series that reference uh an AWS account so as you can see here I kind of blur it
+59:46
+out first because I don't want you to have my account number but uh it's four digits Dash four digits Dash four digits
+59:51
+Dash and that just references your AWS count so some scenarios where your AWS
+59:57
+account uh ID are used include uh you know logging in with the user that's not
+1:00:02
+the root account so like an IAM user uh giving shared access to resources and
+1:00:08
+another account so maybe you're like doing some VPC peering and then aw support cases you know if you have
+1:00:14
+problems they'll ask you what your account ID is so they can find you uh do your best to keep your account ID
+1:00:19
+private I mean just like you wouldn't want your username floating around out there when you log into stuff you don't
+1:00:25
+want your account ID out there either okay so the AWS API
+1:00:32
+an API stands for application programming interface which you know in
+1:00:37
+this contest context it allows uh or software rather that allows two services
+1:00:43
+to talk to each other the most common is HTTP https requests
+1:00:48
+uh you can kind of utilize this API in your own custom way with either the console SDK or CLI uh but just you know
+1:00:57
+this is important to know just conceptually you don't really have to know too much uh you know under the hood
+1:01:02
+about how it works but uh just you know it's important to know what it is so the AWS Management console when you
+1:01:09
+first log in this is what you're going to see and uh there's different widgets these are all called widgets these squares
+1:01:15
+here uh but there's a bunch you can add to kind of customize your home console page but again this is the most
+1:01:21
+user-friendly way to interact with and manage AWS resources you'll likely use this the most kind of
+1:01:28
+when you're first starting out learning experimenting uh you know maybe with the new service but the most efficient way
+1:01:34
+is long term going to be the CLI more than likely but each service has its own
+1:01:39
+console as well so if I were to click on like easy two or excuse me IAM or a glue or any of these
+1:01:46
+then it'll go to its own console where you can kind of manage your resources within that service okay
+1:01:53
+so again the SDK is a set of tools used to build software uh you know and that
+1:02:00
+SDK is going to be specific to a platform in this case it's specific to AWS because that's what we're building
+1:02:05
+stuff with uh it's going to provide support for many programming languages including but
+1:02:11
+not limited to python Java JavaScript Ruby and go but it's basically if it's a
+1:02:16
+major you know kind of wily accepted programming language is going to be an SDK for it so you can use it on AWS
+1:02:24
+and uh if you're interested in using them all you have to do is just you know find what you're looking for by Googling
+1:02:30
+AWS and so insert program language here SDK so like AWS python SDK AWS Java SDK
+1:02:38
+whatever hey so AWS CLI this is what it actually looks like
+1:02:43
+and if you're not really a technical person I mean this looks a lot you know
+1:02:49
+more user friendly and better than this uh but the CLI is a tool that you can use to create and run scripts to
+1:02:55
+automate a lot of stuff in AWS it's not to say you can't automate things in the console uh it's just a little easier
+1:03:02
+here in the CLI okay uh you know again we're not doing anything development
+1:03:08
+related here so we don't need to dive too deep into this but just kind of know that it's there know what it does and
+1:03:14
+know that you know it's a good way to run scripts and automate stuff okay so access keys are required to have
+1:03:21
+programmatic access to AWS resources outside of a console
+1:03:27
+right so there's two components to access Keys there's an access key ID which you can see down here and then a
+1:03:34
+secret access key which also uh you know gets generated as
+1:03:40
+well and they have the same permissions as the users they are attached to you
+1:03:45
+can deactivate and regenerate new ones on demand just whatever you want and you should never share them with anyone
+1:03:51
+right so if this for example was a key pair that was linked to an admin user in
+1:03:58
+your account and somebody somehow got a hold of these they could go and do a lot of damage right so you always want to
+1:04:05
+make sure these are protected uh you know and not shared and as you
+1:04:10
+could probably imagine I have already deactivated these in my account so you know if you find me Good Luck using
+1:04:16
+those oops all right so now that we kind of have an idea of
+1:04:24
+the tools you know that we're going to use to kind of uh manage and interact
+1:04:30
+with our resources let's actually talk about what some of those resources might look like so I mentioned that primarily what you
+1:04:37
+know AWS offers are services for compute storage database and networking so we're going to go into each of those domains
+1:04:44
+and then talk about the common Technologies and services that are actually used since you know knowing the
+1:04:51
+Technologies is about 33 of your exam score it's kind of important to know them okay
+1:04:56
+so we're going to start off with compute and some of the key concepts with compute is that you know you want to
+1:05:04
+remember that Computing is the tier of service that's used to process workloads
+1:05:09
+handle app logic evaluate rules reactic conditions basically need it for
+1:05:14
+everything because we're working with computers right so we need compute and the main
+1:05:19
+services that you'll want to know and remember for this domain are ec2 and Lambda right so ec2 is the flagship AWS
+1:05:28
+compute service that allows you to launch VMS uh which AWS calls instances which is a
+1:05:33
+little confusing if you're coming from like another Cloud platform because uh Azure for example calls and VMS but
+1:05:40
+aws's instances but it's like tomato tomato whatever but a VM or instance is basically an
+1:05:47
+emulation of a physical computer that uses software so it's like having a laptop without actually having the
+1:05:53
+physical laptop okay you can run multiple VMS on the same physical server
+1:05:58
+that AWS hosts which again allows you to share the cost of that server with other customers so that economy of scale
+1:06:06
+concept okay you can configure ec2 instances to meet any business requirements
+1:06:13
+because there's so many potential uh configurations that you can do with easy to instances that there's really no
+1:06:19
+reason you can meet a business requirement using it and Amazon machine images are the
+1:06:25
+templates for creating ec2 instances so you can configure components such as
+1:06:30
+the amount of memory like Ram the amount of CPUs or processor cores the amount of networking bandwidth and what type of os
+1:06:37
+you want to use so like Windows Linux Ubuntu whatever uh but
+1:06:42
+Amis are basically a very helpful tool to automate the creation of new instances
+1:06:48
+because if you needed to create a new instance for example instead of going through the wizard and setting up
+1:06:54
+everything you could just create an instance over an Ami and then specify what type of instance you want okay
+1:07:01
+Amis don't necessarily include everything they're not going to include like instance type and actual kind of
+1:07:07
+Hardware you want it's more or less just going to be kind of like the like software kind of configuration components get
+1:07:14
+uh so ec2 instance types this is what you will
+1:07:19
+you know want to kind of consider on your own but there's five types of instance families you can use depending
+1:07:25
+on again your business's use case you've got general purpose instances which is just a good balance of compute memory
+1:07:33
+and networking resources it's kind of the default and it's you know appropriate for most use cases okay
+1:07:40
+compute optimized instances are going to be ideal when there's High processing
+1:07:45
+power needed so memory optimized are going to be used for workloads processing large data sets
+1:07:52
+in memory and accelerated optimized is uh you know it's kind of a newer tier but it's
+1:07:58
+really only used for machine learning and storage optimized provides you with high read and write access to large data
+1:08:06
+sets that are on local storage okay so uh you'll want to know what tenancy
+1:08:14
+is so tenancy is basically you know when you set up an instance on AWS servers
+1:08:20
+how is your instance you know kind of living on that server as a tenant good and tenancy you know is what allows for
+1:08:27
+cost savings between customers because any customer that uh sets up any kind of
+1:08:32
+resource on AWS is going to use you know tendency to an extent right so the
+1:08:39
+default is shared which is kind of what I'm referencing where multiple AWS accounts are going to
+1:08:44
+be using the same uh physical Hardware and then you've got dedicated instances
+1:08:49
+which are where you have an instance that runs on a single tenant Hardware but it's not an entire host but then you
+1:08:57
+do have dedicated hosts where you have an instance uh that's running on its own physical server that you can control
+1:09:03
+configure so this is kind of confusing uh the difference between dedicated instance
+1:09:08
+and host um but kind of the key things to remember is that with a
+1:09:14
+dedicated host it's like having your own server okay but with the dedicated instance it's like having your own piece
+1:09:21
+of hardware on a server so you don't have the server itself you just have your own Hardware on a server that
+1:09:27
+you're not sharing with other customers but dedicated hosts sometimes are required for like compliance
+1:09:32
+requirements or licensing uh you know specifications so sometimes that's what you'll need uh
+1:09:39
+but it's obviously the most expensive option because you're paying to use the whole server okay
+1:09:45
+so uh ec2 pricing models uh we want to know you know what our options are to
+1:09:51
+pay for stuff so you've got on demand which basically means uh you know you pay as you go you only pay for what you
+1:09:58
+use it's the default and it works based around hourly rates so for example you
+1:10:04
+have like some instances that are just extremely small but they're only like you know one cent per hour which is
+1:10:09
+crazy then of course you have some that are like dozens or hundreds of dollars per hour because they're high powered maybe customized instances okay
+1:10:17
+uh you've got reserved instances what's your best for applications are going to have a steady predictable usage
+1:10:25
+and you can commit to either one or three years of usage of course the longer you commit for the more money
+1:10:31
+you're going to save over time and uh these instances can be standard
+1:10:37
+or convertible which means that you can uh in either
+1:10:43
+case well in either case you can have substantial savings when compared to On Demand but for standard instances you
+1:10:49
+can modify the instance type but with convertible instances you can exchange
+1:10:56
+your instance attributes based on you know changing demand that your business has which is kind of neat uh you can pay
+1:11:03
+up front uh partial upfront or no upfront of course more money up front would mean you save more over the long
+1:11:11
+run and if you do less up front obviously you don't have to pay as much right away but you will have a higher
+1:11:17
+month-to-month payment okay you can share reserved instances between multiple accounts if you have multiple
+1:11:23
+accounts and then kind of the neat thing with a a standard reserved instances are
+1:11:29
+that if you're not using them you can sell them on AWS Marketplace to make some money back which is pretty neat so
+1:11:35
+it's not like it's a sunken cost and then you have spot instances
+1:11:40
+which are really interesting but they are by far the most uh cost uh optimized
+1:11:46
+type of competing instance uh your basically what you're doing is you're bidding on unused compute
+1:11:52
+capacity that AWS has available just somewhere out there and you can have up to 90 savings when compared to On Demand
+1:11:59
+uh but there's kind of one key flaw with spot instances in that you're you know when you set up an instance as a spot
+1:12:06
+instance it's not guaranteed to keep you know running without interruptions uh and AWS can actually take back spot
+1:12:14
+Computing capacity at any time if it's needed by other customers that are using on-demand pricing for ec2
+1:12:21
+but uh it's designed uh for workloads that again a flexible start and end times because it can be interrupted just
+1:12:28
+whenever AWS needs it back okay um so Auto scaling groups and load
+1:12:35
+balancers are going to be what we go into after we take a quick five minute break all right so uh I'll see you back
+1:12:43
+here in uh just a few minutes
+1:12:50
+foreign
+1:16:56
+let's get back into it so Auto scaling groups and load balancers
+1:17:02
+these two Services together are what allow you to achieve High elasticity and scalability for your compute workloads
+1:17:09
+okay so Auto scaling groups are going to automatically add or remove instances
+1:17:15
+that meet your performance requirements and elastic load balancers are going to
+1:17:22
+distribute the traffic between your instances to achieve the best possible latency okay
+1:17:28
+and there's two primary types of elastic load balancers there's two additional ones but you
+1:17:34
+probably won't see them on the test so I'll mention them but you don't really need to know them the application load
+1:17:39
+balancer is used for Distributing traffic from the web to Targets in your
+1:17:45
+network targets could be like ec2 instances containers or Lambda functions or some
+1:17:50
+other stuff and it uses HTTP or https traffic okay
+1:17:56
+a network load balancer uses TCP UDP traffic and it's designed to handle
+1:18:01
+millions of requests per second with ultra low latency so if you ever see something like that on the test which I
+1:18:07
+have it's asking you about a requirement for a load balancer that has ultra low latency you can handle millions of
+1:18:12
+requests starting a network okay the two you don't really need to know there's a Gateway load balancer which is
+1:18:20
+used when you have like third-party software involved and you want to distribute low to those and a classic
+1:18:25
+load balancer which supports Legacy ec2 instances uh but if you're at this point
+1:18:31
+you know in your Cloud Journey you probably don't have any of those because they were discontinued years ago okay
+1:18:38
+so uh VMS and container actually you know what one thing I want to mention real quick uh is auto scaling groups
+1:18:45
+allow you to specify a minimum a desired and a maximum number of instances you
+1:18:52
+want so for example if your application would ideally you would like to have two
+1:18:57
+instances running to have the best performance you can set your auto scaling group to make sure that it keeps
+1:19:03
+two instances running uh but you could also set it to make sure that it has one running bare minimum at all times
+1:19:11
+and then say you have like some random traffic that you need to support you can excuse me you can set it up to
+1:19:17
+have up to four more instances potentially okay so it's uh important to
+1:19:23
+know that with auto scaling groups you can have a minimum a desired and a maximum capacity of instances okay
+1:19:30
+so VMS and containers VM uh VMS rather utilize software to
+1:19:36
+replicate using an actual server a popular service for this is going to be
+1:19:43
+Amazon light sale it's a managed VM service which is kind of like a more user-friendly ec2
+1:19:50
+and containers are basically something that's going to have everything an app needs to run on a server so it's uh it
+1:19:57
+basically comes without an operating system which is kind of a heavy component of a full solution
+1:20:03
+uh but to support containers you have elastic container service ECS which
+1:20:08
+works primarily with docker which is primarily if you're working with containers you're probably going to
+1:20:14
+use a docker and then you have ECS fargate which is more hands-off container
+1:20:20
+Management Service so it's kind of ECS but you can pay Amazon to do it for you
+1:20:26
+and then you have elastic kubernetes service which is a kind of a more Hands-On container Management Service
+1:20:33
+that uses kubernetes as an orchestration tool okay if you're familiar with containers
+1:20:39
+you'll know more about that and if you're not just uh know kind of what the acronym stands for and what it's used
+1:20:46
+for okay so serverless so this is a concept AWS loves talking about and it's definitely
+1:20:52
+important to know uh but serverless basically means uh it doesn't mean rather there's no like physical servers
+1:21:00
+being used I mean we're working with computers so there's still computers and servers somewhere but what it means instead is that
+1:21:06
+there's an absence of like a physical dedicated server right so again if you had uh programs and workloads that
+1:21:15
+you're running for your business they aren't tied to a specific server you know if something happens to that
+1:21:21
+server then your whole business could come like crashing down and you could just have all sorts of problems uh AWS
+1:21:28
+Lambda is the primary serverless compute tool that uh helps you you know run code
+1:21:33
+without provisioning servers you only pay for the amount of memory you use and how long your function runs for there's
+1:21:40
+a few other servers Services rather that can utilize serverless uh like
+1:21:46
+conceptually like Amazon Aurora which is an RDS a database solution that we'll get to later that does uh but uh you
+1:21:54
+have AWS elastic beanstock which is a fully managed service to allow you to deploy serverless web apps
+1:22:00
+and basically with this what you're going to do is you're going to tell AWS what kind of resources your web
+1:22:06
+application needs to run and then AWS is going to deploy and manage them for you
+1:22:11
+uh which allows you to focus more on your application and not on your infrastructure so again if something
+1:22:17
+were to happen with one of your application servers and you're using Beanstalk then it'll automatically you know kind of fix that issue by adding
+1:22:24
+another server okay and being stocks based off of cloud formation templates which basically allow you to Define how
+1:22:32
+uh you know your architecture is deployed okay all right so moving on to storage
+1:22:40
+so storage is uh you know we probably all heard of databases but storage is a
+1:22:45
+little bit different uh in that you generally have more flexibility on how the data you store is formatted
+1:22:51
+typically with the database you need some kind of structure so like with the
+1:22:57
+relational database you need columns and rows with the even with like a nosql
+1:23:03
+database you know you generally use like some kind of table with key value pairs uh with uh storage you know you can
+1:23:10
+generally just say hey I just want to store this you know text file or this video file or whatever and you know it's
+1:23:17
+uh just like okay cool I'll hold on to that for you uh the best way to keep an
+1:23:23
+analyze log files because logging is very important helps you fix issues fast and learn from your
+1:23:29
+mistakes but the best way to keep them is in a storage solution like S3 and
+1:23:34
+then you can run something like Athena to analyze all your logs uh later on for you know whatever use case and you can
+1:23:41
+automate and upload uh you can automate the upload and removals of your objects
+1:23:47
+and your storage which is again the more we can automate the better off we will be the smoother operation will run and
+1:23:54
+the less headaches will have get so there's a few different types of storage Services there's elastic block
+1:24:00
+storage EBS which I mentioned at first because we just got done talking about ec2 and compute and EBS is designed to
+1:24:09
+work with ec2 instances you've got your elastic file system which is file
+1:24:14
+storage and that's useful when multiple users need access to the same drive so
+1:24:20
+you know think like typical folder file type structure you've got simple storage service S3
+1:24:26
+which is object storage that offers a virtually unlimited amount of storage that's kind of what AWS says it's the
+1:24:33
+most widely used AWS storage service so you are without a doubt going to want to know what it is
+1:24:39
+and then you've got the AWS snow family which is used to migrate data in or out of AWS cloud with physical devices you
+1:24:46
+probably won't use this if you're just like a you know casual user or new user of AWS it's mostly used for like
+1:24:53
+businesses that are planning again to move either in or out of the cloud okay
+1:24:58
+so S3 like I said it's got virtually unlimited storage capacity for objects okay and it
+1:25:07
+consists of objects and buckets and an object is going to be what actually contains your data it's similar
+1:25:14
+to a file and it consists primarily of key value Bears right
+1:25:19
+a bucket on the other hand is what actually holds your objects it can contain folders and the name for your
+1:25:26
+bucket supposed to be globally unique so it can have the same name as any bucket anywhere else and any other AWS account
+1:25:33
+anywhere in the world okay but S3 is extremely important
+1:25:39
+because like I said it's the most commonly used storage class so I would bet my life on the fact that you'll be
+1:25:46
+asked about S3 on your test so let's get to know it uh but S3 has some storage
+1:25:52
+classes that are very useful when considering costs and basically what that means is that you can store your
+1:26:00
+data based on two things right you can base it on how often and quickly you need to access your data
+1:26:07
+and you can also store based on how much you're willing to pay to store that data okay
+1:26:12
+so you've got the S3 standard class which is the default it's the most expensive but it's also the fastest to
+1:26:19
+get your data back uh it should really be used for kind of what's called like hot data you know data that's accessed
+1:26:26
+very frequently as you can see it's going to replicate it your data rather
+1:26:31
+across multiple azs three of them to be clear and uh you know that's very
+1:26:36
+helpful if something were again to happen to an availability Zone your data will still be available okay
+1:26:42
+uh and by the way something that's abstract that it's not something you even have to do which is really nice uh
+1:26:47
+S3 intelligent hearing uses machine learning to move objects to the most appropriate storage class
+1:26:53
+uh so it's kind of like again a way to automate things uh S3 standard IA and
+1:27:00
+frequent access is best if your objects are accessed less than once a month it's
+1:27:06
+cheaper than standard it still has a fast data retrieval uh but you know if
+1:27:12
+you access your data early then you you know you're going to pay a little extra because it's not meant to be you know
+1:27:19
+for frequently accessed data which is why it's called m41 access S3 one zone IA is the standard the same
+1:27:28
+as the standard IA that we just talked about but it's cheaper because your data is
+1:27:33
+only going to live in one availability zone so the standard I is going to replicate across three like the standard
+1:27:38
+does but one zone IA is only gonna uh you know have your data in one AZ
+1:27:45
+I mean it's still going to be you know pretty pretty secure but some businesses
+1:27:50
+are uh reliable rather and but some businesses require like
+1:27:57
+replication across multiple zones so that may not be an option for you uh S3 Glacier is going to be long-term storage
+1:28:04
+which is going to be kind of Ideal for archives it's very cheap but the data retrieval does take minutes to hours
+1:28:11
+there's a few different types of you know Glacier tiers but you don't necessarily need to know those just know
+1:28:17
+that glaciers for archive archived data rather so like say you
+1:28:22
+need tax documents uh once a year that's uh a good place to put them in Glacier
+1:28:28
+because you need them you can't get rid of them but you don't really need to access them except once a year so it's a cheap place to keep them okay and H3
+1:28:34
+Glacier deep archive is the same as Glazier but it's a lot cheaper and a lot slower okay
+1:28:41
+so the AWS snow family is like I said it's physical devices that are used to
+1:28:46
+move data in and out of the cloud AWS snow cone supports up to eight
+1:28:52
+terabytes of storage for HDD HDD hard disk drive
+1:28:58
+excuse me or 14 terabytes for a solid state drive that's the SSD uh snow cones
+1:29:04
+kind of looks kind of like a briefcase and AWS snowball is going to be a little bigger it kind of looks like a server
+1:29:10
+rack almost but you can have two types you can have either Edge uh storage optimized which obviously you could
+1:29:17
+store more up to 80 terabytes or snowball Edge compute optimized which you know still stores a lot at 28
+1:29:24
+terabytes but uh you know it doesn't store as much obviously but it will do a read write operations faster for you
+1:29:31
+and then AWS snowmobile is a literal semi truck of storage that can support 100 petabytes or more I really want to
+1:29:37
+see this in action uh but I haven't yet but that's what it is
+1:29:43
+all right so elastic file system EFS this is a file system that automatically
+1:29:49
+grows or shrinks based on your usage uh so basically like how much you're
+1:29:54
+storing in your file system they're commonly mounted on ec2 instances but they can also be mounted
+1:30:02
+on containers or even Lambda functions which is kind of wild because Lambda functions are you know serverless but
+1:30:09
+you've got four storage classes that you can use to manage your costs very similar to S3 you've got standard which
+1:30:15
+used for regularly access files and again most expensive standard IA which is infrequently
+1:30:21
+accessed files uh and then one zone standard one zone is going to be
+1:30:27
+frequently accessed data that doesn't need to be very durable because it's only in one availability Zone
+1:30:32
+and then one zone IA which is the cheapest but uh you know it's going to be less durable and of course it should
+1:30:39
+only be used for infrequent access okay elastic block storage is going to be uh
+1:30:46
+you know if you're looking for very quick convenient storage for ec2 start
+1:30:52
+thinking of EBS because it's designed to work with that because it can access the OS of your instance directly which is
+1:30:58
+pretty neat it can be attached to multiple instances but only one at a
+1:31:04
+time so what that means is that if I have like instance a and it's got this block storage volume over here but I
+1:31:12
+need this data on this volume on instance B over here I can easily take
+1:31:17
+this EBS volume off and put it on instance b instead which is pretty neat you've got two primary types of uh uh
+1:31:26
+volumes you've got SSD based which is a general purpose and provisioned iops and
+1:31:33
+then HDD based which is throughput optimized and Cold Storage okay
+1:31:38
+all right so let's take a quick break here before we get into database and then uh when we
+1:31:45
+come back we will get into databases
+1:35:51
+we've all heard databases let's talk about what they actually are so a database as I mentioned earlier
+1:35:58
+it's used to store semi and completely structured data
+1:36:03
+and that's the primary difference between database and storage Right storage is a lot more flexible in the
+1:36:09
+data structure that accepts whereas a database is more peculiar and sometimes you need to perform extra
+1:36:15
+steps like uh ETL operations to kind of you know clean your data before it's
+1:36:21
+uploaded into a database but of course that's not something we need to know here for this test but
+1:36:27
+there's two types of databases that you can choose from there's relational databases which are
+1:36:33
+structured as rows and columns so I think like an Excel sheet is kind of a good visual of a relational database
+1:36:41
+and non-relational can be very similar to relational but uh you know it in that
+1:36:48
+it uses tables anyways uh but it you know it can also work using key value pairs so it is kind of confusing because
+1:36:55
+yes relational non-relational you know they kind of both use tables but whereas with a relational table it needs
+1:37:03
+specific rows and columns whereas uh a non-relational table is more about
+1:37:09
+defining the attributes of an object using key value Bears kit so generally a database is used to
+1:37:16
+structure data so it is easier to access and query right just make everyone's life easier
+1:37:23
+so in case you're not familiar with what key value pairs are Let's uh just kind of take a look so it's important with
+1:37:30
+the nosql databases nosql databases AKA non-relational as you might guess relational is SQL
+1:37:37
+databases but an important concept with no SQL databases are key value pairs and
+1:37:43
+a key is What references an attribute of an object and a value describes it okay
+1:37:50
+so you've got for example over here you've got your keys some of them may be uh like maybe this one has a
+1:37:58
+value name and then you have the value over here which is Bob and then you have
+1:38:03
+another key called age and then a value of 25 and then you know you just kind of keep going down from there but uh you
+1:38:10
+could you know really kind of narrow down what you're looking for in a query using these different key value pairs so
+1:38:17
+you can potentially see how it would be helpful all right so AWS relational database Services
+1:38:23
+you've got RDS which uh support provides support for the most common SQL based
+1:38:30
+databases such as MySQL mariadb postgresql Oracle and Microsoft SQL
+1:38:36
+Server okay you've also got Amazon Aurora which is Amazon's uh offering uh you
+1:38:44
+know that's similar and provides full support for MySQL and postgresql but
+1:38:50
+it's uh more available durable scalable and secure and I mentioned earlier it
+1:38:55
+can be serverless as well and the reason why and we won't go really down this rabbit hole but basically uh because uh
+1:39:03
+you know this uh service separates the compute and the storage layer right so the compute layer is used
+1:39:10
+to you know write stuff to your debate database make changes handle requests whatever
+1:39:15
+and then obviously your storage later is what actually has your data but you can separate those so that again
+1:39:22
+they aren't uh dependent on each other and if you have multiple compute
+1:39:28
+instances running your database again you're not relying on just one instance doing everything to your database to be
+1:39:33
+working as it should okay so non-relational database Services the primary one that you're going to see on
+1:39:39
+the test is dynamodb it's the main nosql database from AWS it's designed to be
+1:39:45
+extremely fast available and scalable and it can scale to billions of records with guaranteed consistent data return
+1:39:51
+and seconds so keywords there right billions of Records uh very low latency
+1:39:58
+no SQL database starting a Dynamo get documentdb is a nosql document database
+1:40:04
+which is primarily used for mongodb so you probably won't see this much uh
+1:40:09
+unless of course you're working with mongodb and you need some AWS support with it so there's that
+1:40:17
+some other database services that you'll likely at least get asked about uh you know once anyways are redshift which is
+1:40:24
+a data warehouse solution and data warehouses store data very similarly to
+1:40:29
+SQL right so those kind of rows and columns but they are designed to run extremely large and complex queries so
+1:40:37
+it's used for example in things like olapso online analytical processing
+1:40:44
+and elasticash is going to be a cash in memory caching service that's uh based
+1:40:51
+off of either memcache or redis uh and it's again designed to cache data which
+1:40:58
+basically means that it will put frequently accessed data closer to the
+1:41:04
+end users that are frequently accessing it to it right so if your servers are mostly in the United States but your
+1:41:10
+users are mostly in Europe it makes sense to Cache your data in Europe so it's faster to get that as a user in
+1:41:17
+Europe as opposed to you know having to go across the pond okay uh and then you've got database
+1:41:22
+migration service which is uh used for uh you know an on-premise database to
+1:41:28
+AWS so you have a company that you're currently managing your own databases but you say you know forget this I don't
+1:41:35
+want to pay or do this myself I'm going to handle you know handle this with AWS that's what you would use DMS for
+1:41:43
+you can do it uh from uh that's really
+1:41:48
+annoying go away please thank you uh you can do it uh from two to databases in uh
+1:41:54
+different or the same AWS accounts that are using different SQL engines
+1:41:59
+uh or even uh you know nosql but uh you know essentially what that means is that
+1:42:06
+this is a very flexible service that can fit just about any use case you know if you need to migrate databases to AWS
+1:42:12
+okay all right so as you might have guessed there from my Miss click we are moving
+1:42:18
+on to networking
+1:42:23
+all right and yeah I'm using a Christmas coffee cup judge me I don't care whatever
+1:42:28
+all right so networking uh it can be a little confusing because you
+1:42:34
+know some companies have very vast infrastructures and architectures but to just give you a general idea of
+1:42:42
+what you know networking kind of looks like we can use this graphic here
+1:42:47
+so you have the internet out here and you have your VPC here and the VPC is
+1:42:53
+going to be the main component that contains all of your AWS resources okay virtual private cloud is what that
+1:43:00
+stands for all right so we'll get into the more of these details later we'll keep kind of coming
+1:43:06
+back to this picture but basically you have two availability zones so these
+1:43:12
+would be I should back up a second so say you know this VPC is just for a
+1:43:18
+specific region we'll just say Us East one okay and within this U.S east one region I've
+1:43:23
+got uh these two availability zones I'm using even though Us East one I think
+1:43:28
+has five availability zones you could use but uh within availability Zone one I've got a subnet with an ec2 instance I've
+1:43:38
+got another subnet with another ez2 instance and what's likely the case here
+1:43:43
+is that this is a public instance so it's able to be accessed to
+1:43:49
+you know by the internet and this is a private instance which is not able to be accessed by the internet so maybe like a
+1:43:55
+database uh you know some kind of database instance there and then you've got a whole other
+1:44:01
+availability Zone here this could either be the exact same thing as this other
+1:44:06
+availability zone right so copy so you know you're more durable and highly available and fall tolerant or maybe
+1:44:13
+this could be a completely separate application right that you're running in another AZ it's you know the sky's the
+1:44:19
+limit but essentially this is what your networking is going to look like right everything is going to live inside of
+1:44:26
+your VPC that's the main networking service and then within availability zones
+1:44:31
+that's where you're going to specify subnets and then within subnets that's where you're going to set up your resources okay so hopefully that's a
+1:44:38
+hierarchy there makes sense feel free to reference that again but uh VPC so virtual private cloud and
+1:44:46
+subnets uh the VPC is the main bread and butter of your networking service where
+1:44:51
+you launch everything you have to specify a VPC to launch resources and if you don't there's a default one AWS has
+1:44:57
+that you'll put stuff in okay so a VPC is basically a logically isolated section of the AWS Network
+1:45:05
+where you launch your AWS resources and it uses cider notation to specify a
+1:45:11
+range of ips to be used so if we go back here this is our uh cider block here so within this VPC
+1:45:20
+all of the resources in here have to have an IP address within the boundaries
+1:45:26
+of this 10.0.0.0 16. that's a good amount of IP addresses but you still would need to
+1:45:33
+make sure that it falls within that boundary kit and subnets are smaller partitions
+1:45:40
+within your vbcs that also use IP address ranges and kind of like I just
+1:45:45
+alluded to they need to have a smaller range than your VPC so that everything falls inside of that range uh that you
+1:45:52
+set for your VPC subnets can be either public or private depending on what they're being used for
+1:45:58
+or the resources inside of them are being used for rather um
+1:46:03
+um but yeah like I kind of mentioned you know you want to make sure that you have a kind of large range
+1:46:09
+of uh um IP address is available for your VPC as a whole so you don't run into any
+1:46:16
+issues you know if you start growing or you might just need to set up a completely new VPC and connect the two
+1:46:23
+something along those lines okay so security groups and Knuckles
+1:46:31
+security groups are going to work at the instance level when they basically uh or not basically
+1:46:39
+they implicitly deny all traffic and they only work off of allow rules so
+1:46:45
+they're stateful and AWS really likes asking you about you know stateful versus stateless when it comes to
+1:46:52
+security groups and Knuckles um so definitely keep that in mind and
+1:46:57
+then knackle stands for network access control list and they work at a subnet level
+1:47:02
+so it's kind of like a virtual firewall at the network level and you can specify allow and deny rules uh which makes them
+1:47:10
+stateless so two things here number one the way I like to remember uh the diff
+1:47:16
+you know which is staple which is a list is you know if someone were to ask me if
+1:47:21
+a knackle uh had a state I would say nah right no it does not it is stateless
+1:47:26
+okay uh second thing you want to uh remember if we go back here to this
+1:47:33
+graph then we want to uh have Security in multiple layers
+1:47:39
+so if we look at this availability Zone over here right we have this subnet
+1:47:46
+uh actually the arrows are pointing down here so let's use this bottom one so we have this subnet that is being
+1:47:52
+controlled by a knackle and you can see kind of like the light green outline
+1:47:57
+here so it's you know kind of applying here as well it's just a little easier to see here but anyways so basically
+1:48:04
+what this is saying is that uh you know uh to gain entry into this subnet
+1:48:11
+we need to have a TCP traffic coming from anywhere zero zero zero zero and
+1:48:17
+then we're saying allow but say for example a request came in uh from
+1:48:24
+somewhere maybe this other subnet and it was an SSH request we would deny it so
+1:48:30
+it wouldn't be allowed into our subnet it would get it would throw an error because we're basically saying any SSH
+1:48:36
+traffic from anywhere on you know this port just go ahead and deny it and this
+1:48:41
+is a standard standard SSH Port here but yeah go ahead and deny that so that we
+1:48:47
+can secure our subnet okay now a security group acts at the instance
+1:48:53
+level so say this request was a TCP uh
+1:48:59
+request and uh we uh had okay so that
+1:49:04
+request came in it's a loud boom that's good um now it needs to pass this check here
+1:49:11
+at the instance level and this is basically saying that we are going to
+1:49:16
+allow SSH traffic over this port for this Source IP range which in this
+1:49:26
+case is from anywhere over the internet and we're also going to allow https traffic over Port 443 from the source of
+1:49:34
+anywhere and this is kind of where uh the state comes in place so because
+1:49:41
+security groups are Stay full if it allows entry into this instance it will
+1:49:46
+automatically allow you know outbound traffic back out of that instance to act as a response okay
+1:49:53
+um but one thing you might be noticing here is that uh hey this rule right here says
+1:50:00
+all TCP traffic from anywhere go ahead and allow it but this rule says okay well SSH traffic we
+1:50:08
+won't deny it but SSH traffic uses TCP protocol so what's important to remember is that
+1:50:15
+with AWS a deny rule is always going to override a allow rule
+1:50:22
+so what that means in this case is that okay yes even though TCP traffic is
+1:50:27
+allowed because we specified to deny ssh in particular if a TCP request comes in
+1:50:35
+it's going to pass this right because this is okay from anywhere but then if that TCP request is SSH we're going to
+1:50:42
+deny it so it won't be able to go through okay so that's important to uh kind of remember that a deny is always
+1:50:48
+going to override a allow all right
+1:50:54
+so now that we're familiar with security groups and knackles hopefully uh let's
+1:51:00
+go ahead and move on from there so VPN and direct connects uh VPN or
+1:51:08
+virtual private Network you've probably heard of these at some point uh they're generally the equivalent to an
+1:51:13
+on-premise version of your VPC it provides an isolated secure environment to access resources but you can also you
+1:51:21
+have the ability to establish a connection between your on-premise
+1:51:26
+resources and your AWS cloud and you can do this uh you know using uh like
+1:51:33
+gateways basically so AWS Direct Connect allows you to create a direct physical connection to
+1:51:40
+AWS for on-prem where your traffic never touches the public internet so two things to remember here okay
+1:51:46
+number one AWS Direct Connect is like plugging an ethernet cable in right it uses a physical connection that runs
+1:51:53
+between your on-premise resources and a data center somewhere around you that AWS owns uh and it's very fast obviously
+1:52:00
+that's going to cost more money though um so that's the difference there and the direct connect is direct so it's
+1:52:06
+physical and VPN is virtual it's not physical uh but they both allow you access okay
+1:52:13
+and that's kind of the second point is that because a VPN is kind of abstracted uh you'll want to set up a Gateway that
+1:52:21
+allows you to connect your on-premise resources to you know whatever you have
+1:52:28
+in your AWS Cloud so it can still definitely be secure and quick but it's
+1:52:33
+not necessarily going to be as fast potentially as again plugging that ethernet cable in all right so Direct
+1:52:39
+Connect is a physical connection to connect to your on-prem resources and VPN is a virtualized way to connect to
+1:52:46
+your on-premise resources okay all right uh so AWS security so we're
+1:52:53
+getting close guys I I know we've been going for almost two hours but uh we're getting there so let's just try to
+1:53:00
+finish out here and uh we'll get you on your way
+1:53:05
+all right AWS security so some key Concepts here are that uh
+1:53:12
+security is you know basically takes into consideration that you have uh security at multiple layers kind of like
+1:53:18
+we just talked about with you know your subnet versus your instance layer security
+1:53:23
+um but you know you can uh just uh you know consider the seven layers of security for applications in the cloud
+1:53:30
+okay you have data security so you know your data itself what kind of access is
+1:53:36
+being given to business and customer data is it encrypted in transit and at rest your application security are you
+1:53:42
+keeping them up to dates they have no vulnerabilities or old patches or anything like that
+1:53:48
+uh your compute uh are you controlling access to your VMS or can anybody just
+1:53:53
+RDP in and make changes uh your network you want to control access to and uh communication with your
+1:54:02
+resources so basically like control who's actually able to access and get into your network in the first place and
+1:54:08
+then once they're in control which of your resources in your network they can access okay
+1:54:13
+so uh the perimeter security is basically where you want to filter large-scale attacks like DDOS attacks to
+1:54:20
+prevent them from getting into your VPC in the first place uh identity and access so controlling
+1:54:27
+access to your infrastructure and change management so you know just control this kind of
+1:54:33
+applies to like user security and then physical security right so you know limiting access to a data center to only
+1:54:39
+authorize Personnel of course this isn't something you have to do with AWS but if you had your own stuff then yeah you
+1:54:46
+would definitely want to limit access to that so nobody could just come cut the cords on your servers if they didn't like your company
+1:54:51
+all right so encryption is what allows your data to stay
+1:54:57
+confidential at all stages of its life cycle I think I've said this like three or
+1:55:02
+four times now but there's two primary types which are answering in transit and
+1:55:08
+at rest okay and transit's going to use SSL cos and then at rest you can use
+1:55:13
+either S3 server-side encryption if you're storing things in S3 you can use you can encrypt your database instances
+1:55:20
+you can encrypt like your EBS snapshots and more so there's pretty much a way to encrypt anything that would you know be
+1:55:27
+recommended by AWS to encrypt uh one of the most popular and secure types of encryption is aes256
+1:55:35
+but it's kind of hard to you know reproduce in a simple manner but uh to give you an example of what encryption
+1:55:41
+kind of looks like and how it works if we use sha 256 encryption and we put in
+1:55:47
+the word hello this is what we get out right so now imagine like thousands or millions of
+1:55:53
+pieces of data what that would look like there's no way anybody could read it and it you know would take a very long time
+1:55:59
+to decrypt all this assuming you know your uh encryption keys don't get
+1:56:04
+compromised uh and yeah so you encrypt an encrypt with uh encrypt and decrypt Keys pretty
+1:56:11
+self-explanatory there uh there's definitely more nuances to encryption and encryption keys but for this test
+1:56:18
+you don't necessarily need to know them okay so AWS inspector
+1:56:24
+is a service that essentially is going to run a security Benchmark against
+1:56:31
+excuse me specified ec2 instances and you can check your security and
+1:56:36
+compliance state for your ECT resources and then use the results to fix the issues you know potentially even
+1:56:42
+automatically so you can see here a little bit of a screenshot uh from a the the results of
+1:56:50
+an inspector uh scan or Benchmark rather is you can see here at column uh
+1:56:55
+categorizes uh these findings based on severity uh when they were found so
+1:57:02
+they're probably all going to be found when you run your benchmark and then it'll just give you you know some more
+1:57:07
+uh descriptions uh on you know where it is and what's going on with it okay so it's definitely useful for uh compliance
+1:57:15
+reasons because again a lot of companies will have compliance policies that your resources need to fall in line with
+1:57:21
+right so AWS Shield is specifically used to prevent against
+1:57:27
+DDOS attacks so direct denial of service and it's inherently used with Route 53
+1:57:33
+and cloudfront and the standard version 3 Advanced is three grand a month comes with some extra features that you don't
+1:57:39
+really need to know for this test but the way I like to remember this is so a DDOS attack is basically when somebody
+1:57:45
+sends just a ton of requests to your architecture to try to like overload it and the way I like to think of shield is
+1:57:53
+like you're holding up a shield to like a hail of bullets the bullets are like the requests coming in trying to penetrate
+1:57:59
+um so that's kind of how I remember that because you know sometimes you'll get asked the security question on the test
+1:58:04
+and it gives you four services and you're kind of stuck trying to remember which does which okay
+1:58:11
+um so as we could see here uh if you were to have Shield standard
+1:58:16
+uh which you probably will unless you want to pay three grand a month uh it's basically going to sit between you know
+1:58:22
+even the first thing that an end user will hit which is Route 53 which is a kind of helps with like load balancing a
+1:58:30
+DNS resolution but uh before they even get to your infrastructure you know
+1:58:35
+Shields way before they get to your infrastructure Shield will potentially filter out those ddot's attacks kind of
+1:58:41
+like that perimeter security that uh we we reference earlier okay so Amazon guard duty is a threat
+1:58:48
+detection service that continually monitors your accounts for malicious activity and using machine learning to
+1:58:54
+analyze things like cloudtrail DNS and VPC flow logs the way I like to think about guard duty is like a guard dog
+1:59:01
+outside of its doghouse you know kind of watching making sure nothing gets into
+1:59:06
+the doghouse which in this case the dog house would be your AWS account okay so
+1:59:11
+guard duty is it prevents uh you know malicious activity across your AWS
+1:59:17
+accounts okay I know I've been asked about that question or service rather so virtual private networks a VPN lets
+1:59:25
+you establish a secure and private tunnel between your on-prem network and your personal devices
+1:59:31
+we kind of talked about it a little bit earlier uh but an AWS VPN is going to
+1:59:36
+establish the same tunnel uh but between your network and devices and the AWS
+1:59:42
+Global Network so wherever your resources are and the AWS Cloud so kind of the difference
+1:59:50
+there is that a VPN is going to be used from your resources on premises to like
+1:59:55
+maybe your employees at your company working from home they would be the personal devices and an AWS VPN establishes the
+2:00:03
+connection between again your on-prem resources but now it's uh the AWS cloud
+2:00:09
+and whatever you got going on in there okay so there's two types of AWS vpns
+2:00:15
+there's a site to site VPN which is basically going to connect your on-prem
+2:00:20
+network to the VPC uh maybe what you would generally think of but there's also a client VPN which connects end
+2:00:28
+users to AWS or on-prem networks so it can kind of replace uh you know the
+2:00:33
+traditional VPN that you might be using if that's something you know you want to offload to AWS to manage okay
+2:00:39
+so AWS web application firewall is an application Level firewall right
+2:00:46
+makes sense it's in the name that you can use to write rules to allow or deny
+2:00:51
+traffic to your AWS resources and then it can be attached to either cloudfront or your application load
+2:00:59
+balancer right those would be the two components that'll help you run web applications all right that handle
+2:01:04
+requests rather so it protects against the 10 most dangerous and commonly known attacks
+2:01:09
+like SQL injections and cross-site scripting but say for example like you had some
+2:01:16
+attackers that got you before but now you have uh WAFF going and you kind of know the IP address range that these
+2:01:23
+attackers like to use you can customize a rule in your uh web app firewall to
+2:01:29
+deny the attackers IP ranges so that will block them out which is really helpful for obvious reasons okay
+2:01:37
+so AWS Key Management Service is a managed service meaning AWS handles the
+2:01:43
+configuration of the service itself you just have to manage kind of your keys
+2:01:48
+and it makes it easy to create and control your encryption keys that are used to encrypt your data and uh you
+2:01:55
+know a good practice is to have complex rotating keys so don't use the same key forever
+2:02:01
+um uh and it uses envelope encryption so basically what that means is that to uh
+2:02:08
+get access to your data you basically need multiple keys right so you have your data here right sitting
+2:02:15
+maybe an S3 bucket or your database or whatever and this data key is going to be what
+2:02:21
+actually encrypts this data okay so you have your data key but then you also
+2:02:28
+have a root key that's going to be used to encrypt the data key so even if someone gets your data key
+2:02:35
+it's still encrypted so they can't really use it to you know hack into your actual data and as you might have
+2:02:42
+guessed in order to decrypt your data which you first need is you need to provide your rookie and then that's
+2:02:47
+going to decrypt your data key and then your data key is going to decrypt your actual data and then you'll get what you
+2:02:53
+need but by having this it's called envelopes encryption it keeps things obviously much more secure because
+2:03:00
+you're not just relying on like one key that could potentially be compromised okay
+2:03:05
+all right uh let's take a quick break and then when we come back we'll do
+2:03:10
+uh we'll look at uh user and identity management
+2:03:19
+[Music]
+2:03:33
+thank you
+2:03:40
+[Music]
+2:04:02
+[Music]
+2:04:08
+[Applause] [Music]
+2:04:15
+I am [Music]
+2:04:34
+[Music] thank you
+2:04:40
+[Music]
+2:04:51
+thank you
+2:06:14
+uh get right back into it here so we're going to look at user and identity
+2:06:21
+management and this is really important because more than likely you're not going to be
+2:06:26
+the only person getting into your AWS account resources so you got to know how to secure access to said resources all
+2:06:35
+right so some of the key Concepts to remember here are that when giving permissions to your
+2:06:42
+users you should always and I said that usually you know don't
+2:06:47
+use that word ignore those words but in this case you should always follow the principle of least privilege okay and
+2:06:54
+what that means is that you only give enough permissions to a user to accomplish what they need
+2:07:01
+like their job function and nothing else so for example if you had
+2:07:06
+maybe a database administrator just have enough permissions to manage the
+2:07:12
+database and but you don't need permission to spin up ec2 instances or
+2:07:17
+see billing account information things like that okay a lot of times you're going to want to
+2:07:23
+consider the compliance standards that your organization has and most
+2:07:29
+organizations will have some you want to utilize multiple layers of
+2:07:35
+authentication like MFA on top of passwords for Access right so again kind
+2:07:42
+of that concept of security at multiple layers okay
+2:07:48
+so IAM identity and access management is the primary service for managing users
+2:07:56
+and permissions and it's based on Json documents so JavaScript object notation
+2:08:03
+you can assign permissions to users and AWS services
+2:08:10
+there's a lot of times where you're building a solution and you'll need like one service that you have resources on
+2:08:15
+to have permission to access another service that you want to communicate with okay so there's three different
+2:08:22
+types of IAM identities you have users which are
+2:08:29
+as the name would kind of hint at end users that log into the console or need
+2:08:34
+programmatic access you've got groups which are groups of end users that you
+2:08:40
+can set up to share permissions and then you have roles which are used to Grant other AWS Services permissions to do
+2:08:49
+specific API actions okay in general you want to manage groups not
+2:08:55
+users because it's just you know you say you had a thousand users do you really want to manage each individual
+2:09:01
+individual user or do you want to maybe just have like 20 30 groups that you're managing right it seems like an obvious
+2:09:08
+answer okay so some key components of an IAM policy
+2:09:16
+so you've got a statement ID which is going to be used to label and identify each statement
+2:09:22
+you've got an effect which is going to say you know if this policy is going to allow or deny something
+2:09:29
+you've got an action which is going to say you know what actions this policy is actually either allowing or denying
+2:09:37
+you've got a principle which is kind of who or what this policy applies
+2:09:42
+to so it's either an account a user or role that you want to allow or deny
+2:09:48
+access to okay you've got your resource which is the resource to which your
+2:09:54
+action is going to apply and then this one's optional but you can have conditions and that's circumstances
+2:10:02
+under which the policy is enacted okay so third party identity providers it's
+2:10:10
+possible to allow access by utilizing a third-party identity provider which are
+2:10:16
+also called Federated identities so for example you're signing into maybe
+2:10:21
+a web application you're using uh that uh or the so backup for example signing
+2:10:31
+in to a web application you are hosting on AWS resources using Facebook Google
+2:10:37
+or Apple credentials right so not necessarily like a login specific to your website but you could just validate
+2:10:43
+uh you know their identity based on the fact that Facebook Google or Apple is
+2:10:49
+you know verifying that it's the correct person okay so Amazon Cognito is a service that's
+2:10:55
+going to handle that and it does so by working with what's called user groups and identity pools uh a user pool is a
+2:11:03
+directory of users and then an identity pool is basically what allows you to
+2:11:08
+give temporary credentials to a third-party verified user to access your AWS services
+2:11:15
+so whenever you see on the test uh you know mentioning like logging in using
+2:11:21
+something other than AWS uh then you want to start thinking about Cognito okay
+2:11:27
+so the root user account is the special account that's created upon creation of
+2:11:33
+your AWS account and it has full access to everything and it only uses an email
+2:11:38
+password login okay so it should be well secured with MFA
+2:11:44
+and extremely limited with access I mean it's hopefully obvious to you because I
+2:11:50
+mentioned that it has full access to everything and we just got done talking about the principle of least privilege okay
+2:11:56
+uh there are only a few certain things that you'll need to log into this account for everything else can be done
+2:12:03
+with an IAM just admin user um
+2:12:08
+and some things that you'll need the root account for are changing account settings like your email address or your
+2:12:13
+account name restoring IAM user permissions uh so in
+2:12:19
+case you like accidentally just delete everything you can just restore it from here uh you need it to activate the IAM
+2:12:25
+access to billing console if this isn't activated even I am admin users can't
+2:12:30
+see that uh you'll need it to close your AWS account or to change and or cancel
+2:12:36
+your AWS sport plan okay but the moral of the story is that the root user account should uh uh you know really be
+2:12:44
+highly limited to maybe only like one or two people that and should be scared with multi-factor
+2:12:50
+authentication okay so application integration
+2:12:57
+basically we're not going to spend too long here but it's got some services that you'll kind of need to know
+2:13:02
+but application integration refers to letting multiple independent applications work and communicate with
+2:13:07
+each other while being facilitated by an intermediate system so it's kind of like decoupling your architecture like we
+2:13:14
+talked about a while ago okay so by separating out apps into individual components you reduce the
+2:13:21
+risk of one thing breaking which is going to potentially cause everything else to break okay that's not good
+2:13:26
+most common systems that are utilized for application integration are like
+2:13:32
+queuing uh Pub sub so publisher subscriber streaming and then API Gateway Escape
+2:13:38
+so queuing is uh you know a non-real-time messaging system so it's
+2:13:44
+it's exactly like the queue you would imagine in your head it processes messaging and events that come in and
+2:13:51
+then once an event is received it kind of sits in this queue until it can be processed by something that you specify
+2:13:56
+and then once it does the process that message or consume it rather it will delete it so there's not a bunch of a
+2:14:03
+repetition okay so the service for this is sqs which is
+2:14:08
+simple queue service and it's fully managed and it allows you
+2:14:13
+to create cues excuse me so that you can double decouple and scale your systems and
+2:14:21
+applications all right uh so a publish And subscribe system is
+2:14:28
+commonly used for messaging systems and notifications of events occurring
+2:14:33
+this one's primarily going to use SNS simple notification service and it's a fully managed service that is
+2:14:42
+specifically designed to handle uh you know your Pub sub system okay
+2:14:48
+this is going to consist of Publishers which are message senders topics which
+2:14:54
+are event handlers and subscribers which are message receivers right uh so the typical SNS flow would be that
+2:15:02
+a user subscribes to a topic to be notified by email when say an AWS account charges reach ten dollars
+2:15:09
+so when the account charges reach ten dollars SNS will automatically send out
+2:15:14
+a notification to that topic and uh you know basically it can work
+2:15:20
+with like text messaging or emailing uh there's a few other ways but those are kind of the main kind of common commonly
+2:15:27
+used methods of delivery uh the message is then filtered and sorted and automatically emailed to the user if
+2:15:32
+you're using email notifying them of their charges so it's really cool because you know in this case you wouldn't have to like sit there and
+2:15:39
+constantly uh go to your billing console every day every hour or whatever monitoring your charges you could just
+2:15:45
+have a notification since you uh whenever you know you exceed that 10
+2:15:50
+threshold get so streaming is going to utilize SNS and sqs
+2:15:56
+so users or Services can react to events and messages in real time as they are
+2:16:02
+processed and Amazon Kinesis is the primary streaming service to handle analyzing real-time incoming events okay
+2:16:11
+so API gateways uh we kind of talked about apis a little bit earlier but they're kind of like the middleman that
+2:16:17
+sit between your application and your backend systems and just allow the two to kind of talk to each other
+2:16:23
+they contain information about a request so for example when you log into Facebook an API it will send your login
+2:16:29
+credentials to a database and then once it's verified it will send back the appropriate information to load like
+2:16:36
+your profile page okay uh Amazon API Gateway is going to handle apis in your Cloud environment context
+2:16:44
+and it's also going to allow you to format requests and responses if you
+2:16:51
+need like a kind of a custom setup there okay Amazon eventbridge is going to be used
+2:16:57
+with cloudwatch pretty closely and it's a service that monitors how
+2:17:03
+your systems are performing and what's actually happening with them so eventbridge is going to process events
+2:17:10
+as they happen and then it can be used to trigger actions to occur
+2:17:16
+automatically from other services right so we think about that automation eventbridge is a huge component of that
+2:17:21
+okay however it's you know primarily used to monitor what's happening with your ec2
+2:17:27
+instances which is kind of a limitation but you know at the same time you're probably
+2:17:33
+going to be running a bunch of stuff on ec2 instances anyway so it's good to have okay all right containers to touch on this
+2:17:40
+real quick so like we said earlier containers allow you to run multiple applications on the same ec2 instance
+2:17:46
+that are completely isolated from each other and it comes with everything an app needs to run regardless of the
+2:17:52
+underlying operating system because it does not come with an operating system right so it's not like you're shipping a
+2:17:59
+a container that has a Linux OS and trying to run it on a Windows OS no you're just running things related to
+2:18:05
+the application itself uh and then you can just inherit whatever operating system that container runs on okay
+2:18:13
+all right so to get a better better visual of this uh say so you have your
+2:18:18
+elastic container repository which basically contains kind of like let's say images of containers
+2:18:25
+and then say okay we have this specific container that we want to use so we're going to download it from ECR to elastic
+2:18:31
+container services uh and then we also okay so say we have
+2:18:37
+you know container one which is the yellow one and then container two which is a red one uh these containers that
+2:18:42
+they're then going to kind of act as the application and run requests and then
+2:18:48
+once you deploy them you can deploy them to your ec2 instances uh and then you
+2:18:54
+could even run as you can see here like the same container on the instance itself which is pretty nice so
+2:19:01
+containers are really flexible in that they allow you to run an application you know over some kind of ec2 instance
+2:19:08
+regardless of the operating system okay so you have ECS which is the fully
+2:19:13
+managed service that allows you to deploy manage and scale your containerized applications and it is
+2:19:18
+primarily going to use docker you've got elastic kubernetes service eks which is a fully managed service
+2:19:25
+that helps kubernetes just kind of control and orchestrate
+2:19:32
+your containers and manage your application available availability story
+2:19:37
+cluster data and just other tasks that works again with Docker it's kind of Hands-On you kind of got to know what
+2:19:44
+you're doing but if you don't you can use AWS fargate which is more of a
+2:19:49
+hands-off container management service that allows you to focus more on building applications and less on
+2:19:55
+dealing with your containers and their nuances personally I haven't worked much with
+2:20:00
+containers uh so I would definitely be into fargate all right AWS organizations and accounts
+2:20:08
+so AWS organizations is a service that allows you to create new accounts AWS
+2:20:13
+accounts tied to your business and essentially manage your billing access compliance
+2:20:18
+security and share your resources so it's kind of a One-Stop shop if you're a
+2:20:24
+company or an organization it's maybe a little bigger and you want to use multiple AWS accounts okay
+2:20:31
+so you have the uh Roots uh master account user that sits at the top of the organization
+2:20:37
+and then you have organizational units which are groups of AWS accounts and
+2:20:43
+they can be nested so for example you could have like a root account up here and then you could have one OU here one
+2:20:49
+OU here and maybe this OU has like two more organizational units uh and then
+2:20:55
+within those organizational units are one or more multiple accounts okay so service control policies act as guard
+2:21:03
+rails for your organization and it basically allows or sets rather boundaries on what your
+2:21:10
+accounts are able to do so it doesn't necessarily Grant permissions it just says uh you know
+2:21:16
+what is possible to do within your organization okay
+2:21:22
+so if we have uh maybe a better visualization here than my hands we've got the root account up here and then
+2:21:29
+say we've got you know kind of our foundational organizational units we've got one for prod pre-prod staging and a
+2:21:36
+sandbox within our foundational OU we've got an infrastructure and a security
+2:21:42
+OU uh So within this infrastructure OU maybe you have your network team and then a shared service team security
+2:21:49
+obviously security team and a log archive but these are all different accounts that serve a very specific
+2:21:55
+purpose so it's similar to decoupling your architecture itself you can
+2:22:00
+decouple you know your organization's kind of tasks and responsibilities into different accounts okay
+2:22:07
+and then of course over here it looks like each of these I'll use is going to have two different accounts what you can
+2:22:13
+do is you can enable Consolidated billing which will simplify things by allowing this root account to pay for
+2:22:19
+the expenses of all these accounts so if you're managing an organization
+2:22:25
+that makes things a lot easier all right so organizations are useful if you have
+2:22:31
+a bunch of different users and departments and need access to services and like I mentioned you can enable
+2:22:36
+Consolidated billing to send a bill up to that root account you can use things like tags to see which accounts are
+2:22:42
+incurring which costs you can automate new account creation and automatically apply the appropriate permissions using
+2:22:48
+things like those service control policies you can automate infrastructure deployment in specific accounts so say
+2:22:54
+you're setting up like test environment accounts you can automate what gets deployed to that account and then you can easily share resources
+2:23:01
+across accounts because AWS is going to kind of assume that if you you know
+2:23:06
+allowed and granted access to this account and your organization then it's you know can be trusted and it's pretty
+2:23:13
+easy to share stuff across those okay so service control policies
+2:23:19
+like I mentioned uh set guard rails for all accounts in your organization not necessarily the user's roles but the
+2:23:25
+accounts themselves and uh basically again they just say what's possible they don't add
+2:23:31
+permissions you still need to specify like within the accounts what's pot you know give the actual permissions
+2:23:39
+uh and if you uh want to adhere to best practices which I would hope you do
+2:23:45
+avoid attaching uh service control policies to the root account as it could have unwanted trickle effects uh
+2:23:52
+somewhere else in you know your hierarchy because scps will be inherited you know from the
+2:23:59
+top down so if we uh if let's back up here so if we have scps on the root everything in
+2:24:05
+here every account in here is going to inherit that SCP but say we set an SCP to this
+2:24:11
+infrastructure OU that SCP would only apply to the network and shared service team which you know could be useful
+2:24:19
+um so definitely want to keep that in mind okay all right governance and compliance
+2:24:24
+let's finish this section and then we should be almost to the end and then uh we will take a break and finish up okay
+2:24:31
+so key Concepts here are that sometimes your organization uh or an organization you work with
+2:24:37
+requires things to be done in a particular way for compliance reasons like I've kind of been hinting at
+2:24:43
+AWS has services that will automatically ensure your Cloud resources are all
+2:24:48
+compliant and any changes made are recorded and verified with the rules laid out okay AWS artifacts is uh one you'll want to
+2:24:56
+keep in mind when you're thinking One-Stop shop for security and compliance reports
+2:25:01
+all right AWS config though is a service that's kind of used to manage changes in your
+2:25:08
+AWS account and make sure they're compliant with policies that are set forth by organization it is region
+2:25:15
+specific so you would need to specify what you want to have configured within
+2:25:21
+each region but some common use cases include ensuring a resource stays configured in
+2:25:26
+a specific way keeping track of changes uh to resources listing all your
+2:25:32
+resources or uh you know getting assistance with your security analysis by detailing historical information and
+2:25:39
+changes okay cloud formation so cloud formation is a service that allows you to make
+2:25:45
+templates to specify how you want your architecture deployed and it's really
+2:25:50
+helpful you know when you're considering uh automating things okay so you can reuse templates to quickly
+2:25:57
+deploy uh and or edit your architecture configuration automatically and it helps
+2:26:03
+eliminate user error when deploying resources because you don't have to go manually set things up you can just use a template
+2:26:09
+so what that looks like is uh you create a template and say when you use this
+2:26:14
+template these are the kind of resources I want to deploy okay you save that to an S3 bucket in case you don't need it
+2:26:20
+right away but when you do need it you say hey cloudformation I want this template and I wanted to set this up so
+2:26:27
+in this case it looks like it would set up you know a VPC with the you know a couple subnets maybe a couple instances
+2:26:33
+maybe an internet gateway and whatever else is going on there okay so instead of having to go through and specify all
+2:26:39
+those things every time you want to set it up you could just use this one template that you kind of create one time and then manage overtime okay
+2:26:47
+it's tagging I've kind of mentioned this a few times but tagging is going to involve identifying your resources with
+2:26:53
+key value Pairs and it's one of the best ways to manage costs by far so for example you could have uh and we kind of
+2:27:01
+talked about key value pairs earlier but a key of department and then a value of accounting status approved environment
+2:27:06
+production location United States for example here you know if you were using tags when you go
+2:27:12
+to analyze your costs you could see like hey why is the accounting department you you know spending so much money this
+2:27:18
+month let's go let's go chat with those those folks uh you can group tagged
+2:27:24
+resources into resource groups which will allow you to better organize them and apply permissions to groups of
+2:27:30
+resources aside from tracking and managing costs they're helpful for the some of the
+2:27:35
+following reasons you can manage resources to see how much a certain resource has allocated uh you can use
+2:27:43
+them to automate so like we say you're using cloud formation templates you could say you want to deployed to maybe
+2:27:49
+the production or the test environment governance and compliance you know some companies will need you to tag things so
+2:27:55
+you can easily identify them and then it'll help classify data and subsequent security impacts so if you're trying to
+2:28:02
+add to your production environment you could look for the production tag and analyze all of those resources and data
+2:28:09
+to see you know if anything's going to potentially be compromised okay
+2:28:14
+so AWS license manager uh is used when uh there are times that you you know
+2:28:20
+have specific requirements to use licenses uh so for example like you can
+2:28:26
+see down there Oracle databases uh it works off of a bring your own license kind of model but license manager allows
+2:28:34
+you to centrally manage them so you don't necessarily have to keep up with them and they can be based on bcpus
+2:28:40
+physical cores sockets or just how many machines you're actually using and working with
+2:28:45
+and you can see what kind of uh you know resources that AWS license manager
+2:28:51
+currently works with okay all right let's uh take a break here I
+2:28:58
+believe we are again close to the end and then uh we'll come back here in a few minutes
+2:29:05
+[Music]
+2:29:26
+foreign foreign [Music]
+2:33:26
+all right let's carry on with vlogging so I use logging a lot actually it's uh
+2:33:31
+it's very important to remember that things will go wrong uh like I said like Werner rogel said the CTO of AWS at one
+2:33:39
+point uh it's unavoidable okay but logging will help you pinpoint failure
+2:33:45
+points and it will determine the cause of failure and automatically remediate it and it's important to remember too
+2:33:50
+that failure doesn't always mean like everything blows up and stops working there's going to be like little things
+2:33:56
+here and there that are break that are you know still important to run but they're not going to bring everything down and logging will help you kind of
+2:34:03
+figure out you know why what's going wrong is actually going wrong okay so there's a few different types of logging
+2:34:09
+services but there's basically two primary areas you monitor so you want to monitor your
+2:34:16
+infrastructure itself so like what is actually happening to your infrastructure and then you want to be able to monitor
+2:34:22
+any changes in access to your infrastructure basically like who did what you know who did it as opposed to
+2:34:28
+what's happening okay so cloudwatch is going to be the what it's going to monitor what is happening with your
+2:34:35
+infrastructure it consists of a few different services so we've got just
+2:34:40
+like blogs which is a centralized area to store log data metrics which are time ordered data points AKA variables
+2:34:47
+and then eventbridge is going to monitor for specified events and will trigger
+2:34:53
+actions when those events occur alarms trigger notifications based on
+2:34:58
+metrics dashboards are going to visualize what is happening based on collected metrics
+2:35:04
+and the cloud watch alarms basically have three states okay you've got okay which means that the Define metric that
+2:35:11
+you're tracking is within the defined threshold that you're monitoring you have alarm which means the metric uh the
+2:35:17
+metric you're monitoring is outside of the defined threshold one way or another and then insufficient data you'll
+2:35:23
+usually just see like when you make a you know new alarm because it's just started or there's not enough data
+2:35:29
+available like maybe set an alarm for a service that you just set up or something okay
+2:35:34
+so AWS cloudtrail is going to be the who did it and if you're ever asked how to track API calls or user access start
+2:35:42
+thinking cloudtrail okay those are some keywords there for you and it's basically going to monitor all
+2:35:49
+your API calls and actions made on your AWS account with the following okay you've got the where so it's going to be
+2:35:55
+a source IP address when the time that it happened uh who so you know link to a
+2:36:01
+user and or their account and then what so you know where like which region which resource and what kind of action
+2:36:08
+actually happened okay this trails are stored in S3 and are
+2:36:14
+analyzed with Amazon Athena which is a serverless SQL like service that is primarily used to analyze data
+2:36:21
+stored in S3 okay all right pricing and billing
+2:36:26
+total cost of ownership TCO is one of the largest value ads of using the cloud so it's important to know especially
+2:36:33
+again if you're not really like uh from a technical point of view working with the cloud you're maybe selling your
+2:36:39
+Executives or your shareholders on why they should be you know moving into the cloud but basically TCO is going to
+2:36:46
+compare the cost of owning and maintaining your own on-premise physical servers and data centers and then hiring
+2:36:52
+the associated people to do that uh versus using AWS servers and adopting
+2:36:58
+a pay-as-you-go model right so when you're managing your own stuff some things you have to consider are the
+2:37:05
+hardware cost of the actual servers the software costs you know what you're going to be running on it the software
+2:37:11
+functionality are there any limitations which are going to cost you time and money software architecture and
+2:37:17
+scalability right is your company planning on provide you know moving towards new projects that aren't going
+2:37:23
+to be compatible with what you got right now time to implementation obviously if
+2:37:28
+you need more time to do something you lose opportunities and potentially money user training same thing you want to
+2:37:35
+make sure your you know users are using this efficiently and not doing
+2:37:41
+things and going out of control spending money that you know they're not supposed to be spending just the list goes on and
+2:37:46
+on right so you want to make sure that when you are considering a move to the cloud you kind of compare apples to
+2:37:53
+oranges you know in regards to what it's going to cost to maintain your own Data Center
+2:37:59
+and I.T Solutions versus Outsourcing it to AWS okay
+2:38:05
+so to do some of this you can use the AWS pricing calculator which is totally a free tool that anyone
+2:38:11
+can use to estimate the cost of various AWS Services it contains over a hundred
+2:38:16
+very commonly used AWS services that you can use in your estimate uh basically
+2:38:22
+it's kind of like imagine like it looks like a shopping list and then you just add maybe some instances of a certain
+2:38:27
+size here and some EBS volumes and some networking components and then that'll tell you how much you know on a monthly
+2:38:34
+basis perhaps it's going to cost you and then you can again compare that to what it's going to cost you on a monthly
+2:38:41
+basis to uh host your own stuff and deal with your own data centers get
+2:38:48
+so AWS budgets uh allow you to set up budgets that will send you alerts if you're approaching or exceeding your
+2:38:54
+defined budget works very closely with the SNS that we talked about earlier it's got cost usage or reservation based
+2:39:02
+budgets so cost could be how much do you want to spend usage is you know what capacity do you want to actually use a
+2:39:10
+given resource to and then reservation uh you know how many uh of a certain
+2:39:16
+resource do you actually want to you know allocate to be able to use okay so it can be tracked at a monthly a
+2:39:22
+quarterly or yearly level and then you can create budget reports to send out again if you have to report to like
+2:39:28
+accounting folks or you know whoever else again Executives maybe you can send
+2:39:33
+those reports out so everybody can be on the same page okay so cost and usage reports uh just look
+2:39:41
+like detailed spreadsheets that again help you better analyze and understand your AWS costs it won't contain cost
+2:39:47
+allocation tags so it's kind of important to know what you're putting in there when you actually generate it but
+2:39:52
+as you can see here it kind of looks like a just Excel spreadsheet and uh
+2:39:57
+it'll give you kind of a line item breakdown of uh all of your costs and you could you know Analyze This in
+2:40:05
+multiple ways the sky is kind of the limit here okay AWS class Explorer though is going to be
+2:40:10
+a very visually friendly way to visualize understand and manage your AWS
+2:40:16
+costs and usage over time you can view your data at a monthly or daily level of granularity so uh I mean
+2:40:24
+as you can see here this is much more user friendly than this and over here you can apply
+2:40:31
+filters maybe you know in this case we wanted to see like running hours of ec2 uh but you could you know maybe switch
+2:40:38
+this to include S3 service or RDS you want to see what you spent on your storage or database so it's pretty neat
+2:40:44
+and then you can build dashboards uh that again you can kind of show to other people to communicate your costs and
+2:40:50
+usage as well okay so cost allocation tags that keep kind of harder on these but it allows you to
+2:40:56
+identify each resource so that when costs are ported you know which uh or
+2:41:01
+where rather each expense came from okay can be one of two types
+2:41:07
+it can be user find tags such as production or AWS generated uh and it's
+2:41:13
+generally going to look like this AWS created by so you can see down here this is a AWS man uh generated tag okay so
+2:41:21
+you could have any number of tags and you can get them as specific as you want okay
+2:41:27
+so AWS Consolidated billing I kind of mentioned this earlier in the organization section but this is
+2:41:33
+exclusive to organizations and that you can have that root account so the paying
+2:41:38
+account uh just paying for everything and then you can use cost Explorer to visual visualize your usage for the
+2:41:46
+Consolidated billing and the associated accounts so for example you can see over here okay uh well this paying account used uh
+2:41:55
+this much 39.52 you have five different accounts and this is how much each one
+2:42:00
+spent so for a total of 636.64 cents but this is all just paid
+2:42:07
+by you know this kind of paying account over here this root account all right so it's uh very helpful again when you are
+2:42:15
+looking to just pay your bill in one go and then just look and see and manage
+2:42:21
+your uh you know accounts in terms of who's spending what uh at a separate time okay
+2:42:27
+so there's some free services kind of uh make mental footnote of them but there's uh on top of that there's a free tier
+2:42:35
+for uh you know pretty much all resources that you're going to want to use anyways that allow you to use them
+2:42:42
+uh for free for your first 12 months of sign up or until you reach a specified monthly limit and they definitely let
+2:42:48
+you know what that is but the below services are free forever as opposed to that free tier which is free up to 12
+2:42:54
+months or until you hit that uh that limit but it's important to note here that some Services May generate paid
+2:43:01
+services such as Beanstalk and auto scaling so for example Auto scaling itself is free but the ec2 instances it
+2:43:08
+will provision for you are not free okay and you can see there those are some services that are free forever so it's
+2:43:16
+pretty cool all right all right so AWS support and some other helpful Services uh you've got four
+2:43:22
+different support plans you've got basic which is free it's only for email support with billing and account
+2:43:28
+questions you get seven trusted advisor checks okay uh you've got the developer plan which
+2:43:34
+is a tech support via email within about 24 response time for General guidance and system impaired
+2:43:41
+issues you've also got seven trusted advisor checks uh and there's the cost there
+2:43:49
+basically as you go up the chain here you're going to pay more but you get more out of it and faster response times
+2:43:55
+so with the business plan you get tech support via email chat and phone 24 7.
+2:44:01
+it's the same benefits as the developer tier but with production support right
+2:44:07
+so you get all trusted advisor checks but of course it is more and Enterprise
+2:44:12
+level is you get a dedicated technical account manager which is an AWS employee
+2:44:18
+that's dedicated to managing and optimizing architecture for you uh costs
+2:44:24
+a lot though so obviously unless you're a large Enterprise you're probably not going to use that okay
+2:44:30
+so AWS trusted advisor is a recommendation tool that automatically and actively monitors your AWS account
+2:44:38
+to provide actionable recommendations across a series of categories okay you've got five categories of AWS
+2:44:46
+trusted advisor which are similar to the uh architect well
+2:44:52
+architected framework so you've got cost optimization performance security fault tolerance and service limits right so
+2:44:59
+basically what this will do is it'll scan your architecture and it'll make recommendations in each of those categories okay
+2:45:05
+you've got the AWS Marketplace which is a curated digital catalog with thousands of software of this uh listings from
+2:45:12
+independent software vendors and the products can be free or paid and then the charges will just come with your AWS
+2:45:19
+bill and the products can be offered as Amis which we talked about earlier Amazon
+2:45:24
+machine images AWS cloud formation templates SAS offering so software as a
+2:45:31
+service web apples custom AWS wife rules so there's a lot here or there rather
+2:45:36
+over in the marketplace and it's super helpful but basically you'll just subscribe to these products if they're
+2:45:42
+not free and it will run based off of AWS resources and then you just you know
+2:45:49
+lump the cost of it into your AWS Bill okay so the service Health dashboard shows
+2:45:55
+the general status of AWS services so if there was a problem for example with the
+2:46:00
+like um the uh ec2 instances then they would not show a green check mark they
+2:46:06
+would show Red X uh your personal health dashboard how on the other hand is going to provide
+2:46:12
+alerts and guidance for events that might affect your environment so your personal resources okay so you can see
+2:46:20
+here for example we have a RDS storage failure uh DB corruption it shows in
+2:46:25
+which region that's in and it shows uh over here that we've got one database
+2:46:31
+instance affected and if we were to click on that hyperlink it would take us to our instance get
+2:46:36
+so the terms of review say is important to remember because you don't want to get banned that would not be good but
+2:46:42
+the AWS trust and safety team is a team that specifically deals with abuses
+2:46:48
+occurring on the AWS platform for specific issues and typically you know they're related
+2:46:53
+to behavior that could cause harm to the infrastructure or other customers using that same server or infrastructure
+2:47:00
+you know they're just kind of trying to hold up there into the shared responsibility model and make sure that nothing happens to their actual
+2:47:06
+infrastructure Okay so just don't mess up their servers and we'll all be good all right
+2:47:12
+so the AWS partner Network the APN is a global partner for AWS your organization
+2:47:18
+can join it to increase exposure to and in Opportunities with AWS so for example
+2:47:23
+you can be a Consulting partner which is where you help companies utilize AWS or
+2:47:29
+you can be a tech partner which is where you know you build Tech on top of AWS as a service offering okay
+2:47:36
+all right so we've got uh some service definitions now which are really just going to be recommended as review almost
+2:47:44
+uh we're just going to kind of run through basically what's considered fair game by AWS
+2:47:50
+so things that you could see on the test we went over
+2:47:56
+um in detail you know the most common services that you will be asked about
+2:48:02
+but these are services that you could be asked about uh so again I would recommend this
+2:48:08
+section for last minute test prep and in that scenario you want to try using
+2:48:13
+what's uh called active recall so basically like if you look and you see okay ec2 instead of just immediately
+2:48:21
+reading what it is and what it's for try to you know make yourself remember what it's used and what it's for okay that'll
+2:48:26
+help you out a lot more on the test as well because you don't have the answer sitting right in front of you on the
+2:48:31
+test you gotta recall it out of your brain okay so these Services you know uh if it
+2:48:37
+wasn't mentioned on like a previous slide and we didn't really go into it uh just conceptually know what it is but
+2:48:42
+you don't really have to you know do a deep dive or read too much into the documentation and the only details you
+2:48:48
+should know are for again some of the major services that we kind of talked about previously right so for the
+2:48:54
+following ones if we didn't talk about it previously just know what it is what it does but you don't have to know the ins and outs cut
+2:49:02
+all right here we go so actually let me get a water sip all right so apis is an application
+2:49:10
+programming interface cross Explorer helps you visualize and manage your AWS costs cost and usage
+2:49:16
+reports are detailed spreadsheets describing uh your AWS costs the CLI is
+2:49:22
+the command line interface that programmatically manages AWS resources elastic load balancers distribute
+2:49:29
+traffic between resources ec2 instance types can be either reserved on demand
+2:49:35
+or spot Amazon machine image Ami our templates that uh uh templates on how to build ec2
+2:49:43
+instances AWS Management console is the user-friendly web interface to manage AWS resources AWS Marketplace allows you
+2:49:51
+to buy or sell software Solutions on AWS security groups can be either stateful
+2:49:58
+security groups are stateful and they control traffic at an instance level
+2:50:04
+knackles network access control lists are stateless and they control traffic at the network level
+2:50:10
+AWS service catalog controls what services can be used in an organization
+2:50:16
+service quotas are the max limit of something you can have or do so like for
+2:50:22
+example the max amount of ec2 instances you could have in region software development kits sdks are
+2:50:28
+software to help integrate application languages with AWS AWS support plans you
+2:50:34
+got basic developer business and Enterprise each one gets more expensive but each more gives you more access to support
+2:50:40
+okay and more trusted advisor checks virtual private Network VPN allows you
+2:50:45
+to establish a secure connection between end users and your network
+2:50:51
+so now we'll break it down into sections we've got the analytics section which involves Amazon Athena which is SQL like
+2:50:57
+as equal like query service that analyzes logs and data Kinesis analyzes real-time streaming
+2:51:04
+data quicksite our dashboards and reports that are used for business intelligence application integration
+2:51:10
+which involves SNS which is used to send notifications based on events and then
+2:51:16
+sqs is a queue system to pass messages and events between services computer serverless we've got batch
+2:51:22
+which runs large-scale batch machine learning compute jobs ec2 handles Computing work elastic Beanstalk is a
+2:51:30
+hands-off service to deploying scale web apps Lambda runs serverless compute jobs light sails like being stock but more
+2:51:36
+hands off and then workspaces are fully managed virtual desktops containers ECS is a primary service that
+2:51:44
+allows you to run highly secure and scalable containers eks use kubernetes to manage and orchestrate your Docker
+2:51:50
+containers on AWS and then fargate deploys your apps to AWS managed containers
+2:51:56
+database we've got Aurora which is the AWS native serverless MySQL and postgresql service dynamodb is the nosql
+2:52:03
+database service Alaska is an in-memory caching service RDS is the relational
+2:52:09
+database service supporting popular SQL engines and redshift is the data
+2:52:15
+warehousing service developer tools you've got code build I'm actually not going to read too much into these
+2:52:20
+because you really won't be asked about them probably but we got code commit code deploy and code pipeline management
+2:52:26
+monitoring and governance so we've got Auto scaling which scales resources up or down automatically to meet demand AWS
+2:52:34
+budgets which set budgets to control costs and be notified AWS cloud formation which uses templates to
+2:52:40
+automate infrastructure deployment cloudtrail monitors user activity and API usage in your account so who did it
+2:52:47
+cloudwatch monitors the state of your AWS infrastructure so what happened or what is happening
+2:52:53
+we've got config which evaluates the config and compliance of your resources event Bridge triggers actions based on
+2:53:00
+events usually cloudwatch events uh license manager is managed or lets you
+2:53:06
+manage required software licenses managed Services it basically means that it's an AWS service where all the
+2:53:12
+software of that service is maintained by AWS and it helps organizations fully
+2:53:17
+use AWS organization centrally group and manage multiple AWS accounts Secrets manager
+2:53:24
+essentially manages the life cycle of your secrets so things like passwords System Manager essentially monitors and
+2:53:30
+configures your resources trusted advisor provides recommendations and those five key areas to help you follow
+2:53:36
+AWS best practices networking and content delivery we've got API Gateway which maintains and
+2:53:42
+secures apis cloudfront caches data around the world and Edge locations to improve
+2:53:48
+performance for end users direct connects is plugging the ethernet cord in it's a physical direct connection
+2:53:53
+between AWS and your on-prem network Route 53 is a DNS name resolution VPC is
+2:53:59
+a private area of the cloud where you deploy your resources storage you've got AWS backup which
+2:54:04
+essentially manages backups with policies EBS which is block storage designed to be attached to and work with
+2:54:11
+ec2 instances EFS is a serverless and scalable file storage S3 is a simple
+2:54:18
+storage service object level object it's an object storage that has infinitely
+2:54:25
+scalable potential S3 Glacier which is cheap archive storage snowball Edge is a
+2:54:31
+physical device to move data into the cloud and then storage Gateway combines on-premise and cloud storage
+2:54:37
+security identity and compliance we've got artifacts which downloads AWS compliance reports certificate manager
+2:54:43
+which creates and manages SSL and TLS certificates AWS Cloud HSM is a physical
+2:54:48
+device that stores encryption Keys it's self-destructive tampered with pretty cool Cognito service is a service to provide
+2:54:56
+Federated identities with access to services so again like Apple or Google logins Amazon detective visually
+2:55:03
+analyzes your data for security guard Duty protects your AWS accounts from malicious activity IAM essentially
+2:55:10
+provides and manages identities to access resources inspector inspects the security status
+2:55:16
+of your ec2 instances an AC scans and discovers exposed sensitive data usually
+2:55:22
+in S3 buckets Shield prevents protects against DDOS attacks and then WAFF web application firewall protects web apps
+2:55:29
+from common threats all right so we're almost done I know this is like the third fourth time I've
+2:55:36
+said that but uh we're really just going to kind of push through the end here and finish up all right so I mentioned earlier rule out one to
+2:55:43
+two answers there's going to be one or two answers that just don't make sense you can rule them out okay every service and an answer is real know the context
+2:55:50
+right know how you would use a service uh because that's how they're actually going to test you no abbreviations and
+2:55:57
+the common patterns to them uh so for example like uh EC uh ec2 probably you
+2:56:03
+know the E is probably going to stand for elastic uh don't flag too many questions for review so when you
+2:56:10
+um are taking the test you can flag questions to come back to if you aren't sure about it but don't do that for half your questions because you're just going
+2:56:16
+to psych yourself out and probably second guess yourself on a lot of those questions okay and the day before your test just chill this is very very
+2:56:23
+important so if you don't know something the day before your test you're probably not going to know it but if you find
+2:56:28
+something you don't know because you're trying to cram then it's going to stress you out you're going to be anxious you're going to doubt yourself you're
+2:56:34
+going to fail okay just chill out make sure that you're going in your test with a good mindset you know watch a
+2:56:39
+movie do whatever Hobbies you're into okay so to schedule your AWS test
+2:56:45
+uh well first of all you can do your test at a testing center or at home I would recommend doing it at a testing
+2:56:51
+center because at home it's kind of weird and you have someone like you have to have a camera with someone constantly
+2:56:56
+watching you and you have to install like software to write it's just kind of a pain so if you can go to a testing
+2:57:03
+center but just know if that's not an option you can do it at home upon passing you'll actually receive a
+2:57:09
+discount on your next exam which is pretty neat so you can keep getting certified and then you can schedule your
+2:57:14
+test by going to www.aws.training certification
+2:57:21
+all right let's take a big breath we finished you finished nice job uh so
+2:57:28
+thank you for tuning in sticking with me for uh jeez about three hours but uh you
+2:57:33
+know this isn't uh even though it's an intro level test you know don't uh take
+2:57:39
+it lightly you know make yourself prepared uh definitely check out the
+2:57:44
+Hands-On labs and the practice exams that I got for you those will be infinitely valuable and again the goal
+2:57:52
+here is to over prepare you so you only have to take the test once all right and then you can just move on with your life
+2:57:57
+and put it out there that you're a certified professional all right so
+2:58:03
+thanks again it was a long one but we made it uh if you have any questions you can reach me
+2:58:09
+on my website uh which if you bought my content you know where to find that and
+2:58:14
+if you're here on YouTube then uh just look in the link below alright so best
+2:58:19
+of luck to you I hope you pass on the first time and if you use this guide I am sure you will alright so best of luck
+2:58:27
+to you and we'll see you next time
+ 
+
+
+

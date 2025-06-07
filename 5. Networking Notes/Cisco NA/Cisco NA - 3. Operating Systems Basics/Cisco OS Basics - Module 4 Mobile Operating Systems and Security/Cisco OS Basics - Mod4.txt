@@ -1,0 +1,988 @@
+Cisco NA - Operating Systems Basics Overview
+
+
+God be with us
+
+
+=======================================================================
+Module 4: Mobile Operating Systems and Security
+
+
+------------------------------------
+4.0. Introduction
+
+
+→
+
+ • 
+   -> 
+
+
+4.0.1 Why Should I Take This Module?
+
+ - The use of mobile devices has grown very rapidly. 
+ - IT technicians and professionals must be familiar with the operating systems on these devices. 
+ - Like desktops and laptops, mobile devices also use operating systems to interface with the hardware and to run software. 
+ - The two most commonly used mobile operating systems are Android and iOS.
+
+ - In this module, you will learn about the components, functions, and terminology related to mobile operating systems. 
+ - You will learn about the differences between the Android and iOS mobile operating systems, Android being open source and customizable, and iOS being proprietary to Apple and closed source. 
+ - You will also learn about common mobile device features like screen orientation, screen calibration, Wi-Fi calling, virtual assistants, and GPS. 
+ - You will work with both the Android and iOS operating systems as part of lab exercises.
+
+ - The portable nature of mobile devices makes them at risk for theft and loss. 
+ - You will learn about mobile security features such as screen lock, biometric authentication, remote lock, remote wipe, and patching and upgrading. 
+ - You also learned that mobile OSs can be configured to disable access if too many failed login attempts are made. 
+ - This can prevent someone from trying to guess a passcode. 
+ - Most mobile devices also have a remote lock and remote wipe feature that can be activated if the device is stolen. 
+
+
+4.0.2 What Will I Learn in This Module?
+
+
+
+------------------------------------
+4.1. Android Versus iOS
+
+ 
+
+
+→
+
+ • 
+   -> 
+
+
+4.1.1 Open Source versus Closed Source
+
+ - Like desktops and laptops, mobile devices use an operating system (OS) to run the software. 
+ - This chapter focuses on the two most commonly used mobile operating systems: Android and iOS. 
+ - Google develops Android, and Apple develops iOS.
+
+ - Before users can analyze and modify software, they must be able to see the source code. 
+ - Source code is the sequence of instructions written in human-readable language before it is turned into machine language (zeroes and ones). 
+ - The source code is an essential component of free software as it allows the users to analyze and eventually modify the code. 
+ - The software is said to be open source when the developer chooses to provide the source code. 
+ - The software is said to be closed-source if the program’s source code is not published.
+
+
+Android GUI
+ - Android is an open source, Linux based smartphone/tablet operating system developed by the Open Handset Alliance, primarily driven by Google. 
+ - Released in 2008 on the HTC Dream, the Android OS has been customized for use on a wide range of electronic devices. 
+ - Because Android is open and customizable, programmers can use it to operate devices like laptops, smart TVs, and e-book readers. 
+ - There have even been Android installations in devices like cameras, navigation systems, and portable media players. 
+
+
+iOS GUI
+ - iOS is a closed source Unix based operating system for Apple’s iPhone smartphone and iPad tablet. 
+ - Released in 2007 on the first iPhone, the Apple iOS source code was not released to the public. 
+ - To copy, modify or redistribute iOS requires permission from Apple. 
+
+
+Windows 10 Mobile
+ - iOS is not the only closed source OS for mobile devices. 
+ - Microsoft also created a version of Windows for their mobile devices. 
+ - This includes Windows CE, Windows Phone 7, and Windows Phone 8. 
+ - With the development of Windows 10 Mobile, Microsoft provides a very similar user interface and use of code an all of their devices. 
+ - This includes their Windows 10 Mobile phones and tablets they develop under the name Surface.
+
+
+
+
+
+4.1.2 Application and Content Sources
+
+ - Apps are programs that are executed on mobile devices. 
+ - Apps are written and compiled for a specific mobile operating system such as Apple iOS, Android, or Windows. 
+ - Mobile devices come with several different apps preinstalled to provide basic functionality. 
+ - There are apps to make phone calls, send and receive an email, listen to music, take pictures, and play video or video games.
+
+ - Apps are used on mobile devices in the same way programs are used on computers. 
+ - Instead of being installed from an optical disk, apps are downloaded from a content source. 
+ - Some apps can be downloaded for free, and others must be purchased.
+
+
+iOS Apps
+ - Apps for Apple iOS mobile devices are available for free or purchase from the App Store. 
+ - Apple uses a walled garden model for their apps meaning the apps must be submitted to and approved by Apple before they are released to users. 
+ - This helps prevent the spread of malware and malicious code. 
+ - Third-party developers can create apps for iOS devices by using Apple’s Software Development Kit (SDK) Xcode and the Swift programming language. 
+ - Note that Xcode can only be installed on computers running OS X.
+
+
+Android Apps
+ - Android apps are available from both Google Play and third-party sites, such as Amazon’s App store. 
+ - Android Studio, a Java-based SDK, is available on Linux, Windows, and OS X. 
+ - Android apps run in a sandbox and have only the privileges enabled by the user. 
+ - A prompt will appear if an app needs to obtain permissions. 
+ - Permissions are granted via the app’s Settings page.
+
+ - Third-party or custom programs are installed directly using an Android Application Package (apk) file. 
+ - This gives users the ability to directly install apps without going through the storefront interface. 
+ - This is known as sideloading.
+
+
+Automobile Apps
+Many new cars have navigation built into them. Some also have what is known as in-vehicle entertainment systems. A growing trend is using many apps on your mobile device through this entertainment system. Your tablet or smartphone is connected to the system via USB or Bluetooth to enable what is known as Android Auto or Apple CarPlay. Navigation is one of the most common uses for this connection. You can also access the music on your mobile device and play it over the car stereo. Other features include talk-to-text, hands-free calling, access to digital assistants, and a display of your calendar contents.  
+
+
+
+
+
+4.1.3 Check Your Understanding - Compare Android and iOS
+
+
+Linux based operating system
+ - Android
+
+Closed source operating system
+ - Apple iOS
+
+Developed by Open Handset Alliance
+ - Android
+
+Source code is not released to the public
+ - Apple iOS
+
+Uses walled garden model for apps
+ - Apple iOS
+
+Third-party or custom programs are installed directly using an .apk file.
+ - Android
+
+
+
+------------------------------------
+4.2. Mobile Touch Interface
+
+ 
+
+
+→
+
+ • 
+   -> 
+
+
+4.2.1 Android Home Screen Items
+
+ - Much like a desktop or laptop computer, mobile devices organize icons and widgets on multiple screens for easy access.
+
+ 
+Android Main Home Screen
+ - One screen is designated as the home screen. 
+ - Additional screens are accessed by sliding the home screen to the left or right. 
+ - Each screen contains navigation icons, the main area where icons and widgets are accessed, and notification and system icons. 
+ - The screen indicator displays which screen is currently active.
+
+
+Navigation Icons
+ - The Android OS uses the system bar to navigate apps and screens. 
+ - The system bar is always displayed at the bottom of every screen.
+
+
+Notification and System Icons
+ - Each Android device has an area that contains system icons, such as the clock, battery status, and radio signal status for Wi-Fi and provider networks. 
+ - Apps such as email, text messaging, and Facebook often display status icons to indicate communication activity.
+
+ - To open the notification area on Android devices, swipe down from the top of the screen. 
+ - You can do the following when notifications are open:
+ • Respond to a notification by touching it.
+ • Dismiss a notification by swiping it off the screen to either side.
+ • Dismiss all notifications with the icon.
+ • Toggle often-used settings.
+ • Adjust the brightness of the screen.
+ • Open the Settings menu with the quick settings icon.
+
+
+
+4.2.2 Lab - Working with Android
+
+In this lab, you will work with the Android operating system.
+
+Introduction
+In this lab, you will place apps and widgets on the home screen and move them between different screens. You will also create folders. Finally, you will install and uninstall apps from the Android device.
+
+
+
+4.2.3 iOS Home Screen Items
+
+ - The iOS interface works in much the same way as the Android interface. Screens are used to organize apps launched with a touch. 
+ - There are some significant differences:
+
+ • No navigation icons - A physical button may be pressed instead of touching navigation icons.
+ • No widgets - Only apps and other content can be installed on iOS device screens.
+ • No app shortcuts - Each app on a home screen is the actual app, not a shortcut.
+
+
+
+Home button
+ - Unlike Android, iOS devices do not use navigation icons to perform functions. 
+ - On iPhone versions prior to the iPhone X, a single physical button called the Home button performs many of the same functions as the Android navigation buttons. 
+ - For these older phones, the Home button is at the bottom of the device and can perform many functions. 
+ - Some common functions performed by the home button with explanations of how these functions are performed on the iPhone X, which has eliminated the home button, are shown below:
+
+ • Wake the device - When the device’s screen is off, press the Home button once to turn it on. 
+			- On iPhone X you can wake the device using either facial recognition or by raising the phone and tapping the screen. 
+			- (Raise to wake is also available on iPhone versions 6s or later.)
+
+ • Return to the home screen - Press the Home button while using an app to return to the last home screen that was used. 
+			- On iPhone X return to the home screen by swiping the screen up from the bottom.
+
+ • Start Siri or voice control – Press and hold the Home button to start Siri or voice control. 
+			- Siri is special software that understands advanced voice controls. 
+			- On iPhone X Siri is launched by pressing and holding the side button.
+
+
+
+iOS Notification Center
+ - iOS devices have a notification center that displays all alerts in one location. 
+ - To open the notification area on iOS devices, touch the top center of the screen and swipe down. 
+ - This will show the phone's lock screen. 
+ - Any notifications will appear in the middle area of the screen. 
+ - From here, you can browse notifications and alerts, dismiss them, clear them, and adjust them as necessary.
+
+
+
+Commonly Used Settings
+ - iOS devices allow the user to quickly access common settings and switches, even if the device is locked. 
+ - To access the commonly used settings menu, swipe down from the TOP RIGHT CORNER.
+
+ - The Control Center comes with some default controls that are always available. 
+ - You can configure addition controls by navigating to Settings > Control Center. 
+ - In the figure, the user has added the Flashlight, Timer, Calculator, Camera, and other apps to the Control Center screen.
+
+
+iOS Spotlight
+ - From any screen of an iOS device, touch the screen and drag down to reveal the Spotlight search field. 
+ - Any part of the screen except the very top or the very bottom should work. 
+ - When Spotlight search field is revealed, type what you're looking for. 
+ - Spotlight shows suggestions from many sources including your installed apps, Setting, the internet, iTunes, App Store, movie show times, and nearby locations. 
+ - Spotlight also automatically updates the results as you type.
+
+
+
+4.2.4 Lab - Working with iOS
+
+In this lab, you will work with the iOS operating system.
+
+Introduction
+In this lab, you will place apps on the home screen and move them between different home screens. You will also create folders. Finally, you will install an app on the iOS device and then uninstall it.
+
+
+
+
+
+
+
+------------------------------------
+4.3. Common Mobile Device Features
+
+ 
+
+
+→
+
+ • 
+   -> 
+
+
+
+4.3.1 Screen Orientation
+
+ - Most mobile devices function in either portrait or landscape mode. 
+ - A sensor inside the device, known as an accelerometer, detects how it is being held and will change the screen orientation appropriately. 
+ - Users can choose the viewing mode that is the most comfortable for them for different types of content or applications. 
+ - Content rotates to the position of the device. This feature is useful, for example, when taking a photograph. 
+ - The camera app also turns to landscape mode when the device turns to landscape mode. 
+ - Also, when a user writes a text, turning the device to landscape mode makes the keyboard larger and broader.
+
+ - Some devices have gyroscopes to provide more accurate movement readings. 
+ - Gyroscopes allows a control mechanism for driving games where the phone or tablet functions as a steering wheel.
+
+ 
+Android Screen Auto-Rotation Setting
+ - When using an Android device, to enable auto rotation, open the notifications panel and turn on the auto-rotate function by tapping the screen rotation icon, indicated in the figure.
+
+
+iOS Screen Auto-Rotation Setting
+ - When using an iOS device, to enable automatic rotation use the following procedure:
+
+ - Swipe down from the TOP RIGHT CORNER to open the Control Center, and tap the lock icon
+
+
+
+4.3.2 Screen Calibration
+
+ - You may need to adjust the screen's brightness when using a mobile device. 
+ - When bright sunlight makes the screen difficult to read, increase the brightness level. 
+ - Inversely, very low brightness is helpful when reading a book on a mobile device at night. 
+ - Mobile devices can auto-adjust the brightness depending on the amount of surrounding light. 
+ - The device must have a light sensor to use auto-brightness.
+
+ - The LCD screen for most mobile devices uses the most battery power. 
+ - Lowering the brightness or using auto-brightness helps conserve battery power. 
+ - Set the brightness to the lowest to get the device the most battery life.
+
+
+Android Brightness Menu
+ - When using an Android device, to configure screen brightness use the following path:
+
+ - Swipe down from the very top of the screen > Display > Brightness > slide the brightness to the desired level
+
+ - Alternatively, tap the Adaptive Brightness toggle to allow the device to decide the optimal screen brightness based on the amount of ambient light.
+
+
+
+iOS Display & Brightness Menu
+ - When using an iOS device, to configure screen brightness, use the following path:
+
+ - Swipe down from the TOP RIGHT CORNER and slide the brightness bar up or down to vary the brightness.
+
+ - Alternatively, to configure brightness in the Settings menu, use the following path:
+
+ - Settings > Display & Brightness > slide the brightness to the desired level.
+
+
+
+
+4.3.3 GPS
+ - Another common feature of mobile devices is the Global Positioning System (GPS). 
+ - GPS is a navigation system that determines the time and geographical location of the device by using messages from satellites in space and a receiver on Earth. 
+ - A GPS radio receiver uses at least four satellites to calculate its position based on the messages. 
+ - GPS is very accurate, even used under most weather conditions. 
+ - However, dense foliage, tunnels, and tall buildings can interrupt satellite signals. 
+ - GPS receivers must have line-of-sight to GPS satellites and do not work indoors. 
+ - Indoor Positioning Systems (IPS) can determine device location by triangulating its proximity to other radio signals, such as Wi-Fi access points.
+
+ - GPS services allow app vendors and websites to know a device's location and offer location-specific services (such as local weather and advertising). 
+ - This is called geotracking.
+
+
+Android Location Services
+ - To enable GPS on Android devices use the following path:
+
+ - Settings > Location > Tap on the toggle to turn location services on
+
+
+iOS Location Services
+ - To enable GPS on iOS devices use the following path:
+
+ - Settings > Privacy & Security > Location Services > Turn location services on
+
+
+
+4.3.4 Lab - Mobile Device Features
+In this lab, you will learn about mobile device features.
+
+Introduction
+In this lab, you will set the autorotation, brightness, and turn GPS on and off.
+
+
+
+4.3.5 Wi-Fi Calling
+
+ - Instead of using the cellular carrier's network, modern smartphones can use the internet to transport voice calls by taking advantage of a local Wi-Fi hotspot. 
+ - This is called Wi-Fi calling. 
+ - Locations such as coffee shops, workplaces, libraries, or homes, usually have Wi-Fi networks connected to the internet. 
+ - The phone can transport voice calls through the local Wi-Fi hotspot. 
+ - If there is no Wi-Fi hotspot within reach, the phone will use the cellular carrier's network to transport voice calls.
+
+ - Wi-Fi calling is beneficial in areas with poor cellular coverage because it uses a local Wi-Fi hotspot to fill the gaps. 
+ - The Wi-Fi hotspot must guarantee a throughput of at least 1Mbps to the internet for a good quality call. 
+ - When Wi-Fi calling is enabled and used during a voice call, the phone will display "Wi-Fi" next to the carrier name.
+
+
+Enabling Wi-Fi Calling on Android
+ - To enable Wi-Fi calling on Android use the following path:
+
+ - Settings > More (under Wireless & networks section) > Wi-Fi Calling > Tap on the toggle to turn it on
+
+
+Enabling Wi-Fi Calling on iOS
+ - To enable Wi-Fi calling on iOS use the following path:
+
+ - Settings > Wi-Fi and turn on Wi-Fi Calling
+
+ - Note: Not all cellular carriers allow Wi-Fi calling. If you cannot enable it on your phone, your carrier or mobile device probably does not support it.
+
+
+
+
+
+
+
+4.3.6 Mobile Payments
+
+Mobile payments refer to any payments made through a mobile phone.
+
+
+Premium SMS Based Transactional Payments
+ - Consumers send an SMS message to a carrier's special phone number containing a payment request. 
+ - The seller is informed the payment has been received and is cleared to release the goods. 
+ - The charge is then added to the customer's phone bill. 
+ - Slow speed, poor reliability, and poor security are a few shortcomings of this method.
+
+
+Direct Mobile Billing
+ - Using a mobile billing option during check-out, a user identifies their self (usually through two-factor authentication) and allows the charge to be added to the mobile service bill. 
+ - This is very popular in Asia and has the following benefits: security, convenience, and no need for bank cards or credit cards.
+
+
+Mobile Web Payments Contactless
+ - The consumer uses the web or dedicated apps to complete the transaction. 
+ - This method relies on the Wireless Application Protocol (WAP) and usually requires the use of credit cards or a pre-registered online payment solution, such as PayPal or Venmo.
+
+
+Contactless NFC
+ - Near Field Communication (NFC) is a mobile payment method used mostly in physical store transactions. 
+ - A consumer pays for good or services by waving the phone near the payment system. 
+ - Based on a unique ID, the payment is charged directly against a pre-paid account or bank account. 
+ - NFC is also used in mass-transportation services, the public parking sector, and many other consumer areas.
+
+
+
+4.3.7 Virtual Private Network
+
+ - A Virtual Private Network (VPN) is a private network that uses a public network (usually the internet) to connect remote sites or users. 
+ - Instead of a dedicated leased line, a VPN uses "virtual" connections routed through the internet from the company's private network to the remote site or employee.
+
+ - Many companies create their VPNs to accommodate the needs of remote employees and distant offices. With the proliferation/growth of mobile devices, it was a natural move to add VPN clients to smartphones and tablets.
+
+ - For a VPN established from a client to a server, the client accesses the network behind the server like it was connected directly to that network. 
+ - Because VPN protocols also allow for data encryption, the communication between client and server is secure.
+
+ - When the device has VPN information loaded, that device must start before traffic can be sent and received.
+
+
+Configuring a VPN Connection on Android
+ - To create a new VPN connection on Android use the following path:
+
+ - Settings > More (under Wireless & networks section) > VPN > Tap on the + sign to add a VPN connection
+
+Starting a VPN Connection on Android
+ - To start a VPN on Android use the following path:
+
+ - Settings > General > VPN > Select the desired VPN connection > enter username and password > tap CONNECT
+
+
+Configuring a VPN Connection on iOS
+ - To create a new VPN connection on iOS use the following path:
+
+ - Settings > General > VPN > Add VPN Configuration...
+
+
+Starting a VPN Connection on iOS
+ - To start a VPN on iOS use the following path:
+
+ - Settings > Toggle VPN to on
+
+
+
+4.3.8 Virtual Assistants
+
+ - A digital assistant sometimes called a virtual assistant, is a program that can understand natural conversational language and perform tasks for the end user. 
+ - Modern mobile devices are powerful computers, making them the perfect platform for digital assistants. 
+ - Popular digital assistants include Google Now for Android, Siri for iOS, and Cortana for Windows Phone.
+
+ - These digital assistants rely on artificial intelligence, machine learning, and voice recognition technology to understand conversational-style voice commands. 
+ - As the end user interacts with these digital assistants, sophisticated algorithms predict the user's needs and fulfill requests. 
+ - By pairing simple voice requests with other inputs, such as GPS location, these assistants can perform several tasks, including playing a specific song, performing a web search, taking a note, or sending an email.
+
+
+Google Now
+ - To access Google Now on an Android device simply say "Okay google" and Google Now will activate and start listening to requests.
+
+
+iOS Display & Brightness Menu
+ - To access Siri on an iOS device, press and hold the Home button. 
+ - Siri will activate and start listening to requests. 
+ - Alternatively, Siri can be configured to start listening to commands when it hears "Hey Siri". 
+ - To enable "Hey Siri", use the following path:
+
+ - Settings > Siri & Search > Toggle Listen for "Hey Siri".
+
+
+
+
+
+
+
+------------------------------------
+4.4. Passcode Locks
+
+ 
+
+
+→
+
+ • 
+   -> 
+
+4.4.1 What Do You Already Know? - Screen Locks
+
+
+This screen lock requires that a four or six-digit numeric code be entered to unlock the mobile device.
+ - Passcode lock.
+ - This is the most common method to lock mobile devices. Passcode options can also include setting a custom numeric code or alphanumeric password.
+
+
+This screen lock requires the user simply swipe the device screen in a pre-defined direction to unlock the device.
+ - swipe lock.
+ - Also called Slide to unlock on many Android devices. Although convenient, this less secure method should only be used if security is unimportant.
+
+
+This screen lock requires the user to join four or more dots in a specific pattern to unlock the device.
+ - pattern lock.
+ - Available on many Android devices. The screen unlocks using a pattern you draw with your finger.
+
+
+This biometric screen lock can unlock a device by scanning the user's fingerprint.
+ - fingerprint lock.
+
+This iOS and Android feature converts the user's fingerprint scan into a unique hash. When a user touches the fingerprint sensor, the device re-computes the hash. The device unlocks if the hash values match.
+
+This biometric screen lock can unlock a device by simply looking at it.
+ - face lock.
+ - This iOS and Android feature computes a hash using a picture of the user's face. Nice try, but that's not the correct answer.
+
+
+
+
+
+
+4.4.2 Lab - Passcodes Locks
+
+In this lab, you will use passcode locks.
+
+
+Introduction
+For most users, these Android or iOS devices are on the go with the users, and they are usually powered on all the time. 
+If the device is lost or stolen, the passcode can prevent unauthorized access.
+
+In this lab, you will set a passcode lock, change a passcode lock, and fail passcode authentication. 
+You will also configure the device to use your fingerprints if it has biometric capability. Finally, you will remove the passcode and biometric locks
+
+ 
+
+
+
+4.4.3 Restrictions on Failed Login Attempts
+Unlocking a mobile device requires entering the correct PIN, password, pattern, or another passcode type. In theory, a passcode, such as a PIN, could be guessed given enough time and perseverance. Mobile devices can perform defined actions after incorrect attempts to prevent someone from trying to guess a passcode.
+
+For Android devices, the number of failed attempts before lockout depends on the device and version of Android OS. Commonly, an Android device will lock when a passcode has failed from 4 to 12 times. After a device is locked, you can unlock it by entering the Gmail account information used to set up the device.
+
+
+IOS Erase Data
+For iOS devices, you can turn on the Erase data option as shown. If the passcode fails 10 times, the screen goes black, and all data on the device is deleted. To restore the iOS device and data, if you have backups, use either the Restore and Backup option in iTunes or the Manage Storage option in iCloud.
+
+Note: The iPhone in the figure is managed by Cisco. As part of Cisco's security policy, the user is not allowed to turn off Erase Data. Therefore, if the wrong password is entered 10 times, all data will be erased.
+
+
+
+iOS GUI
+On iOS, to increase security, the passcode is used as part of the encryption key for the entire system. Because the passcode is not stored anywhere, no one can gain access to the user data on iOS devices, including Apple. The system depends on the user to provide the passcode before the system can be unlocked and decrypted for use. A forgotten passcode will render user data unreachable, forcing the user to perform a full restore from a backup saved in iTunes or iCloud.
+
+
+
+4.4.4 Check Your Understanding - Screen Locks and Biometric Authentication
+
+
+The swipe lock is considered the most secure method of preventing unauthorized access to a mobile device
+ - false
+
+Requiring the user to draw a pattern on the screen with their finger is a feature of the fingerprint lock
+ - false
+
+The iOS Erase Data feature will delete all data on the devices after 3 failed passcode attempts
+ - True
+ - 
+
+Some mobile devices can be unlocked by scanning a user’s facial features
+ - false
+ - 
+
+iOS devices store passcodes in plain text in flash memory
+ - false
+
+------------------------------------
+4.5. Cloud-Enabled Services for Mobile Devices
+
+ 
+
+→
+
+ • 
+   -> 
+
+
+4.5.1 Remote Backup
+
+ - Mobile device data can be lost due to device failures or the loss or theft of the device. 
+ - Periodically back up data to ensure it is recoverable if needed. 
+ - With mobile devices, storage is often limited and not removable. 
+ - Perform remote backups to overcome these limitations. 
+ - A remote backup is when a device copies its data to cloud storage using a backup app. 
+ - To restore data, run the backup app and access the website to retrieve the data.
+
+ - Most mobile operating systems have a user account linked to the vendor’s cloud services, such as iCloud for iOS, Google Sync for Android, and OneDrive for Microsoft. 
+ - The user can enable automatic backups to the cloud for data, apps, and settings. 
+ - Some third-party backup providers, such as Dropbox, can be used. 
+ - Mobile devices can back up to a PC. iOS supports backups on iTunes running on a PC. 
+ - Another option is configuring Mobile Device Management (MDM) software to back up user devices automatically.
+
+
+
+4.5.2 Locator Applications
+
+ - If a mobile device is misplaced or stolen, it is possible to find it using a locator app. 
+ - A locator app should be installed and configured on each mobile device before it is lost. 
+ - Both Android and iOS have apps for remotely locating a device.
+
+ - Like Apple’s Find My iPhone, Google Find My Device allows a user to locate, ring, or lock a lost Android device or erase data from the device. 
+ - To manage a lost device, the user must visit Google Find My Device hosted at https://www.google.com/android/find and log in with the Google account used on the Android device. 
+ - Google Find My Device is included and enabled by default on Android 5. x and can be found under Settings > Biometrics Security > Find My Mobile.
+
+ - iOS users can use the Find My iPhone app. 
+ - The first step is to install the app, start it, and follow the instructions to configure the software. 
+ - Different iOS devices locate a lost device with The Find My iPhone app.
+
+ - Note: If the app cannot locate the lost device, the device might be turned off or disconnected. 
+	- Connect to a cellular or wireless network to receive app commands or send location information to the user.
+
+ - After locating the device, you might be able to perform additional functions, such as sending a message or playing a sound. 
+ - These options are helpful if you have misplaced your device. 
+ - If the device is close by, playing a sound indicates the location. 
+ - If the device is at another site, sending a message to display on the screen allows the finder to contact you. 
+
+
+
+4.5.3 Remote Lock and Remote Wipe
+
+ - If attempts to locate a mobile device have failed, other security features can prevent data on the device from being compromised. 
+ - Usually, the same apps that perform remote locations have security features. 
+ - Two of the most common security features are remote lock and wipe.
+
+ - Note: For these remote security measures to function, the device must be powered on and connected to a cellular or Wi-Fi network.
+
+ → Remote Lock
+ - The remote lock feature for iOS devices is called 'lost mode'. 
+ - The Android Device Manager calls this feature 'Lock'. 
+ - It allows you to lock the device with a passcode, so others cannot gain access to the data in the device. 
+ - For example, the user can display custom messages, or keep the phone from ringing due to incoming calls or text messages.
+
+ → Remote Wipe
+ - The remote wipe feature for iOS devices is called 'erase phone'. 
+ - The Android Device Manager calls this feature 'Erase'. 
+ - It deletes all data from the device and returns it to a factory state. 
+ - To restore data to the device, Android users must set up the device using a Gmail account, and iOS users must synchronize their device to iTunes.
+
+
+ - Most mobile device operating systems provide a full device encryption feature. 
+ - Full device encryption can prevent anyone in possession of the device from circumventing the device’s access controls and reading the raw data stored in memory.
+
+ - All user data on an iOS device is always encrypted and the key is stored on the device. 
+ - When used to “wipe” the device, the OS deletes the key, and the data becomes inaccessible. 
+ - Data Protection encryption is enabled automatically when a password lock is configured on the device.
+
+ - On Android OS, encryption is enabled through Settings > Security. Android uses full-disk encryption with a passcode-derived key. 
+
+
+
+
+4.5.4 Check Your Understanding - Cloud-Enabled Services for Mobile Devices
+
+Read the scenarios and match them with the security feature that you would use to accomplish the configuration need.
+
+Find a mobile device that has been lost or stolen.
+ - Locator App
+
+Store mobile device data in the cloud.
+ - Remote backup
+
+Delete all data on an Android device and return into a factory state.
+ - Erase
+
+Remotely lock an Android device using a passcode.
+ - Lock
+
+Remotely lock an iOS device using a passcode.
+ - Lost mode
+
+Store iOS backups on local PC.
+ - iTunes
+ 
+
+
+
+------------------------------------
+4.6. Mobile Device Software Security
+
+ 
+
+→
+
+ • 
+   -> 
+
+
+4.6.1 Antivirus
+
+ - All computers are vulnerable to malicious software. 
+ - Smartphones and other mobile devices are computers and are also vulnerable. 
+ - Antivirus apps are available for both Android and iOS. 
+ - Depending on the permissions granted to antivirus apps when installed on an Android device, the app might not be able to scan files automatically or run scheduled scans. 
+ - Manually initiate file scans. 
+ - iOS does not allow automatic or scheduled scans. 
+ - This safety feature prevents malicious programs from using unauthorized resources or contaminating other apps or the OS. 
+ - Some antivirus apps also provide locator services, remote lock, or remote wipe.
+
+ - Mobile device apps run in a sandbox. 
+ - A sandbox is a location of the OS that keeps code isolated from other resources and other code. 
+ - It is difficult for malicious programs to infect a mobile device because apps run inside the sandbox. 
+ - An Android app asks for permission to access specific resources upon installation. 
+ - A malicious app can access any resources that were allowed permission during installation. 
+ - This is another reason why it is vital to download apps only from trusted sources. 
+ - A trusted app source is authenticated and authorized by a service provider. 
+ - The service provider issues the developer a certificate to sign their apps and identify them as trusted.
+
+ - Due to the nature of the sandbox, malicious software does not usually damage mobile devices; it is far more likely for a mobile device to transfer a malicious program to another device, such as a laptop or desktop. 
+ - For example, suppose a malicious program download from email, the Internet, or another device. 
+ - In that case, a malicious program can be placed on a laptop the next time it connects to a mobile device.
+
+ - To prevent the malicious program from infecting additional devices, use a firewall. 
+ - Firewall apps for mobile devices can Monitor app activity and prevent connections to specific ports or IP addresses. 
+ - Because mobile device firewalls must be able to control other apps, they logically work at a higher (root) permission level. 
+ - No root firewalls work by creating a virtual private network (VPN) and then controlling app access to the VPN.
+
+ 
+
+ 
+4.6.2 Rooting and Jailbreaking
+
+ - Several software restrictions usually protect mobile operating systems. 
+ - For example, an unmodified copy of iOS will only execute authorized code and allow minimal user access to its file system.
+
+ - Rooting and Jailbreaking are two methods for removing restrictions and protections added to mobile operating systems. 
+ - They are a means of circumventing/going around the usual operating of the device operating system to gain super-user or root administrator permissions. 
+ - Rooting is used on Android devices to gain PRIVILAGED or root-level ACCESS for modifying code or installing software not intended for the device. 
+ - Jailbreaking is typically used on iOS devices to REMOVE MANUFACTURER RESTRICTIONS allowing them to run arbitrary user code and granting users full access to the file system and kernel modules.
+
+ - Rooting or jailbreaking a mobile device usually voids the manufacturer's warranty. 
+ - Although modifications are discouraged, a large group of users choose to remove their own devices' restrictions. 
+ - Rooting or jailbreaking a mobile device customizes the GUI to improve the speed and responsiveness of the device. 
+ - Apps come from secondary or unsupported sources.
+
+ - Jailbreaking exploits vulnerabilities in iOS. 
+ - A program is written after finding a usable vulnerability. 
+ - This program is the actual jailbreak software distributed on the internet. 
+ - Apple discourages jailbreaking and actively works towards eliminating vulnerabilities that make jailbreaking possible on iOS. 
+ - In addition to the OS updates and bug fixes, new iOS releases usually include patches to eliminate known vulnerabilities that allow jailbreaking. 
+ - When updates fix iOS vulnerabilities, it forces hackers to start over.
+
+ → Note: The jailbreak process is completely reversible. 
+   - To remove the jailbreak and bring the device back to its factory state, connect it to iTunes and perform a Restore.
+
+
+
+4.6.3 Patching and Updating Operating Systems
+
+ - You can update or patch the OS on mobile devices like the OS on a desktop or laptop. 
+ - Updates add functionality or increase performance. 
+ - Patches can fix security problems or issues with hardware and software.
+
+ - Because there are so many Android mobile devices, updates and patches do not release as one package for all devices. 
+ - Sometimes a new version of Android cannot install on older devices where the hardware does not meet the minimum specifications. 
+ - These devices might receive patches to fix known issues but not receive OS upgrades.
+
+ - Android updates and patches use an automated process for delivery. 
+ - When a carrier or manufacturer has an update for a device, a notification on the device indicates that an update is ready. 
+ - Touch the update to begin the download and installation process.
+
+ - iOS updates use an automated process for delivery. 
+ - Devices that do not meet the hardware requirements are excluded. 
+ - The easiest method to check for iOS updates is on the iPhone, go to Settings > General > Software Update.
+
+ - Two other types of updates for mobile device radio firmware are important. 
+ - These are called baseband updates and consist of the Preferred Roaming List (PRL) and the Primary Rate ISDN (PRI). 
+ - The PRL is configuration information that a cellular phone needs to communicate on other networks to call outside the carrier’s network. 
+ - The PRI configures the data rates between the device and the cell tower. 
+ - This ensures that the device can communicate with the tower at the correct rate.
+
+
+4.6.4 Check Your Understanding - Mobile Device Software Security
+
+iOS allows both automatic and scheduled Antivirus scans
+ - false
+
+Running apps in a sandbox helps mitigate damage to mobile devices by malicious software
+ - true
+
+Rooting is a method for removing restrictions on modifying code on an iOS device
+ - false
+
+Jailbreaking exploits vulnerabilities on iOS devices and is completely reversible
+ - true
+
+Updates and patches for Android devices are not released as one package for all devices
+ - true
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+------------------------------------
+4.7. Mobile Operating Systems and Security Summary
+
+
+
+→
+
+ • 
+   -> 
+
+
+4.7.1 What Did I Learn in this Module?
+
+
+Android Versus iOS
+
+Topic Objective: Compare the Android and iOS operating systems.
+
+
+Mobile Touch Interface
+
+Topic Objective: Describe the features of the Android and iOS touch interfaces.
+
+
+Common Mobile Device Features
+
+Topic Objective: Describe operating system features that are common among mobile devices.
+
+
+Passcode Locks
+
+Topic Objective: Explain how to configure various types of passcode locks.
+
+
+Cloud-Enabled Services for Mobile Devices
+
+Topic Objective: Describe Cloud-enabled services for mobile devices.
+
+
+Mobile Device Software Security
+
+Topic Objective: Describe software security for mobile devices.
+
+
+
+=======================================================================
+
+4.7.2 Quiz - Mobile Operating Systems and Security
+
+
+Question 1
+What are two potential user benefits of rooting or jailbreaking a mobile device? (Choose two.)
+ - The user interface can be extensively customized.
+ - The operating system can be fine-tuned to improve the speed of the device.
+
+
+Question 2
+What is Wi-Fi calling?
+ - a way to make mobile phone calls over a wireless data network
+
+
+ Question 3
+Which two conditions must be met for mobile device security measures such as remote lock and remote wipe to function? (Choose two.)
+ - The device must be powered on.
+ - The device must be connected to a network.
+
+
+ Question 4
+Which two methods are commonly used to remove the default restrictions and protections added to mobile operating systems? (Choose two.)
+ - rooting
+ - jailbreaking
+
+
+ Question 5
+A user downloads a widget onto his Android phone but is puzzled to see that when the widget is touched an app is launched. What is a possible cause?
+ - The widget is associated with the app and this is the normal behavior.
+
+
+Question 6
+What are two types of cloud-enabled services for mobile devices? (Choose two.)
+ - locator apps
+ - remote backup
+
+
+ Question 7
+Which cloud-based storage service does Microsoft provide for backups?
+ - OneDrive
+
+
+ Question 8
+Which feature of an Android or iOS mobile device helps prevent malicious programs from infecting the device?
+ - Mobile device apps are run in a sandbox that isolates them from other resources.
+
+
+ Question 9
+Which component uses the greatest amount of power on most mobile devices?
+ - LCD screen
+
+
+ Question 10
+What are two purposes of the passcode lock feature on mobile devices? (Choose two.)
+ - to help prevent theft of private information
+ - to prevent unauthorized use of the device
+
+
+
+ Question 11
+What is a good source for safely downloading Android apps?
+ - Google Play
+
+ Question 12
+A user presses the Recent Apps icon on an Android-based smartphone to see a list of recently used apps. What should the user do to remove an app from the list?
+ - Swipe the app to either side.
+ - retarded
+
+
+
+ Question 13
+Which model does Apple use to provide iOS apps to customers?
+ - walled garden
+
+
+ Question 14
+Which two location data sources can locator apps use to determine the position of a mobile device? (Choose two.)
+ - Cellular towers
+ - WiFi hotspots
+
+
+ Question 15
+Which three methods can be used to unlock a smartphone? (Choose three.)
+ - Biometric information
+ - Swipe pattern
+ - Passcode
+
+
+ 
+
+
+=======================================================================
+

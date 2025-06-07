@@ -1,0 +1,3925 @@
+Transcript - 100+ Docker Concepts you Need to Know 
+	Fireship
+
+0:00
+welcome to Docker 101 if your goal is to
+0:02
+ship software in the real world one of
+0:04
+the most powerful Concepts to understand
+0:06
+is containerization When developing
+0:08
+locally it solves the age-old problem of
+0:10
+it works on my machine and when
+0:12
+deploying in the cloud it solves the
+0:13
+age-old problem of this architecture
+0:16
+doesn't scale over the next few minutes
+0:17
+we'll unlock the power inside this
+0:19
+container by learning 101 different
+0:21
+concepts and terms related to computer
+0:23
+science the cloud and of course Docker
+0:25
+I'm guessing you know what a computer is
+0:27
+right it's a box that has three
+0:28
+important components in side a CPU for
+0:31
+calculating things random access memory
+0:33
+for the applications you're using right
+0:35
+now and a dis to store things you might
+0:37
+use later this is bare metal hardware
+0:39
+but in order to use it we need an
+0:41
+operating system most importantly the OS
+0:43
+provides a kernel that sits on top of
+0:45
+the bare metal allowing software
+0:46
+applications to run on it in the olden
+0:48
+days you would go to the store and buy
+0:50
+software to physically install it on
+0:51
+your machine but nowadays most software
+0:53
+is delivered via the Internet through
+0:55
+the magic of networking when you watch a
+0:57
+YouTube video your computer is called
+0:59
+the client but you and billions of other
+1:01
+users are getting that data from remote
+1:03
+computers called servers when an app
+1:04
+starts reaching millions of people weird
+1:06
+things begin to happen the CPU becomes
+1:08
+exhausted handling all the incoming
+1:10
+requests disio slows down Network
+1:12
+bandwidth gets maxed out and the
+1:14
+database becomes too large too query
+1:16
+effectively on top of that you wrote
+1:17
+some garbage code that's causing race
+1:19
+conditions memory leaks and unhandled
+1:21
+errors that will eventually grind your
+1:23
+server to a halt the big question is how
+1:25
+do we scale our infrastructure a server
+1:27
+can scale up in two ways vertically or
+1:29
+horizont ially to scale vertically you
+1:31
+take your one server and increase its
+1:33
+RAM and CPU this can take you pretty far
+1:36
+but eventually you hit a ceiling the
+1:37
+other option is to scale horizontally
+1:39
+where you distribute your code to
+1:41
+multiple smaller servers which are often
+1:43
+broken down into microservices that can
+1:45
+run and scale independently but
+1:47
+distributed systems like this aren't
+1:48
+very practical when talking about bare
+1:50
+metal because actual resource allocation
+1:52
+varies One Way Engineers address this is
+1:54
+with virtual machines using tools like
+1:56
+hypervisor it can isolate and run
+1:58
+multiple operating system systems on a
+2:00
+single machine that helps but a vm's
+2:02
+allocation of CPU and memory is still
+2:05
+fixed and that's where Docker comes in
+2:07
+the sponsor of today's video
+2:08
+applications running on top of the
+2:10
+docker engine all share the same host
+2:12
+operating system kernel and use
+2:13
+resources dynamically based on their
+2:15
+needs under the hood docker's running a
+2:17
+demon or persistent process that makes
+2:19
+all this magic possible and gives us OS
+2:22
+level virtualization what's awesome is
+2:24
+that any developer can easily harness
+2:25
+this power by simply installing Docker
+2:27
+desktop it allows you to develop
+2:29
+software without having to make massive
+2:30
+changes to your local system but here's
+2:32
+how Docker Works in three easy steps
+2:34
+first you start with a Docker file this
+2:36
+is like a blueprint that tells Docker
+2:38
+how to configure the environment that
+2:40
+runs your application the docker file is
+2:42
+then used to build an image which
+2:43
+contains an OS your dependencies and
+2:45
+your code like a template for running
+2:47
+your application and we can upload this
+2:49
+image to the cloud to places like Docker
+2:51
+Hub and share it with the world but an
+2:53
+image by itself doesn't do anything you
+2:54
+need to run it as a container which
+2:56
+itself is an isolated package running
+2:58
+your code that in theory could scale
+3:00
+infinitely in the cloud containers are
+3:01
+stateless which means when they shut
+3:03
+down all the data inside them is lost
+3:05
+but that makes them portable and they
+3:06
+can run on every major Cloud platform
+3:08
+without vendor lock in pretty cool but
+3:10
+the best way to learn Docker is to
+3:12
+actually run a container let's do that
+3:14
+right now by creating a Docker file a
+3:16
+Docker file contains a collection of
+3:17
+instructions which by convention are in
+3:19
+all caps from is usually the first
+3:21
+instruction you'll see which points to a
+3:23
+base image to get started this will
+3:25
+often be a Linux drro and may be
+3:27
+followed by a colon which is an optional
+3:29
+image tag and in this case specifies the
+3:31
+version of the OS next we have the
+3:33
+working directory instruction which
+3:34
+creates a source directory and CDs into
+3:36
+it and that's where we'll put our source
+3:38
+code all commands from here on out will
+3:40
+be executed from this working directory
+3:42
+next we can use the Run instruction to
+3:44
+use a Linux package manager to install
+3:46
+our dependencies run lets you run any
+3:48
+command just like you would from the
+3:49
+command line currently we're running as
+3:51
+the root user but for better security we
+3:53
+could also create a non-root user with
+3:55
+the user instruction now we can use copy
+3:57
+to copy the code on our local machine
+3:59
+over to the image you're halfway there
+4:01
+let's take a brief
+4:03
+[Music]
+4:04
+[Applause]
+4:07
+intermission now to run this code we
+4:09
+have an API key which we can set as an
+4:11
+environment variable with the EnV
+4:13
+instruction we're building a web server
+4:14
+that people can connect to which
+4:16
+requires a port for external traffic use
+4:18
+the expose instruction to make that Port
+4:20
+accessible finally that brings us to the
+4:22
+command instruction which is the command
+4:24
+you want to run when starting up a
+4:25
+container in this case it will run our
+4:27
+web server there can only be one command
+4:29
+per container although you might also
+4:31
+add an entry point allowing you to pass
+4:32
+arguments to the command when you run it
+4:34
+that's everything we need for the docker
+4:36
+file but as an Added Touch we could also
+4:38
+use label to add some extra metadata or
+4:40
+we could run a health check to make sure
+4:42
+it's running properly or if the
+4:43
+container needs to store data that's
+4:45
+going to be used later or be used by
+4:47
+multiple containers we could mount a
+4:48
+volume to it with a persistent disc okay
+4:51
+we have a Docker file so now what when
+4:53
+you install Docker desktop that also
+4:55
+installed the docker CLI which you can
+4:57
+run from the terminal run Docker help to
+4:59
+see all the possible commands but the
+5:00
+one we need right now is Docker build
+5:03
+which will turn this Docker file into an
+5:05
+image when you run the command it's a
+5:06
+good idea to use the T flag to tag it
+5:08
+with a recognizable name notice how it
+5:10
+builds the image in layers every layer
+5:12
+is identified by a Shaw 256 hash which
+5:15
+means if you modify your Docker file
+5:17
+each layer will be cached so it only has
+5:19
+to rebuild what is actually changed and
+5:21
+that makes your workflow as a developer
+5:22
+far more efficient in addition it's
+5:24
+important to point out that sometimes
+5:26
+you don't want certain files to end up
+5:27
+in a Docker image in which case you can
+5:29
+add them to the docker ignore file to
+5:31
+exclude them from the actual files that
+5:33
+get copied there now open Docker desktop
+5:35
+and view the image there not only does
+5:37
+it give us a detailed breakdown but
+5:39
+thanks to Docker Scout we're able to
+5:41
+proactively identify any security
+5:43
+vulnerabilities for each layer of the
+5:44
+image it works by extracting the
+5:46
+software bill of material from the image
+5:48
+and Compares it to a bunch of security
+5:50
+advisory databases when there's a match
+5:52
+it's given a severity rating so you can
+5:54
+prioritize your security efforts but now
+5:56
+the time has finally come to run a
+5:58
+container we can accomplish that by
+6:00
+simply clicking on the Run button under
+6:02
+the hood it executes the docker run
+6:04
+command and we can now access our server
+6:06
+on Local Host in addition we can see the
+6:08
+running container here in Docker desktop
+6:10
+which is the equivalent to the docker
+6:12
+command which you can run from the
+6:13
+terminal to get a breakdown of all the
+6:15
+running and stop containers on your
+6:16
+machine if we click on it though we can
+6:18
+inspect the logs from this container or
+6:20
+view the file system and we can even
+6:22
+execute commands directly inside the
+6:24
+running container now when it comes time
+6:25
+to shut it down we can use Docker stop
+6:27
+to stop it gracefully or docker kill to
+6:30
+forcefully stop it you can still see the
+6:31
+shutdown container here in the UI or use
+6:33
+remove to get rid of it but now you
+6:35
+might want to run your container in the
+6:37
+cloud Docker push will upload your image
+6:39
+to a remote registry where it can then
+6:41
+run on a cloud like AWS with elastic
+6:43
+container service or it can be launched
+6:45
+on serverless platforms like Google
+6:46
+Cloud run conversely you may want to use
+6:48
+someone else's Docker image which can be
+6:50
+downloaded from the cloud with Docker
+6:52
+pull and now you can run any developers
+6:54
+code without having to make any changes
+6:56
+to your local environment or machine
+6:57
+congratulations you're now a bon ified
+7:00
+and certified Docker expert I hereby
+7:02
+Grant you permission to print out the
+7:03
+certificate and bring it to your next
+7:05
+job interview but Docker itself is only
+7:07
+the beginning there's a good chance your
+7:09
+application has more than one service in
+7:11
+which case you'll want to know about
+7:12
+Docker can POS a tool for managing
+7:14
+multicontainer applications it allows
+7:16
+you to Define multiple applications and
+7:18
+their Docker images in a single yaml
+7:20
+file like a front end a backend and a
+7:22
+database the docker compose up command
+7:25
+will spin up all the containers
+7:26
+simultaneously while the down command
+7:28
+will stop them that works works on an
+7:29
+individual server but once you reach
+7:31
+massive scale you'll likely need an
+7:33
+orchestration tool like kubernetes to
+7:35
+run and manage containers all over the
+7:37
+world it works like this you have a
+7:38
+control plane that exposes an API that
+7:41
+can manage the cluster now the cluster
+7:42
+has multiple nodes or machines each one
+7:45
+containing a cubet and multiple pods a
+7:47
+pod is the minimum Deployable unit in
+7:49
+kubernetes which itself has one or more
+7:51
+containers inside of it what makes
+7:52
+kubernetes so effective is that you can
+7:54
+describe the desired state of the system
+7:56
+and it will automatically scale up or
+7:58
+scale down while also providing fall
+8:00
+tolerance to automatically heal if one
+8:02
+of your servers goes down it gets pretty
+8:04
+complicated but the good news is that
+8:05
+you probably don't need kubernetes it
+8:07
+was developed at Google based on its
+8:09
+Borg system and is really only necessary
+8:11
+for highly complex hi trffic systems if
+8:13
+that sounds like you though you can also
+8:15
+use extensions on Docker desktop to
+8:17
+debug your pods and with that we've
+8:19
+looked at 100 concepts related to
+8:21
+containerization Big shout out to Docker
+8:23
+for making this video possible thanks
+8:25
+for watching and I will see you in the
+8:26
+next one
+
+============================================================================================
+
+Transcript - Learn Docker in 7 Easy Steps - Full Beginner's Tutorial
+	Fireship
+
+0:00
+one of the leading causes of imposter
+0:01
+syndrome among developers is not knowing
+0:03
+docker it makes it hard to go to parties
+0:05
+where everybody's talking about
+0:06
+kubernetes
+0:07
+swarms shuffle sharding while you hide
+0:09
+in the corner googling what is a
+0:10
+container we've all been there at one
+0:12
+point or another
+0:12
+in today's video you'll learn everything
+0:14
+you need to know about docker to survive
+0:16
+as a developer in 2020
+0:17
+we'll take a hands-on approach by
+0:19
+containerizing a node.js application
+0:21
+i'll assume you've never touched a
+0:22
+docker container before so we'll go
+0:23
+through installation and tooling
+0:25
+as well as the most important
+0:26
+instructions in a dockerfile in addition
+0:28
+we'll look at very important advanced
+0:30
+concepts like port forwarding
+0:31
+volumes and how to manage multiple
+0:33
+containers with docker compose
+0:35
+we'll do everything step by step so feel
+0:37
+free to skip ahead with the chapters in
+0:39
+the video description
+0:40
+what is docker from a practical
+0:42
+standpoint it's just a way to package
+0:43
+software so it can run on any hardware
+0:46
+now in order to understand how that
+0:47
+process works there are three things
+0:49
+that you absolutely must know
+0:50
+docker files images and containers a
+0:53
+docker file is a blueprint for building
+0:55
+a docker image
+0:56
+a docker image is a template for running
+0:59
+docker containers
+1:00
+a container is just a running process in
+1:02
+our case we have a node application we
+1:04
+need to have a server that's running the
+1:05
+same version of node and that has also
+1:07
+installed these dependencies
+1:09
+it works on my machine but if someone
+1:10
+else with a different machine tries to
+1:12
+run it with a different version of node
+1:13
+it might break
+1:14
+the whole point of docker is to solve
+1:16
+problems like this by reproducing
+1:18
+environments the developer who creates
+1:19
+the software can define the environment
+1:21
+with a docker file
+1:22
+then any developer at that point can use
+1:24
+the docker file to rebuild the
+1:26
+environment which is saved as an
+1:27
+immutable snapshot known as an image
+1:29
+images can be uploaded to the cloud in
+1:31
+both public and private registries
+1:33
+then any developer or server that wants
+1:35
+to run that software
+1:36
+can pull the image down to create a
+1:38
+container which is just a running
+1:40
+process of that image in other words one
+1:42
+image file can be used to spawn the same
+1:44
+process multiple times in multiple
+1:46
+places
+1:46
+and it's at that point where tools like
+1:48
+kubernetes and swarm come into play
+1:50
+to scale containers to an infinite
+1:51
+workload the best way to really learn
+1:53
+docker
+Installation & Tooling
+1:54
+is to use it and to use it we need to
+1:56
+install it if you're on mac or windows i
+1:58
+would highly recommend installing the
+1:59
+docker desktop application it installs
+2:01
+everything you need for the command line
+2:03
+and also gives you a gui where you can
+2:04
+inspect your running containers
+2:06
+once installed you should have access to
+2:07
+docker from the command line and here's
+2:09
+the first command you should memorize
+2:11
+docker which gives you a list of all the
+2:13
+running containers on your system
+2:14
+you'll notice how every container has a
+2:16
+unique id and is also linked to an image
+2:19
+and keep in mind you can find the same
+2:20
+information from the gui as well now the
+2:22
+other thing you'll want to install is
+2:23
+the docker extension for vs code or for
+2:26
+your ide
+2:26
+this will give you language support when
+2:28
+you write your docker files and can also
+2:30
+link up to remote registries and a bunch
+2:32
+of other stuff
+2:32
+now that we have docker installed we can
+2:34
+move on to what is probably the most
+2:36
+important section of this video and
+2:37
+that's the docker file
+2:39
+which contains code to build your docker
+Dockerfile
+2:41
+image and ultimately run your app as a
+2:43
+container
+2:43
+now to follow along at this point you
+2:45
+can grab my source code from github or
+2:47
+fireship io or better yet
+2:48
+use your own application as a starting
+2:50
+point in this case i just have a single
+2:52
+index.js file
+2:53
+that exposes an api endpoint that sends
+2:55
+back a response
+2:56
+docker is easy then we expose our app
+2:58
+using the port environment variable
+3:00
+and that'll come into play later the
+3:02
+question we're faced with now is how do
+3:03
+we dockerize this app
+3:05
+we'll start by creating a docker file in
+3:07
+the root of the project
+3:08
+the first instruction in our docker file
+3:10
+is from and if you hover over it it will
+3:12
+give you some documentation about what
+3:13
+it does
+3:14
+you could start from scratch with
+3:15
+nothing but the docker runtime however
+3:17
+most docker
+3:18
+files will start with a specific base
+3:19
+image for example
+3:21
+when i type ubuntu you'll notice it's
+3:22
+underlined and when i control click it
+3:24
+it will take me to all the base images
+3:26
+for this flavor of linux and then you'll
+3:28
+notice it supports a variety of
+3:29
+different tags which are just different
+3:31
+variations on this base image
+3:32
+ubuntu doesn't have nodejs installed by
+3:34
+default we could still use this image
+3:36
+and install node.js manually
+3:38
+however there is a better option and
+3:39
+that's to use the officially supported
+3:41
+node.js image
+3:42
+we'll go ahead and use the node version
+3:43
+12 base image which will give us
+3:45
+everything we need to start working with
+3:46
+node in this environment
+3:48
+the next thing we'll want to do is add
+3:49
+our app source code to the image
+3:51
+the working directory instruction is
+3:53
+kind of like when you cd into a
+3:54
+directory
+3:55
+now any subsequent instructions in our
+3:57
+docker file will start from this app
+3:58
+directory
+3:59
+now at this point there is something
+4:01
+very important that you need to
+4:02
+understand
+4:03
+and that's that every instruction in
+4:04
+this docker file is considered its own
+4:06
+step or layer
+4:07
+in order to keep things efficient docker
+4:09
+will attempt to cache layers
+4:11
+if nothing is actually changed now
+4:12
+normally when you're working on a node
+4:14
+project
+4:14
+you get your source code and then you
+4:16
+install your dependencies but in docker
+4:18
+we actually want to install our
+4:19
+dependencies first so they can be cached
+4:21
+in other words we don't want to have to
+4:23
+reinstall all of our node modules every
+4:25
+time we change our app source code we
+4:27
+use the copy instruction which takes two
+4:28
+arguments
+4:29
+the first argument is our local package
+4:31
+json location
+4:32
+and then the second argument is the
+4:34
+place we want to copy it in the
+4:35
+container which is the current working
+4:37
+directory
+4:38
+and now that we have a package json we
+4:40
+can run the npm install command
+4:42
+this is just like opening a terminal
+4:44
+session and running a command
+4:45
+and when it's finished the results will
+4:47
+be committed to the docker image as a
+4:49
+layer
+4:49
+now that we have our modules in the
+4:50
+image we can then copy over our source
+4:52
+code
+4:53
+which we'll do by copying over all of
+4:55
+our local files to the current working
+4:56
+directory
+4:57
+but this actually creates a problem for
+4:59
+us because you'll notice that we have a
+5:00
+node modules folder here in our local
+5:02
+file system
+5:03
+that would also be copied over to the
+5:04
+image and override the node modules that
+5:06
+we install there
+5:08
+what we need is some kind of way for a
+5:09
+docker to ignore our local node modules
+5:11
+we can do that by creating a docker
+5:13
+ignore file
+5:14
+and adding node modules to it it works
+5:16
+just like a git ignore file which you've
+5:18
+probably seen before
+5:19
+okay so at this point we have our source
+5:21
+code in the docker image
+5:22
+but in order to run our code we're using
+5:24
+an environment variable we can set that
+5:26
+environment variable in the container
+5:27
+using the env
+5:28
+instruction now when we actually have a
+5:30
+running container we also want it to be
+5:31
+listening on port 8080 so we can access
+5:34
+the nodejs express app publicly
+5:36
+and we'll look at port some more detail
+5:37
+in just a minute when we run the
+5:38
+container
+5:39
+and that brings us to our final
+5:40
+instruction command there can only be
+5:42
+one of these per docker file and it
+5:44
+tells the container how to run the
+5:45
+actual application
+5:46
+which it does by starting a process to
+5:48
+serve the express app you'll also notice
+5:50
+that unlike run
+5:51
+we've made this command an array of
+5:53
+strings this is known as exec form
+5:55
+and it's the preferred way to do things
+5:56
+unlike a regular command it doesn't
+5:58
+start up a shell session
+5:59
+and that's basically all there is to it
+6:01
+we now have a full set of instructions
+6:02
+for building a docker image
+6:04
+and that brings us to the next question
+6:05
+how do we build a docker image
+Build an Image
+6:07
+you build a docker image by running the
+6:09
+docker build command there's a lot of
+6:11
+different options you can pass with the
+6:12
+command but the one you want to know for
+6:13
+right now
+6:14
+is tag or t this will give your image a
+6:16
+name tag that's easy to remember so you
+6:18
+can access it later
+6:19
+when defining the tag name i'd first
+6:21
+recommend setting up a username on
+6:23
+docker hub
+6:24
+and then do that username followed by
+6:25
+whatever you want to call this image
+6:27
+so in my case it would be fireship slash
+6:29
+demo app and you could also add a
+6:31
+version number separated by a colon
+6:33
+from there you simply add the path to
+6:34
+your docker file which in our case is
+6:36
+just a period for the current working
+6:38
+directory
+6:38
+when we run it you'll notice it starts
+6:40
+with step one which is to pull the node
+6:42
+12 image remotely
+6:43
+then it goes through each step in our
+6:44
+docker file and finally it says
+6:46
+successfully built the
+6:47
+image id and now that we have this image
+6:49
+we can use it as a base image to create
+6:51
+other images or we can use it to run
+6:53
+containers
+6:54
+in real life to use this image you'll
+6:56
+most likely push it to a container
+6:57
+registry somewhere
+6:58
+that might be docker hub or your
+7:00
+favorite cloud provider and the command
+7:02
+you would use to do that is
+7:03
+docker push then a developer or server
+7:05
+somewhere else in the world could use
+7:07
+docker pull to pull that image back down
+7:09
+but we just want to run it here locally
+7:10
+in our system so let's do that with the
+Run a Container
+7:12
+docker run command
+7:14
+we can supply it with the image id or
+7:15
+the tag name and all that does
+7:17
+is create a running process called a
+7:19
+container and we can see in the terminal
+7:21
+it should say app listening on localhost
+7:23
+8080. but if we open the browser and go
+7:25
+to that address we don't see anything
+7:27
+so why can't i access my container
+7:29
+locally remember we exposed port 8080 in
+7:31
+our docker file
+7:32
+but by default it's not accessible to
+7:34
+the outside world let's refactor our
+7:36
+command to use the p
+7:37
+flag to implement port forwarding from
+7:39
+the docker container to our local
+7:40
+machine
+7:41
+on the left side we'll map a port on our
+7:43
+local machine 5000 in this case
+7:45
+to a port on the docker container 8080
+7:48
+on the right side
+7:49
+and now if we open the browser and go to
+7:50
+localhost 5000 we'll see the app running
+7:53
+there
+7:53
+now one thing to keep in mind at this
+7:55
+point is that the docker container will
+7:56
+still be running even after you close
+7:58
+the terminal window
+7:59
+let's go ahead and open up the dashboard
+8:01
+and stop the container you should
+8:03
+actually have two running containers
+8:04
+here if you've been following along
+8:06
+when you stop the container any state or
+8:08
+data that you created inside of it will
+8:09
+be lost
+8:11
+but there can be situations where you
+8:12
+want to share data across multiple
+8:14
+containers
+8:15
+and the preferred way to do that is with
+8:16
+volumes a volume is just a dedicated
+8:19
+folder on the host machine
+8:20
+and inside this folder a container can
+8:22
+create files that can be remounted into
+8:24
+future containers or multiple containers
+8:26
+at the same time
+8:27
+to create a volume we use the docker
+8:29
+volume create command
+8:31
+now that we have this volume we can
+8:32
+mount it somewhere in our container when
+8:34
+we run it
+8:35
+multiple containers can mount this
+8:36
+volume simultaneously and access the
+8:38
+same set of files
+8:40
+and the files stick around after all the
+8:41
+containers are shut down
+8:43
+now that you know how to run a container
+8:44
+let's talk a little bit about debugging
+8:46
+when things don't go as planned you
+8:48
+might be wondering how do i inspect the
+8:49
+logs and how do i get into my container
+8:51
+and start interacting with the command
+Debugging
+8:53
+line
+8:53
+well this is where docker desktop really
+8:55
+comes in handy if you click on the
+8:56
+running container you can see all the
+8:58
+logs right there
+8:59
+and you can even search through them you
+9:01
+can also execute commands in your
+9:02
+container by clicking on the cli button
+9:04
+and keep in mind you can also do this
+9:06
+from your own command line using the
+9:07
+docker exec command
+9:09
+in any case it puts us in the root of
+9:11
+the file system of that container so we
+9:13
+can then ls to see files
+9:15
+or do whatever we want in our linux
+9:16
+environment that's useful to know but
+9:19
+one of the best things you can do to
+9:20
+keep your containers healthy
+9:21
+is to write simple maintainable micro
+9:23
+services each container should only run
+9:25
+one process
+9:26
+and if your app needs multiple processes
+9:28
+then you should use multiple containers
+9:30
+and docker has a tool designed just for
+9:32
+that called docker compose
+9:34
+it's just a tool for running multiple
+Docker Compose
+9:35
+docker containers at the same time
+9:37
+we already have a docker file for our
+9:38
+node app but let's imagine that our node
+9:40
+app also needs to access a mysql
+9:42
+database
+9:43
+and we also likely want a volume to
+9:45
+persist the database across multiple
+9:47
+containers
+9:48
+we can manage all that with docker
+9:49
+compose by creating a
+9:51
+docker-compose.yaml file in the root of
+9:53
+our project
+9:54
+inside that file we have a services
+9:56
+object where each key
+9:58
+in that object represents a different
+10:00
+container that we want to run
+10:01
+we'll use web to define our node.js app
+10:03
+that we've already built
+10:04
+and then we'll use build to point it to
+10:06
+the current working directory which is
+10:08
+where it can find the docker file
+10:10
+and then we'll also define the port
+10:11
+forwarding configuration here as well
+10:13
+then we have a separate container called
+10:15
+db which is our mysql database process
+10:18
+after services we'll also define a
+10:20
+volume to store the database data across
+10:22
+multiple containers
+10:23
+and then we can mount that volume in our
+10:25
+db container and hopefully you're
+10:27
+starting to see how much
+10:28
+easier it is to define this stuff as
+10:29
+yaml as opposed to writing it out as
+10:32
+individual commands
+10:33
+and now that we have this configuration
+10:34
+set we can run docker compose up from
+10:36
+the command line which will find this
+10:38
+file
+10:38
+and run all the containers together we
+10:40
+can mess around with our app for a
+10:42
+little while
+10:42
+and then run docker compose down to shut
+10:44
+down all the containers together
+10:46
+i'm going to go ahead and wrap things up
+10:47
+there if this video helped you please
+10:49
+like and subscribe and consider becoming
+10:50
+a pro member at fireship io
+10:52
+where we use docker in a variety of
+10:54
+different project-based courses
+10:56
+thanks for watching and i will see you
+10:58
+in the next one
+
+
+============================================================================================
+Transcript - The intro to Docker I wish I had when I started 
+	typecraft
+
+0:00
+for the longest time Docker was a tool
+0:01
+that I used sparingly throughout my
+0:03
+whole career I mean I'm a Ruby on Rails
+0:05
+Dev I don't have to know Docker I can
+0:07
+just run all my services locally on my
+0:09
+machine right I can even remember
+0:10
+throughout my career if anyone ever
+0:12
+mentioned that we needed to use Docker
+0:13
+to run something I would always say
+0:15
+Docker barely even know her and as
+0:16
+hilarious as that joke is I was missing
+0:19
+out on a core foundational piece of
+0:21
+technology that I should have known
+0:22
+about all along in this video we're
+0:24
+going to cover virtualization and
+0:26
+containerization and what the difference
+0:27
+is between the two things because for me
+0:29
+this was always messed up in my head
+0:31
+we're also going to cover Docker files
+0:33
+images Docker containers and how they
+0:35
+all fit into the grand scheme of Docker
+0:37
+this video is going to be a gentle
+0:38
+introduction to Docker and we're just
+0:40
+going to be scratching the surface so
+0:41
+stick around this is going to be a fun
+0:50
+[Music]
+0:53
+one so why is Docker an important thing
+0:56
+to learn in the first place well you see
+0:58
+you probably use containers and
+1:00
+containerization Technologies every
+1:02
+single day of your career if you're a
+1:03
+web developer even if you don't realize
+1:05
+it containers are a way to build
+1:07
+reproducible lightweight environments
+1:09
+for processes to run and we use them
+1:11
+everywhere in continuous integration and
+1:13
+continuous deployment pipelines like on
+1:15
+GitHub actions that you probably use all
+1:17
+the time and we also use it whenever
+1:19
+you're deploying to a server if you
+1:20
+deploy something to the cloud chances
+1:22
+are you're interacting with container
+1:24
+technology somewhere along the way so I
+1:26
+think it's a pivotal thing that you need
+1:27
+to learn in your web development career
+Let's talk about virtualization
+1:30
+but wait what the hell is a container
+1:31
+anyways in order to talk about
+1:33
+containers we should talk about
+1:34
+virtualization now bear with me for a
+1:36
+minute because these two things are very
+1:38
+closely related and I think it's
+1:39
+important to understand the distinctions
+1:41
+between the two technologies so let's
+1:43
+talk about virtualization so let's draw
+1:44
+up how virtualization Works in a typical
+1:46
+sense and we can talk through it now
+1:48
+typically when it comes to
+1:51
+virtualization you start off with a host
+1:53
+machine this could be your host now the
+1:56
+host could be anything it could be your
+1:57
+local PC it could be a server up in the
+1:59
+cloud server in a data center somewhere
+2:01
+whatever it is it's a piece of Hardware
+2:03
+now in this piece of Hardware you have
+2:05
+different things that control how this
+2:06
+Hardware works you have things like your
+2:09
+CPU you also have things like memory and
+2:13
+you have your hard drive we'll call this
+2:14
+IO now when it comes of virtualization
+2:17
+what happens is we take little pieces of
+2:19
+each of these pieces of hardware and
+2:21
+separate them out into a separate
+2:23
+machine this is a virtual machine and
+2:26
+then we take these pieces of hardware
+2:27
+and in this virtual machine we actually
+2:30
+run a full entire operating system now
+2:33
+this technique is commonly used in the
+2:34
+cloud if you're deploying something to
+2:36
+AWS or an ec2 instance typically what
+2:38
+you're doing is you're spinning up a new
+2:40
+virtual machine that you can then deploy
+2:42
+your code onto now virtual machines have
+2:44
+a special type of program that can run
+2:47
+and manage the life cycle of these
+2:48
+machines this program is called a
+2:50
+hypervisor and the hypervisor is in
+2:52
+charge of virtual machines it manages
+2:54
+the life cycle it starts them up it
+2:56
+stops them it creates them it deletes
+2:58
+them it Provisions resources for for
+3:00
+them that is what the hypervisor does
+3:01
+now a common hypervisor that you would
+3:03
+be aware of is VMware or virtual box
+3:06
+these are the programs that control the
+3:08
+virtual machines now virtualization is
+3:10
+similar but it differs from
+Let's talk about containerization
+3:12
+containerization which is the thing that
+3:14
+Docker is kind of based around so let's
+3:16
+talk about containerization in a
+3:17
+container setup what you would do is you
+3:19
+would have a host PC much like the
+3:21
+virtualization setup that we set up
+3:23
+before now let's say on this host PC we
+3:25
+want to run a set of processes but we
+3:27
+want these processes to run in isolation
+3:29
+we don't want them to touch anything
+3:31
+else now we can achieve that using some
+3:33
+techniques right let's say we want these
+3:35
+processes to run on this machine
+3:37
+processes what we do is we can use some
+3:39
+techniques like the CH root command
+3:41
+which will create a new route for a
+3:43
+process so it can only live inside that
+3:45
+root and it can't touch anything outside
+3:47
+of that like any of the other users
+3:49
+directories or things like that that are
+3:50
+already on the system we could also use
+3:52
+a kernel feature like the r limit
+3:54
+feature which will limit the amount of
+3:55
+resources these processes take up these
+3:58
+techniques amongst other things will en
+3:59
+Compass what is containerization now
+4:02
+with containerization you could do all
+4:04
+this manually yourself but it's really
+4:06
+difficult and pretty tricky so there are
+4:08
+programs that help manage the life cycle
+4:10
+of your containers this is where Docker
+4:13
+comes into play Docker is a program that
+4:15
+manages the life cycles of containers
+4:18
+edit them run them and interact with
+4:20
+them so to sum up containerization is
+4:22
+the ability to create a lightweight
+4:24
+environment where processes can run on a
+4:26
+host operating system they share all the
+4:28
+same things in that operating system
+4:29
+system but they cannot touch anything
+4:31
+outside of their little bounded box Okay
+4:33
+so we've talked enough about
+4:35
+virtualization and containerization
+4:37
+let's see containerization through
+4:38
+Docker in work let's get our hands dirty
+4:41
+so now let's install Docker again this
+4:43
+is this portion of our graph right here
+4:45
+this is the management layer that will
+4:47
+manage the life cycles of all of our
+4:49
+containers that we want to create that's
+Let's install Docker!
+4:51
+what Docker does for us now to install
+4:53
+Docker there are examples of how to
+4:55
+install it on the docker website for me
+4:57
+I use Arch Linux by the way so I going
+4:59
+to use Pac-Man to install Docker and
+5:02
+it's as simple as that Docker is now
+5:05
+installed so how do we know that Docker
+5:06
+is even running correctly on our system
+5:08
+well Docker gives us a helpful command
+5:10
+that we can run to sort of give us our
+5:12
+first taste of what Docker will do for
+5:14
+us we can do Docker space run space
+5:17
+hello hyphen world let's see what
+5:20
+happens we're going to break down this
+5:21
+command in a little bit but let's just
+5:22
+see what happens
+5:24
+now okay a lot of stuff just happened
+5:26
+let's go through this line by line and
+5:28
+let's see what Docker is telling telling
+5:29
+us that it did now to start off with
+5:31
+Docker was unable to find the image
+5:33
+hello world latest now this is the name
+5:36
+of our image and this is the tag of our
+5:38
+image now in Docker speak an image is
+5:40
+basically the thing we run our
+5:42
+containers from I'll explain it again in
+5:43
+a second and latest is the tag of that
+5:46
+image by default doer tags its images
+5:48
+with the latest tag so doer was unable
+5:51
+to find the image hello world latest
+5:53
+locally so it pulls it from a repository
+5:56
+Docker will pull images that are already
+5:58
+known from dockerhub we can actually
+6:01
+check out dockerhub by going to hub.
+6:03
+do.com and this is where you can see all
+6:06
+of the images that Docker already has
+6:09
+pre-built in this platform here Docker
+6:11
+hubs this is where you can explore if I
+6:13
+wanted to look for like let's say a
+6:14
+postgress image here it is right here I
+6:16
+can use the postgress image from Docker
+6:18
+Hub I don't have to build one myself so
+6:20
+Docker Hub is very helpful and that's
+6:22
+what it does here it pulls the hello
+6:24
+world image from Docker Hub and as you
+6:26
+can see here it says status downloaded
+6:28
+newer image for hello World latest
+6:30
+awesome and then it says hello from
+6:32
+Docker this is the actual image running
+6:35
+a container I'll explain this in one
+6:36
+second here this message shows that your
+6:38
+installation appears to be working
+6:39
+correctly to generate this message
+6:41
+Docker took the following steps the
+6:43
+client contacted the docker Damon the
+6:44
+docker Damon pulled the hello world
+6:46
+image from Docker Hub that's what we
+6:48
+were just talking about and then the
+6:49
+Damon created a new container for us
+6:51
+from the image okay and now the docker
+6:54
+Damon streamed that output to the docker
+6:56
+client which sent it to your terminal
+6:58
+okay let's unpack this a little bit you
+What the hell is a Dockerfile? An anatomy
+7:00
+might be asking yourself what the hell
+7:02
+is an image and how does Docker know how
+7:04
+to build these things and run containers
+7:07
+from images what is all this stuff now
+7:09
+before we talk about how to build images
+7:11
+and how to then run containers from the
+7:12
+images we have to talk about something
+7:14
+called a Docker file this is an example
+7:16
+doer file and it's pretty contrived but
+7:19
+essentially what you would have with any
+7:21
+project anything you want to build an
+7:22
+image out of is you would have a
+7:24
+directory structure that looks something
+7:25
+like this in this contrived example we
+7:27
+have a directory that can contains a
+7:30
+Docker file and within the docker file
+7:32
+we have a coffee recipe folder let's
+7:34
+just imagine that this is a coffee
+7:36
+recipe application of some sort in this
+7:38
+coffee recipe folder we have two scripts
+7:40
+prepare Beans and Brew Coffee okay so
+7:43
+now let's talk about what this Docker
+7:45
+file is doing you can see on this very
+7:47
+first line we have from Ubuntu latest
+7:49
+now you might remember this terminology
+7:51
+from not too long ago that means that we
+7:53
+want to use the Ubuntu image at the
+7:57
+latest tag this is the terminology for
+8:01
+an image and the tag for that image
+8:03
+Ubuntu latest okay great the next line
+8:06
+says we want to run appt get update and
+8:09
+appt get install some contrived package
+8:11
+what is this this line tells Docker that
+8:15
+we want to run something on the image
+8:18
+that was added above so we're running
+8:21
+apt get update and apt get install on
+8:23
+our auntu latest image so this runs
+8:27
+command on the image next what we want
+8:30
+to do is copy the coffee recipe
+8:33
+directory from our local file system
+8:36
+into this image so what we want to do
+8:38
+here is basically just copy things from
+8:40
+our local directory again you can
+8:42
+remember our directory structure looks
+8:44
+like this we have the coffee recipe
+8:46
+directory and under this we have a
+8:48
+couple of scripts so we want to copy the
+8:49
+coffee recipe directory into this image
+8:52
+next we want to run in our image the
+8:54
+script prepare beans. sh so this will
+8:57
+run that script now remember since we
+8:59
+copied the directory into our image we
+9:02
+will have this available to us because
+9:04
+prepared beans is right here oh look I
+9:06
+misspelled it how fun and then next we
+9:09
+have this line that says command Now
+9:11
+command is the default command that this
+9:13
+container is going to run it's this can
+9:15
+be overwritten in the CLI but by default
+9:17
+we're going to run the Brew Coffee
+9:19
+command this is the default command for
+9:22
+our Docker image so when the darker
+9:24
+container runs it's going to run this
+9:26
+default command so now let's zoom out a
+How Dockerfile, images, and containers relate
+9:28
+little bit here what we are going to do
+9:30
+is we are going to take in this
+9:32
+contrived example this Docker file and
+9:35
+from this Docker file we are going to
+9:37
+build a Docker image now this image we
+9:40
+could name anything but let's just call
+9:42
+it coffee right this image by default
+9:44
+will create will be called coffee at the
+9:47
+latest tag you can give an image
+9:49
+whatever tag you want but again by
+9:51
+default Docker gives a tag of latest to
+9:53
+every image now this image is almost
+9:56
+like the file system for the container
+9:58
+to run and it's immutable you can only
+10:01
+build one image you don't change your
+10:03
+images what you do if you want to change
+10:05
+anything is you change your Docker file
+10:07
+and then build a new version of your
+10:09
+image for containers to run now from our
+10:12
+image what we want to do is we want to
+10:14
+call Docker run and that will then run
+10:17
+our container and our container as we
+10:19
+said before will call the Run command
+10:22
+that we specified in our darker file
+10:24
+which was Brew coffee.
+10:27
+sh and again to actually build the image
+10:30
+we want to run Docker build and there
+10:32
+are certain Flags we can pass to build
+10:34
+like I said to change the tag of the
+10:36
+image from the default of latest you can
+10:38
+also name the image whatever you want
+10:40
+but this is generally the process for
+10:42
+Docker we want to create a Docker file
+10:44
+in some repository or in our directory
+10:46
+we want to then use this Docker file as
+10:48
+the instructions to build a new image
+10:51
+for Docker then we can run this image
+10:53
+and Docker will spin up a new container
+10:55
+on our system that is not able to touch
+10:58
+anything else within our system and it
+11:00
+will run whatever code we want it to run
+11:02
+using the command flag so that in a
+11:04
+nutshell is how Docker sets up Docker
+11:07
+files images and containers okay so now
+11:09
+we have all of our Core Concepts in
+11:11
+place we understand the relationship
+11:12
+between a Docker file how a Docker file
+11:14
+is the instructions to build a Docker
+11:16
+image and then how a Docker image is
+11:18
+used to then run a Docker container all
+Let's create our first image and container
+11:21
+underneath the umbrella of the docker
+11:23
+CLI so let's get our hands dirty and
+11:25
+actually try out a real world example
+11:27
+this is going to be a simple example
+11:29
+it's a contrived example yet again but
+11:31
+we're actually going to run a real
+11:33
+container on our system to get a feel
+11:35
+for how the docker CLI works now let's
+11:37
+just say I have a directory called
+11:39
+Docker example and in this directory I
+11:40
+have two files a Docker file and a print
+11:43
+message. sh file let's take a look at
+11:45
+them let's start first with our print
+11:47
+message. sh we can see that it is a bash
+11:50
+script and then it has a variable that
+11:52
+has a list of phrases these phrases are
+11:55
+then randomly selected and we print them
+11:57
+out to the terminal using a a program
+12:00
+called figlet now what if I don't have
+12:02
+figlet installed on my local machine
+12:04
+well that's okay that's why we have this
+12:05
+Docker file so in our Docker file what
+12:07
+we want to do as we've seen before we
+12:09
+want to use auntu latest that means
+12:11
+we're using the latest version of the
+12:12
+auntu image from Docker probably from
+12:14
+Docker Hub then on that image we want to
+12:17
+run apt get update and apt get install
+12:19
+figlet and wget we're going to use WG
+12:22
+get in the next line where we run W get
+12:25
+and we W get some fonts that we want to
+12:28
+then install on our system then we want
+12:30
+to copy our local print message script
+12:33
+into the Container for print m.sh this
+12:36
+is what we're actually going to run then
+12:38
+we want to chamod plus X print m.sh that
+12:42
+just makes this script executable inside
+12:44
+of the container and our final command
+12:46
+is to just run print message. SSH it's a
+12:48
+pretty simple Docker file but this will
+12:50
+give us an understanding of how to use
+12:52
+these things in real time so now that
+12:54
+we're within this directory that has a
+12:55
+doer file we can call from within the
+12:58
+directory Docker build now in Docker
+13:01
+build we could tag that by default it
+13:03
+will tag it with the latest release and
+13:04
+we can call this asky and we want to
+13:07
+make sure we build everything in this
+13:08
+current directory this will build our
+13:10
+very first image let's see what this
+13:12
+command does okay this was a lot of
+13:14
+stuff but let's just go through it
+13:15
+really quickly and see what we did here
+13:17
+we can see that it sent the build
+13:19
+context to the docker Damon and then we
+13:21
+did the steps that were in the docker
+13:22
+file we can see the docker file working
+13:24
+for us step one out of six from auntu
+13:27
+latest now it pulls from Library auntu
+13:30
+this is probably pulling from dockerhub
+13:31
+we then run appt get update and app get
+13:34
+install these couple of programs onto
+13:36
+our abtu image very good we can see that
+13:38
+that is running and that's what all this
+13:40
+output is and then in our next step step
+13:42
+three we want to run W get for these
+13:44
+files now these files were then taken
+13:47
+and saved into this image very good and
+13:50
+now in step four out of six we copy our
+13:52
+local print message script into the
+13:53
+image then we run chamod plus X which
+13:56
+will make it executable and at the very
+13:58
+end we want to make sure our default
+13:59
+command is just by running this print
+14:02
+message script cool okay so now we have
+14:04
+our image built how do we run the
+14:06
+container based on this image well what
+14:08
+we can do is we can check what images we
+14:10
+have currently built on our system with
+14:12
+the docker images command we hit enter
+14:15
+and we can see that amongst a couple
+14:16
+others like Ubuntu and hello world we
+14:18
+have our asky image tagged at the latest
+14:21
+tag with an image ID created about a
+14:23
+minute ago and that's what we have right
+14:25
+here we built our image I'm going to
+14:27
+make my font smaller here because we're
+14:28
+printing out asky text and it's going to
+14:30
+be pretty large on the screen you'll see
+14:32
+what I mean in a second but basically
+14:33
+what we want to do is now that we have
+14:35
+our image built we can run Docker run
+14:38
+and then type the name of the image
+14:40
+which is asky we could also optionally
+14:42
+add the tag which would be latest and
+14:44
+I'll just add it right here if we do
+14:46
+this and enter Then This command we can
+14:48
+see that it actually runs the container
+14:50
+and it runs the script that prints out
+14:52
+asky art to our screen isn't that
+14:55
+awesome so basically what we've done
+14:56
+here is we have now a Docker file that
+14:58
+installs STS things into an image we
+15:00
+have an image that has all these
+15:01
+programs on it like figlet w get and
+15:04
+everything else and then it has a script
+15:06
+inside of that image as well now the
+15:07
+container runs and the container's
+15:09
+default command is to then print this
+15:11
+stuff out to the terminal and that's
+15:13
+what it is we just did that awesome now
+15:15
+we can keep running this command we can
+15:17
+keep running this Docker container and
+15:19
+it will just randomly select another
+15:21
+thing apparently it was the same for a
+15:23
+bunch of those but it will select random
+15:25
+sayings and then print them out in an
+15:26
+asky text to us very cool but now let's
+Tagging a new version of our image
+15:29
+say we want to modify this script and we
+15:31
+want to print out different things what
+15:32
+do we do now to update this image well
+15:35
+images are immutable what you're going
+15:37
+to have to do is edit your Docker file
+15:38
+and then create a new image probably
+15:40
+with a different tag let's get into that
+15:43
+so we see we have our Docker file here
+15:45
+and we have our print message. sh let's
+15:47
+just say we want to change some of these
+15:51
+phrases this is
+15:53
+fun I love
+15:56
+Docker cool okay so now we've changed
+15:58
+the script that actually prints the
+15:59
+messages out what we're going to want to
+16:00
+do is build a new image from this Docker
+16:03
+file because this new image is going to
+16:05
+contain different things okay so let's
+16:07
+do Docker
+16:09
+build- T and what we want to do is we
+16:12
+want to name this asky with a colon the
+16:15
+colon is going to denote the tag and I'm
+16:18
+just going to call it different we can
+16:19
+call whatever we want and we want to
+16:20
+build it from our local directory now
+16:22
+let's hit enter so we can see here we
+16:24
+get very similar output to what we had
+16:26
+before we probably get less output
+16:27
+because we already have the ab image
+16:29
+installed and we already have these
+16:30
+programs installed in the abutu image
+16:33
+that Docker is using to build this image
+16:35
+but we can see down below we've
+16:36
+successfully built this new image which
+16:38
+has a new ID and there's a new tag
+16:40
+called asky different very cool all
+16:43
+right so now let's check Docker images
+16:45
+to see what this looks like okay great
+16:46
+we can see that we have as's latest
+16:48
+build which isn't currently the latest
+16:50
+because we tagged it with something
+16:51
+different but that's okay for now and we
+16:53
+have our new asky different tag so this
+16:56
+tag is a snapshot of our Docker file
+17:00
+that was built into an image so now
+17:01
+let's run our new image in a container
+17:04
+we can call Docker run asky and we want
+17:07
+to add the tag of different let's see
+17:09
+what happens you can see it pushes out
+17:11
+the different text that we did now we
+17:13
+have different sayings that we're
+17:14
+putting out there like I love you or I
+17:16
+love Docker let's make this a little bit
+17:17
+smaller so we can see it a little bit
+17:18
+better but I love Docker this is fun I
+17:22
+love you these are all the different
+17:23
+messages that we put in our print
+17:25
+message Dosh now the cool thing is we
+17:27
+still have the previous version of this
+17:29
+image like I said they're immutable you
+17:30
+don't change the images you just create
+17:32
+new ones so we can also say Docker run
+17:36
+asky latest and that was the previous
+17:38
+one that we built which has all of these
+17:40
+Star Wars things in there let's make
+17:42
+this smaller so we can run both of our
+17:45
+containers based on the images that
+17:47
+we've built the images are mutable you
+17:49
+don't delete them you just create new
+17:50
+versions of them very cool so what have
+17:52
+we learned here well I think we've
+17:54
+learned a lot we've learned about the
+17:55
+difference between virtualization and
+17:57
+containerization and we've also learned
+17:59
+about Docker as a whole and how Docker
+18:01
+files images and containers all relate
+18:04
+to one another but this is just the
+18:06
+surface of this surface that we're
+18:07
+scratching here if you want to learn
+18:09
+more about Docker like Docker compose
+18:11
+mounting Docker volumes or even doing
+18:13
+things like Port mapping and darker then
+18:15
+leave a comment down below of what you
+18:16
+would like to learn next and hey thanks
+18:19
+nerds
+18:20
+[Music]
+
+============================================================================================
+Transcript - What is Docker?
+	Telusko
+
+0:00
+[Music]
+0:03
+welcome back aliens monuments of Nvidia
+0:06
+in this video we'll talk about docker
+0:07
+docker is basically an ecosystem where
+0:09
+you can create containers where you can
+0:11
+run containers but then why do we need
+0:12
+it see we can talk about this docker in
+0:15
+detail but then the main question is why
+0:17
+do we need Dockers now think about this
+0:19
+as a developer or as a tester or as
+0:21
+operation team what we do is we work
+0:24
+with Sophos like the ultimate thing is
+0:26
+to provide a software so that your user
+0:29
+can use it I'm talking about the web
+0:31
+application now all web services so what
+0:33
+we do is we build an application
+0:34
+normally development team they pay a
+0:37
+software and then this soffit goes for
+0:39
+the testing so testing team will be
+0:41
+doing the testing on it all and then
+0:43
+after that if everything is going good
+0:44
+of course if something goes wrong it it
+0:46
+comes back to development team but what
+0:48
+if everything is perfect then goes for
+0:50
+the operation team so that they can
+0:51
+deploy the application on broad server
+0:53
+of course depend upon company this
+0:55
+process might change but then we have
+0:57
+these steps right there look the
+0:59
+application there's the application and
+1:00
+ship it to the production server so that
+1:02
+we can run there one thing is when as a
+1:04
+developer when you build an application
+1:05
+you might be using some framework so
+1:07
+let's say if you're working one job or
+1:08
+you might be using Spring Framework
+1:10
+maybe you want to build a web
+1:11
+application using using Python so you'll
+1:13
+be using Django framework so what we do
+1:16
+is when when we want to build an
+1:17
+application we have a framework and this
+1:20
+framework will need certain libraries
+1:21
+some dependencies or maybe some O's
+1:23
+level features so what we do is when you
+1:26
+want to start with the application you
+1:28
+need before even before touching the
+1:29
+application you have to download
+1:31
+dependencies you have to download the
+1:32
+libraries now the thing is after
+1:35
+researching which library to use after
+1:37
+is searching with dependence that you
+1:38
+use you will download them and you will
+1:40
+have those things on your machine so you
+1:42
+have your framework you have your
+1:44
+application you have your dependencies
+1:45
+and maybe some postal features now
+1:49
+everything is done right your product is
+1:51
+ready with you and of course the next
+1:53
+step would be testing so you will ship
+1:55
+this product to the ship to the testing
+1:57
+team but the problem is the testing team
+1:59
+when they start using your application
+2:01
+they might face issues so there's
+2:03
+nothing wrong with the software what
+2:05
+went wrong is with with the dependencies
+2:07
+because the dependency which you have
+2:09
+used of course you have list them all
+2:11
+the dependencies which are required so
+2:13
+they might be download
+2:14
+those dependencies or maybe you are
+2:15
+sending those dependencies in a jar file
+2:18
+or dinner in a zip file the problem is
+2:20
+it's not just the number of dependencies
+2:22
+it's also the versions right so maybe
+2:23
+you have used our version 4.2 and then
+2:26
+they might be using 4.0 so there will be
+2:29
+a clash your software will generate
+2:30
+issues the problem is with the
+2:32
+dependencies and the libraries and
+2:34
+sometime you know what happens when you
+2:35
+are building an application your
+2:37
+application may need some extra
+2:38
+dependencies which even you are not
+2:40
+aware of so what happens is maybe you
+2:42
+have worked on some earlier projects and
+2:43
+those projects needed some dependencies
+2:45
+which you have in your machine but the
+2:48
+same thing is not there in the tester
+2:49
+machines but testing team will say hey
+2:51
+developer something went wrong something
+2:52
+went wrong because of you and you will
+2:54
+be saying hey it was working on my
+2:55
+machine is not working on your machine
+2:57
+so it's something wrong with your
+2:58
+machine we can have a blame game there
+3:00
+but that's not happen if it happens in
+3:01
+the company but then we can you might
+3:03
+imagine a scenario right they might be
+3:04
+thinking this in the in their head so
+3:06
+what if you can when you when you are
+3:09
+shipping the application the application
+3:11
+which you have build not just
+3:13
+application but you have to ship
+3:15
+everything the framework dependencies
+3:17
+and that is everything so you will take
+3:19
+take the entire stuff and give it to the
+3:21
+testing team but is it possible is it
+3:24
+possible to give everything the thing is
+3:26
+some dependencies and libraries are
+3:29
+dependent on the OS so you have to give
+3:31
+the entire OS and that's not practically
+3:33
+possible right you find copy or say -
+3:34
+haven't give it to someone else and
+3:35
+that's where we got a solution and that
+3:38
+solution is hypervisor okay if you don't
+3:41
+know about hypervisors think about
+3:42
+virtual machines all VM very few that's
+3:44
+very famous software which you might
+3:45
+have used in your polish days or in your
+3:48
+company so what we do using the virtual
+3:51
+machine is so you have a hardware so you
+3:53
+have a physical hardware and on that
+3:55
+hardware you install an OS of course
+3:57
+every app every machine has arose maybe
+4:00
+Windows or Linux based OS for Macintosh
+4:03
+now on that OS you will be installing a
+4:05
+hypervisor or VMware basically now this
+4:08
+VMware can install another OS now the
+4:11
+amazing thing is when you install the
+4:12
+new OS now this OS can be back and you
+4:15
+can ship it so you can create an image
+4:17
+of it so the amazing thing is when you
+4:19
+give this OS to someone else they can
+4:21
+load it the same OS and this OS will
+4:23
+have everything so what I'm saying is a
+4:26
+Hardware OS hypervisor
+4:28
+and you're always the customers or the
+4:29
+or the virtual OS now on this virtual OS
+4:32
+okay you can do anything you want you
+4:34
+can install software you can install
+4:36
+dependencies you can you can build an
+4:38
+application now when you're giving the
+4:40
+application to the testing team don't
+4:42
+just give the software give the entire
+4:45
+image of your OS the virtual image which
+4:47
+you say and then once they get the image
+4:49
+they can create an instance of it so
+4:51
+basically you can imagine the concept of
+4:54
+classes and objects in Java when you
+4:56
+give up class they can create objects
+4:58
+they can do it instances of it of course
+5:00
+you can't the running image but you can
+5:02
+run instances with one image you can
+5:04
+have multiple instances running so you
+5:05
+can have ten instance if you have
+5:06
+hundred instances so that's amazing
+5:08
+right so the testing team will they will
+5:10
+run the instance now the amazing thing
+5:11
+is they don't have to worry about
+5:13
+dependencies because you have given them
+5:15
+everything the software which you have
+5:17
+built libraries dependencies and maybe
+5:19
+some oysters features now they will be
+5:21
+testing the application not the
+5:23
+dependencies but they will test your
+5:25
+your logic and everything is working or
+5:27
+not and then if everything goes well
+5:29
+even they don't have to I know think
+5:32
+about the production server they can
+5:34
+simply create a virtual image again the
+5:36
+new image we making after making some
+5:38
+changes and give it to the production
+5:40
+now production will have the image they
+5:43
+will get the image and the ops team they
+5:44
+will simply clear instance everything is
+5:46
+running right so if if this software
+5:49
+works on your machine it will also work
+5:51
+on the server that's great right that's
+5:54
+the concept of hypervisors but then
+5:56
+something went wrong right because the
+5:58
+the title of the video talks about
+6:00
+docker in fact in the start of the video
+6:01
+I've said hey we will talk about docker
+6:03
+and I'm talking about hypervisors so the
+6:06
+problem with hypervisor is it's a great
+6:07
+concept right so if hypervisor was
+6:09
+perfect we don't even need Dockers but
+6:11
+the thing is hyper was I still agreed
+6:13
+okay there are lot of application there
+6:14
+a lot of companies they're still using
+6:15
+hypervisors for various reasons might
+6:18
+for one of the reason why hypervisor is
+6:21
+not referred is the the thing is when
+6:24
+you install in OS when you install the
+6:26
+hypervisors and then you have to install
+6:28
+another OS now what if you have a server
+6:30
+and then you want to run multiple
+6:31
+application so imagine every application
+6:34
+will need its own OS then that will be
+6:37
+bulky right so you are basically running
+6:39
+multiple operating system on this
+6:41
+same hardware the same physical hardware
+6:43
+so you're wasting resources okay but
+6:45
+necessary sauce you're wasting CPU
+6:46
+you're wasting Ram you are wasting
+6:48
+harddrive you are wasting all the
+6:49
+resources this the next issue is with
+6:52
+the licenses what if the OS which are
+6:53
+using is Windows OS so of course you
+6:55
+have to buy those licenses or even if
+6:58
+you are using appropriate with index
+6:59
+based OS you have to buy licenses for
+7:01
+license for that so we don't want to
+7:04
+invest at of that much of money so we
+7:06
+got a concept of containers no thanks to
+7:08
+Linux containers which is lxv we can
+7:11
+have a container systems
+7:12
+now what continuous are is think about
+7:15
+containers as hypervisors the only
+7:17
+differences in containers we don't
+7:19
+install Newars so all the containers
+7:21
+will share the same they will share the
+7:23
+same OS cardinal and that's beauty right
+7:25
+so on the hardware you will be having OS
+7:28
+on that always will be installing docker
+7:29
+not hypervisor docker and on this docker
+7:32
+you can have multiple containers and
+7:34
+each container can run its own
+7:36
+application the full-fledged application
+7:37
+your application dependencies everything
+7:40
+that that's awesome right so that's the
+7:42
+concept of containers now this container
+7:44
+can be created with the help of images
+7:45
+now go back to the example as a
+7:47
+developer you will be having a physical
+7:49
+hardware on that hardware you will be
+7:51
+installing an OS on that OS will be
+7:52
+installing dock and on docker you can
+7:54
+create containers now once you build
+7:56
+into the application you just have to
+7:58
+pack the application that you have to
+8:00
+pack the container now when you pack a
+8:02
+container it will create a image now
+8:05
+this image goes to the tester they can
+8:06
+create multiple containers they can
+8:08
+create multiple instances and each is
+8:10
+just we can call it as containers again
+8:12
+the same concept imagine image as as a
+8:16
+class and if you have multiple
+8:17
+containers as objects and if you create
+8:19
+two container of the same image they
+8:20
+will behave in the same way okay because
+8:22
+they are the containers there are these
+8:24
+juices of the same image so now when
+8:26
+testing team has this they can again
+8:27
+they can do testing and then when this
+8:29
+ship when this ship this product to the
+8:30
+production server again they will again
+8:33
+give the image and on the person's away
+8:34
+you can run containers and container
+8:36
+will have everything they just need a
+8:37
+docker system there and it can run the
+8:39
+application now the beauty is you can
+8:42
+create your own container so let's say
+8:44
+if I want to teach the spring framework
+8:45
+to someone and or maybe I want to
+8:48
+demonstrate some tool so of course they
+8:50
+don't have to install the software so
+8:51
+what I can do is on my machine I will
+8:53
+install
+8:53
+docker and I can create container with
+8:55
+multiple libraries and Spring Framework
+8:58
+and then I can give them the container
+9:00
+the image now they can run the image on
+9:02
+their machine on their taco right so we
+9:04
+can also share the images and that's why
+9:06
+if you go to the public repository of
+9:08
+docker they will have all the they were
+9:11
+had they have most of the repositories
+9:13
+they have most of the images so you can
+9:15
+use those images example they have image
+9:17
+for for ladies they have image for Noah
+9:19
+so they have image for the window as
+9:21
+well so if you want to run to this
+9:23
+application just use docker pull the
+9:25
+image run it on your machine and you can
+9:28
+you can get started right that's the
+9:30
+people test the beauty now come back
+9:31
+coming back blocker the docker is a
+9:33
+ecosystem as I mentioned in docker we
+9:35
+have so many things to talk about we can
+9:36
+talk about chocolate hubs so the deposit
+9:38
+ways which I'll talk about talking about
+9:40
+it was a docker hub then we have a
+9:42
+concept of docker engine so you know we
+9:44
+have a client-server architecture where
+9:45
+we have a server when you have a client
+9:47
+of course we can talk talk about those
+9:49
+things in detail it's not a small topic
+9:50
+you talk about right so it has so many
+9:53
+things involved inside docker so doctor
+9:56
+is also a company now when you say you
+9:57
+work with docker so that's a company
+9:58
+they are talking in fact doctor also has
+10:00
+an enterprise version so they have a
+10:01
+community version they have Enterprise
+10:03
+version committee was is open source and
+10:06
+they have named it mobi and their the
+10:08
+Enterprise version as well the feature
+10:10
+is almost same it's just that for the
+10:11
+enterprise version they provide support
+10:13
+so that's the introduction of dropper
+10:15
+let me know if you if you want to know
+10:17
+some more concepts about this I can make
+10:19
+a series on talk anyway we are going to
+10:21
+use this concept in high polish of
+10:23
+fabric goes so yeah that's it that's
+10:26
+about docker so I hope you enjoyed this
+10:27
+video write me in the comment section
+10:28
+and use it for the videos
+
+
+
+============================================================================================
+Transcript - What Is Docker? | What Is Docker And How It Works? | Docker Tutorial For Beginners | Simplilearn 
+	Simplilearn
+
+Intro
+0:02
+hello this is Matthew from simply learn
+0:05
+and today we're gonna cover what is
+0:07
+docker and why it should be of value to
+0:10
+you as somebody who works in DevOps so
+0:13
+let's take a throw scenario a very
+Why Docker?
+0:15
+developer Etna testa before you had the
+0:18
+world of docker a developer would
+0:21
+actually build their code and then
+0:23
+they'd send it to the tester but then
+0:25
+the code wouldn't work on their system
+0:28
+coders are worldly a system due to the
+0:30
+differences in computer environments so
+0:32
+what could be the solution to this well
+0:35
+you could go ahead and create a virtual
+0:37
+machine to be the same of the solution
+0:39
+in both areas what do you think docker
+0:42
+is an even better solution so let's kind
+0:45
+of break out what the main big
+0:47
+differences are between docker and
+0:49
+virtual machines as you can see between
+0:51
+the left and the right hand side both
+0:53
+look to be very similar what you'll see
+0:56
+however is that on the docker side what
+0:59
+you'll see as a big difference is that
+1:01
+the guest OS for each container has been
+1:05
+eliminated docker is inherently more
+1:07
+lightweight but provides the same
+1:10
+functionality as a virtual machine so
+1:13
+let's step through some of the pros and
+1:15
+cons of a virtual machine versus docker
+1:18
+so first of all a virtual machine
+1:20
+occupies a lot more memory space on the
+1:24
+host machine
+1:25
+in contrast Dhaka occupies significantly
+1:29
+less memory space the boot up time
+1:31
+between both is very different docker
+1:34
+just boots up faster the performance of
+1:38
+the docker environment is actually
+1:41
+better and more consistent than the
+1:43
+virtual machine docker is also very easy
+1:47
+to set up and very easy to scale the
+1:50
+efficiencies therefore a much higher
+1:53
+with a docker environment versus a
+1:55
+virtual machine environment and you'll
+1:58
+find it is easier to port docker across
+2:01
+multiple platforms than a virtual
+2:04
+machine finally the space allocation
+2:06
+between docker and a virtual machine is
+2:09
+significant when you don't have to
+2:12
+include the guest Oh
+2:13
+you're eliminating a significant amount
+2:16
+of space and the dock environment is
+2:18
+just inherently smaller so after darker
+2:22
+as a developer you can build out your
+2:24
+solution and send it to a tester and as
+2:27
+long as we're all running in the doctor
+2:29
+environment everything will work just
+2:31
+great so let's step through what can I
+What's in it for you?
+2:34
+cover in this presentation we're gonna
+2:36
+look at the DevOps tools and where
+2:38
+docker fits within that space we'll
+2:40
+examine what docker actually is and how
+2:42
+docker works and then finally we'll step
+2:45
+through the different components of the
+2:47
+docker environment so what is DevOps
+2:50
+DevOps is a collaboration between the
+DevOps and its tools
+2:52
+development team the operation team
+2:54
+allowing you to continuously deliver
+2:56
+solutions and applications and services
+2:59
+that both delight and improve the
+3:01
+efficiency of your customers if you look
+3:03
+at the Venn diagram that we have here on
+3:05
+the left hand side we have development
+3:08
+on the right hand side we have operation
+3:10
+and then there's a cross over in the
+3:12
+middle and that's where the DevOps team
+3:14
+sits if we look at the areas of
+3:17
+integration between both groups
+3:19
+developers are really interested in
+3:21
+planning code building and testing and
+3:24
+operations want to be able to
+3:25
+efficiently deploy operate a monitor
+3:28
+when you can have both groups
+3:29
+interacting with each other on these
+3:32
+seven key and elements then you can have
+3:36
+the efficiencies of an excellent DevOps
+3:38
+team so planning in codebase we use
+3:40
+tools like JIT and Guerra
+3:42
+for building we use Gradle and mavin
+3:45
+testing we use selenium the integration
+3:49
+between dev and ops is through tools
+3:52
+such as Jenkins
+3:53
+and then the deployment operation is
+3:56
+done with tools such as docker and share
+3:58
+finally nagas is used to monitor the
+4:02
+entire environment so let's step deeper
+4:04
+into what docker actually is so docker
+4:07
+is a tool which is used to automate the
+What is Docker?
+4:09
+deployment applications in a lightweight
+4:11
+container so the application can work
+4:14
+efficiently in different environments no
+4:17
+it's important to note that the
+4:19
+container is actually a software package
+4:21
+that consists of all the dependencies
+4:23
+required to run the application
+4:25
+so multiple containers can run on the
+4:27
+same hardware the containers are
+4:29
+maintained in isolated environments
+4:32
+they're highly productive and they're
+4:35
+quick and easy to configure so let's
+4:37
+take an example of what dogger is by
+4:40
+using a house that may be rented for
+4:42
+someone using Airbnb so in the house
+4:45
+there are three rooms and only one
+4:48
+cupboard and kitchen and the problem we
+4:50
+have is that none of the guests are
+4:52
+really ready to share the cupboard and
+4:54
+kitchen because every individual has a
+4:57
+different preference when it comes to
+4:58
+how the cupboard should be stocked and
+5:00
+how the kitchen should be used this is
+5:03
+very similar to how we run software
+5:05
+applications today each of the
+5:07
+applications could end up using
+5:09
+different frameworks so you may have a
+5:13
+framework such as rails perfect and
+5:15
+flask and you may want to have them
+5:18
+running for different applications for
+5:20
+different situations this is where
+5:22
+docker will help you run the
+5:23
+applications with the suitable
+5:25
+frameworks so let's go back to our
+5:28
+Airbnb example so we have three rooms
+5:31
+and a kitchen and cupboard how do we
+5:33
+resolve this issue well we put a kitchen
+5:36
+in covered in each room we can do the
+5:38
+same thing for computers docker provides
+5:41
+the suitable frameworks for each
+5:43
+different application and since every
+5:46
+application has a framework with a
+5:47
+suitable version this space can also
+5:49
+then be utilized for putting in Suffern
+5:52
+applications that are long and since
+5:54
+every application has its own framework
+5:56
+and suitable version the area that we
+5:59
+had previously stored for a framework
+6:01
+can be used for something else now we
+6:04
+can create a new application in this
+6:07
+instance a fourth application that uses
+6:09
+its own resources you know what
+6:12
+with these kinds of abilities to be able
+6:14
+to free up space on the computer
+6:16
+it's no wonder docker is the right
+6:18
+choice so let's take a closer look to
+6:20
+how docker actually works so when we
+6:23
+look at docker and we call something
+How does Docker work?
+6:25
+Dokka we're actually referring to the
+6:27
+base engine which actually is installed
+6:29
+on the host machine that has all the
+6:31
+different components that run your
+6:32
+docker environment and if we look at the
+6:36
+image on the left-hand side of the
+6:37
+screen you'll see that docker
+6:39
+has a client-server relationship there
+6:42
+is a client installed on the hardware
+6:45
+there is a client that contains the
+6:47
+docker product and then there is a
+6:49
+server which controls how that docker
+6:51
+client is created the communication that
+6:54
+goes back and forth to be able to share
+6:57
+the knowledge on that docker client
+6:58
+relationship is done through a REST API
+7:00
+this is fantastic news because that
+7:03
+means that you can actually interface
+7:04
+and program that API so we look here in
+7:07
+the animation we see that the docker
+7:09
+client is constantly communicating back
+7:12
+to the server information about the
+7:15
+infrastructure and it's using this REST
+7:17
+API as that communication channel the
+7:21
+dock a server then we'll check out the
+7:23
+requests and the interaction necessary
+7:25
+for it to be the docker daemon which
+7:27
+runs on the server itself will then
+7:30
+check out the interaction and the
+7:31
+necessary operating system pieces needed
+7:34
+to be able to run the container okay so
+7:37
+that's just an overview of the docker
+7:39
+engine which is probably where you're
+7:41
+going to spend most of your time but
+7:44
+there are some other components that
+7:45
+form the infrastructure for docker let's
+7:48
+dig into those a little bit deeper as
+7:49
+well so what we're going to do now is
+7:51
+break out the four main components that
+7:54
+comprise of the docker environment the
+7:57
+four components are as follows the
+7:59
+docker clientís server which we've
+8:01
+already done a deeper dive on docker
+8:04
+images docker containers and the dagger
+8:07
+registry so if we look at the structure
+8:10
+that we have here on the left-hand side
+8:12
+you see the relationship between the
+8:14
+docker client and the darkest server and
+8:17
+then we have the rest api in between now
+8:20
+if we start digging into that rest api
+8:22
+particularly the relationship with the
+8:24
+daka daemon on the server we actually
+8:26
+have our other elements that form the
+8:29
+different components of the docker
+8:31
+ecosystem so the docker client is
+Components of Docker. Docker Client and Server
+8:33
+accessed from your terminal window so if
+8:35
+you are using Windows this can be
+8:37
+PowerShell on Mac it's going to be your
+8:39
+terminal window and it allows you to run
+8:42
+the docker daemon and the registry
+8:44
+service when you have your terminal
+8:46
+window open so you can actually use your
+8:48
+terminal window to create instructions
+8:50
+on how to build and run your
+8:53
+images and containers if we look at the
+Components of Docker - Docker Image
+8:55
+images part of our registry here we
+8:58
+actually see that the image is really
+9:00
+just a template with the instructions
+9:02
+used for creating the containers which
+9:04
+you use within docker the document image
+9:07
+is built using a file called the docker
+9:09
+file and then once you've created that
+9:11
+docker file you store that image in the
+9:14
+docker hub or registry and that allows
+9:16
+other people to be able to access the
+9:19
+same structure of a docker environment
+9:21
+that you've created the syntax of
+9:23
+creating the image is fairly simple it's
+9:26
+something that you'll be able to get
+9:27
+your arms around very quickly and
+9:29
+essentially what you're doing is you're
+9:31
+creating the option of a new container
+9:34
+you're identifying what the image will
+9:36
+look like what are the commands that are
+9:38
+needed and the arguments for and then
+9:40
+those commands and once you've done that
+9:42
+you have a definition for what your
+9:45
+image will look like so if we look here
+Components of Docker - Docker Container
+9:48
+at what the container itself looks like
+9:50
+is that the container is a standalone
+9:53
+executable package which includes
+9:55
+applications and their dependencies it's
+9:58
+the instructions for what your
+9:59
+environment will look like so you can be
+10:01
+consistent in how that environment is
+10:04
+shared between multiple developers
+10:05
+testing units and other people within
+10:08
+your DevOps team now the thing that's
+10:10
+great about working with docker is that
+10:12
+it's so lightweight that you can
+10:13
+actually run multiple docker containers
+10:16
+in the same infrastructure and share the
+10:19
+same operating system this is its
+10:21
+strength it allows you to be able to
+10:23
+create those multiple environments that
+10:25
+you need for multiple projects so you're
+10:27
+working on interestingly though within
+10:29
+each container that contain it creates
+10:32
+an isolated area for the applications to
+10:35
+run so while you can run multiple
+10:37
+containers in an infrastructure each of
+10:40
+those containers are completely isolated
+10:43
+they're protected so that you can
+10:44
+actually control how your solutions work
+10:47
+there now as a team you may start off
+Components of Docker - Docker Registry
+10:49
+with one or two developers on your team
+10:51
+but when a project starts becoming more
+10:53
+important and you start adding in more
+10:56
+people to your team you may have 15
+10:58
+people that are offshore you may have 10
+11:01
+people that are local you may have 15
+11:04
+consultants that are working on your
+11:06
+project
+11:06
+you have a need for each of those two
+11:09
+verbs or each person on your team to
+11:11
+have access to that docket image and to
+11:14
+get access to that image we use a docker
+11:16
+registry which is an open source server
+11:18
+site servers for hosting and
+11:20
+distributing the images that you have
+11:23
+defined you can also use docker itself
+11:26
+as its own default Rattray and docker
+11:28
+hub now something it has to be very
+11:30
+mindful is that
+11:31
+for publicly shared images you may want
+11:33
+to have your own private images in which
+11:35
+case you would do that through your own
+11:37
+registry so once again public
+11:39
+repositories can be used to host the
+11:42
+docket images which can be accessed by
+11:43
+anyone and I really encourage you to go
+11:46
+out to docker and see the other docket
+11:48
+images that have been created because
+11:49
+there may be tools there that you can
+11:51
+use to speed up your own development
+11:53
+environments now you will also get to a
+11:56
+point where you start creating
+11:58
+environments that are very specific to
+12:00
+the solutions that you are building and
+12:03
+when you get to that point you'll likely
+12:04
+want to create a private repository so
+12:07
+you're not sharing that knowledge with
+12:08
+the world in general now the way in
+12:11
+which you connect with the docker
+12:13
+registry is through simple pull and push
+12:15
+commands that you run through terminal
+12:17
+window to be able to get the latest
+12:19
+information so if you want to be able to
+12:21
+build your own container what you'll
+12:23
+start doing is using the pull commands
+12:26
+to actually pull the image from the
+12:28
+docker repository and the command line
+12:30
+that is fairly simple in terminal window
+12:33
+you would write docker
+12:34
+pull and then you put in the image name
+12:36
+and any tags associated with that image
+12:39
+and use the command pools so in your
+12:42
+terminal window you would actually use a
+12:44
+simple line of command once you've
+12:46
+actually connected to your docker
+12:47
+environment and that command will be
+12:49
+docker pull with the image name and any
+12:52
+associated tags around that image what
+12:54
+that will then do is pour the image from
+12:57
+the docker repository whether that's a
+12:59
+public repository or a private one now
+13:01
+in Reverse if you want to be able to
+13:03
+update the docker image with a new
+13:06
+information you do a push command where
+13:09
+you would take the script that you've
+13:11
+written about the docker container that
+13:13
+you defined and push it to the
+13:15
+repository and as you can imagine the
+13:17
+commands for that are also fairly simple
+13:20
+in
+13:20
+terminal window you would write darker
+13:22
+push the image name any associated tags
+13:24
+and then that would then push that image
+13:27
+to the docker repository again either a
+13:29
+public or a private repository so if we
+13:32
+recap the docker file creates a docker
+13:34
+image that's using the build commands
+13:37
+docket image then contains all the
+13:39
+information necessary for you to be able
+13:41
+to execute the project using the docket
+13:44
+image any user can run the code in order
+13:46
+to create a docker container and once
+13:49
+the docket images build is uploaded to a
+13:51
+registry or to a docker hub where it can
+13:53
+be shared across your entire team and
+13:55
+from the docker hub users can get access
+13:58
+to the docket image and build their own
+13:59
+new containers so the five key takeaways
+Key Takeaways
+14:03
+here so with a virtual machine you're
+14:05
+able to create a virtualized environment
+14:08
+to run an application on an operating
+14:10
+system with docker it allows you to
+14:12
+focus on just running the application
+14:15
+and doing it consistently it improves
+14:18
+the ability for teams to be able to
+14:20
+share environments that are consistent
+14:22
+from team to team it's highly productive
+14:25
+and it's really quick and easy to
+14:27
+configure the architecture of docker is
+14:30
+really primarily built out of four
+14:32
+components of which the one that you'll
+14:34
+use the most is the client-server
+14:36
+environment where as a developer you
+14:38
+have a client application running on
+14:40
+your local machine and then you connect
+14:42
+with a server environment where you're
+14:45
+getting the latest information about
+14:46
+that container that you're building a
+14:49
+solution for and then finally what we
+14:51
+see with the workflow improvements with
+14:53
+docker is that the goal is to be able to
+14:56
+be more efficient to be able to be more
+14:59
+consistent with your development
+15:01
+environments and be able to push out
+15:03
+those environments whether it goes to a
+15:06
+test person to a business analyst or
+15:08
+anybody else on your DevOps team so they
+15:11
+have a consistent environment that looks
+15:13
+and acts exactly like your production
+15:15
+environment and can be eventually pushed
+15:17
+out to a production environment using
+15:19
+tools such as puppet or chef so you're
+15:21
+creating a consistent operations
+15:24
+environment really hope you've enjoyed
+15:26
+this presentation as always click like
+15:29
+and subscribe below to get more of these
+15:31
+presentations and if you have any
+15:33
+question
+15:34
+please put those in the comments below
+15:39
+hi there if you like this video
+15:42
+subscribe to the simple learn YouTube
+15:44
+channel and click here to watch similar
+15:46
+videos de nerd up and get certified
+15:48
+click here
+
+
+
+============================================================================================

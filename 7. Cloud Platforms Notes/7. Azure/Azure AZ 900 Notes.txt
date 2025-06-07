@@ -1,0 +1,21 @@
+7. Cloud Platforms
+   • Azure 
+
+
+Cloud Platforms:
+
+Platform: Azure​
+
+Certifications:
+
+Microsoft Certified: Azure Fundamentals
+
+Description: Validates foundational knowledge of Azure services and cloud concepts.
+
+Cost: $99 USD
+
+Microsoft Certified: Azure Administrator Associate
+
+Description: Demonstrates ability to manage Azure resources and services.
+
+Cost: $165 USD

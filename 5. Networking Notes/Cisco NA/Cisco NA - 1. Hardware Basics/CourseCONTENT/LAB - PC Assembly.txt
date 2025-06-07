@@ -1,0 +1,274 @@
+Lab - PC Assembly Manual
+Introduction
+In this lab, you assemble a PC. The provided directions are for reference only.
+
+Part 1: Install the Power Supply
+
+Part 2: Install the Motherboard in a Computer
+
+Part 3: Install the Drives
+
+Part 4: Install Adapter Cards
+
+Part 5: Install Internal Cables
+
+Part 6: Install Front Panel Cables
+
+Part 7: Complete the Computer Assembly
+
+Recommended Equipment
+Power supply with a compatible form factor to the computer case, screws, and power cable
+Computer case
+Tool kit, antistatic wrist strap and antistatic mat
+Motherboard, motherboard standoffs and screws, and motherboard manual
+CPU, heat sink/fan assembly, and thermal compound
+RAM module(s)
+Hard disk drive, hard disk drive screws, and hard disk drive data cable
+Optical drive, optical drive screws, and optical drive data cable
+NIC and wireless NIC
+Video adapter card
+Adapter card screws
+Monitor cable (HDMI, DVI, or VGA)
+Keyboard and mouse
+Network cable
+Wireless antenna
+Instructions
+Part 1: Install the Power Supply
+Step 1: Open the Computer Case.
+
+Remove the screws from the side panels.
+
+Remove the side panels from the computer case.
+
+Step 2: Install the Power Supply.
+
+Align the screw holes in the power supply with the screw holes in the case.
+
+Secure the power supply to the case with the power supply screws.
+
+If the power supply has a voltage selection switch, set this switch to match the voltage in your area.
+
+Part 2: Install the Motherboard in a Computer
+Step 1: Install the CPU.
+
+Place the motherboard, the CPU, the heat sink/fan assembly, and the RAM module on the antistatic mat.
+
+Note: These are general instructions for an LGA1155 socket. Your motherboard may be different. Follow all instructions provided by your CPU and motherboard manufacturers.
+
+Put on your antistatic wrist strap and attach the grounding cable to the antistatic mat.
+
+Locate Pin 1 on the CPU. Locate Pin 1 on the socket
+
+Note: The CPU may be damaged if it is installed incorrectly.
+
+Align Pin 1 on the CPU with Pin 1 on the socket.
+
+Place the CPU into the CPU socket.
+
+Close the CPU load plate and secure it in place by closing the load lever and moving it under the load lever retention tab.
+
+Apply a small amount of thermal compound to the CPU.
+
+Note: Thermal compound is only necessary when it is not included on the heat sink. Follow all instructions provided by the manufacturer for specific application details.
+
+Align the heat sink/fan assembly retainers with the holes in the motherboard around the CPU socket.
+
+Place the heat sink/fan assembly onto the CPU and the retainers through the holes in the motherboard.
+
+Tighten the heat sink/fan assembly retainers to secure it.
+
+Plug the fan connector into the motherboard. Refer to the motherboard manual to determine which set of fan header pins to use.
+
+Step 2: Install the RAM.
+
+Locate the RAM slots on the motherboard.
+
+Align the notch(es) on the bottom edge of the RAM module to the notches in the slot.
+
+Press down until the side tabs secure the RAM module.
+
+Ensure that none of the RAM module contacts are visible. Reseat the RAM module if necessary.
+
+Check the latches to verify that the RAM module is secure.
+
+Install any additional RAM modules using the same procedure.
+
+Step 3: Install the Motherboard.
+
+Install the motherboard standoffs.
+
+Install the I/O connector plate in the back of the computer case.
+
+Align the connectors on the back of the motherboard with the openings in the back of the computer case.
+
+Place the motherboard into the case and align the holes for the screws with the standoffs. You may need to adjust the motherboard to line up the holes for the screws.
+
+Attach the motherboard to the case using the appropriate screws.
+
+Part 3: Install the Drives
+Step 1: Install the Hard Disk Drive.
+
+Align the hard disk drive with the 3.5 inch drive bay.
+
+Slide the hard disk drive into the bay from the inside of the case until the screw holes line up with the holes in the 3.5 inch drive bay.
+
+Secure the hard disk drive to the case using the proper screws.
+
+Step 2: Install the Optical Drive.
+
+Note: Remove the 5.25 inch cover from one of the 5.25 inch external drive bays if necessary.
+
+Align the optical drive with the 5.25 inch drive bay.
+
+Insert the optical drive into the drive bay from the front of the case until the screw holes line up with the holes in the 5.25 inch drive bay and the front of the optical drive is flush with the front of the case.
+
+Secure the optical drive to the case using the proper screws.
+
+Part 4: Install Adapter Cards
+Step 1: Install the wired NIC.
+
+Locate a compatible expansion slot for the NIC on the motherboard.
+
+Remove the slot cover from the back of the case, if necessary.
+
+Align the NIC to the expansion slot.
+
+Press down gently on the NIC until the card is fully seated.
+
+Secure the NIC by attaching the PC mounting bracket to the case with a screw.
+
+Step 2: Install the wireless NIC.
+
+Locate a compatible expansion slot for the wireless NIC on the motherboard.
+
+Remove the slot cover from the back of the case, if necessary.
+
+Align the wireless NIC to the expansion slot.
+
+Press down gently on the wireless NIC until the card is fully seated.
+
+Secure the wireless NIC by attaching the PC mounting bracket to the case with a screw.
+
+Step 3: Install the video adapter card.
+
+Locate a compatible expansion slot for the video adapter card on the motherboard.
+
+Remove the slot cover(s) from the back of the case, if necessary.
+
+Align the video adapter card to the expansion slot.
+
+Press down gently on the video adapter card until the card is fully seated.
+
+Secure the video adapter card by attaching the PC mounting bracket(s) to the case with a screw.
+
+Part 5: Install Internal Cables
+Step 1: Connect the motherboard power supply connector.
+
+Align the motherboard power supply connector to the socket on the motherboard.
+
+Gently press down on the connector until the clip clicks into place.
+
+Step 2: Connect the auxiliary power connector.
+
+Align the auxiliary power connector to the auxiliary power socket on the motherboard.
+
+Gently press down on the connector until the clip clicks into place.
+
+Note: This step is necessary only if your computer has an auxiliary power connector.
+
+Step 3: Connect the internal disk drive power connectors.
+
+Plug a power connector into the hard disk drive and the optical drive.
+
+Step 4: Connect the video adapter card power cable.
+Plug the PCIe power connector to the video adapter card.
+
+Note:This step is necessary only if your video adapter card has a PCIe power connector.
+
+Step 5: Connect the fan power connector.
+
+Connect the fan power connector into the appropriate fan header on the motherboard.
+
+Note: This step is necessary only if your computer has a fan power connector.
+
+Step 6: Connect the hard disk data cable.
+
+Align and plug the hard disk drive data cable into the motherboard connector.
+
+Align and plug the other end of the hard disk drive data cable into the hard disk drive connector.
+
+Note: SATA cables are keyed to ensure correct orientation with the connector.
+
+Step 7: Connect the optical drive data cable.
+
+Align and plug the optical drive data cable into the motherboard connector.
+
+Align and plug the other end of the optical drive data cable into the optical drive connector.
+
+Step 8: Verify the connections.
+
+Part 6: Install Front Panel Cables
+Step 1: Connect the reset switch connector.
+
+Gently press down on the reset switch connector until the pins are fully inserted.
+
+Step 2: Connect the power switch connector.
+
+Gently press down on the power switch connector until the pins are fully inserted.
+
+Step 3: Connect the power LED connector.
+
+Gently press down on the power LED connector until the pins are fully inserted.
+
+Step 4: Connect the HDD LED connector.
+
+Gently press down on the HDD LED connector until the pins are fully inserted.
+
+Step 5: Connect the speaker connector.
+
+Gently press down on the speaker connector until the pins are fully inserted.
+
+Step 6: Connect the USB and front audio jacks.
+
+If your case also has a front USB and front audio jacks, gently press down on the connector until the clip clicks into place or the pins are fully inserted.
+
+Step 7: Verify the Connections.
+
+Note: If any LED or switch does not work when the computer is first started, remove the connector for that item, turn it around, and reconnect it.
+
+Part 7: Complete the Computer Assembly
+Step 1: Attach the side panels.
+
+Attach the side panels to the computer case.
+
+Secure the side panels to the computer using the panel screws.
+
+Step 2: Attach the monitor cable.
+
+Attach the monitor cable to the video port.
+
+Secure the cable by tightening the screws on the connector.
+
+Step 3: Attach the keyboard cable.
+
+Plug the keyboard cable into the USB or PS/2 keyboard port.
+
+Step 4: Attach the mouse cable.
+
+Plug the mouse cable into the USB or PS/2 mouse port.
+
+Step 5: Attach the Ethernet cable.
+
+Plug the Ethernet cable into the Ethernet port.
+
+Step 6: Attach the wireless antenna.
+
+Connect the wireless antenna to the antenna connector.
+
+Step 7: Attach the power cable.
+
+Plug the power cable into the power socket of the power supply.
+
+Step 8: Verify connections.
+
+This lab is complete. Please have the instructor verify your work.

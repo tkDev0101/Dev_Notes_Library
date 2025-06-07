@@ -1,0 +1,4093 @@
+============================================================================================
+Transcript - Learn Docker in 12 Minutes 
+	Jake Wright
+
+0:00
+Docker is a tool for running
+0:01
+applications in an isolated environment
+0:06
+it gives you advantages similar to
+0:08
+running your application inside a
+0:09
+virtual machine some of those advantages
+0:11
+are your app always runs in exactly the
+0:14
+same environment so you don't get
+0:15
+inconsistencies in how it behaves if it
+0:18
+works on your computer it works on every
+0:20
+computer it works on the live server it
+0:22
+always acts the same
+0:24
+if you're working on multiple projects
+0:26
+it lets you sandbox each one and keep
+0:28
+them separate good for security and
+0:30
+eliminate potential conflicts between
+0:32
+different projects and lastly it makes
+0:34
+it easier to get going with somebody
+0:35
+else's project you don't have to install
+0:37
+all of the tools and dependencies that
+0:40
+the project needs you just spin up the
+0:41
+virtual machine put your code inside and
+0:43
+it works Docker gives you these
+0:45
+advantages but without the overhead and
+0:47
+hassle of running and managing a virtual
+0:49
+machine instead we have containers the
+0:52
+code and the environment are all wrapped
+0:54
+up inside a container but a container is
+0:56
+not a full virtual machine
+0:59
+when you run a virtual machine each
+1:00
+machine gets its own full operating
+1:02
+system including the kernel the kernel
+1:04
+is like the core of the operating system
+1:05
+the bit that controls the low level
+1:07
+stuff
+1:12
+and this is quite resource heavy on the
+1:14
+host machine the computer running the
+1:16
+virtual machines
+1:18
+containers however they all use the host
+1:20
+machine's kernel a core bit of the
+1:22
+operating system is shared
+1:25
+but everything on top of that is still
+1:27
+separated everything that makes a Linux
+1:29
+distribution unique because all Linux
+1:31
+distributions Ubuntu Debian
+1:33
+Etc are all built on the same kernel and
+1:36
+Docker uses special features of the Unix
+1:38
+file system to create these isolated
+1:40
+environments so a container is a
+1:43
+compromise the separation and sandboxing
+1:44
+is not quite as extreme but it's enough
+1:46
+and as a result a container can start up
+1:49
+in seconds as opposed to minutes they
+1:51
+use fewer resources to take in a bless
+1:53
+disk space and using less memory
+1:57
+so a container is a running instance of
+2:00
+an image an image is a template for
+2:02
+creating the environment you wanted to
+2:04
+snapshot of the system at a particular
+2:06
+time
+2:08
+so it's got the operating system the
+2:10
+software the application code all
+2:12
+bundled up in a file
+2:16
+images are defined using a Docker file a
+2:19
+Docker file is just a text file with a
+2:21
+list of steps to perform to create that
+2:24
+image for example you'd configure the
+2:26
+operating system install the software
+2:28
+you need copy the Project's files into
+2:29
+the right places
+2:31
+Etc
+2:32
+so you write a Docker file then you
+2:34
+build that and you get an image which
+2:36
+you can then run to get containers so
+2:39
+let's try out this whole process
+2:42
+first you're going to want to install
+2:43
+Docker for Mac or for Windows links are
+2:46
+in the description this is just some
+2:47
+software to allow Docker containers to
+2:49
+run on your computer and unless you've
+2:52
+got a specific reason to use it ignore
+2:53
+Docker toolbox That's the older way to
+2:56
+run Docker on a Mac or PC
+2:59
+I've created a new folder just on my
+3:01
+desktop for this demonstration and I'm
+3:04
+going to write a super simple hello
+3:06
+world application in PHP it's literally
+3:09
+just gonna Echo
+3:12
+hello world
+3:13
+and I'm going to save that in a folder
+3:16
+called SRC for source as index dot PHP
+3:21
+right now you can't execute that file
+3:23
+you need a web server our goal is to use
+3:25
+Docker to create one so let's make a new
+3:27
+file and we're going to call this Docker
+3:29
+file we're going to save it next to the
+3:30
+source folder not inside Docker file
+3:33
+capital D one word and in here we're
+3:34
+going to use code to configure our
+3:36
+environment so for this we want an
+3:38
+operating system with PHP and Apache
+3:40
+installed Apache is the web server
+3:42
+software the cool thing though is we
+3:44
+don't have to start from scratch we
+3:46
+start in our Docker file with the name
+3:48
+of an existing image an image that has
+3:50
+already been built and then we build on
+3:52
+top of that conveniently you can find
+3:54
+lots of existing images on the docker
+3:56
+Hub so if you go to hub.docker.com
+4:00
+sign up the search doesn't seem to work
+4:02
+if you're logged out you can search for
+4:04
+images so we can search for a PHP image
+4:06
+now the Hub includes images from the
+4:08
+whole community so it's up to you to
+4:11
+decide if the image is suitable and well
+4:13
+maintained the best ones to look out for
+4:15
+are the official ones luckily for us an
+4:17
+official PHP image already exists at the
+4:20
+top you'll find all of the variations of
+4:22
+the image these are called Tags so we
+4:25
+just want to like the latest version of
+4:26
+PHP and we want Apache as well so this
+4:29
+line right here this has a few versions
+4:31
+of PHP with Apache going left to right
+4:34
+they get less specific so this will give
+4:37
+you specifically 7.0.10 all the way to
+4:39
+the end where this will always just give
+4:41
+you the latest version of PHP that one's
+4:43
+usually a bad idea though because that
+4:45
+means PHP could just unexpectedly be
+4:47
+upgraded and I might break your old code
+4:49
+but one of these other ones is fine for
+4:51
+us
+4:52
+now if you scroll down you even get
+4:54
+instructions telling you how to use the
+4:56
+image if you find the Apache section it
+4:58
+tells you what to put in the docker file
+5:00
+so we first wanted to find the base
+5:02
+image using the from keyword and we want
+5:05
+the name of the image PHP then a colon
+5:07
+and the name of the tag so we'll use as
+5:09
+suggested 7.0 Dash Apache and then we
+5:14
+want to copy our files inside the image
+5:17
+using the copy keyword so we want to
+5:19
+copy the contents of source into slash
+5:22
+VAR
+5:23
+www.html they're just telling us here
+5:26
+that this is where Apache will look on
+5:28
+its own file system and to find the file
+5:30
+so we should put our files there and you
+5:32
+can see now why I called that folder
+5:34
+Source just so it matches these
+5:35
+instructions we want one more thing in
+5:37
+our Docker file we want to use the
+5:39
+expose keyword to expose Port 80. this
+5:42
+just means when you run the image and
+5:45
+you get a container that container will
+5:47
+listen on Port 80. by default it would
+5:49
+just ignore all incoming requests if
+5:51
+you're wondering what operating system
+5:52
+this PHP image is based on you can
+5:55
+usually find the docker file that it's
+5:57
+defined by in this case it's linked next
+6:00
+to the tag names and we see it's based
+6:03
+on Debian similarly that Debian image
+6:05
+will have a dawn Docker file and they'll
+6:06
+stack on top of each other like I said
+6:08
+earlier and this layering of images is a
+6:11
+huge advantage of using Docker the php's
+6:13
+docker file is a little bit more
+6:14
+complicated than ours but let's just
+6:16
+focus on ours for now so when we build
+6:18
+our Docker file Docker is going to
+6:20
+download PHP from the docker Hub it's
+6:23
+going to copy our files from source to
+6:26
+this location inside of the image it's
+6:28
+going to tell running containers to
+6:30
+listen on Port 80 and then it's going to
+6:32
+Output a new image our new customized
+6:34
+version which we'll be able to run so to
+6:37
+build it I'm going to go to a terminal
+6:38
+first I'm going to move to the folder
+6:41
+that it's in so we can see we've got
+6:43
+Docker file right there and I'm going to
+6:45
+type Docker build Dash T to give it a
+6:48
+name I'm just going to call it hello
+6:50
+world and then at the end you want to
+6:51
+tell it the location of the Docker file
+6:53
+now since it's in the current directory
+6:55
+we just want to put a dot to say that
+6:58
+oops helps if I save the docker file
+7:01
+first
+7:02
+the first time you do this it'll have to
+7:04
+download all of the layers that make up
+7:06
+that PHP image shouldn't take too long
+7:08
+once it's got the image it's going to
+7:10
+copy our files inside at the end it I'll
+7:13
+put our new image and it's going to be
+7:15
+called hello world so we can run this by
+7:17
+typing Docker run
+7:20
+hello world there's one other thing we
+7:22
+need in the middle of this we need to
+7:23
+use the dash P tag to forward a Port
+7:26
+Port 80 from the host to Port 80 in the
+7:29
+container so that means when a request
+7:31
+gets to the host the host is your
+7:33
+computer when a request gets there
+7:34
+Docker is going to forward that to the
+7:36
+container and when it gets to the
+7:38
+container that expose line that we've
+7:40
+got in the docker file that will let the
+7:42
+container accept the request and allow
+7:45
+Apache to handle it
+7:47
+so we can run that we'll get some output
+7:49
+from the container from PHP and then we
+7:51
+can go to localhost
+7:54
+and we'll see Hello World so we've done
+7:57
+it we've got our application running
+7:59
+inside a Docker container now if you go
+8:02
+back to index.php and you change this
+8:06
+when you refresh localhost it won't
+8:10
+change the the docker container won't
+8:12
+reflect the new version of the file and
+8:14
+this is because when we built the image
+8:15
+it made a copy of that file to see the
+8:17
+change you'd need to rebuild the image
+8:19
+and spin up a new container from the
+8:21
+updated image during development this is
+8:23
+obviously a massive pain and this is
+8:25
+where volumes come in so there are two
+8:27
+types of volumes one to persist and
+8:30
+share data between containers we only
+8:33
+have one container I'm not going to talk
+8:35
+about this today
+8:36
+but the second type lets you share
+8:39
+folders between the host and the
+8:41
+container you can mount a local
+8:43
+directory on your computer as a volume
+8:45
+inside the container then the container
+8:48
+when it's running will be able to see
+8:49
+the files that we're working on hit Ctrl
+8:51
+C to stop this container
+8:54
+to mount a volume
+8:55
+and we're going to add another option to
+8:58
+the docker run command we're going to
+8:59
+add Dash V and we want to tell it to
+9:02
+Mount the the folder users J desktop it
+9:07
+needs to be the full path not a relative
+9:09
+one slash Docker slash SRC so we want
+9:13
+that folder that local folder to be
+9:15
+mounted so we put a caller inside the
+9:19
+container www.html
+9:24
+so the image it copies this folder to
+9:27
+this location inside the container but
+9:28
+during development we don't just want to
+9:31
+copy we want to see that folder we want
+9:33
+a live view of that folder so we can
+9:34
+mount it at that directory so this time
+9:37
+when you run it
+9:39
+you'll see changes that we make are
+9:42
+reflected straight away as soon as we
+9:44
+refresh the docker container can't see
+9:46
+that change in the file because it's
+9:48
+looking at the file itself so this is
+9:50
+really useful during development but
+9:52
+before you deploy this and try to run
+9:53
+the image somewhere else you will need
+9:56
+to rebuild the image to get an updated
+9:57
+copy of the files put inside volumes
+10:00
+just give a running container the
+10:02
+ability to see files on the host
+10:04
+machines file system they do not change
+10:06
+the image so when you're done you can
+10:08
+press Ctrl C to stop the container again
+10:11
+so one last thing I want to mention
+10:13
+you can see we can easily stop a
+10:16
+container manually by pressing Ctrl C
+10:17
+but containers will stop by themselves
+10:20
+when the main process exits in this case
+10:23
+that would only be if PHP died for some
+10:25
+unexpected reason but you can equally
+10:27
+make containers with short running tasks
+10:30
+you might have a container which runs
+10:32
+tests or a container which runs composer
+10:34
+install the process running in these
+10:37
+containers will end when the task is
+10:39
+complete and when that main process ends
+10:41
+the container will stop
+10:43
+so for this reason you should Endeavor
+10:45
+to have one process per container
+10:47
+because the life of that container is
+10:49
+tied directly to a single process so you
+10:53
+don't want five other things going on in
+10:55
+the background that will all be brought
+10:57
+down when without warning when the main
+10:59
+process terminates and the container
+11:01
+just stops but since containers are
+11:03
+really lightweight you can run loads and
+11:06
+loads of containers on your computer all
+11:07
+at the same time and it's no problem at
+11:10
+all so we found a suitable image as a
+11:13
+uses a base image on the docker Hub we
+11:16
+wrote a Docker file to augment that
+11:18
+image and then we built that to Output
+11:21
+our new customized image which we could
+11:23
+then run to get a container which would
+11:25
+run our application we mounted a volume
+11:27
+using the dash V tag and we ended up
+11:29
+with a Docker container running granted
+11:32
+it's a very simple application but it is
+11:34
+that easy three-line Docker file gets
+11:36
+this up and running in a future video
+11:38
+we'll look at more complex situations
+11:39
+and we'll look at orchestration options
+11:41
+and deployment options so you can get
+11:44
+your container to run a website on the
+11:46
+internet
+11:47
+please let me know how you've found this
+11:49
+video feel free to ask any questions
+11:51
+I'll try to answer as many as possible
+11:53
+either in the comments or in a future
+11:56
+video thanks for watching
+
+============================================================================================
+
+Transcript - 100+ Docker Concepts you Need to Know 
+	Fireship
+
+0:00
+welcome to Docker 101 if your goal is to
+0:02
+ship software in the real world one of
+0:04
+the most powerful Concepts to understand
+0:06
+is containerization When developing
+0:08
+locally it solves the age-old problem of
+0:10
+it works on my machine and when
+0:12
+deploying in the cloud it solves the
+0:13
+age-old problem of this architecture
+0:16
+doesn't scale over the next few minutes
+0:17
+we'll unlock the power inside this
+0:19
+container by learning 101 different
+0:21
+concepts and terms related to computer
+0:23
+science the cloud and of course Docker
+0:25
+I'm guessing you know what a computer is
+0:27
+right it's a box that has three
+0:28
+important components in side a CPU for
+0:31
+calculating things random access memory
+0:33
+for the applications you're using right
+0:35
+now and a dis to store things you might
+0:37
+use later this is bare metal hardware
+0:39
+but in order to use it we need an
+0:41
+operating system most importantly the OS
+0:43
+provides a kernel that sits on top of
+0:45
+the bare metal allowing software
+0:46
+applications to run on it in the olden
+0:48
+days you would go to the store and buy
+0:50
+software to physically install it on
+0:51
+your machine but nowadays most software
+0:53
+is delivered via the Internet through
+0:55
+the magic of networking when you watch a
+0:57
+YouTube video your computer is called
+0:59
+the client but you and billions of other
+1:01
+users are getting that data from remote
+1:03
+computers called servers when an app
+1:04
+starts reaching millions of people weird
+1:06
+things begin to happen the CPU becomes
+1:08
+exhausted handling all the incoming
+1:10
+requests disio slows down Network
+1:12
+bandwidth gets maxed out and the
+1:14
+database becomes too large too query
+1:16
+effectively on top of that you wrote
+1:17
+some garbage code that's causing race
+1:19
+conditions memory leaks and unhandled
+1:21
+errors that will eventually grind your
+1:23
+server to a halt the big question is how
+1:25
+do we scale our infrastructure a server
+1:27
+can scale up in two ways vertically or
+1:29
+horizont ially to scale vertically you
+1:31
+take your one server and increase its
+1:33
+RAM and CPU this can take you pretty far
+1:36
+but eventually you hit a ceiling the
+1:37
+other option is to scale horizontally
+1:39
+where you distribute your code to
+1:41
+multiple smaller servers which are often
+1:43
+broken down into microservices that can
+1:45
+run and scale independently but
+1:47
+distributed systems like this aren't
+1:48
+very practical when talking about bare
+1:50
+metal because actual resource allocation
+1:52
+varies One Way Engineers address this is
+1:54
+with virtual machines using tools like
+1:56
+hypervisor it can isolate and run
+1:58
+multiple operating system systems on a
+2:00
+single machine that helps but a vm's
+2:02
+allocation of CPU and memory is still
+2:05
+fixed and that's where Docker comes in
+2:07
+the sponsor of today's video
+2:08
+applications running on top of the
+2:10
+docker engine all share the same host
+2:12
+operating system kernel and use
+2:13
+resources dynamically based on their
+2:15
+needs under the hood docker's running a
+2:17
+demon or persistent process that makes
+2:19
+all this magic possible and gives us OS
+2:22
+level virtualization what's awesome is
+2:24
+that any developer can easily harness
+2:25
+this power by simply installing Docker
+2:27
+desktop it allows you to develop
+2:29
+software without having to make massive
+2:30
+changes to your local system but here's
+2:32
+how Docker Works in three easy steps
+2:34
+first you start with a Docker file this
+2:36
+is like a blueprint that tells Docker
+2:38
+how to configure the environment that
+2:40
+runs your application the docker file is
+2:42
+then used to build an image which
+2:43
+contains an OS your dependencies and
+2:45
+your code like a template for running
+2:47
+your application and we can upload this
+2:49
+image to the cloud to places like Docker
+2:51
+Hub and share it with the world but an
+2:53
+image by itself doesn't do anything you
+2:54
+need to run it as a container which
+2:56
+itself is an isolated package running
+2:58
+your code that in theory could scale
+3:00
+infinitely in the cloud containers are
+3:01
+stateless which means when they shut
+3:03
+down all the data inside them is lost
+3:05
+but that makes them portable and they
+3:06
+can run on every major Cloud platform
+3:08
+without vendor lock in pretty cool but
+3:10
+the best way to learn Docker is to
+3:12
+actually run a container let's do that
+3:14
+right now by creating a Docker file a
+3:16
+Docker file contains a collection of
+3:17
+instructions which by convention are in
+3:19
+all caps from is usually the first
+3:21
+instruction you'll see which points to a
+3:23
+base image to get started this will
+3:25
+often be a Linux drro and may be
+3:27
+followed by a colon which is an optional
+3:29
+image tag and in this case specifies the
+3:31
+version of the OS next we have the
+3:33
+working directory instruction which
+3:34
+creates a source directory and CDs into
+3:36
+it and that's where we'll put our source
+3:38
+code all commands from here on out will
+3:40
+be executed from this working directory
+3:42
+next we can use the Run instruction to
+3:44
+use a Linux package manager to install
+3:46
+our dependencies run lets you run any
+3:48
+command just like you would from the
+3:49
+command line currently we're running as
+3:51
+the root user but for better security we
+3:53
+could also create a non-root user with
+3:55
+the user instruction now we can use copy
+3:57
+to copy the code on our local machine
+3:59
+over to the image you're halfway there
+4:01
+let's take a brief
+4:03
+[Music]
+4:04
+[Applause]
+4:07
+intermission now to run this code we
+4:09
+have an API key which we can set as an
+4:11
+environment variable with the EnV
+4:13
+instruction we're building a web server
+4:14
+that people can connect to which
+4:16
+requires a port for external traffic use
+4:18
+the expose instruction to make that Port
+4:20
+accessible finally that brings us to the
+4:22
+command instruction which is the command
+4:24
+you want to run when starting up a
+4:25
+container in this case it will run our
+4:27
+web server there can only be one command
+4:29
+per container although you might also
+4:31
+add an entry point allowing you to pass
+4:32
+arguments to the command when you run it
+4:34
+that's everything we need for the docker
+4:36
+file but as an Added Touch we could also
+4:38
+use label to add some extra metadata or
+4:40
+we could run a health check to make sure
+4:42
+it's running properly or if the
+4:43
+container needs to store data that's
+4:45
+going to be used later or be used by
+4:47
+multiple containers we could mount a
+4:48
+volume to it with a persistent disc okay
+4:51
+we have a Docker file so now what when
+4:53
+you install Docker desktop that also
+4:55
+installed the docker CLI which you can
+4:57
+run from the terminal run Docker help to
+4:59
+see all the possible commands but the
+5:00
+one we need right now is Docker build
+5:03
+which will turn this Docker file into an
+5:05
+image when you run the command it's a
+5:06
+good idea to use the T flag to tag it
+5:08
+with a recognizable name notice how it
+5:10
+builds the image in layers every layer
+5:12
+is identified by a Shaw 256 hash which
+5:15
+means if you modify your Docker file
+5:17
+each layer will be cached so it only has
+5:19
+to rebuild what is actually changed and
+5:21
+that makes your workflow as a developer
+5:22
+far more efficient in addition it's
+5:24
+important to point out that sometimes
+5:26
+you don't want certain files to end up
+5:27
+in a Docker image in which case you can
+5:29
+add them to the docker ignore file to
+5:31
+exclude them from the actual files that
+5:33
+get copied there now open Docker desktop
+5:35
+and view the image there not only does
+5:37
+it give us a detailed breakdown but
+5:39
+thanks to Docker Scout we're able to
+5:41
+proactively identify any security
+5:43
+vulnerabilities for each layer of the
+5:44
+image it works by extracting the
+5:46
+software bill of material from the image
+5:48
+and Compares it to a bunch of security
+5:50
+advisory databases when there's a match
+5:52
+it's given a severity rating so you can
+5:54
+prioritize your security efforts but now
+5:56
+the time has finally come to run a
+5:58
+container we can accomplish that by
+6:00
+simply clicking on the Run button under
+6:02
+the hood it executes the docker run
+6:04
+command and we can now access our server
+6:06
+on Local Host in addition we can see the
+6:08
+running container here in Docker desktop
+6:10
+which is the equivalent to the docker
+6:12
+command which you can run from the
+6:13
+terminal to get a breakdown of all the
+6:15
+running and stop containers on your
+6:16
+machine if we click on it though we can
+6:18
+inspect the logs from this container or
+6:20
+view the file system and we can even
+6:22
+execute commands directly inside the
+6:24
+running container now when it comes time
+6:25
+to shut it down we can use Docker stop
+6:27
+to stop it gracefully or docker kill to
+6:30
+forcefully stop it you can still see the
+6:31
+shutdown container here in the UI or use
+6:33
+remove to get rid of it but now you
+6:35
+might want to run your container in the
+6:37
+cloud Docker push will upload your image
+6:39
+to a remote registry where it can then
+6:41
+run on a cloud like AWS with elastic
+6:43
+container service or it can be launched
+6:45
+on serverless platforms like Google
+6:46
+Cloud run conversely you may want to use
+6:48
+someone else's Docker image which can be
+6:50
+downloaded from the cloud with Docker
+6:52
+pull and now you can run any developers
+6:54
+code without having to make any changes
+6:56
+to your local environment or machine
+6:57
+congratulations you're now a bon ified
+7:00
+and certified Docker expert I hereby
+7:02
+Grant you permission to print out the
+7:03
+certificate and bring it to your next
+7:05
+job interview but Docker itself is only
+7:07
+the beginning there's a good chance your
+7:09
+application has more than one service in
+7:11
+which case you'll want to know about
+7:12
+Docker can POS a tool for managing
+7:14
+multicontainer applications it allows
+7:16
+you to Define multiple applications and
+7:18
+their Docker images in a single yaml
+7:20
+file like a front end a backend and a
+7:22
+database the docker compose up command
+7:25
+will spin up all the containers
+7:26
+simultaneously while the down command
+7:28
+will stop them that works works on an
+7:29
+individual server but once you reach
+7:31
+massive scale you'll likely need an
+7:33
+orchestration tool like kubernetes to
+7:35
+run and manage containers all over the
+7:37
+world it works like this you have a
+7:38
+control plane that exposes an API that
+7:41
+can manage the cluster now the cluster
+7:42
+has multiple nodes or machines each one
+7:45
+containing a cubet and multiple pods a
+7:47
+pod is the minimum Deployable unit in
+7:49
+kubernetes which itself has one or more
+7:51
+containers inside of it what makes
+7:52
+kubernetes so effective is that you can
+7:54
+describe the desired state of the system
+7:56
+and it will automatically scale up or
+7:58
+scale down while also providing fall
+8:00
+tolerance to automatically heal if one
+8:02
+of your servers goes down it gets pretty
+8:04
+complicated but the good news is that
+8:05
+you probably don't need kubernetes it
+8:07
+was developed at Google based on its
+8:09
+Borg system and is really only necessary
+8:11
+for highly complex hi trffic systems if
+8:13
+that sounds like you though you can also
+8:15
+use extensions on Docker desktop to
+8:17
+debug your pods and with that we've
+8:19
+looked at 100 concepts related to
+8:21
+containerization Big shout out to Docker
+8:23
+for making this video possible thanks
+8:25
+for watching and I will see you in the
+8:26
+next one
+
+
+============================================================================================
+
+Transcript - Docker Tutorial for Beginners [FULL COURSE in 3 Hours]
+	TechWorld with Nana
+
+0:06
+we'll have a deep understanding of all the main concepts and also a great big picture overview of how
+0:12
+Docker is used in the whole software development process. The course is a mix of animated theoretic explanations,
+0:20
+but also hands on demos for you to follow along. So get your first hands on experience and confidence
+0:28
+using Docker in your projects. So let's quickly go through the topics
+0:33
+I'll cover in this course. We will start with the basic concepts of what Docker actually
+0:38
+is and what problems it solves. Also will understand the difference between Docker and virtual machine. And after installing Docker,
+0:47
+we will go through all the main documents to start and stop containers, debugging containers, etc..
+0:53
+After that, we'll see how to use Docker in practice by going through a complete workflow with a demo project.
+1:01
+So first we'll see how to develop locally with containers. Then we'll run multiple containers or services with Docker
+1:09
+Compose, we'll build our own Docker image with Dockerfile and will push that built image into a private
+1:16
+docker repository on AWS and finally will deploy our containerized application. Last but not least,
+1:24
+we look at how to persist data in Docker, learning the different volume types and afterwards configure
+1:31
+persistance for our demo project. If you get stuck anywhere,
+1:36
+just comment under the video and I will try my best to answer your questions. Also,
+1:41
+you can join the private tech world. We're not a community group on Facebook, which is there to exchange your knowledge
+1:47
+with others and connect with them, if you like the course by the end of the video. Be sure to subscribe to my channel for more
+1:55
+related content. So let's get started.
+What is Docker?
+2:01
+So we'll talk about what a container is and what problems it solves.
+2:06
+We will also look at a container repository, which is basically a storage for containers.
+2:11
+We'll see how a container can actually make the development process much easier and more efficient
+2:16
+and also how they solve some of the problems that we have in the deployment process of applications.
+2:23
+So let's dive right into it. What a container is, a container is a way to package applications with everything
+2:29
+they need inside of the package, including the dependencies and all the configuration necessary.
+2:35
+And that package is portable, just like any other artifact is in. That package can be easily shared and moved around
+2:42
+between a development team or development and operations team. And that portability of containers plus everything
+2:51
+packaged in one isolated environment gives it some of the advantages that makes development
+2:57
+and deployment process more efficient. And we'll see some of the examples of how
+3:03
+that works in later slides, so as I mentioned, containers are portable,
+3:08
+so there must be some kind of a storage for those containers so that you can share them and move them around.
+3:15
+So containers leave in a container repository. This is a special type of storage for containers.
+3:22
+Many companies have their own private repositories where the host or the way they store all the containers
+3:29
+and this will look something like this where you you can push all of the containers that you have.
+3:36
+But there is also a public repository for docker containers where you can browse and probably
+3:42
+find any application container that you want. So let's head over to the browser and see
+3:48
+how that looks like. So if I hear search for a Docker, which is the name of the public repository for Docker,
+3:56
+I will see this official web. So here, if you scroll down,
+4:02
+you see that they're. More than a hundred thousand container images of different applications hosted or stored
+4:10
+in this repository. So here you see just some of the examples. And for every application,
+4:16
+there is this official docker container or container image.
+4:22
+But if you are looking for something else, you can search it here. And I see there is an official image for, let's say, Jenkins',
+4:31
+but there's also a lot of non official images or container images that developers or for or even
+4:40
+from Jenkins' itself, they actually store it here. So public repository is where you usually get started
+4:48
+when you're using or when you're starting to use the containers where you can find any
+4:53
+application image. So now let's see how container's improved
+4:59
+the development process by specific examples, how did we develop applications before the containers?
+5:06
+Usually when you have a team of developers working on some application,
+5:12
+you would have to install most of the services on your operating system directly. Right. For example,
+5:18
+you you're developing some JavaScript application and you need to be cool and ready for messaging.
+5:26
+And every developer in the team would then have to go and install the binaries of those services and.
+5:35
+Configure them and run them on their local development environment and depending on which operating
+5:43
+system they're using, the installation process will look actually different.
+5:48
+Also, another thing with installing services like this is that you have multiple steps of installation.
+5:56
+So you have a couple of commands that you have to execute. And the chances of something going wrong and error
+6:03
+happening is actually pretty high because of the number of steps required to install each service.
+6:09
+And this approach or this process of setting up a new environment can actually be pretty tedious,
+6:15
+depending on how complex your application is. For example, if you have 10 services that your application is using,
+6:22
+then you would have to do that 10 times on each operating system environment. So now let's see how containers solve some of these
+6:30
+problems with containers. You actually do not have to install any of the services
+6:36
+directly on your operating system because the container is its own isolated operating system layer
+6:43
+with Linux based image. As we saw in the previous slides, you have everything packaged in one isolated environment.
+6:50
+So you have the postgresql with the specific version packaged with a configuration in the start script
+6:58
+inside of one container. So as the developer, you have to go and look for the binaries to download
+7:05
+on your machine, but rather you just go ahead and check out the container repository to find that specific
+7:12
+container and download on your local machine. And the download step is just one docker command
+7:19
+which fetches the container and starts it at the same time. And regardless of which operating
+7:25
+system you're on, the command, the doc recommend for starting the container will not be different. It will be the exactly the same.
+7:33
+So we have 10 applications that your JavaScript application uses and depends on.
+7:38
+You would just have to run 10 docker commands for each container and that will be it.
+7:44
+Which makes the setting up your local development environment
+7:50
+actually much easier and much more efficient than the previous version. Also,
+7:55
+as we saw in the demonstration before, you can actually have different versions of the same
+8:00
+application running on your local environment without having any conflict.
+8:08
+So now let's see how container's can improve the deployment process before the containers,
+8:13
+a traditional deployment process will look like this. Development team will produce artifacts together with a set
+8:21
+of instructions of how to actually install and configure those artifacts on the server.
+8:27
+So you would have a jar file or something similar for your application. And in addition,
+8:32
+you would have some kind of a database service or some other service also with a set of instructions of how
+8:39
+to configure and set it up on the server. So development team would give those artifacts
+8:46
+over to the operations team and the operations team will handle setting up the environment to deploy
+8:53
+those applications. Now, the problem with this kind of approach is that,
+8:58
+first of all, you need to configure everything and install everything directly on the operating system,
+9:05
+which we saw in the previous example that could actually lead to conflicts with dependency version
+9:11
+and multiple services running on the same host. In other problems that could arise from this kind of process is when there
+9:19
+is misunderstanding between the development team and operations because everything
+9:24
+is in a textual guide as instructions. So there could be cases where developers forget
+9:30
+to mention some important point about configuration. Or maybe when operations team misinterpreted some of those
+9:39
+instructions and when that fails, the operations team has to go back to the developers
+9:45
+and ask for more details. And this could lead to some back and forth communication until the application
+9:51
+is successfully deployed on the server with containers. This process is actually simplified because, no,
+10:00
+you have the developers and operations working in one team to package the whole configuration
+10:07
+dependencies inside the application, just as we saw previously. And since it's already encapsulated in one single
+10:15
+environment and you're going to have to configure any of this directly on the server.
+10:20
+So the only thing you need to do is run a docker command that pulls that container image that you've stored somewhere
+10:28
+in the repository and then run it. This is, of course, a simplified version,
+10:34
+but that makes exactly the problem that we saw on the previous slide much more easier.
+10:40
+No environmental configuration needed on the server. The only thing, of course, you need to do is you have to install and set up
+10:47
+the DOCA runtime on the server before you will be able to run. Container's there, but that's just one time effort.
+What is a Container?
+10:59
+Now that you know what a container concept is, let's look at what a container is technically.
+11:05
+So technically container is made up of images. So we have layers of stacked images on top of each other.
+11:12
+And at the base of most of the containers, you would have a Linux based image, which is either Alpina with a specific version
+11:19
+or it could be some other Linux distribution. And it's important for those base images to be small.
+11:24
+That's why most of them are actually Alpine, because that will make sure that the containers
+11:30
+stay small in size, which is one of the advantages of using container. So on top of the base image,
+11:37
+you would have application image and this is a simplified diagram. Usually you would have these intermediate images
+11:43
+that will lead up to the actual application image that is going to run in the container. And of course, on top of that,
+11:50
+you will have all this configuration data. So, no, I think it's time to dove into a practical example
+11:58
+of how you can actually use a docker container and how it looks like when you install it and downloaded and run
+12:05
+it on your local machine. So to give you a bit of an idea of how this works,
+12:12
+let's head over to Docker Hub and search for Posterous Keywell.
+12:24
+So here, which is a doctor official image, I can see some of the versions and let's say I'm looking
+12:30
+specifically for older version. I don't know, nine, six something. So I'm going to pull that one.
+12:39
+So this is a doc repository so that I can actually go ahead and pull the containers from the repository directly.
+12:47
+And because it's a public repository, I don't have to log in to it.
+12:52
+I don't have to provide any authentication credentials or anything. I can just get started with a simple document
+13:00
+without doing or configuring anything to access Docker Hub.
+13:05
+So on my terminal, I can just do Dr.. Paul,
+13:11
+I can even do a run and then just copy the the image name,
+13:17
+and if I don't specify any version, it will just give me the latest. But I want a specific version.
+13:24
+So I'm just I'm going to go with nine point six, actually, just to demonstrate so I can provide the version
+13:34
+like this with a column and I can start. Right. So,
+13:39
+as you see, the first line says, unable to find image locally, so it knows that he has to go to Dr.
+13:45
+Hub and pull it from there. And the next line says, pulling from Library Posterous.
+13:53
+And here you see a lot of hashes that says downloading. And the this is what I mentioned earlier,
+14:01
+which is docker containers or any containers are made up of layers. Right.
+14:06
+You have the image layer, you have the application layers and so on. So what what do you see here are actually all those layers
+14:15
+that are separately downloading from the Docker hub on my machine. Right.
+14:20
+The advantage of splitting those applications in layers is that actually, for example,
+14:26
+if the image changes or I have to download a newer version of Posterous,
+14:31
+what happens is that the layers there are the same between those two applications.
+14:37
+Two versions of Posterous will not be downloaded again, but only those layers that are different. So,
+14:46
+for example, now it's going to take around 10 or 15 minutes to download this one image because I don't have any posterous locally.
+14:54
+But if I were to download the next version, it will take a little bit less time because some layers
+15:00
+already exist on my local machine. So now you see that it's already logging because it this comment
+15:10
+that I read here, the doctor run with the container name and version, it fetches or it pulls the in the container,
+15:18
+but it also starts it. So it executes the start script right away as soon as it downloads it.
+15:25
+And here you see the output of this starting of the application. So it just gives some output about starting the server
+15:33
+and doing some configuration stuff. And here you see database system is ready to accept
+15:40
+connections and launch it started. So now let's open the new tab and see with Dr. Pascaline.
+15:48
+You can actually see all the running containers. So here you see that postcrisis nine six
+15:57
+is running and it actually says image. So this is another important thing to understand when we're
+16:03
+talking about containers, there are two technical terms, image and a container. And a lot of people confuse those two, I think.
+16:11
+And there is actually a very easy distinction between the two. So images, the actual package that we saw in one of those previous slides.
+16:20
+So the application package, together with the configuration and the dependencies and all these things,
+16:26
+this is actually the artifact that is movable around is actually the image.
+16:31
+Container is when I pull that image on my local machine and I actually started so the application inside
+16:39
+actually starts that creates the container environment. So if it's not running, basically it's an image.
+16:46
+It's just an artifact that's lying around if I started and actually run it on my machine.
+16:52
+It is a container. So that is the distinction. So here it says the active running containers
+16:59
+with a container ID image that it's running from and some entry commands that it executes
+17:06
+and some other status information. So this means that PostgreSQL is now
+17:12
+running on my local machine. Simple as that, if I were now to need, let's say,
+17:19
+another version of Posterous to run at the same time on my local machine, I could just go ahead and say,
+17:26
+let's go back and let's say I want to have nine point six
+17:31
+and ten point ten running at the same time on my local machine. I would just do run Posterous.
+17:45
+And run again, it doesn't find it locally, so it pushes and this is what I actually
+17:52
+explained to you earlier, because it's the same application,
+17:57
+but with just a different version. Some of the layers of the image are the same.
+18:02
+So I don't have to fetch those again because they are already on my machine and it just fetches the layers
+18:09
+that are different. So that saves a little bit of time. And I think it's it could be actually good advantage.
+18:21
+So now we'll wait for other image layers to load so that we have the second.
+18:29
+Postcrisis version running and now you see I have Posterous nine point six
+18:36
+running in this command line tab and I have Postgres version ten point
+18:43
+ten running in the next one. So I have to postcrisis with different versions and running and I can actually output them here.
+18:50
+If both of them running and there's no conflict between those two, I can actually run any number of applications with different
+19:00
+versions maybe of the same application with no problem at all. And we are going to go through how to use those
+19:06
+containers in your application and the port configuration and some of the other configuration
+19:11
+stuff later in this tutorial when we do a deep dove. But this is just for you to get the first visual image of how
+19:20
+docker containers actually work, how they look like, and how easily you can actually start them on your
+19:26
+local machine without having to implement a specific version of Posterous application and do all the configuration yourself.
+Docker vs Virtual Machine
+19:42
+When I first started learning, Doctor, after understanding some of the main concepts, my first question was, OK,
+19:49
+so what is the difference between Docker and an Oracle virtual books, for example?
+19:54
+And the difference is quite simple, I think. And in the short video, I'm going to cover exactly that.
+20:00
+And I'm going to show you the difference by explaining how DOCA works on an operating system level and then comparing
+20:07
+it to how virtual machine works. So let's get started.
+20:13
+In order to understand how Docker works on the operating system level, let's first look at how operating system is made up.
+20:21
+So operating systems have two layers operating system kernel in the applications layer. So as you see in this diagram,
+20:30
+the kernel is the part that communicates with the hardware components like CPU and memory,
+20:36
+et cetera, and the applications run on the kernel layer.
+20:41
+So they are based on the kernel. So for example, you will know Linux operating system and there are lots
+20:48
+of distributions of Linux out there. There's Bonta and Debian and there is Linux meaned, etc.
+20:54
+There are hundreds of distributions. They all look different. So the graphical user interface is different.
+20:59
+The file system is maybe different. So a lot of applications that you use are different because even though they use the same Linux kernel,
+21:09
+they use different or they implement different applications on top of that kernel. So, as you know,
+21:16
+Docker and virtual machine, they're both virtualization tools. So the question here is what parts of the operating
+21:24
+system they virtualize? So Docker virtualize is the application layer.
+21:32
+So when you download a docker image, it actually contains the applications layer
+21:37
+of the operating system and some other applications installed on top of it. And it uses the kernel of the host because it doesn't
+21:45
+have its own kernel, the virtual box or the virtual machine, on the other hand,
+21:52
+has the applications layer and its own kernel. So it virtualize is the complete operating system,
+21:59
+which means that when you download a virtual machine image on your host, it doesn't use your host kernel.
+22:06
+It puts up its own. So what is this difference between Docker and virtual machine actually mean? So first of all,
+22:14
+the size of Docker images are much smaller because they just have to implement one layer.
+22:20
+So Docker images are usually a couple of megabytes. Virtual machine images, on the other hand,
+22:26
+can be a couple of gigabytes large. A second one is the speed so you can run and start
+22:31
+docker containers much faster than the VMS because they every time you start them,
+22:37
+you they have to put the operating system kernel and the applications on top of it.
+22:43
+The third difference is compatibility, so you can run a virtual machine image of any
+22:50
+operating system on any other operating system host, but you can't do that with Docker.
+22:56
+So what is the problem exactly? Let's say you have a Windows operating system
+23:01
+with a kernel and some applications and you want to run Linux based Docker image on that Windows host.
+23:10
+The problem here is that a Linux based, her image might not be compatible with the Windows kernel,
+23:16
+and this is actually true for the Windows versions below 10 and also for the older Mac versions,
+23:23
+which if you have seen how to install Docker on different operating systems, you see that the first step is to check whether your hosts
+23:30
+can actually run Docker natively, which basically means is the kernel compatible
+23:36
+with the Docker images? So in that case, a workaround is that you install a technology
+23:42
+called Docker Toolbox, which abstracts away the kernel to make it possible for your hosts to run different docker images.
+Docker Installation
+23:57
+So in this video, I will show you how to install DOCA on different operating systems, the installation will differ not only based
+24:04
+on the operating system, but also the version of the operating system. So you can actually watch this video selectively,
+24:10
+depending on which OS and the version of the OS you have. I will show you how to find out which installation step
+24:18
+applies to you in the before installing section, which is the first one. So once you find that out,
+24:23
+you can actually directly skip to that part of the video. Where I explain that into details, I will put the minute locations of each part
+24:30
+in the description part of the video. And also I will put all the links that I use
+24:36
+in the video, in the description, so that you can easily access them. Also,
+24:41
+if you have any questions during the video or if you get stuck installing the docker on your system,
+24:47
+please post a question or problem in the comments section so that I can get back to you and help
+24:53
+you proceed, or maybe someone from the community will. So with that said, let's dove right into it.
+25:01
+So if you want to install Tucker, you can actually Google it and you get an official
+25:06
+documentation of Docker. It's important to note that there are two editions of Tucker.
+25:11
+There is a community and enterprise editions for us to begin with. Community additions will be just fine in the Docker
+25:20
+community edition tape there. There is a list of operating systems
+25:25
+and distributions in order to install Docker. So, for example, if we start with Menck,
+25:31
+we can click in here and we see the documentation of how to install it on Mac,
+25:36
+which is actually one of the easiest. But we'll see some other ones as well.
+25:44
+So before you install her on your Mac or Windows computer, they are prerequisites to be considered.
+25:52
+So for Mac and Windows, there has to be some criteria of the operating
+25:58
+system and the hardware met in order to support running docker.
+26:04
+If you have Mac go through the system requirements to see if you're a Mac version is actually supporting Docker.
+26:12
+If you have Windows, then you can go to the Windows tab and look at
+26:18
+the system requirements there or what to know before you install. For example,
+26:23
+one thing to note is that Docker natively runs only on Windows 10.
+26:29
+So if you have a Windows version, which is less than 10, then Docker cannot run natively on your computer.
+26:38
+So if your computer doesn't meet the requirements to run Docker, there is a workaround for that, which is called Docker Toolbox.
+26:46
+That of Docker. You basically just have to install a tool box that will become a sort of a bridge between your
+26:53
+operating system and the docker, and that will enable you to run on your legacy computer.
+26:59
+So if that applies to you, then skip ahead in this video to the part where
+27:05
+I explain how to install Docker toolbox on Mac and on Windows.
+27:15
+So let's install Dr. for Formic, as you see here, there are two channels that you can download
+27:22
+the binaries from or the application from. We will go with the stable channel. And other thing to consider,
+27:28
+if you have an older version of make the software or the hardware,
+27:33
+please go through the system requirements to see if you can actually install Docker. So here there is a detailed description of what make
+27:42
+version you need to be able to run Docker and also you need at least four gigabytes of RAM
+27:49
+and by installing Docker you will actually have the whole package of it, which is a docker engine,
+27:56
+which is important or which is necessary to run the containers on your laptop, the Docker command line client,
+28:05
+which will enable you to execute some documents Docker composed. If you don't know it yet, don't worry about it.
+28:12
+But it's just technology to orchestrate if you have multiple containers and some other stuff that we're not
+28:20
+going to need in this tutorial. But you will have everything in a package installed. So go ahead and download the stable version. Well,
+28:31
+I already have Docker installed from the channel, so I won't be installing it again.
+28:37
+But it shouldn't matter because the steps of installation are the same for both.
+28:42
+So once the Doctor DMC file is downloaded, you just double click on it and it will pop up
+28:50
+this window just like the doctor well up
+28:55
+into the applications and it will be installed on your Mac is the next step.
+29:01
+You will see doctor installed in your applications. So you can just go ahead and. Started.
+29:13
+So as you see, the doctor sign or icon is starting here,
+29:18
+if you click on it, you see the status that doctor is running. And you can configure some preferences and check the Docker
+29:28
+version and so on. And if you want to stop Dakara or Quited on your mic,
+29:34
+you can just do it from here. And important maybe interesting note here
+29:40
+is that if let's say you download or install Docker and you have more than one
+29:47
+accounts on your laptop. You'll actually get some errors or conflicts
+29:53
+if you run occur at the same time or multiple accounts. So what I do, for example,
+30:00
+is that if I switch to another account where I'm also going to need Docker, I quit it from here.
+30:06
+And then I started from other accounts so that I don't get any errors.
+30:12
+So that may be something you need to consider if you use multiple accounts.
+30:20
+So let's see how to install windows, the first step, as I mentioned before, is to go to that before you install section and to see
+30:29
+that your operating system and your computer meets all the criteria to run Docker natively.
+30:36
+So if you are installing DOCA for the first time, don't worry about most of these parts like Docker Toolbox and Docker Machine.
+30:43
+There are two things that are important. One is to double check that your Windows version
+30:49
+is compatible for Docker and the second one is to have virtualization enabled. Virtualization is by default,
+30:57
+always enabled other than you manually disabled it. So if you're unsure,
+31:03
+then you can check it by going to the task manager performance CPU tab and here you can see the status
+31:10
+of the virtualization. So once you have checked that and made sure that these
+31:16
+two prerequisites are met, then you can scroll up and download the Windows
+31:23
+installer for from the stable channel. Once the installer is downloaded,
+31:29
+you can just click on it and follow the installation wizard to install Windows once
+31:36
+the installation is completed. You have to explicitly start Docker because it's not
+31:41
+going to start automatically. So for that, you can just go and search for the doctor
+31:46
+for Windows app on your windows. Just click on it and you will see that Dr.
+31:52
+Weil Aykan starting. And if you click on that icon, you can actually see the status that says
+31:59
+stalker is now up and running. So this is basically it for the installation.
+32:08
+Now let's see how to install Tucker on different Linux distributions,
+32:13
+and this is where things get a little bit more complicated. So first of all, you see that in the menu on the on the left,
+32:21
+you see that four different Linux distributions, the installation steps will differ. But also,
+32:28
+for example, if we just click on Bonta for the guide, you can see that in the prerequisites section,
+32:36
+there is also differentiation between the versions of the same Linux distribution. And there may be some even more complicated scenarios
+32:44
+where the combination of the version of the distribution and the architecture it's running in also makes some difference
+32:51
+into how to set up Docker on that specific environment.
+32:57
+Because of that, I can't go through a docker installation process of every
+33:03
+Linux environment because they're just too many combinations. So instead, what we'll do is just go through a general overview
+33:10
+of the steps and configuration process to get Docker running on your Linux environment.
+33:16
+And you can just adjust it then for your specific set up. So these are some general steps to follow in order
+33:23
+to install Dakara on your Linux Linux environment. First of all,
+33:28
+you have to go through the operating system requirements part on the relevant Linux
+33:33
+distribution that applies for you. A second step in the documentation
+33:39
+to is to install old versions. However, if it's the first time you installing Docker,
+33:45
+then you don't have to worry about that. You also don't have to worry about the supported storage drivers and you can skip ahead to the part of installing
+33:54
+Docker community addition. So for any Linux distribution here,
+34:01
+the steps will be or the options for installing Docker will be the same. So first option is basically to set up a repository
+34:10
+and download the docker from and install it from the repository.
+34:16
+The second option is to install the packages manually. However,
+34:21
+I wouldn't recommend it, and I think the documentation doesn't recommend it either, because then you will have to do a lot of steps
+34:27
+of the installation in the maintenance of the versions manually. So I wouldn't do that.
+34:33
+The third one is just for the testing purposes. It may be enough for the development purposes as well, but I would still not do it,
+34:41
+which is basically just downloading some automated scripts that will install and set up
+34:47
+Docker on your Linux environment. However, again, I wouldn't go with it.
+34:52
+I would actually just do the first option, which is just downloading the docker from the repository.
+35:01
+So in order to install Docker using the first option, which is downloading it from the Dockers repositories,
+35:08
+you have two main steps. So the first one is to set up the repository,
+35:15
+which differs a little bit depending on which distribution you have, and then install the democracy from that repository.
+35:24
+So from Ubuntu and deepen the steps for setting up the repository are generally just updating your package,
+35:33
+then setting up in connection with the repository and adding
+35:38
+the Ducker's official GPG key, which only wanto in Debian need.
+35:44
+You don't have to do these steps for scintillation fedora there. You have to install the required packages
+35:54
+in the last step for setting up the repository is basically setting up the stable repository of Docker,
+36:03
+which we saw previously on the overview that there are two channels which is a stable and edge here.
+36:08
+You always have to set up the stable repository, optionally you can also set up the edge repository.
+36:15
+But I would just do stable this time. And here also something to notice.
+36:21
+Depending on the architecture, you have to actually set it or you have to set
+36:27
+that as a parameter when you set up the repository. So if you have, for example, a different architecture,
+36:32
+you can use those steps to display the correct comen for it. And I guess that applies to other Linux
+36:41
+distributions as well. Like, for example, here you also have the second tab where you see a separate come in for it.
+36:48
+So these steps should actually set up the repository. So as a next step,
+36:54
+you can then install the democracy from those repositories. So installing DOCA from the set up repository
+37:01
+is actually pretty straightforward, those steps are same for or similar to all
+37:07
+the distributions, basically just update the package and then you just say install Toker C. So this command will
+37:15
+just download the latest version. If you want to install a specific one, which you will need to do in a production environment,
+37:24
+then you can just provide a version like this. You just say Toker minus C equals some specific versions.
+37:33
+And using this command, you can actually look up what versions are available in that repository that you just and with this command,
+37:42
+actually Docker will be installed on your Linux environment and then you can just
+37:47
+verify using pseudo docker run Hello World, which is this demo image of Docker.
+37:54
+You can verify that DOCA is running and this will start. Hello, world docker container on your environment.
+38:06
+So as I mentioned previously, for environments that do not support running docker natively,
+38:14
+there is an workaround which is called Docker Toolbox. So Docker Toolbox is basically an installer for Docker
+38:22
+environment set up on those systems.
+38:27
+So this is how to install Dr. Toolbox on your Mac, this is the whole package that comes
+38:34
+with the installation of Dr. Toolbox, which is basically the Docker command line Docker machine. Dr.
+38:39
+Campos, basically all the packages that we saw in the native installation. And on top of that,
+38:45
+you also get the Oracle virtual box. So in order to install the toolbox,
+38:51
+it's actually pretty straightforward. On this website, you can go to the toolbox releases.
+38:56
+We have a list of latest releases. You just take the latest release.
+39:02
+And here you see to Essence, this one is for Windows, obviously, and you just download the package for Mac.
+39:09
+And once it's downloaded, you just click on it and go through the installation wizard.
+39:14
+Leave all the options by default as they are, do not change anything.
+39:19
+And after the installation you can just validate the installation is successful and you can actually run docker.
+39:27
+So after seeing the installation with successful screen, just go and look up in your launch pad QuickStart
+39:33
+terminal and once you open it, you should be able to run documents and you can
+39:39
+just try to run Hello World, which should just start up or bring up this hill
+39:45
+world docker container on your environment.
+39:50
+So now let's see how to install Dr. Toolbox and Windows, here's to you that you get the whole package
+39:57
+of Toker Technologies with a toolbox which are basically the same package which you get
+40:02
+on the native Docker installation. And on top of that, you get Oracle VM Virtual Box,
+40:08
+which is the tool that enables Docker to run on an older system.
+40:13
+So before you install the toolbox, you have to make sure that you meet some of the preconditions. Number one,
+40:20
+you have to make sure your Windows system supports virtualization and that virtualization
+40:26
+must be enabled. Otherwise DOCA docker won't start. So depending on which Windows version you have,
+40:33
+looking up or checking the virtualization status will be different. So I used to suggest you Google it and look it up
+40:41
+of how to find the virtualization status to see that it's enabled once you have that checked.
+40:47
+Also make sure that your Windows operating system is 64 bits.
+40:52
+So if those two criteria are met, then you can go ahead and install the doctor toolbox.
+40:58
+The place where you see the releases or they release artifacts is toolbox releases link here,
+41:03
+which I have open. So it's basically a list of the releases. You just take the latest one, which has two artifacts.
+41:11
+This is the one for Windows. You just download this executable file, click on it and go through the installation
+41:17
+wizard once the installation is completed there. Just a couple of steps here. You can verify that Docker was installed
+41:25
+or the toolbox was installed by just looking up the Docker QuickStart terminal on your windows
+41:31
+that it must be installed. And once you click on it and open it, you should be able to run documents in the terminal.
+41:38
+So the basic docker recommend that you can test will be Docker Run Halo World,
+41:44
+which will just fetch this basic docker container from the public registry and run it on your computer.
+41:51
+If that command is successful, it means that Docker was successfully installed on your computer and now you can proceed with the tutorial.
+Main Docker Commands
+42:05
+So in this video, I'm going to show you some basic documents at the beginning,
+42:11
+I'm going to explain what the difference between container and images, because that's something a lot of people confuse.
+42:16
+Then very quickly go through version and take and then show you a demo of how to use the basic documents,
+42:23
+commands that will be enough to pull an image locally to start a container, to configure a container and even debug the container.
+42:31
+So with that said, let's get started. So what is the difference between container and image,
+42:39
+mostly people use those terms interchangeably, but actually there is a fine difference between the two to see. Theoretically,
+42:47
+teener is just the part of a container runtime. So container is the running environment for an image.
+42:56
+So as you see in this graphic, the application image that runs the application
+43:02
+could be Postgres redis. Some other application needs, let's say,
+43:07
+a file system where it can save the log files or where you can store some configuration files.
+43:14
+It also needs the environmental configuration like environmental variables and so on.
+43:19
+So all this environmental stuff are provided by container and container also has a port that is binded to it,
+43:29
+which makes it possible to talk to the application which is running inside of a container.
+43:34
+And of course, it should be noted here that the file system is virtual in container.
+43:40
+So the container has its own abstraction of an operating system, including the file system and the environment,
+43:47
+which is of course different from the file system and environment of the host machine.
+43:53
+So in order to see the difference between container and image in action, let's head over to the Docker hub and find, for example,
+44:03
+a 3D image. Another thing is that Docker hub, all the artifacts that are in the Docker
+44:10
+hub are images. So we're not talking about containers here. All of these things are images, Docker, official image.
+44:18
+So we're going to go ahead and pull a 3D image out of the Docker hub to my laptop.
+44:27
+So you see the different layers of the image are downloaded.
+44:35
+And this will take a couple of minutes. So once the download is complete,
+44:42
+I can check all the existing images on my laptop using Docker images come in.
+44:50
+So I see I have two images, Redis and Postgres with text images and so on.
+44:57
+Another important aspect of images is that they have tags or versions. So,
+45:03
+for example, if we go back to the dog cup, each one, each image that you look up in the Docker hub will
+45:11
+have many different versions. The latest is always the one that you get
+45:17
+when you don't specify the version. Of course, if you have a dependency on a specific version,
+45:23
+you can actually choose the version you want and specified and you can select one from here.
+45:30
+So this is what you see here. The tag is basically the version of the image.
+45:36
+So I just downloaded the latest and I can also see the size of the image. So now to this point,
+45:43
+we have only worked with images, there is no container involved and there is no redis running.
+45:51
+So now let's say I need redis running so that my application can connect to it.
+45:57
+I'll have to create a container of that 3D image that will make it possible to connect
+46:05
+to the reddish application. And I can do it by running the red image.
+46:11
+So if I say docker run credits. This will actually start the image in a container,
+46:20
+so as I said before, container is a running environment of an image.
+46:26
+So now if I open a new tab and the doctor says I will
+46:33
+get stares of all the running docker containers so I can see
+46:38
+the container release is running with a container ID based on the image of redness and some other information about it,
+46:47
+for example, the port that it's running on. And so.
+46:54
+So as you see here, the doctor run ready to come in, will start the race container in the terminal
+47:01
+in an attached mode. So, for example, if I were to terminate this with the control see
+47:09
+you see the redis application stops and the container will be stopped as well.
+47:15
+So if I do dock trips again, I see that no container is running. So there is an option for Docker Run command
+47:24
+that makes it able makes it possible to run the container in a detached mode and that is minus deep.
+47:32
+So if I do run minus redis. I will just get the idea of the container
+47:38
+is an output and the container will stop running. So if we check again. Yes,
+47:44
+I see the container with ID starting with eight three eight, which is the same thing here is running.
+47:52
+So this is how you can start it in the detached mode now. For example,
+47:58
+if you would want to restart a container because I don't know, some application crushed inside or some error happened.
+48:06
+So you want to restart it, you would need the container ID. So just the first part of it, not the whole string.
+48:15
+And you can simply say, Docker, stop idea of the container and that will
+48:21
+stop the container. I think running if you want to start it again,
+48:27
+you can use the same ID to start the game.
+48:37
+So let's say you stop docker container at the end of the day,
+48:43
+you go home, you come back the next day, open your laptop and you want to restart the stalled container.
+48:50
+Right. So if you do is there it's, uh, the output is empty. You don't see any containers.
+48:56
+So what you can do alternative to just looking up your history. Menlyn History is you can do Docker P. S minus A, which will
+49:07
+show you all the containers which are running or not running.
+49:12
+So here you see the container idea again and you can restarted.
+49:21
+OK, so let's try another thing, let's say you have two parallel applications
+49:26
+that both use Redis, but in different versions, so you would need to redis containers with different image
+49:34
+versions running on your laptop. Right, at different times maybe, or at the same time. So here we have the latest one,
+49:44
+which is redis five zero six. And let's head over to the Docker hub
+49:51
+and select version. Let's say you need version four point. Oh,
+49:58
+so remember the first time that we download the reddest image we did Dr. Paul Radice. However,
+50:06
+if you run Docker, if you use a docker run with Redis image and the tech,
+50:13
+which was four point o, it will pull the image and start the container right away after it.
+50:20
+So it does two commands basically in one. So it's docker, pull that docker start in one command.
+50:27
+So if I do this it says it can find the image locally. So it goes and pulls the image from the repository
+50:35
+to my laptop. And again, we see some leaders are downloaded and the container
+50:44
+is started right away, and no, if I do, yes,
+50:50
+you see that I have two races running. So this is where it gets interesting. Now,
+50:57
+how do you actually use any container that you just started?
+51:03
+So in this output, we you also see the ports section, which specifies on which port the container is listening
+51:12
+to the incoming requests. So both containers open the same port,
+51:18
+which is what was specified in the image. So.
+51:23
+In the logs of the container, you can see the information running boats and loan
+51:29
+Port six three seven nine. So how does that actually work and how do we not
+51:35
+have conflicts while both are running on the same port? So to explain that, let's head over to our slide and see how this works is,
+51:44
+you know, container is just the virtual environment running on your host. And you can have multiple containers running
+51:52
+simultaneously on your host, which is your laptop, PC, whatever you're working on.
+51:58
+And your laptop has certain ports available that you can open for certain applications.
+52:05
+So how it works is that you need to create a so-called binding between a port that your laptop,
+52:13
+your host machine has and the container. So, for example, in the first container part here,
+52:20
+you see container is listening on Port 5000 and you find your laptop's port.
+52:27
+Five thousand to that containers. Now you will have conflict if you open to five
+52:35
+thousand ports on your host because you will get a message. The port is already bound or is already in use.
+52:42
+You can do that. However, you can have two containers,
+52:48
+as you see in the second and third containers are both listening and port three thousand,
+52:54
+which is absolutely OK as long as you're buying them to two different ports from your host machine.
+53:02
+So once the port binding between the host and the container is already done, you can actually connect to the running container
+53:09
+using the port of the host. So in this example, you you would have some F localhost and then the port
+53:17
+of the host and the host then will know how to forward the request to the container
+53:24
+using the port binding. So if we head back here,
+53:30
+you see that containers have their ports and they're running on the same one. However,
+53:36
+we haven't made any binding between my laptop's ports and the container port. And because of that,
+53:44
+the container is basically unreachable by any application. So I won't be able to use it.
+53:50
+So the way we actually do that is by specifying the binding of the ports during the run command.
+53:58
+So I'm going to break this and check that there is just one container running. No, I'm going to.
+54:06
+Stop the other one as well so we can start them anew. OK, so we see both containers are here.
+54:15
+So now we want to start them using the binding between the host and the container ports.
+54:23
+But again, we have to it. So we need to bind them to two different ports on my laptop.
+54:30
+So the way to do it is you do run and you specify with minus P, the port of the host.
+54:39
+That's the first one. So let's go with 6000.
+54:45
+It doesn't really matter in this case, and the second one is the port that you're binding this to,
+54:52
+which is the container port. So we know the container port will be six three seven nine.
+54:58
+And this is where we find our. So my laptop's port six thousand two.
+55:06
+And if I do this this year.
+55:11
+So, you know, if the groups.
+55:17
+That's actually clean this mess again here you see the binding here. All right,
+55:25
+so your laptop's six thousand port is bound to the containers,
+55:30
+six three seven nine. So now let's do another thing and let's
+55:38
+start it in a detached mode like this. Let's check again.
+55:46
+It's running again and no, I want to start the second container, it's clear this again.
+55:59
+So here you see it created a bunch of containers because, uh, when I specified different options with the port binding,
+56:06
+it actually created new containers. That's why you see a couple of more here.
+56:12
+So I'm going to copy the image name with the take for, uh oh,
+56:19
+minus P. So, for example, if I were to do this, no.
+56:26
+And I would try to run the other red is the second red is container with the same
+56:36
+ports on my laptop, I would get an error saying port is already
+56:42
+allocated so I can do six thousand one and run it again.
+56:48
+I'll run it in detached mode so that I won't see port.
+56:53
+And if I go over here and say, yes, I see that I have two different ready
+57:01
+versions running, both of them bound to different ports on my
+57:07
+laptop and the containers themselves listening to request
+57:12
+on the same port. So so far, we have seen a couple of basic documents,
+Debugging a Container
+57:21
+we have seen Doctor Pool, which pulls the image from the repository to local environment. We also saw run,
+57:29
+which basically combines pool and start, pulls the image if it's not locally available
+57:36
+and then starts it right away. Then we saw a start and stop,
+57:42
+which makes it possible to restart the container if you made some changes and you want to create
+57:49
+a new version, which makes it possible to restart a container if you need to. We also saw Docker run with options.
+57:56
+The one option that we saw was D minus D, which is detach so you can run the container detached mode
+58:05
+so you can use a terminal again, minus P allows you to bind port of your host to the container.
+58:13
+So very important to remember minus P, then comes the port of your host and then comes
+58:20
+the port of your container or whatever it might be. We also saw the cops,
+58:28
+the cops minus a which basically gives you all the containers no matter if they're running
+58:34
+currently or not. We also saw the images, which gives you all the images that you have locally. So,
+58:42
+for example, if after a couple of months you decide to clean up your space and get rid of some stale images,
+58:50
+you can actually check them, check the list and then go through them and delete them. You can do the same with stale docker
+58:57
+containers that you don't use anymore or you don't need any more. You can also get rid of them.
+59:03
+So the final part of the Docker basic commands are commands for troubleshooting, which are very, very useful.
+59:08
+If something goes wrong in the container, you want to see the logs of the container or you want to actually get inside of container,
+59:16
+get the terminal and execute some comments on it. So let's see. Yes,
+59:22
+we have two containers running right now. We don't have any output. We don't see any locks here.
+59:27
+So let's say something happens. Your application cannot connect to redis and you don't
+59:33
+know what's happening. So ideally, you would want to see what logs redis container is producing.
+59:41
+Right. The way to do that is very easy. You just say docker logs and you specify the container
+59:47
+ID and you see the logs. You can also do the logs if you don't want
+59:53
+to remember the container idea or to decrypt all the time,
+59:58
+you can remember the name of the container and you can get the logs using the name.
+1:00:05
+So a little side note here as we're talking about the names of the containers, so here it is. You see,
+1:00:11
+when a container is created, you just get some random name like this so you can name your containers as you want using another option
+1:00:20
+of the docker run, which might be pretty useful sometimes if you don't want to work with the container IDs and you just want
+1:00:26
+to remember the names or if you just want to differentiate between the containers. So,
+1:00:31
+for example, let's create a new container from readies for that old image using a different name that we choose.
+1:00:40
+So I'm going to stop this container and I'm
+1:00:45
+going to create a new one from the same image. So let's run it in the detached mode that's open the port.
+1:00:55
+I was in one, two, six three seven nine and gave the name
+1:01:04
+to the container and let's call it since it's the older version,
+1:01:09
+let's call it redis older. And we need to specify the image. So remember,
+1:01:16
+this will create a new container since we're running the Docker Run comment again.
+1:01:22
+So if we execute this and check again, we see the readies for the old image based
+1:01:32
+container is created, which is fresh, new, you can see,
+1:01:37
+and it created in the name is already older and we can do the same for
+1:01:44
+the other container so that we kind of know which container is what. So to stop this one
+1:01:53
+and I will use the same comment here, this will be the latest and I will call this latest
+1:02:02
+and since find another port. So I'm going to run it and let's see.
+1:02:11
+So here I have two containers running now. I know. Redis older ladies later. So, for example,
+1:02:17
+if the older version has some problems, I can just do locks right this older and I can
+1:02:25
+get my locks. So in other very useful command in debugging
+1:02:30
+is Docker exec. So what we can do with Docker exec is we can actually get
+1:02:37
+the terminal of a running container. So let's check again. We have two containers running and let's say there
+1:02:43
+is some problem with the latest redis latest container.
+1:02:49
+And I want to get a terminal of the container and do it, maybe navigate a directory inside,
+1:02:55
+check the log file or maybe check the configuration file or print out the environmental
+1:03:01
+variables or whatever. So in order to do that, we use Docker Exit Command with minus T, which stands
+1:03:10
+for Interactive Terminal. Then I specify the container ID and I say. So I get the.
+1:03:20
+And here you see that the the cursor changed. So I'm inside of the container as a user.
+1:03:29
+And here if I say this is empty, I can also print out which directory I am.
+1:03:36
+I can go to the home directory, see what's there. So I have my virtual file system inside
+1:03:42
+of a container and here I can navigate the different directories and I can check stuff.
+1:03:48
+I can also print all the environmental variables to see that something is set correctly
+1:03:55
+and do all kinds of stuff here. And this could be really useful if you have a container
+1:04:02
+with some complex configuration or if, for example, you are running your own application that you wrote
+1:04:09
+in a container and you have some complex configuration there or some kind of setup,
+1:04:15
+and you want to validate that everything is correctly set in order to exit the terminal just to exit
+1:04:24
+and you're out. You can also do the same using the name again
+1:04:30
+if you don't want to work with the IDs and you just want to remember the names of the container to make it easier,
+1:04:36
+you can do it with the name as well. Same thing since most of the container images
+1:04:42
+are based on some lightweight Linux distributions, you won't have much of the Linux commands
+1:04:49
+or applications installed here. For example, you wouldn't have Kerl or some other stuff.
+1:04:54
+So you were a little bit more limited in that sense. So you can execute a lot of stuff
+1:05:00
+from the docker containers for most of the debugging work. Um, it should be actually enough.
+1:05:07
+So the final part to review the difference between stock run in Docker Start, which might be confusing for some people,
+1:05:13
+let's revisit them. So basically, Docker Run is where you create a new container from an image.
+1:05:22
+So Docker Run will take an image with a specific version or just latest.
+1:05:28
+Right as option or as an attribute with Docker Start. You're not working with images,
+1:05:35
+but rather with containers. So for example, as we saw, the Koran has a lot of options.
+1:05:41
+You specify with minus 30 and minus P, the port binding, and then you have this name of the container
+1:05:47
+and all the stuff. So basically you tell Docker at the beginning what kind of container with what attributes
+1:05:56
+name and so on to create from a specific image. But once the container is created and you can
+1:06:05
+see that using the command, for example, here, the last one that we created,
+1:06:11
+and if you stop it and you want to restarted, you just need to use the command to start and specify
+1:06:19
+the container ID. And when you started the container will retain all the attributes that we defined when creating
+1:06:27
+the container using Docker Run. So Docker Run is to create a new container.
+1:06:34
+Docker Start is to restart a stopped container.
+Demo Project Overview - Docker in Practice
+1:06:42
+So once you've learned the basic concepts and understood how it works, it's important to see how the is actually
+1:06:49
+used in practice. So in software development workflow, you will know you have these classical steps of development
+1:06:57
+and continuous delivery or continuous integration and then eventually gets deployed on some environment
+1:07:02
+or it could be a test environment, develop environment. So it's important to see how Docteur actually
+1:07:08
+integrates in all those steps. So in the next couple of videos, I'm going to concentrate exactly on that.
+1:07:14
+So we're going to see some overview of the flow and then we're going to zoom in on different parts
+1:07:20
+and see how Dockray is actually used in those individual steps.
+1:07:26
+So let's consider a simplified scenario where you're developing a JavaScript application on your laptop,
+1:07:32
+right on your local development environment, your JavaScript application uses and mongered TB database,
+1:07:41
+and instead of installing it on your laptop, you download a docker container from the Docker hub.
+1:07:48
+So you connect your JavaScript application with the Monga DB and you start developing.
+1:07:53
+So now let's say you develop the application first version of the application locally and now you want to test
+1:08:00
+it or you want to deploy it on the development environment where a tester in your team is going to test
+1:08:07
+it so you can meet your JavaScript application in Ghiz or in some other version control system that will trigger
+1:08:16
+a continuous integration. Jenkins builds or whatever you have configured
+1:08:23
+and jenkins' build will produce artifacts from your application. So first you will build your JavaScript application
+1:08:32
+and then create a docker image out of that JavaScript artifact.
+1:08:37
+Right. So what happens to this Docker image once it gets created by Jenkins build?
+1:08:44
+It gets pushed to a private Tulka repository, so usually in a company you would have a private
+1:08:51
+repository because you don't want other people to have access to your images. So you push it there.
+1:08:57
+And now is the next step could be configured on Jenkins' or some other scripts or tools.
+1:09:04
+That Docker image has to be deployed on a development server.
+1:09:10
+So you have a development server that pulls the image from the private repository,
+1:09:16
+your JavaScript application image, and then pulls the monga déby that your JavaScript
+1:09:21
+application depends on from a Docker hub. And now you have two containers, one,
+1:09:27
+your custom container and a publicly available Mongar, the B container running on dev server,
+1:09:33
+and they talk to each other. You have to configure it. Of course, they talk and communicate to each other and run as an app.
+1:09:41
+So now if Testor, for example, or another developer logs in to a deaf server,
+1:09:48
+they be they will be able to test the application. So this is a simplified workflow,
+1:09:54
+how DOCA will work in a real life development process in the next few years.
+1:10:00
+I'm going to show you hands on demo of how to actually do all of this in practice.
+Developing with Containers
+1:10:09
+So in this video, we are going to look at some practical example of how to use Docker in a local development process.
+1:10:15
+So what are we going to do is simple demo of a JavaScript A.I.S application
+1:10:20
+in the backend to simulate local development process. And then we're going to connected to a docker
+1:10:25
+container with the TO database in it. So let's get started.
+1:10:33
+So in this video, we're going to see how to work with docker containers when developing applications.
+1:10:39
+So the first step will be is we going to develop a very simple UI backend application using JavaScript,
+1:10:47
+very simple HTML structure and no JS in the backend. And in order to integrate all of this in the database,
+1:10:54
+we are going to use a docker container of a monga to be database and also to make working
+1:11:00
+with the mongered to be much easier so we don't have to execute commands in the terminal.
+1:11:06
+We're going to deploy a docker container of a Monga UI, which is called the Mongar Express,
+1:11:12
+where we can see the database structure and all the updates that our application is making in the database.
+1:11:20
+So this development setup should give you an idea of how docker containers are actually
+1:11:25
+used in the development process.
+1:11:30
+So I've already prepared some very simple JavaScript application, so in order to see the code,
+1:11:37
+basically we have this index HTML that is very simple code and we have some JavaScript here and we're
+1:11:44
+using Noge inspection that just serves that index HTML file and listens on page three thousand.
+1:11:51
+So we have the server running here in the backend and we have the UI that looks like this.
+1:11:56
+So basically it's just the user profile page with some user information and user can edit their
+1:12:02
+profiles or if I, for example, change the name here and if I change the email
+1:12:09
+address and do changes like this, I can save my profile and I have my updates here.
+1:12:16
+However, if I refresh the page, of course the changes will be lost because it's just JavaScript. No.
+1:12:22
+So there's no persistent component in this application. So in order to have this, which is actually how real life applications work,
+1:12:30
+you'll know that you need to integrate the application with a database. So using that example,
+1:12:36
+I will try to showcase you how you can actually use the docker containers to make the development process easier
+1:12:43
+by just pulling one of the databases and attaching it or connecting it to the application.
+1:12:48
+So in this case, we're going to go with the monga to be application and in addition to Monga to be container,
+1:12:55
+we're going to also deploy a Monga DP UI, which is its own container. It's called Mango Express,
+1:13:02
+where we can manage or see the database insights and updates from our application much easier.
+1:13:09
+So now let's see how that all works.
+1:13:16
+So in order to get started, let's go to Docker Hub and find our Mungindi image.
+1:13:25
+Here, let's go to Mongul. And we have to be here.
+1:13:34
+And the Mongar Express, which is another container that we're going to use for the UI. So first,
+1:13:40
+let's pull the monga to be official image.
+1:13:51
+So I already have them going to be later, so pulling doesn't take longer on my laptop,
+1:13:57
+but you're going to need a couple of seconds, probably in the next one we're going to pull
+1:14:02
+is the Talk Express, which I also have, I believe. So let's see. Yes, it's also first,
+1:14:12
+so if I check locally, I have to be and express images,
+1:14:17
+so the next step is to run both mango and mango express
+1:14:23
+containers in order to make the Mungindi database available for application and also to connect
+1:14:31
+the Mongar express with the Mongo DB container. So let's do that. The connection between those two first.
+1:14:40
+In order to do that, we have to understand another doctor concept doctor network,
+1:14:45
+so how it works is that it creates its isolated doctor network.
+1:14:52
+Where the containers are running in. So when I deploy two containers in the same
+1:14:58
+token network, in this case Mango and Mango Express, they can talk to each other using just the container
+1:15:05
+name without localhost port, no, etc. just the container name because they're in the same network.
+1:15:14
+And the applications that run outside of Docker like our No Jars, which just runs from node server,
+1:15:20
+is going to connect to them from outside or from the host using local host and the port. No.
+1:15:28
+So later when we package our application into its own docker image, what we're going to have is a game docking network
+1:15:36
+with Monga to be container Mongar express container. And we're going to have a notice application which we wrote,
+1:15:43
+including the index, HTML and JavaScript for Fronton in its own docker container.
+1:15:49
+And it's going to connect to the Monga DB in the browser, which is running on the host.
+1:15:55
+But outside the Docker network is going to connect to our JavaScript application again using hostname
+1:16:02
+and the port number. So Docker by default already provides some networks. So if we say Docker network,
+1:16:11
+unless we can already see this auto generated Docker networks, so we have four of them with different
+1:16:17
+names and the drivers, we're not going to go into details here, but what are we going to do is create its own network
+1:16:24
+for the mongered to be in the Mongo Express and we're going to call it mobile network. So let's do this right away.
+1:16:33
+I'm going to say Docker Network create and we are going to call it Mongul network.
+1:16:43
+So now if I do a network else again,
+1:16:48
+I see my doctor network has been created. So now in order to make our Mongar to be container
+1:16:55
+in the Mongar express container run in this Mongan network, we have to provide this network option
+1:17:02
+when we run the container in the dock around.
+1:17:08
+So let's start with the Mongul, so we all know that DOCA run is the come in to start
+1:17:14
+a container from an image, right? So we have to run Mongul, which is the basic DOCA run comment. However,
+1:17:20
+in this case, we want to specify a couple of things. As you learn from the previous videos,
+1:17:26
+you have to specify something called port. So we need to open a port of Mongar to be the default
+1:17:34
+port of what would it be is twenty seven thousand seventeen. So we'll take that port actually for both
+1:17:41
+host and container. So Monga will run this port inside of a container and we open the same port on the host.
+1:17:49
+So that will take care of the port. Then we will run it in a detached mode. In addition to that,
+1:17:54
+there are a couple of things that we can specify when starting up the container. And these are environmental variables of the Mongar to be.
+1:18:02
+Let's see, in the official image description, you actually have a couple of documentation
+1:18:08
+about how to use the image, which is very helpful to kind of understand what kind of configuration you can apply to it.
+1:18:16
+Here you see some environmental variables. So basically on startup, you can define what the root username and the password
+1:18:24
+will be, which is very handy because we're going to need those two for the Express to connect
+1:18:30
+to the monga. And you can also specify the any database. We're just going to provide the username and password
+1:18:37
+because we can create the database from the Mongo Express UI later. So let's do that. And the way you can specify the environmental
+1:18:44
+variables you can actually see here as well is by just.
+1:18:51
+Let's copy this one. So here you say environment, a variable,
+1:18:56
+that's what the minus E flag stands for and what username will say, I mean, and another variable,
+1:19:06
+which is the password will be just password. So in this way,
+1:19:11
+we can actually overwrite what the default username and password will be. So two more things that we need to configure
+1:19:18
+in this command are container name because we're going
+1:19:23
+to need that container name to connect with the Monga Express. So we'll call this one Mongo DB,
+1:19:30
+let's say. And another one we need is the network that we created, which was called Mongo Network.
+1:19:41
+So in order to make this command a little bit more structured on multiple lines. So it's C.
+1:19:51
+So it's more readable. So basically all these options or all these flags that we set
+1:19:59
+to go one more time through them, it's going to start in detached mode.
+1:20:04
+We are opening the port on the host username and password that we want to be to use in the startup process.
+1:20:12
+We're going to rewrite or overwrite the name of the container and this container
+1:20:18
+is going to run in a Mongo network and this should actually start the container.
+1:20:27
+OK, so if you want to see whether it was successful, we can lock the container and see what's happening inside.
+1:20:36
+So as we see Mongar was started and everything actually looks good,
+1:20:42
+waiting for connections on board. Twenty seven thousand seventeen. OK, so now let's start Mongar Express one Monga Express
+1:20:52
+to connect to the running Mahmoudi container on startup. And here we have an example of how to run it.
+1:21:00
+And here we have a list of environmental variables that we can configure. So let's quickly look at them.
+1:21:06
+Username, password. We don't need them. However, we need the admin username and password of the monga
+1:21:13
+to be this is actually what we overwrote with admin and password. So we are going to use them because experts will need some
+1:21:20
+username password to authenticate with the monga to be interconnected. The port is by default the correct one.
+1:21:27
+So we don't need to change that. And this is an important part. This is the going to be server, right. So basically,
+1:21:34
+this is the container name that experts will use to connect to the docker.
+1:21:41
+And because they're running in the same network, only because of that, this configuration will work.
+1:21:46
+If I didn't if I hadn't specified the network, then I could have I could specify the name
+1:21:53
+correct name here of the container, but it wouldn't work. So with that said, let's actually create the Docker Run
+1:22:00
+command for Xpress as well. So let's clear the history and let's start. So again,
+1:22:09
+we run detached mode and let's see what parameters we need. So first of all, port, let's say,
+1:22:15
+what is the default port that the Express runs on? That's 80 81. So we'll take that.
+1:22:23
+So basically, it's going to run on our laptop on Port 80, 81.
+1:22:28
+The next option would be. These two and remember, environmental variables need to be specified with minus EHP,
+1:22:37
+and this is the username of Monga Debe admin, which is admin,
+1:22:42
+because we specified it when we started the ongoing going to be container. This is the password.
+1:22:47
+Let's set this one as well. Don't forget the network minus minus net Wango Network.
+1:23:00
+We have the name. We can also call it Mongul Express.
+1:23:08
+And let's see what else we might need here. Yes, this is an important one.
+1:23:17
+And our container name, let's actually see it again, Dr.
+1:23:23
+Pierce, the one running, it's called mongered to be that's the container name and this is what we need to specify here.
+1:23:29
+So I'm going to write this here. And finally, the image is called Mongar Express.
+1:23:36
+I'm just going to copy this one here. And that is it's so basically with these commands,
+1:23:44
+Mongar Express should be able to connect to the to be container. So that's right.
+1:23:49
+And just to make sure, let's log the container and see what's happening there.
+1:23:56
+Waiting for Mongo DB Welcome to my Express. It looks like it connected successfully.
+1:24:03
+It says here database connected and the Mongar Express is available at Port eighty eighty one.
+1:24:11
+So let's check the Mongar Express out at the port. Eighty, eighty one. So actually,
+1:24:19
+let's close this tabs. You don't need them anymore. And here if I say localhost one,
+1:24:25
+I should be able to see the Monga Express. So these are the databases that already exist by default
+1:24:32
+in Wango or which are created on startup and using the UI, we can create our own database. As we saw previously.
+1:24:40
+We could have specified environmental variable. You need to be on mongered to be stored up
+1:24:46
+and that would have created a new database. However, it does matter. We will just create a database name here.
+1:24:53
+So we will call it user account database.
+1:24:59
+So let's create one. And now we can actually use it or connect
+1:25:04
+to this database from no JS. So let's see how that works.
+1:25:13
+So now we have the mongered to be container in the Mongar express container running, so let's check that we have both of them.
+1:25:21
+We'll have to connect not just with the database. So the way to do it is usually to give
+1:25:27
+a protocol of the database and the Ghauri and the UI for the database would be localhost and the port
+1:25:34
+that it's accessible at. I already went ahead and prepared the code
+1:25:39
+for Narges. So basically we are going to use a Mongul client here, which is a node module, and using that model client,
+1:25:47
+we are connecting to the Mungindi database. So this is the protocol.
+1:25:53
+The host and the port that we just saw that the Mogador be listening at and username and password
+1:26:01
+of the route user Mongar to be. Of course, usually you wouldn't put the password here or not use
+1:26:06
+an admin or route username password to connect to a database. But this is just a demonstration purposes
+1:26:13
+and these are username and password that we set as environmental variables when we created
+1:26:19
+the Docker Mongar container. So. They check that.
+1:26:25
+So this is the Mongkut to be, uh, Container Command and this is the user name,
+1:26:30
+root and root password that we specified. And this is what we are going to use in the code. As I said,
+1:26:38
+for demonstration purposes, I will write the password directly here. So then we connect to the database.
+1:26:45
+So I also went ahead and in the Mongo Express user account database and inside that I created
+1:26:52
+a collection which is like a table in my secret world called users. So here I connect to a user account database and I query
+1:27:02
+the collection users and this is a card requests. So I'm just fetching something from the database
+1:27:07
+and this is update request. Same thing. I connect to the database using the same
+1:27:13
+you or I and the database name and I update or insert something in the collection. So let's see how all that works.
+1:27:22
+So let's head over to the UI. So in the user's collection, there is no data. It's empty.
+1:27:27
+So we're going to refresh it and edit the data. So I'm going to write here some and updated and refresh.
+1:27:38
+We see that a new insert was made. So this is the update profile section here.
+1:27:45
+So all this was executed. It connected to the Mungindi be. And now we have one entry,
+1:27:52
+which is email coding name that we changed. So if I'm going to refresh it now,
+1:27:58
+I fetched a newly inserted user data in the UI and displayed it here. And also, if you want to see what the monga,
+1:28:05
+the big container actually logs during this process, we can actually look at the logs. So I'm going to say yes and log using the container ID.
+1:28:15
+So let's say if I wanted to see just the last part of it, because I want to see what the last activity was,
+1:28:22
+I can also let's clear this and I can also do
+1:28:27
+tail so I can just display the last part of it. Or if I wanted, I could also stream the logs.
+1:28:33
+So I'll clear this again and I will say stream the logs so I won't have to do the logs all the time.
+1:28:41
+So if I make a line here, for example, to mark the lost logs, I can refresh it.
+1:28:47
+Let's make some other changes. Let's change it and save profile.
+1:28:56
+So I'm going to see some activity here as well. So these connections are new.
+1:29:02
+And he also says received collect metadata. And this is where the node JS request comes
+1:29:07
+in with the notice and its version. And at the end of each communication,
+1:29:12
+there is an end connection because we end the database connection at the end.
+1:29:19
+So we see that also in the logs, so, for example, something wasn't working properly, you could always check them in the logs here.
+1:29:27
+So with that, I have a fully functional Java application, which has a persistance in the Mongered database,
+1:29:33
+and we also have Mongar UI, both of them running in a Docker container.
+1:29:39
+So this would be some unrealistic example of how local development using docker containers
+1:29:46
+would look like.
+Docker Compose - Running multiple services
+1:29:52
+So in the last video we created and started to docker containers among to and among Express,
+1:29:58
+and these are the comments that we used to make it happen, right? The first we created a network where these two
+1:30:04
+containers can talk to each other using just the container name and no host port, etc. is necessary for that.
+1:30:12
+And then we actually ran to dock, run, commence with all the options and environmental variables,
+1:30:19
+etc. said no. This way of starting containers all the time is a little bit
+1:30:27
+tedious and you don't want to execute this wrong commands all the time on the mainline terminal,
+1:30:32
+especially if you have a bunch of docker containers to run. You probably want to automated or just
+1:30:39
+make it a little bit easier. And there is a tool that that makes running
+1:30:44
+multiple docker containers with all this configuration much easier than with docker run commands.
+1:30:50
+And that is Docker Campo's. If you already know Doc Campos and you were wondering
+1:30:55
+why is it useful and what it actually does, then bear with me in the next slide. I'm going to explain that.
+1:31:02
+So this is a doctor run command of the mongered to be executed previously. So basically with Dr.
+1:31:10
+Campos file, what we can do is we can. Take the whole comment with its configuration and map
+1:31:18
+it into a file so that we have a structured comment. So if you have, let's say,
+1:31:24
+10 containers that you want to run for your application and they all need to talk to each other
+1:31:29
+and interact with each other, you can basically write all the run commands for each container in a structured way in the dock who can
+1:31:36
+post and we'll see how that structure actually looks like. So on the right side,
+1:31:42
+in the Docker composed example, the first two takes are always there, right?
+1:31:47
+Version three, that's the latest version of the compose and compose.
+1:31:53
+And then we have the services. This is where the container list goes. So the first one is mongered to be and that MEPs
+1:31:59
+actually to the container name. Right. This is going to be a part of container name when Docker creates a container out
+1:32:06
+of this configuration blueprint. The next one is actually the image, right,
+1:32:14
+so we need to know which image that container is going to be built from. And of course, you can specify a version take here next to the name.
+1:32:23
+The next one is port. So we can also specify which ports is going to be open.
+1:32:29
+First one is on the host and the second one after the column is on the container. So the port maybe is there.
+1:32:37
+And of course, the environmental variables can be also mapped in the dock or compose.
+1:32:43
+And this is how actually the structure of Docker compose looks like, for one specific comments.
+1:32:49
+Let's actually see the second container come in for Mongar Express that we executed
+1:32:54
+and how to map that. So now again, we have a document command for Mongar Express
+1:33:00
+and let's see how we can make it into a dock to compose. So, as I said, services will list the containers that we want
+1:33:07
+to create. And again, names Mongo Express will never map to the container name.
+1:33:15
+The next one will be the image again. You can edtech here. If you want to be have a specific one,
+1:33:23
+then you have the ports, 80 to eighty 80.
+1:33:28
+And then you have all the environmental variables again. Under the environment,
+1:33:35
+and this is how the Ducker compose will look like, so basically the composed,
+1:33:40
+it's just a structured way to contain very normal common documents. And of course,
+1:33:47
+it's going to be easier for you to edit the file if you want to change some variables or if you want
+1:33:54
+to change the ports. If you want to add some new options to the run, come in,
+1:33:59
+so to say. And maybe you already noticed the network configuration is not there in the docker compose.
+1:34:06
+So this Mongo network that we created, we don't have to do it in a docker compose. We go to the next slide because we have the same
+1:34:15
+concept here. We have containers that will talk to each other using just the container name.
+1:34:22
+So what Docker Compose will do is actually take care of creating a common network for these containers
+1:34:30
+so we don't have to create the network and specify in which network these containers will run in.
+1:34:37
+And we're going to see that in action right away.
+1:34:44
+So let's actually create a docker compose file, so I'm going to paste all my contents here
+1:34:51
+and this is exactly what we saw on the slides and I'm going to save it is a Mongo demo and we see
+1:35:02
+the highlighting as well. Be very aware of the invitation they have to be correct. So this is the least of all the containers
+1:35:11
+on the same level. And then each container has its configuration inside that.
+1:35:17
+So now, compared to Docker run commands, it will be very easy for me to go here and change
+1:35:22
+this environment variables or add some new configuration options, et cetera.
+1:35:29
+So here again for demonstration, we actually saved the Doctor Campos in the code. So it's part of the application code.
+1:35:36
+So now that we have a doc who can post file, the question is how do I use it or how do I start
+1:35:42
+the containers using that? So let's go to the come in line and start docker containers using this Docker Campos file.
+1:35:51
+So the way to use it is using Docker Campos. Comment now,
+1:35:58
+if you've installed Dakkar on your laptop, it usually gets installed with the TOKU
+1:36:04
+compose packaged inside, so you should have both darker and darker compose commands installed as a package.
+1:36:11
+So Dogra composed command takes an argument, which is the file. So I'm going to specify which file I want to execute.
+1:36:20
+And in my case, it's called Mongo Yamal. And at the end I want to say what I want to do
+1:36:27
+with this file. In this case, the command is up, which will start all the containers
+1:36:32
+which are in the Mongul Yamal. So let's actually check before that. There are no containers for money.
+1:36:39
+So I don't have anything running here and I'm going to start those two containers.
+1:36:52
+OK, so there are a couple of interesting things here in this output, so let's crawl all the way up.
+1:36:58
+So we've talked about Dr Network and how we created our own network at the beginning to run the containers inside.
+1:37:06
+And I said the Dr. Campos takes care of it. And here we see the output where he actually created
+1:37:12
+a network called My App Default. This is the name of the network and it's going
+1:37:19
+to run those two containers. These are actually the names of the containers that compose created.
+1:37:24
+This is what we specified and it just added prefix and suffix to it.
+1:37:30
+And he created those two containers in that network. So if I actually go here and do doctor network,
+1:37:38
+as I see the my default is here.
+1:37:44
+So that's one important thing. And the other one is the logs of those containers
+1:37:50
+actually mixed because we are starting both at the same time. As you see,
+1:37:55
+the Mongar Express has to wait for Mongar DB to start because it needs to establish a connection.
+1:38:03
+So we here see the logs. Some are going to be starting.
+1:38:09
+We still get Conexion refuse because it's not started completely and some were here when mongered the be is started
+1:38:18
+and listening for connections, Mongar Express is able to connect to it. So this is something that you can also do with Dr.
+1:38:24
+Campos when you have two containers that where one depends on another one starting,
+1:38:31
+you can actually configure this waiting logic in the composed. OK,
+1:38:37
+so now let's see actually that the docker containers are running. So we have both of them here.
+1:38:44
+You see the container names that Dr. Campos gave them. And one thing here to note is that the Mongar Express
+1:38:54
+actually started on Port Eddie. Eighty one inside the container. So we can see that here.
+1:39:00
+So we are opening a port on my laptop that actually
+1:39:06
+forwards the request to container at port eighty eighty one just so that you don't get confused
+1:39:11
+because was it on the slides. So now that we have restarted the containers,
+1:39:18
+let's actually check the first one, which is Mongar Express.
+1:39:24
+So it's running on 80, 80 in the previous example, we created a database in the collection,
+1:39:32
+which is gone because we restart the container. This is actually another very important concept
+1:39:38
+of containers to understand when you restart the container, everything that you configured in that containers
+1:39:45
+application is gone. So data is lost. So to say there is no data persistance
+1:39:52
+in the containers itself. Of course, that is very inconvenient.
+1:39:57
+You want to have some persistence, especially when you're working with the database. And there is a concept where you're going to learn later
+1:40:04
+called volumes that makes it possible to have persistency
+1:40:10
+between the container restarts. OK, so let's actually create the database again
+1:40:16
+because we need it. And inside the database we had actually users collection.
+1:40:22
+Let's create that one as well and that is empty. Now let's actually start our application.
+1:40:36
+And there you go. So now if I were to modify this one here and update,
+1:40:46
+I should see the updated entry here. So the connectivity with Mongar to be works.
+1:40:52
+So now what do I do it if I want to stop those containers, of course, I could go there and say,
+1:40:59
+Doctor, stop and I can provide all the IDs as we did previously or with Dr. Campos. It's actually easier I can do.
+1:41:07
+Dr. Campos again. Specify the file and instead of up,
+1:41:14
+I'm going to say down and that will go through all the containers and shut them all.
+1:41:20
+And in addition to removing the containers or stopping them removing the containers, it also removes the network.
+1:41:29
+So the next time we restarted, it's going to recreate, so let's actually check that the network
+1:41:35
+allows that default. My default network is gone.
+1:41:41
+And when I do up. See, it gets recreated,
+1:41:48
+that should give you a good idea of what Dr. composes and how to use it. The next,
+1:41:54
+we're going to build our own Docker image from our no JavaScript application.
+Dockerfile - Building our own Docker Image
+1:42:03
+So now let's consider the following scenario, you have developed an application feature, you have tested it,
+1:42:09
+and now you're ready to deploy it right to deployed, your application should be packaged into its
+1:42:16
+own docker container. So this means that we are going to build in Docker image
+1:42:21
+from our JavaScript Noge spec in application and prepare it to be deployed on some environment to review
+1:42:30
+this diagram that we saw at the beginning of the tutorial. So we have developed a JavaScript application.
+1:42:35
+We have used the Monga be docker container to use it, and now it's time to commit it to the right. In this case,
+1:42:43
+we're going to simulate these steps on the local environment. But still, I'm going to show you how these steps actually work.
+1:42:50
+So after you have a continuous integration that runs. So the question is,
+1:42:56
+what does actually Jenkins' do with this application when it builds the application so that JavaScript
+1:43:03
+application using the NPM build, etc., it packages it then in a Docker image.
+1:43:12
+And then pushes it into a repository, so we're going to actually simulate what Jenkins does
+1:43:20
+with their application and how it actually packages it into a Docker image on the local environment.
+1:43:26
+So I'm going to do all this on my laptop, but it's basically the same thing that Jenkins will do.
+1:43:32
+And then on later said we can actually push the built image into a docker repository.
+1:43:40
+In order to build a docker image from an application, we basically have to copy the contents of that application
+1:43:48
+into the Docker file. It could be an artifact that we built in our case. We just have three files so we can copy them
+1:43:54
+directly in the image and we're going to configure it. In order to do that, we're going to use a blueprint for building images,
+1:44:02
+which is called a docker file. So let's actually see what is a docker file and how it actually looks like. So as I mentioned,
+1:44:10
+Docker file is a blueprint for creating Docker images.
+1:44:16
+A Syntex of Docker file is super simple. So the first line of every docker file is from image.
+1:44:24
+So whatever image you are building, you always want to base it on another image.
+1:44:30
+In our case, we have a JavaScript application with no JS backend, so we are going to need a node inside of our
+1:44:38
+container so that it can run our node application instead
+1:44:44
+of basing it on a Linux Alpine or some other lower level image, because then we would have to install node ourselves on it.
+1:44:52
+So we are taking a ready node image. And in order to see that, let's actually go to Docker Hub.
+1:45:00
+And research note here and here, you see there is a ready node image that we can
+1:45:07
+base our own image from. So here we have a lot of different text so we can actually use one specific one or we can just go
+1:45:15
+with the latest if we don't specify any take. So what that actually means basing our own image
+1:45:23
+on a node image is that we are going to have node installed inside of our image.
+1:45:32
+So when we start a container and we actually get a terminal of the container, we can see that node command is available
+1:45:39
+because there is node installed there. This is what from Node actually gives us.
+1:45:44
+So the next one is we can configure environmental variables inside or docker file now is you know,
+1:45:52
+we have already done this in the using the Docker anchorman's or the docker compose.
+1:45:58
+So this will be just an alternative to defining environmental variables in a docker composed,
+1:46:04
+for example, I would say it's better to define the environmental variables externally
+1:46:10
+in a Docker compose file because if something changes, you can actually override it.
+1:46:16
+You can change the Docker Compose File Incorporated instead of rebuilding the image. But this is an option.
+1:46:22
+So this in command basically would translate to setting the environmental variables inside of the image environment.
+1:46:31
+The next one is run. So all this capital case words that you see
+1:46:37
+from N and Run, they're basically part of a Syntex of a docker file. So using run,
+1:46:43
+basically you can execute any kind of Linux commands. So you see make directory is a Linux command
+1:46:52
+that creates a home slash home slash app directory. Very important to note here,
+1:46:58
+this director is going to live inside of the container. So why not start a container from this image?
+1:47:05
+Slash home slash EP directory will be created inside of the container and not on my laptop,
+1:47:12
+not on the host. So all this commands that you have in Docker file will apply to the container environment.
+1:47:19
+None of them will be affecting my host's environment or my laptop environment.
+1:47:25
+So we run basically you can execute any Linux commands that you want. So that's probably one of the most used ones.
+1:47:33
+And we also have a copy command. Now, you would probably ask I can execute a copy comm
+1:47:39
+in a Linux copy command using run. Yes, you could. But the difference here is that,
+1:47:45
+as I said, all these commands end run, for example. They apply to they get executed inside
+1:47:53
+of the container. The copy command that you see here, it actually executes on the host.
+1:48:00
+And you see the first parameter is DOT in the second parameter is from scholarship. So source and the target.
+1:48:09
+So I can copy files that I have on my host inside of that container image. Because if I were to execute,
+1:48:18
+run Sepi source this nation, that command would execute inside of the DOKO container,
+1:48:25
+but I have the Farzat I want to copy on my host in the last one.
+1:48:32
+So from an seemed or command is always part of the aircraft. What command does is basically executes an entry
+1:48:40
+point Linux command. So this line with the command actually translates to node Sergius.
+1:48:48
+So remember here we actually do node savages, so we start a node server with node. Yes,
+1:48:55
+this is exactly what it does, but inside of the container. So once we copy our jazz and other files
+1:49:02
+inside of a container, we can then execute node searches and we are able to do
+1:49:07
+it because we are basing on the node image that already has node preinstalled and we are going
+1:49:14
+to see all of this in action. So another question here. What is the difference between run ins?
+1:49:20
+Because I could also say run node server, which is the difference again, is that CMB is an entry point.
+1:49:28
+Come in so you can have multiple run commands with Linux commands, but ACMD just one.
+1:49:34
+And that marks for Docker file that this is the command that you want to execute
+1:49:39
+as an entry point. So that basically runs the server and that's it.
+1:49:47
+So now let's actually create the Docker file, and just like the Toku Campos file,
+1:49:52
+Docker file is part of the application code. So I'm going to create a new file here and I'm going to.
+1:50:01
+Paste here, the contents. So, again, we are basing of node image and actually instead
+1:50:09
+of just having the latest node, I'm going to specify in node version. So I'm going to take 13 minus Alpine.
+1:50:18
+So all this that you see here are text so I can use any of them as a tick.
+1:50:24
+So I'm going to say 13 minus Alpine. Like this,
+1:50:30
+so this is going to be a specific node image that I'm going to use as my base image,
+1:50:37
+let's actually stop here for a moment and take a little bit of a deep dove on this line.
+1:50:43
+So since we saw that dogor file is a blueprint for any Docker image,
+1:50:49
+that should actually mean that every Docker image that there is on Docker Hub should be
+1:50:55
+built on its own Docker file. Right. So if we actually go to let's actually look at
+1:51:02
+one of the latest versions, which is 13 minus Alpine. Let's click inside. And as you see,
+1:51:10
+this specific image has its own Docker file. And here, as you see, we have the same from that we just saw.
+1:51:18
+And this is what this node official image is based off, which is a base image, Alpine, three point ten. Right.
+1:51:27
+And then we have this environmental variable set and all this Lenos commands using run and some
+1:51:35
+other environmental variable. And you have this entry point, which is a script.
+1:51:40
+So you can also execute the whole Shell script instead of separate commands. And you have this final comment.
+1:51:47
+Right. So you don't have to understand any of this. I just want to demonstrate that every image
+1:51:54
+is based off another base image. Right. So in order to actually visually comprehend how these
+1:52:01
+layers stacking works with images, let's consider this simplified visualization.
+1:52:08
+So our own image that we're building up with the version 1.0 is going to be based on a node image
+1:52:15
+with a specific version. That's why we're going to specify from Node 13 Alpine in the node 13 alpine image,
+1:52:24
+as we saw in the Docker file, is based on Alpine based image with a version three point ten.
+1:52:31
+That's why it specifies from Alpine three point ten. So Alpine is lightweight based image
+1:52:38
+that we install node on top of it. And then we stole our own application on top of it. And basically this is how all the images are built.
+1:52:46
+So now let's go back and complete our Docker file. So we have the from specified.
+1:52:52
+We have the environmental variables specified. And in just a second, we're going to actually see these commands in action.
+1:53:00
+So let's copy that. And this is also very important. Docker file has to be called exactly like that.
+1:53:07
+You can just give it any name. It is always called Docker File, starting with a capital D, and that's it.
+1:53:15
+It's a simple text file, so just save it like this. And here you can see the highlighting
+1:53:20
+and this docker icon.
+1:53:26
+So now that we have a profile ready, let's see how to actually use it. So how do we build an image out of it?
+1:53:34
+So in order to build an image using Docker file, we have to provide two parameters.
+1:53:41
+One is we want to give our image a name in the take, just like all the other images have.
+1:53:47
+So we are going to do it using minus T, so we are going to call our image my app and we're going to give
+1:53:55
+it a take of 1.0. The tech could be anything you can even call it actually version one. It would matter.
+1:54:03
+So we are going to do one point. Zero in the second required parameter,
+1:54:08
+actually is a location of a Docker file,
+1:54:14
+because we want to tell Docker here, build an image using this Docker file.
+1:54:19
+And in this case, because we're in the same folder as the Docker file, we're just going to say current directory.
+1:54:25
+When we execute this, we're going to see that image is built.
+1:54:30
+And this is an idea of the image that was built.
+1:54:35
+Because I already have a. 13 Alpine on my laptop, this just used the the one I have lying
+1:54:43
+around locally for you, if it's the first time, you will actually see that it's pulling node
+1:54:49
+image from the Docker hub. So now with the Dockray images, I can actually see that my images here,
+1:54:57
+it says created two days ago. I don't know why. But anyways, so I have the image name, which is this one here,
+1:55:04
+and I have the name of the image and the take of the image. So if we go back to this diagram that we saw in the review,
+1:55:13
+so basically we've gone all these steps or we have simulated some of the steps. We've built the Joska application
+1:55:19
+using a docker containers. And once the application is ready, let's say we made the commit and we're we just simulated
+1:55:28
+what jenkins' server also does. So what Jenkins does is actually it takes the docker
+1:55:35
+file that we create. So we have to commit the Docker file into the repository with the code.
+1:55:42
+And Jenkins will then build a Docker image based on the Docker file.
+1:55:48
+And what is an important point here is that usually you don't develop lone, you are in the team,
+1:55:53
+so other people might want to have access to that. Up to image of your application that you developed,
+1:56:00
+it could be a tester maybe who wants to pull that image and tested locally, or you want that image to be deployed
+1:56:07
+on a development server. Right. In order to do that, you have to actually share the image so it is pushed
+1:56:14
+into a docker repository. And from there, either people can take it, for example, a tester,
+1:56:21
+maybe want to download the image from there and test it locally, or a development server can actually pull it from their.
+1:56:31
+So let's actually just run a container. I'm just going to say run the image name obviously,
+1:56:40
+and tick like this. And in this case,
+1:56:45
+I'm not going to specify any other options because we just want to see what's going on inside of the container. So I'm just going to run it. OK,
+1:56:54
+so the problem is that it can find the Sergius file, which is actually logical because we're not telling
+1:57:01
+it to look in the correct directory. So since we're copying all the resources in this directory,
+1:57:09
+service is going to be there as well. And this is another topic.
+1:57:15
+Whenever you adjust a docker file, you have to rebuild an image because the old
+1:57:20
+image cannot be overwritten, so to say. So what I'm going to do now is actually I'm going to delete
+1:57:26
+the one that I built. So I'm going to I'm going to actually take the image. This is how you delete an image.
+1:57:36
+But I can delete it because as it says, the docker is used by a stopped container.
+1:57:42
+So if I do Docker s minus a actually let's
+1:57:48
+go up to my app like this, I have to first delete the container.
+1:57:56
+So this is how you delete a container. It's Docker are M and 170 deleted the container.
+1:58:02
+I can delete an image. So the image deletion is RMI like this.
+1:58:09
+So if I do images now I see my image isn't there. OK, so we've modified the Docker file,
+1:58:16
+so let's rebuild it now. So Docker build.
+1:58:22
+OK. And let's see the images here. So let's start it again,
+1:58:34
+so it's my one point zero and let's run it and see the problem is fixed
+1:58:41
+up listening on PT.. Three thousand. So our app is running. So this one here, my EP 1.0,
+1:58:49
+first of all, we can see the logs here like this. We see that the EP is listening on three thousand.
+1:58:58
+We know everything is cool to actually just get a little bit more inside. Let's enter the containers.
+1:59:03
+Let's get the terminal, the command line terminal of the container and look around there.
+1:59:10
+So I'm going to say Docker Exec Interactive Terminal. I'm going to specify the container ID and the mesh
+1:59:20
+like this. And since being bashed doesn't work, we can actually try Shell.
+1:59:27
+So this is something you will also encounter because some containers to not have Besch installed.
+1:59:35
+So you have to connect using bean s h. So one of them
+1:59:42
+has to work always. So let's see in which rectory we are. So we are in the root directory and we see our
+1:59:49
+virtual file system there. And as you see, the cursor changes as well. So that means we're inside of a container.
+1:59:57
+So now let's actually check some of this stuff. So first of all, we specified some environmental variables
+2:00:03
+here in the Docker file. And this means that these environmental variables
+2:00:09
+have to be set inside the Docker environment. So if we do and we actually see the mongered to be user
+2:00:17
+name on here and I'm going to be password are set and there are some other environmental
+2:00:23
+variables automatically said we don't care about that. So another thing we can check is this directory
+2:00:29
+because remember, because with this line, we actually created this from a directory.
+2:00:36
+So let's see slash home slash app. And as you can see,
+2:00:42
+the directory was created and with the next line, we copied everything in the current folder.
+2:00:49
+So if we actually go and see Review in Finder.
+2:00:55
+So this is where the doctor father resides. So basically copied everything that is inside
+2:01:01
+of this directory, so all of this into the container. Now,
+2:01:06
+we don't actually need to have Dr. File and Dr. Campos and this other stuff in here,
+2:01:14
+because the only thing we need are the JavaScript files or if we build the JavaScript
+2:01:19
+application artifact, just the artifact. So let's go ahead and improve there. So what I'm going to do is I'm going to create an app
+2:01:28
+directory and I'm going to copy just the files that I'm going to need for starting an application
+2:01:36
+instead of a container. So I'm going to take those.
+2:01:42
+And the images as well, so all these are just external ones, we don't need them there and images,
+2:01:49
+the index extremophile packages and surges and no modules are inside of it.
+2:01:55
+So what we can do it now is instead of copying the whole directory where with the Docker files,
+2:02:01
+I just want to copy all the contents of EBP folder. So I'm going to do is I'm going to say copy
+2:02:10
+all the contents. And again, because we modify it a docker file,
+2:02:15
+we need to recreate the image in order to leave the Docker container terminal. You can actually exit.
+2:02:23
+So now we are on the host again. So if I do docker images again,
+2:02:29
+I have to first delete the container and then image. But in order to delete the container,
+2:02:35
+I have to first stop it. So now I can remove the container and now I can
+2:02:41
+actually remove the image that the container was based on.
+2:02:49
+And let's check again. So let's actually execute that build. Come in again.
+2:02:58
+So now that we have the image built, let's actually run it. So I'm going to say my app 1.0 and of course,
+2:03:08
+I could have executed with a minus D in a detached mode. It doesn't matter now. And if I do it or yes,
+2:03:15
+I see my image continue running and all that's actually enter the container again. So, team.
+2:03:25
+And as we learned, it was in age and again,
+2:03:32
+we're going to see the home EP and here we just have
+2:03:40
+the contents of EP directory, so no unnecessary doctor file look recomposed etc files,
+2:03:46
+which is actually how it's supposed to be. Or as I said, because I just had a couple of files here,
+2:03:53
+I copied all of them. But usually if have this huge application you would want to compress them and package them
+2:04:00
+into an artifact and then copy that artifact into a docker image container. OK, but as I said,
+2:04:09
+this was just for demonstration purposes, because I just wanted to show you how you can
+2:04:14
+actually started as a container and actually look inside. And in this case, we improved a couple of things.
+2:04:20
+But usually we would start this container from a docker composed as well, together with all the other docker images
+2:04:27
+that the application uses. And it's also doesn't have any ports open. So this is just for demonstration purposes.
+Private Docker Repository - Pushing our built Docker Image into a private Registry on AWS
+2:04:37
+So this video, we're going to create a private repository for darker images on A.W.
+2:04:43
+s.E.C Are there many more options for DOCA registries, among them, Nix's and Digital Ocean,
+2:04:50
+so we can see how to create a registry there, build and tag an image so that we can push
+2:04:55
+them into that repository. And in order to push the images into a private repository, you first have to log in to that repository.
+2:05:03
+So let's see how it all works.
+2:05:10
+So the first step is to actually create a private repository for Docker. It's also called Docker Registry. In this case,
+2:05:18
+we're going to do it on. Yes. So let's see.
+2:05:26
+So I already have an account on FWC, so the service that we're going to use is called a plastic
+2:05:34
+container registry. So you see our local container registry.
+2:05:41
+And because I don't have a repository there, yes, I am presenting with the screen, so in order to create a repository.
+2:05:49
+Click on Get Started. And here we have a repository name and we're
+2:05:55
+actually going to name it the name of the application that we have. So I'm actually going to name it my app.
+2:06:02
+This is the domain of the registry from. Yes. And this is the repository name, which is the same as my image name.
+2:06:11
+And don't worry about the other stuff right now and just create a repository. It's as simple as that. Now,
+2:06:18
+one thing I think specific to Amazon Container Service is that here you create a docker repository per image.
+2:06:27
+So you don't have a repository we have where you can actually push multiple images of different applications,
+2:06:34
+but rather for each image you have its own repository and you go inside of the repository here.
+2:06:40
+It's empty now, but what you store in a repository are the different tags or different
+2:06:46
+versions of the same image. So this is how the Amazon Container Service
+2:06:51
+actually works. There are other Docker registries that work differently. For example,
+2:06:56
+we create a repository and you can just throw all of your container images inside of that one repository.
+2:07:02
+So I think this is more or less specific for us. So anyways, we have a repository which is called my EBP,
+2:07:09
+and let's actually see how we can push the image that we have locally.
+2:07:14
+So actually check that once more. So we want to push this image here into that repository.
+2:07:23
+So how do we do that? If you click on this one, the view push comments will be highlighted.
+2:07:30
+This is different for each registry. But basically what you need to do in order to push an image into a repository
+2:07:36
+are two things. One, you have to login into the private
+2:07:41
+repository because you have to authenticate yourself. So if you're pushing from your local laptop
+2:07:47
+or local environment, you have to tell that private repository, hey, I have access to it. This is my credentials.
+2:07:55
+If Docker image is built and pushed from a jenkins' server, then you have to give jenkins' credentials to login
+2:08:03
+into the repository. So Tocal login is always the first step that you need to do. So here. A.W.
+2:08:12
+is actually provides a docker login come in for it years so it doesn't say docker login,
+2:08:19
+but in the background it uses one. So I'm going
+2:08:25
+to execute the slogan come in for us DOCA repository, so in the background it uses actually Docker
+2:08:31
+login to authenticate. So in order to be able to execute that, you need to have a command line interface
+2:08:39
+in the credentials configured for it. So if you don't, I'm going to put a link to the guide of how to do
+2:08:46
+that in the description. I have configured both of them so I can execute this command
+2:08:52
+and I should be logged in successfully to the Docker repository. So now I have authenticated myself
+2:08:58
+to the Docker repository here. So I'm able to push the image that I have
+2:09:06
+locally to that repository. But before I do that, it is one step I need to do. So I've already built my image,
+2:09:12
+so that's fine. And now I have to take my image. And if this come in here,
+2:09:18
+looks a little bit too complicated for you or too strange, let's actually go and look at images NameA
+2:09:23
+concepts in Docker repositories.
+2:09:29
+So this is the naming in doctor registries. This is how it works,
+2:09:35
+the first part of the image name, the image full name is the registry domain.
+2:09:40
+So there is the host port, et cetera, slash repository or image name and the tag. Now,
+2:09:49
+you may be wondering, every time we were pulling an image out of Docker Hub, we actually never had this complex
+2:09:56
+long name of the image. Right. So when we were pulling an image,
+2:10:01
+it looked like this Dr. Paul Mongul for pointing to the thing is with Docker Hub,
+2:10:07
+we're actually able to pull an image with a shorthand without having to specify a registry domain.
+2:10:14
+But this command here is actually a shorthand for this command. What actually gets executed in the background
+2:10:21
+when we say Dr. Paul Mongul is Dr. Paul, the registry domain. So Dr.
+2:10:26
+IOPS library is a registry domain. Then you have the image name and then you have the tag.
+2:10:31
+So because we were working with Docker Hub, we were able to use a shortcut, so to say in a private registries,
+2:10:40
+we can just skip that part because there's no default configuration for it. So in our case in us,
+2:10:48
+you see are what were you going to do? Is we going to execute Docker, pull the full registry domain of the repository?
+2:10:57
+This is what we're going to see here and a take and this is how it just generates the Docker
+2:11:03
+registry name. That's why we see this long image name with the tag here.
+2:11:09
+And we have to take our image like this. So let's go back and take a look at our images,
+2:11:15
+our image that we built again in under the repository. It says my app. Now,
+2:11:23
+the problem is we can just push an image with this name because when we say Docker, push my app like this,
+2:11:32
+Docker would know to which repository we're trying to push it by default. It will actually assume we're trying to push to Docker Hub,
+2:11:41
+but it's not going to work, obviously, because we want to push it to AWEX. So in order to tell Docker, you know what,
+2:11:49
+I want this image to be pushed to a repository with the name my app, we have to take the image.
+2:11:58
+So we have to include that information in the name of the image.
+2:12:03
+And that is why we have to take the image tag basically means that we are renaming our image
+2:12:09
+to include the repository domain or the address in the name. OK, and A.W. has already gives us.
+2:12:19
+The come in that we can execute, we want to use the specific version,
+2:12:25
+so I'm going to use 1.0 and both. So what this is going to do is it's going to rename
+2:12:32
+this is what tech does my app 1.0. This is what we have locally.
+2:12:38
+This is what the name is to this one here. So let's execute that and let's see what the outcome is.
+2:12:46
+And as you see, it took the image that we had made a copy
+2:12:51
+and renamed it into this one. So these two are identical images. They're just called in a different way.
+2:12:58
+And now when we go back, we see the doctor push come in.
+2:13:03
+So basically, this thing here is the same as Docker push and name
+2:13:11
+of the image and the take.
+2:13:16
+So this push command will tell Docker, you know what, I want to take the image.
+2:13:23
+We take 1.0 and push it into a repository at this address. So when I execute this command,
+2:13:33
+see the push command will actually push those layers
+2:13:38
+of the docker image one by one. This is the same thing as when we are pulling it.
+2:13:44
+We also pulled the images layer by layer and this is what happens in the reverse
+2:13:50
+direction when we push it. So this is also going to take a little bit.
+2:13:57
+so the push come in was complete and we should be able to see
+2:14:03
+that image in the repository now. So if I go inside. See,
+2:14:09
+I have image tag with one point zero. This is our tag here and. Pushed a time to digest,
+2:14:18
+which is the unique hash of that image and the image your eye. Which is, again,
+2:14:25
+the name of the image using the the repository address,
+2:14:31
+image, name or repository name in this case and the tech.
+2:14:38
+So now let's say I made some changes in the Docker file, you know, let's say I renamed this home from Slash to know that.
+2:14:51
+Like this, or what could also lead to needs to recreate
+2:14:56
+an image is obviously when I change something in the code red. So, you know,
+2:15:02
+let's say I were to delete this line because I don't want to console log to me in my code.
+2:15:12
+And now I have a different version of the application where I have changes in the application.
+2:15:18
+So now I want to have those changes in the new Docker image. So now let's build a new Docker image out of it.
+2:15:28
+So Docker built let's call it my app with a version one point one and a path to a doctor file.
+2:15:41
+And I have a second image, which is called my EP with version one point one.
+2:15:48
+So now, again, because I want to push this to a repository, I have to rename it to include the repository
+2:15:54
+address inside of it. So I'm going to do Dr. Teg.
+2:15:59
+The first parameter is the image that I want to rename,
+2:16:04
+and the second one is the name of that image, a new name.
+2:16:10
+So it's going to be the same as the previous one because the repository name and the address is the same.
+2:16:18
+Remember, we have one repository for one image,
+2:16:23
+but for different versions. So we're building a version one point one, so it should end up in the same repository.
+2:16:30
+So now here we have one point one. And if I take that and images, I have a second image here.
+2:16:40
+So I'm going to copy that and I'm going to do Dr. Built.
+2:16:48
+And do not forget the tech, it's important because it's part of the complete name, sorry,
+2:16:53
+it's Toker Push.
+2:16:59
+And now some of the leaders that I already pushed are they're only the ones
+2:17:04
+that changed are being pushed, so to say and also know that I just have to do Dr.
+2:17:11
+Log-in once at the beginning and then I can. Pull and push images from this repository as many
+2:17:19
+times as I once saw, Dr. Logan is done once. So now that is complete. Let's actually reload this.
+2:17:29
+So my repository now has two versions. So this is pretty practical. If you are, for example,
+2:17:36
+testing with different versions and you want to have a history of those image tags, if you want to, for example,
+2:17:43
+test a previous version. And I think in A.W. as the repository repository has a capacity
+2:17:50
+of holding up to 1000 image versions. So, for example,
+2:17:55
+my app here, you can have a thousand different tags of the same image. OK, so now again,
+2:18:03
+to compare it to the initial diagram that we saw for this complete flow, that's actually switched back to it quickly.
+2:18:10
+So here what we did is basically simulate how Jenkins would push an image to a Docker repository.
+2:18:17
+So whatever we did on our laptop will be the same commands, execute it on a doctor,
+2:18:24
+on the Jenkins server. And again, Jenkins user or Jenkins server user has to have
+2:18:30
+credentials to the Docker repository to execute Docker login. Depending on the registry,
+2:18:36
+a repository configuration will look different. And Jenkins and its tag the image and then push
+2:18:43
+it to the repository. And this is how it's done. And the next step, of course,
+2:18:48
+we need to use that image that is lying now in the repository and we going to see how it's pulled from that repository. And again,
+2:18:56
+we're going to do it on the local environment. But it's the same thing. That's a development server or any other
+2:19:02
+environment will actually execute. So in this video,
+Deploy our containerized app
+2:19:09
+we're going to see how to deploy an application that we built into a Docker image,
+2:19:14
+so after you package your application in a docker image and save it in the private repository,
+2:19:20
+you need to somehow deployed on a development server or integration server or whatever other environment.
+2:19:26
+And we're going to use Docker Campos to deploy that application. So let's imagine we have logged into a development server
+2:19:37
+and we want to run our image that we just pushed the repository.
+2:19:43
+So our my image and the mongered to be image, both the database and the Mongar express
+2:19:50
+on the development server so that my app image will be pulled from private repository of the in the to go
+2:19:59
+containers will be pulled from the Docker hub. So let's see actually how that would work.
+2:20:06
+So usually again, you have developed your application, you're done with it and you have created your own docker image.
+2:20:16
+Right now, in order to start an application on development server, you would need all the containers that make up
+2:20:24
+that application environment. So we have to be in Mongar Express already. So what we are going to do is here we are going to add
+2:20:33
+a new container in the list, which is going to be our own image.
+2:20:40
+So let's go ahead and copy the image from our repository.
+2:20:47
+So let's actually use the 1.0.
+2:20:55
+So, again, remember we said that this image name is a shortcut for having a doctor thought I ordered
+2:21:04
+thought library slash Mongul with like a specific version.
+2:21:10
+So instead of that, because we are pulling these images from a Docker hub,
+2:21:15
+we can actually skip that repository domain in front of the images. But here,
+2:21:21
+because we are pulling it from a private repository. So if we were to specify our image like this,
+2:21:27
+Docker will think that our image resides on Docker Hub. So we try to pull it from Docker Hub.
+2:21:33
+And of course, it won't find it because we have to tell Docker, go and look at this repository with this repost
+2:21:40
+store name in this take. And of course, in order to be able to pull this image or the docker
+2:21:45
+composed to be able to pull this image, the environment, where you executing this docker compost
+2:21:51
+file has to be logged into a document repository. So here is the development server has to pull the image
+2:22:00
+from the repository. What we would need to do on the development server is actually do a log in before we execute the docker compose.
+2:22:08
+And obviously, you don't need a doctor log in for backup. Those Mongar images will be pulled freely. OK,
+2:22:17
+so the next thing that we have to configure are the ports because obviously want to open the ports.
+2:22:25
+If we go back, we see that our application runs on Port three thousand,
+2:22:31
+so the port of the container or where the container is listening on is three thousand.
+2:22:37
+And here we can open the port on the host machine. So it's going to be three thousand to three thousand.
+2:22:45
+We have actually the environment variables inside of the Docker file, but obviously we could have configured them in the dock
+2:22:53
+or compose just like this. So it's an alternative. So this will be a complete docker compose file
+2:23:00
+that will be used on a development server to deploy all the all the applications inside. So,
+2:23:07
+again, if we're trying to simulate a development server that the first step will be to do the doctor log in. In this case,
+2:23:15
+you have this on command for logging into the repository,
+2:23:20
+which I have done already in this terminal. So the next step is to have the Docker compose file
+2:23:26
+available on this development server because we have to execute the Docker compose file because we're
+2:23:33
+simulating here. The way I would do it is I'm going to create a Mongo file in the current directory where I am.
+2:23:41
+I'm going to copy this. And safe,
+2:23:48
+so now I have my mango yaml file and now we can start
+2:23:53
+all three containers using Dr. Campo's comment and it's F up.
+2:24:08
+And here we see that it started on Three Thousand and Monga, to be an expert,
+2:24:14
+started as well.
+2:24:19
+So let's check the game now. And here we saw the database
+2:24:25
+is lost every time we recreate a container and of course, that's some good and we're going to learn how to preserve
+2:24:32
+the database data when the container restarts using docker volumes in the later tutorials,
+2:24:37
+because this is not an ideal state. OK, so now that we have a database and a collection, let's actually refresh in our application works as well.
+2:24:47
+Let's check.
+2:24:54
+Awesome. So our application works, let's refresh this one as well, and there is actually one thing that I needed
+2:25:01
+to change in the code to connect not just with Mongo DB. So let's actually go and look at that.
+2:25:08
+These are my handlers, you know, just where I connect to the Monga Déby database so that your eyes are the same.
+2:25:15
+And what I changed here is that it was a localhost before, so instead of localhost,
+2:25:21
+I changed it to Monga DB because this actually is a name of the container or of the service
+2:25:30
+that we specify here. So this actually leads back to the doctor network in how Dr.
+2:25:37
+Campos takes care of it. Is that in the your eye or when I connect one
+2:25:42
+application in a container with another one in another container, I don't have to use this localhost anymore.
+2:25:50
+Actually, I wouldn't even need to use the port even because I have all that information.
+2:25:57
+So the hostname and the port number in that configuration.
+2:26:02
+So my application will be able to connect Monga to be using the service name. And because of that,
+2:26:08
+you don't have to specify here a local host and the port number, which is actually even more advantaged when you consider
+2:26:16
+using docker containers to run all of your applications because it makes the connectivity
+2:26:23
+between them even more easier.
+2:26:28
+And that actually concludes the this diagram that we saw previously,
+2:26:33
+we have gone through all of the steps where we saw how to develop JavaScript application locally
+2:26:40
+with docker containers. Then we saw how to build them into an image just
+2:26:46
+like a continuous integration build will do it. Then we pushed it into a private repository
+2:26:52
+and we simulated a development server where we pulled the image from private repository.
+2:26:57
+In the other images from the Docker Hop, where we started the whole application setup with our own
+2:27:03
+application in the two Mongul applications using a Docker campus,
+2:27:09
+which is how you would deploy an application on a Web server so that no testers or other developers will be
+2:27:15
+able to access the development server and actually try out the application that you just deployed.
+2:27:21
+Or you can also use it for DIMOS.
+Docker Volumes - Persist data in Docker
+2:27:29
+So in this video, we're going to learn about Dr. Volumes in a nutshell, Dr. Volumes are used for data,
+2:27:36
+persistence in doctor. So, for example, if you have databases or other stateful applications,
+2:27:42
+you would want to use Dr. Volumes for that. So what are the specific use cases when you need
+2:27:48
+doctor volumes? So a container runs on a host that said we have a database container and a container
+2:27:55
+has a virtual file system where the data is usually stored.
+2:28:01
+But here there is no persistence, so if I were to remove the container or stop
+2:28:06
+it and restart the container, then the data in this virtual file system is gone.
+2:28:11
+And it starts from a fresh state, which is obviously not very practical because I want
+2:28:16
+to save the changes that my application is making in the database, and that's where I need volumes.
+2:28:23
+So what are the Docker volumes exactly? So on a host, we have a physical file system. Right.
+2:28:31
+And the way volumes work is that we plug the physical file system. Perth. Could be a folder, a directory,
+2:28:40
+and we plug it into the containers file system. So in simple terms,
+2:28:45
+a directory folder on a host file system is mounted into a directory of folder in the virtual
+2:28:53
+file system of Docker. So what happens is that when a container writes to its file system,
+2:29:00
+it gets replicated or automatically written on the host file system directory and vice versa.
+2:29:06
+So if I were to change something on the host file system, it automatically appears in the container as well.
+2:29:12
+So that's why when a container restarts, even if it starts from a fresh start in its
+2:29:17
+own virtual file system, it gets the data automatically from that from the host because the data is still there.
+2:29:23
+And that's how data is populated on the up of a container every time you restart. Now,
+2:29:29
+there are different types of docker volumes and so different ways of creating them. Usually the way to create Docker volumes
+2:29:36
+is using Docker Run Command. So in the document there's an option called minus V,
+2:29:42
+and this is where we define the connection or the reference between the host directory
+2:29:48
+and the container directory. And this type of volume definition is called
+2:29:53
+host volume. And the main characteristic of this one is that you decide where on the host file
+2:30:00
+system that references made. So which folder on the host file system
+2:30:05
+you mount into the container. So the second type is where you create a volume just
+2:30:11
+by referencing the container directory so you don't specify which directory on the host
+2:30:19
+should be mounted. But that's taking care of the docker itself. So that directory is, first of all,
+2:30:25
+automatically created by Docker under the Varly Docker volumes. So for each container there will be a folder
+2:30:32
+generated that gets mounted automatically to the container. And this type of volumes are called anonymous
+2:30:38
+volumes because you don't have a reference to this automatically generated folder. Basically,
+2:30:45
+you just have to know the path. And the third volume type is actually an improvement of the anonymous volumes and it specifies the name
+2:30:55
+of that folder on the host file system and the name is up to you.
+2:31:00
+It just to reference the directory and that type of volumes are called named volumes. So in this case,
+2:31:06
+compared to anonymous volumes, you you can actually reference that volume just
+2:31:11
+by name so you don't have to know exactly the path. So from these three types,
+2:31:16
+the mostly used one and the one that you should be using in a production is actually the named
+2:31:22
+volumes because there are additional benefits to letting Docker actually manage those
+2:31:28
+volume directories on the host. Now they showed how to create Docker volumes using Docker run commands.
+2:31:35
+But if you're using Docker Campo's, it's actually the same. So this actually shows how to use volume definition's
+2:31:43
+in a dark recomposed, and this is pretty much the same as in Docker run commands. So we have volume attributes and underneath
+2:31:50
+you define your volume definition, just like you would in these miners. We option and here we use a named volume.
+2:31:57
+So DBE the data will be the name reference name that you can just think of. Could be anything and inva.
+2:32:05
+The my school data is the path in the container. Then you may have some other containers and at the end.
+2:32:12
+So on the same level as the services you would actually list all the volumes
+2:32:18
+that you have defined. You define at least the volumes that you want to mount into the containers.
+2:32:24
+So if you were to create volumes for different containers, you would list them all here and on the container level,
+2:32:31
+then you actually define and which path that specific volume can be mounted.
+2:32:37
+And the benefit of that is that you can actually mount a reference of the same folder on the host
+2:32:44
+to more than one containers, and that would be beneficial if those containers need to share the data. In this case,
+2:32:52
+you would want the same volume name or reference to two different containers and you can mold them
+2:32:58
+into different path inside of the container even.
+Volumes Demo - Configure persistence for our demo project
+2:33:05
+In this video, we are going to look at Dr. Volumes in practice, and this is a simple no just to be application
+2:33:13
+that we are going to attach the volume to so that we don't lose the database data every time we restart the container.
+2:33:23
+So let's head over to the console and I'm going to start the Monga debate with the Campos,
+2:33:28
+so this is how the campus looks like. We're going to start the Mongar debate on container in the Mongul express container so that we have
+2:33:36
+a UI to it. So I'm going to execute the Dr. Campos.
+2:33:44
+Which is going to start to be in the Mongar express.
+2:33:51
+So when he started, I'm going to check that Mongol Express is running on Port 80 80.
+2:33:57
+And here we see just the default databases. So these are just created by default on startup.
+2:34:04
+And we're going to create our own one for the No JS application. And inside of that database,
+2:34:10
+I'm going to create user's collection. So these are the prerequisites or these are the things that my
+2:34:18
+Narges application needs. So this one here. In order to connect to the database, my DP,
+2:34:26
+this is what we just created, might be an inside of that to the collection
+2:34:32
+called users, so they start the application.
+2:34:38
+Which is running on three thousand here.
+2:34:43
+And this is our EP, which when I read something here.
+2:34:51
+Will write the changes to my database. Now, if I were to restart now,
+2:34:57
+the Hmong would be container. I would lose all this data, so because of that,
+2:35:03
+we're going to use named volumes inside of the Dr Campos file to persist all this data in the Mungindi.
+2:35:12
+Let's head over to the campus. So the first step is to define what volumes I'm going to be
+2:35:18
+using in any of my containers and I'm going to do that on the services level.
+2:35:24
+So here I find the list of all the volumes that I'm going to need in any of my containers.
+2:35:31
+And since we need data persistency for Monga to be, we're going to create Mongul data volume here. Now,
+2:35:40
+this is going to be the name of the volume reference, but we also need to provide here a driver local.
+2:35:48
+So the actual storage pairs that we're going to see later, once it's created, it is actually created by Tokura itself.
+2:35:55
+And this is a kind of an information, additional information for Docker to create that physical storage on a local file system.
+2:36:04
+So once we have a name reference to a volume defined, we can actually use it in the container. So here.
+2:36:13
+I'm going to say volumes. And here, I'll define a mapping between the Mongo data
+2:36:21
+volume that we have on our host, and the second one will be the path inside of the Mongar
+2:36:28
+to be container. It has to be the path where Mongar to explicitly persist its data. So, for example,
+2:36:36
+if you check it out online. You see that the default path where Monga be stores,
+2:36:42
+its data is data slash, data slash deep and we can actually check that out.
+2:36:47
+So if I say Dunkerque s and go inside the container.
+2:36:55
+It's minus I t.
+2:37:00
+I can actually see the data deep in here is all the data
+2:37:06
+that Mongo DB actually holds, but this is, of course, only the container. So in the container restarts,
+2:37:13
+the data get regenerated. So nothing persists here. So this is the path inside of the container,
+2:37:20
+not on my host that we need to reference in the volumes here. So we're attaching our volume on the host to data slash data
+2:37:32
+slash deep inside of a container. So, for example, for my school, it's going to be for my school for postgrads.
+2:37:41
+It's also going to be whateva Leape PostgreSQL data so each
+2:37:47
+database will have its own. So you'd have to actually find the right one.
+2:37:52
+So what this means is that all the data that we just saw here, all of this will be replicated on a container
+2:37:58
+stored up on our host on this persistent volume that we defined here and vice versa,
+2:38:05
+meaning when a container restarts, all the data that is here will be replicated inside of that directory,
+2:38:12
+inside of a container. So now that we have defined that, let's actually restart the document post.
+2:38:22
+And. We started.
+2:38:29
+So once we create the data. And I'm going
+2:38:34
+to the collection and let's actually change this one.
+2:38:43
+All here. And update it so we have the data here.
+2:38:50
+So now that we have the persistent volume defined, if I were to restart all these containers,
+2:38:57
+these data should be persisted soon. The next restart, I should see the database might be
+2:39:03
+collection and the entry here. So let's do that.
+2:39:10
+I'm going to do. Great, so let's check. See, the database is here, the collection is here, and the entry has persisted.
+2:39:30
+So now let's actually see where the doctor volumes are located on our local machine,
+2:39:36
+and that actually differs between the operating systems, for example, on a Windows laptop or a computer,
+2:39:42
+the path of the Docker volume will be its program data docker volumes.
+2:39:48
+The program data Docker folder actually contains all the other container information.
+2:39:54
+So you would see other folders in the Docker directory. Besides the volumes on Linux,
+2:40:01
+the path is actually for leap volumes, which is comparable to the Windows pad.
+2:40:08
+So this is where the docker saves all this configuration and the data. And on the Mac, it's also the same one inside of this volumes directory.
+2:40:17
+You actually have a list of all the volumes that one or many containers are using,
+2:40:22
+and each volume has its own hash, which is or which has to be unique and then slash
+2:40:30
+underscore data will actually contain all the files and all the data that is persisted.
+2:40:35
+Let's head over to the come in line and actually see the volumes that we persisted for longer.
+2:40:43
+Now, an interesting note here is that if I were to go to this path that I just showed you in the presentation,
+2:40:50
+which is var leave docker, you see there is no such a directory.
+2:40:56
+So that could be a little bit confusing. But the way it works on MK, specifically on Linux,
+2:41:02
+you would actually have that PEV directly on your host, but then make it a little bit different.
+2:41:08
+So basically what happens is that docker for mech application seems to actually create a Linux VM
+2:41:16
+in the background and store all the Docker information or Docker data about the containers and the volumes,
+2:41:22
+et cetera, inside of that VMS storage. So if we execute this command here.
+2:41:27
+So this is actually the physical storage on my laptop that I have where all the data is stored.
+2:41:33
+But if I execute this command, I actually get the terminal of that VM. And inside here,
+2:41:41
+if I look, I have a virtual different virtual filesystem. And I can find that path that I showed you here,
+2:41:50
+so it's Vare Leap, Dr. See,
+2:41:55
+so I have all this stock information here. I have the containers folder and I have
+2:42:01
+volumes folder. So this is the one we need. Some of those actually go to the volumes,
+2:42:08
+and this is a list of volumes that I have created and this is the one that came from our who compose,
+2:42:16
+right? This is the name of our F this is this is what Dr. Campos actually takes as the name.
+2:42:23
+You can actually take a look here. So when it's creating these containers,
+2:42:28
+it depends this name as a prefix. And then there is Mongo to be in our volume has the same pattern.
+2:42:36
+It has the prefix and then mongered data. This is the name that we defined here.
+2:42:42
+So now if we look inside of that Monga data volume directory.
+2:42:49
+We see that underscore data. This would be the anonymous volumes,
+2:42:56
+so basically here you don't have a name reference, it's just some random unique ID,
+2:43:02
+but it's the same kind of directory as this one here. The difference being that this one has a name.
+2:43:08
+So it's more it's easier to reference it with a name. So this is anonymous volume. This is a name volume.
+2:43:16
+But the contents will be used in the same way. So here is you see in this underscore data,
+2:43:22
+we have all the data that Mongered uses. So this will be where it gets thirtyfold,
+2:43:29
+databases and the changes that we make through our application inside. And if I go inside of the containers. Remember,
+2:43:36
+this volume is attached to.
+2:43:41
+Mongo DB and is replicated inside of the container, underpays data slash Debe,
+2:43:48
+so if we go inside of the container. Actually, right here.
+2:43:55
+Yes.
+2:44:02
+They should be we'll see actually the same kind of data here,
+2:44:08
+so we have all this index and collection files just like we did in this one.
+2:44:13
+So now whenever we make changes to our application, for example, we change it to Smith and.
+2:44:23
+This will make the container update its data and that will cascade into these volumes directory that we have
+2:44:29
+here so that on the next stop of a container, when the data SDB is totally empty,
+2:44:35
+it will actually populate this directory with the data from this persistent volume so that we will see all
+2:44:43
+the data that we created through our application again on startup. And that's how volumes work.
+2:44:52
+In order to end that screen session that we just started, because it doesn't work in this case,
+2:44:59
+somehow on Mac, you can actually click on control a key and then just type Y. And the session will be closed.
+2:45:08
+So when you do screen Ellis, you should see actually it's terminating.
+Wrap Up
+2:45:13
+Congratulations. You made it to the end. I hope you learned a lot and got some valuable
+2:45:18
+knowledge from this course. Now that you've learned all about containers and technology,
+2:45:24
+you can start building complex applications with tens or even hundreds of containers. Of course,
+2:45:30
+these containers would need to be deployed across multiple servers in a distributed way.
+2:45:36
+You can imagine what overhead and headache it would be to manually manage those hundreds of containers.
+2:45:42
+So as a next step, you can learn about container, orchestration, tools and communities in particular,
+2:45:49
+which is the most popular tool to automate this task. If you want to learn about communities,
+2:45:55
+be sure to check out my tutorials on that topic and subscribe to my channel for more content on modern day tools. Also,
+2:46:03
+if you want to stay connected, you can follow me on social media or join the private Facebook group. I would love to see you there.
+2:46:11
+So thank you for watching and see you in the next video.
+
+
+============================================================================================
+
+

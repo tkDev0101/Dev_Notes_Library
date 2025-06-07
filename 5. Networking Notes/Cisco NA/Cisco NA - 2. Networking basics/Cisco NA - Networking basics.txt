@@ -1,0 +1,71 @@
+Cisco NA - Networking basics Overview
+
+
+
+The internet is built on computer networks. So no matter what kind of tech career you are interested in, it is essential to know some networking basics! Whether you are preparing for a career in networking, refreshing your knowledge for an industry-recognized certification, or are just curious about what networking is all about, this is the place for you.
+
+This course covers the foundation of networking and network devices, media, and protocols. You will observe data flowing through a network and configure devices to connect to networks. Finally, you will learn how to use different network applications and protocols to accomplish networking tasks. The knowledge and skills you gain can give you a starting point to find a rewarding career in tech.
+
+
+
+Here's what you will learn.
+
+My Knowledge Check (beta)
+
+Course Introduction
+
+Module 1: Communication in a Connected World
+
+Module 2: Network Components, Types, and Connections
+
+Module 3: Wireless and Mobile Networks
+
+Module 4: Build a Home Network
+
+Checkpoint Exam: Build a Small Network
+
+Module 5: Communication Principles
+
+Module 6: Network Media
+
+Module 7: The Access Layer
+
+Checkpoint Exam: Network Access
+
+Module 8: The Internet Protocol
+
+Module 9: IPv4 and Network Segmentation
+
+Module 10: IPv6 Addressing Formats and Rules
+
+
+
+Module 11: Dynamic Addressing with DHCP
+
+Checkpoint Exam: The Internet Protocol
+
+Module 12: Gateways to Other Networks
+
+Module 13: The ARP Process
+
+Module 14: Routing Between Networks
+
+Checkpoint Exam: Communication Between Networks
+
+Module 15: TCP and UDP
+
+Module 16: Application Layer Services
+
+Module 17: Network Testing Utilities
+
+Checkpoint Exam: Protocols for Specific Tasks
+
+Networking Basics Course Final Exam
+
+
+
+
+
+
+
+
