@@ -1,0 +1,58 @@
+Microsoft Certified: Azure
+
+
+
+------------------------------------
+
+Resources
+
+1. AZ-900 Azure Fundamentals Certification Course 
+	- by John Savill's Technical Training
+	- https://youtube.com/playlist?list=PLlVtbbG169nED0_vMEniWBQjSoxTsBYS3
+
+
+2. Microsoft Certified: Azure Fundamentals
+	- https://learn.microsoft.com/en-us/credentials/certifications/azure-fundamentals/
+
+
+------------------------------------
+NOTES
+
+1. Microsoft likes to be extremely particular with their questions and has a style of asking them, they also like to, in my opinion, ask things in a very stupid manner to try and trick you on occasion
+
+2. Do the official practice questions. 
+ - You'll see the button to start the practice quiz on the exam booking page. 
+ - You can take it as many times as you want
+	- https://learn.microsoft.com/en-us/credentials/certifications/azure-fundamentals/
+
+3. Once you're confident you can score 80-90% consistently, book your exam (you need 70% to pass)
+
+4. But this is the most important thing, once you're confident with the practice exams, you're set 
+
+
+
+====================================================
+
+1. AZ-900 fundamentals
+
+2. AZ-104 Administrator Associate 
+3. AZ-204 Developer Associate 
+
+4. AZ-305 Solutions Architect Expert 
+5. AZ-400 DevOps Engineer Expert 
+
+
+------------------------------------
+
+1. https://learn.microsoft.com/en-us/credentials/certifications/azure-fundamentals/?practice-assessment-type=certification
+2. https://learn.microsoft.com/en-us/credentials/certifications/azure-administrator/?practice-assessment-type=certification
+3. https://learn.microsoft.com/en-us/credentials/certifications/azure-developer/?practice-assessment-type=certification
+4. https://learn.microsoft.com/en-us/credentials/certifications/azure-solutions-architect/
+5. https://learn.microsoft.com/en-us/credentials/certifications/devops-engineer/
+
+
+------------------------------------
+
+
+
+

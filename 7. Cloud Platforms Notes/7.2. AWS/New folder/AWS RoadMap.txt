@@ -1,0 +1,135 @@
+
+Tech Stack for Cloud Developer, Solutions Architect & DevOps Engineer
+
+
+Programming Languages: 
+	- Python, Bash (for automation) 
+	
+Operating Systems:  
+	- Windows 
+	- Linux (Ubuntu, Amazon Linux, CentOS)
+
+Version Control: 
+	- Git, 
+	- GitHub, 
+	- GitLab, 
+	- Bitbucket 
+
+
+-------------------------------
+	[ AWS ]
+
+Compute: 
+	- EC2,  
+	- Lambda 
+	- AWS Batch
+	- AWS Fargate,  
+	- AWS App Runner 
+	- AWS Auto Scaling, 
+
+Storage: 
+	- S3, 
+	- EFS, 
+	- EBS, 
+	- FSx, 
+	- DynamoDB  
+
+Databases: 
+	- Amazon RDS (PostgreSQL/MySQL), 
+	- Amazon Aurora  
+	- Redshift  
+	- DynamoDB, 
+	- Amazon ElastiCache
+
+Networking & Security: 
+	- AWS API Gateway, 
+	- AWS Cognito, 
+	- AWS IAM 
+	- AWS VPC, 
+	- Route 53, 
+	- AWS WAF 
+	- AWS Security Hub, 
+	- GuardDuty
+
+Serverless Technologies: 
+	- AWS Lambda,  
+	- API Gateway, 
+	- AWS AppSync , 
+	- AWS Step Functions,
+
+Infrastructure as Code (IaC): 
+	- AWS CDK (Python/TypeScript), 
+	- Pulumi
+	- AWS SAM 
+	- Terraform, 
+	- AWS CloudFormation, 
+
+Containerization & Orchestration: 
+	- Docker, 
+	- AWS EKS, 
+	- Amazon ECS
+	- AWS Fargate,  
+	- Kubernetes (EKS), 
+	- Helm, 
+	- ArgoCD
+
+CI/CD (Continuous Integration/Delivery): 
+	- AWS CodePipeline, 
+	- AWS CodeBuild, 
+	- Jenkins, 
+	- GitHub Actions, 
+	- ArgoCD
+
+Monitoring & Logging: 
+	- Grafana, 
+	- ELK Stack
+	- AWS X-Ray, 
+	- AWS App Mesh 
+	- AWS Config, 
+	- AWS Trusted Advisor 
+	- AWS CloudWatch, 
+	- CloudWatch Logs, 
+	- Prometheus, 
+
+Automation & Configuration Management: 
+	- Boto3 (Python AWS SDK), 
+	- AWS CLI, 
+	- Ansible, 
+	- AWS Systems Manager
+
+Security & Compliance: 
+	- AWS IAM, 
+	- AWS WAF, 
+	- AWS KMS, 
+	- AWS Cognito, 
+	- AWS Shield,  
+	- AWS Security Hub, 
+	- AWS Inspector, 
+
+Message Queues & Event-Driven Systems: 
+	- Amazon SNS, 
+	- SQS,  
+	- Kinesis 
+	- Kafka
+	- Amazon SNS, 
+	- EventBridge,
+ 
+Machine Learning & Data Analytics: 
+	- AWS SageMaker (Optional), 
+	- AWS Glue, 
+	- AWS Athena 
+	- AWS QuickSight  
+	- AWS CloudTrail
+
+Hybrid & Enterprise Cloud: 
+	- AWS AppSync, 
+	- AWS EventBridge 
+	- AWS Direct Connect, 
+	- AWS Transit Gateway 
+	- AWS VPN, 
+	- AWS Transit Gateway
+
+
+So This is what i was kind of expectinging, am i on the right track?
+
+

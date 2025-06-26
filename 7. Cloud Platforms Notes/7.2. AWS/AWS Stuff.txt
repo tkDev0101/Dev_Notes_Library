@@ -12,34 +12,30 @@ take those notes and google docs it
  ● ○  -> → • 
 
 
-
+------------------------------------
  → AWS EDUCATE
 
 https://www.awseducate.com/student/s/content
 
 
+------------------------------------
+ → Cloud Practitioner Essentials course
+	Course level: Fundamental    
+	Duration: 7 hours
+
+https://explore.skillbuilder.aws/learn/courses/134/aws-cloud-practitioner-essentials
+
+
+------------------------------------
  → Amazon SDE Intern Online Assessment (OA) and Interview Prep Course
 
 https://d1fkqbr9gy4tb4.cloudfront.net/index.html#/
 
 
+------------------------------------
  → Online assessment prep for SDE roles
 
 https://amazon.jobs/content/en/how-we-hire/university-roles/sde
-
-
-
- → Cloud Practitioner Essentials course
-	Course level: Fundamental    
-	Duration: 7 hours
-
-
-https://explore.skillbuilder.aws/learn/courses/134/aws-cloud-practitioner-essentials
-
-
-
-
-
 
 
 ------------------------------------
