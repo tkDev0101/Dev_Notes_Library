@@ -13,8 +13,8 @@ check python version
   • python --version
 
 Create a virtual environment:
-  • python -m venv env
-  • source env/bin/activate   ||   .\env\Scripts\activate
+  • python -m venv envL envW
+  • source envL/bin/activate   ||   .\envW\Scripts\activate
 
 install Django using pip, Python’s package manager
   • pip install django   ||   python -m pip install django
@@ -43,6 +43,17 @@ In project_name/settings.py, find INSTALLED_APPS and add:
 
 Go to http://127.0.0.1:8000 and confirm it works ✅
 
+
+
+manage.py
+  ← The entry point to your project
+  ← Command-line tool to run/manage your project
+  ← Think of it like your project’s “admin terminal.”
+
+  • python manage.py makemigrations
+  • python manage.py migrate
+  • python manage.py runserver
+  • python manage.py createsuperuser
 
 -----------------------------------------------
 🔧 Phase 2: Set Up URLs, Views, and Templates
@@ -112,10 +123,10 @@ Django will look for templates inside templates/iTaskApp/ by default when using 
 
 In iTaskApp/views.py:
 __________________________________________________
-from django.shortcuts import render
-
-def index(request):
-    return render(request, "iTaskApp/index.html")
+from django.http import HttpResponse              
+                                                                                           
+def index(request):                                                     
+    return HttpResponse("Hello, World!")
 __________________________________________________
 
 
