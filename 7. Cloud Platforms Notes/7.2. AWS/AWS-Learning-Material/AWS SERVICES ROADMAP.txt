@@ -1,0 +1,155 @@
+AWS SERVICES ROADMAP 
+
+
+\=========================================================================================
+📍 AWS SERVICES ROADMAP TO BECOME A CLOUD ENGINEER (PRODUCTION-LEVEL)
+=====================================================================
+
+1. CORE AWS SERVICES (MUST KNOW)
+
+   * IAM (Identity & Access Management)
+   * EC2 (Elastic Compute Cloud)
+   * S3 (Simple Storage Service)
+   * RDS (Relational Database Service)
+   * VPC (Virtual Private Cloud)
+   * CloudWatch (Monitoring & Logging)
+   * Route 53 (DNS and Domain Management)
+   * CloudTrail (Audit Logs)
+
+
+2. COMPUTE SERVICES
+
+   * EC2: launch, configure, and secure instances
+   * Auto Scaling Groups
+   * Elastic Load Balancer (ALB/NLB)
+   * Lightsail (optional - simplified compute service)
+   * AWS Lambda (Serverless compute)
+   * AWS Batch (Batch jobs)
+   * AWS Fargate (Serverless containers)
+   * AWS App Runner (Deploy containerized web apps)
+
+
+3. STORAGE SERVICES
+
+   * S3: storage classes, versioning, lifecycle, encryption
+   * EBS: volumes, snapshots, performance types
+   * EFS: shared network file system
+   * Glacier: archival storage
+   * FSx (Windows/Linux file systems)
+
+
+4. DATABASE SERVICES
+
+   * RDS (MySQL, PostgreSQL, MariaDB, SQL Server)
+   * Amazon Aurora (MySQL/PostgreSQL-compatible)
+   * DynamoDB (NoSQL key-value store)
+   * ElastiCache (Redis/Memcached)
+   * Redshift (Data warehouse)
+   * DocumentDB (MongoDB-compatible)
+
+
+5. NETWORKING & CONTENT DELIVERY
+
+   * VPC: CIDR, subnets, route tables, internet/NAT gateways
+   * Security Groups and NACLs
+   * Elastic IPs
+   * Route 53 (DNS, domain registration, routing policies)
+   * CloudFront (CDN)
+   * VPC Peering & Transit Gateway
+   * AWS Global Accelerator
+   * PrivateLink & Interface Endpoints
+
+
+
+
+6. SERVERLESS ARCHITECTURE
+
+   * AWS Lambda
+   * API Gateway (REST & HTTP APIs)
+   * DynamoDB
+   * Step Functions
+   * EventBridge (event bus)
+   * AppSync (GraphQL APIs)
+   * S3 Triggers with Lambda
+
+
+7. INFRASTRUCTURE AS CODE
+
+   * CloudFormation (declarative templates)
+   * AWS CDK (infrastructure as code with Python/TypeScript)
+   * AWS SAM (for serverless applications)
+   * Parameter Store & Secrets Manager (secure config storage)
+
+
+8. DEVOPS & CICD
+
+   * CodeCommit (Git repo)
+   * CodeBuild (automated builds)
+   * CodeDeploy (automated deployments)
+   * CodePipeline (full CI/CD pipelines)
+   * Elastic Beanstalk (optional – simplified app deployment)
+
+
+9. MONITORING, LOGGING & TROUBLESHOOTING
+
+   * CloudWatch Metrics and Alarms
+   * CloudWatch Logs and Log Insights
+   * AWS X-Ray (application tracing)
+   * AWS Config (resource change tracking)
+   * Trusted Advisor (best practices and cost checks)
+   * Systems Manager (remote management)
+
+
+10. SECURITY & COMPLIANCE
+
+* IAM (users, roles, policies, groups)
+* AWS KMS (Key Management Service)
+* AWS WAF (Web Application Firewall)
+* AWS Shield (DDoS Protection)
+* AWS Inspector (vulnerability scanning)
+* GuardDuty (threat detection)
+* Security Hub (security posture dashboard)
+* AWS Organizations (multi-account setup)
+* SCPs (Service Control Policies)
+
+
+
+11. APPLICATION INTEGRATION & MESSAGING
+
+* Amazon SQS (Simple Queue Service)
+* Amazon SNS (Simple Notification Service)
+* Amazon EventBridge
+* Amazon MQ
+* Step Functions
+* Kinesis (real-time data streams)
+
+12. ANALYTICS & BIG DATA (ADVANCED/OPTIONAL)
+
+* AWS Glue (ETL service)
+* Amazon Athena (query S3 data with SQL)
+* Amazon QuickSight (BI dashboards)
+* Amazon Redshift (data warehousing)
+* EMR (Elastic MapReduce – Hadoop, Spark)
+
+13. HYBRID CLOUD & ENTERPRISE INTEGRATION
+
+* AWS Direct Connect (dedicated network link)
+* AWS Site-to-Site VPN
+* AWS Storage Gateway
+* AWS Snowball / Snowcone (data transfer appliances)
+* AWS Control Tower (governance and account setup)
+* AWS Organizations & Service Catalog
+
+\=========================================================================================
+🎯 HOW TO USE THIS ROADMAP
+==========================
+
+* Start from the top and master each category step-by-step
+* Focus on **Core + Compute + Storage + IAM + VPC** first
+* Apply services in **real-world projects** and document your progress
+* Use **AWS Free Tier** for practice
+* Review each service's official **AWS Documentation and FAQs**
+* Revisit this list every month and check off what you've mastered
+
+
+
