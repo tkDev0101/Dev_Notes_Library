@@ -1,5 +1,6 @@
 Starting Prompt Instructions
 
+
 I know chat gpt has some sort of restrictions on limit/length and i cant keep talking in the same chat forever, so as much as i want this to be as detailed as possible please take the length into limitation. I don't want to be building this project and then half way get a notification saying this chat has expired and i need to start working in a new chat
 
 I want to become a cloud engineer and want to start making AWS projects. 
