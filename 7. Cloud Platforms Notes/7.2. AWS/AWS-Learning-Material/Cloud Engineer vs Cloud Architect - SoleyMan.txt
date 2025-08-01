@@ -1,0 +1,696 @@
+Cloud Engineer vs Cloud Architect - Which One Should You Choose?
+
+
+In this video, I breakdown what these roles actually are, the salary ranges, essential skills, market demand and real job responsibilities.
+
+At the end, I reveal which career path I recommend starting with first.
+
+
+0:00
+The cloud computing market is growing at
+0:02
+22% this year, reaching $980 billion.
+0:06
+It's one of the fastest growing
+0:07
+industries in tech, projected to exceed
+0:09
+$5 trillion in the next decade. Now,
+0:12
+this explosion is creating unprecedented
+0:14
+opportunities for anyone looking to
+0:17
+break into the industry. And if you're
+0:19
+considering a career in the cloud, then
+0:21
+you've probably found yourself stuck
+0:23
+between these two different paths: cloud
+0:25
+engineer or cloud architect. The
+0:27
+question is which one should you choose
+0:30
+and is the conventional wisdom about
+0:32
+these career paths actually setting you
+0:35
+up for failure? I'm Slayon. I've worked
+0:37
+in tech for a decade and are on my own
+0:39
+cloud security consultancy. Now through
+0:41
+my academy I've helped more than 500
+0:44
+students learn cloud and AI with my
+0:46
+first principles blueprint for
+0:48
+engineers. I've personally worked in
+0:49
+both of these roles. So, in this video,
+0:52
+I'll reveal what they involve, the
+0:54
+skills that you need, and the salaries
+0:56
+that you could expect because by the end
+0:57
+of this video, you'll know exactly which
+1:00
+path aligns best with your own personal
+1:02
+goals. Now, before we dive deep, I need
+1:04
+to clarify something. There's often
+1:06
+confusion about what these titles
+1:09
+actually mean. Cloud engineers are
+1:10
+hands-on implementers. They are actually
+1:13
+building and deploying cloud
+1:14
+infrastructure. Cloud architects focus
+1:16
+more on the design side of things.
+1:18
+They're architecting the systems that
+1:19
+cloud engineers will then go and deploy.
+1:22
+Now, you may have heard of a solutions
+1:23
+architect as well. They focus more on
+1:25
+the highlevel business strategy. In
+1:28
+terms of career progression, it
+1:29
+typically looks like this. You go from
+1:31
+cloud engineer to senior cloud engineer
+1:33
+to cloud architect and then finally you
+1:35
+go to solutions architect. Now that we
+1:38
+understand the landscape, let's dive
+1:39
+into what these two roles actually
+1:41
+involve. Cloud engineers are very much
+1:44
+hands-on implementers who build and
+1:46
+maintain cloud infrastructure. When
+1:48
+Netflix needs to handle millions of user
+1:50
+streaming simultaneously, cloud engines
+1:52
+will build the autoscaling
+1:53
+infrastructure that makes that possible.
+1:55
+When a startup needs to deploy their
+1:57
+applications globally, cloud engineers
+1:59
+will configure the networking, the
+2:01
+security, the compute resources to make
+2:03
+all of this happen. Now, as a cloud
+2:05
+engineer, a typical day can involve
+2:07
+things like this. Debugging network
+2:08
+issues between services. So, when
+2:10
+different parts of an application can't
+2:11
+talk to each other properly, you figure
+2:13
+out what's blocking the communication
+2:14
+and then you fix it. Maybe you spend
+2:16
+some time optimizing cloud costs by
+2:18
+right- sizing instances, making sure the
+2:21
+company that you're working for isn't
+2:22
+paying for more computing power than
+2:24
+they actually need. Or you'll be
+2:26
+automating deployment processes that
+2:27
+were previously done manually, which is
+2:29
+setting up CI/CD pipelines so that when
+2:31
+developers finish coding some features,
+2:34
+their work can automatically get pushed
+2:36
+to production instead of someone having
+2:37
+to do this by hand each time. So you're
+2:40
+basically saving time. Now, as you can
+2:42
+tell, it requires a deep technical skill
+2:44
+set, particularly in one cloud platform.
+2:46
+Now, I recommend AWS because it's the
+2:48
+industry leader. So, you'll need to
+2:50
+master the core services, EC2, S3, VPC,
+2:54
+IM, along with infrastructures code
+2:56
+tools like Terraform or Cloud Formation.
+2:57
+You also need strong scripting abilities
+2:59
+in Python and Bash, which are essential.
+3:02
+Plus, you need experience with CI/CD
+3:04
+tools like Jenkins or GitHub actions.
+3:06
+Now, career-wise, cloud engineers
+3:08
+typically start earning around $100,000
+3:10
+a year. And as you start to gain
+3:11
+experience, you can comfortably earn
+3:13
+over $200,000. But what happens when you
+3:17
+want to move beyond just implementing
+3:18
+solutions to actually designing them?
+3:20
+And that's where cloud architects come
+3:22
+into the picture. They operate at a
+3:25
+completely different level to cloud
+3:26
+engineers. While cloud engineers focus
+3:28
+on implementation, architects focus on
+3:30
+highlevel system design and strategic
+3:32
+technology decisions. For example, when
+3:35
+a company like Airbnb needs to scale to
+3:37
+handle millions of global users, cloud
+3:39
+architects design how services will
+3:41
+communicate, how data will flow between
+3:43
+different systems, and how the platform
+3:45
+will stay online even when individual
+3:47
+components fail. When I was working as a
+3:49
+cloud architect, my role completely
+3:51
+changed overnight. Although I could
+3:53
+build the actual infrastructure
+3:54
+hands-on, that was no longer expected of
+3:56
+me. In terms of a typical day in the
+3:58
+life of a cloud architect, it involves
+4:00
+meeting stakeholders to understand
+4:02
+business requirements, sitting down and
+4:03
+figuring out what problems that they
+4:05
+need technology to solve and what
+4:06
+constraints that they're working with
+4:08
+because everyone is working under a set
+4:10
+of constraints. You'll be creating
+4:11
+system design documents, basically
+4:13
+drawing blueprints that show how all the
+4:15
+technical pieces will work together. You
+4:17
+might be reviewing technical proposals
+4:18
+from engineering teams and making
+4:20
+decisions about technology standards. to
+4:22
+choosing which tools and which
+4:24
+approaches that the entire organization
+4:26
+will use ensuring that everything is
+4:29
+working together smoothly towards a
+4:31
+longerterm strategy. Essentially, cloud
+4:33
+architects focus on the big picture
+4:35
+which requires a skill set that goes
+4:36
+beyond pure technical knowledge. Yes,
+4:38
+you need deep understanding of cloud
+4:40
+services and system design patterns, but
+4:42
+you also need business acumen and the
+4:44
+ability to make technical decisions that
+4:46
+align with business objectives. Salary
+4:48
+wise, cloud architects typically start
+4:50
+around $140 to $180,000 and experienced
+4:53
+architects can earn anything between
+4:55
+$200 to $300,000 at large companies.
+4:58
+Now, here is something critical that
+4:59
+many people don't understand about this
+5:01
+career progression. You cannot become a
+5:03
+cloud architect without first being a
+5:05
+cloud engineer with hands-on
+5:07
+implementation experience. Now I know
+5:09
+there might be some people on YouTube
+5:10
+that tell you they were a cloud
+5:11
+architect or they are looking to become
+5:14
+an architect first. But when you see
+5:16
+things like this and you hear things
+5:18
+like this, you have to think logically
+5:20
+so it makes sense. How can you design
+5:22
+solutions if you've never implemented
+5:24
+anything yourself? How can you
+5:26
+understand the practical constraints and
+5:28
+challenges if you've only worked with
+5:29
+theoretical concepts? When I was working
+5:31
+as a cloud architect, my background as a
+5:34
+cloud engineer was invaluable. I could
+5:36
+spot potential problems in architectural
+5:37
+designs because I had debugged similar
+5:40
+issues in production. I understand which
+5:42
+solutions look good on paper, but which
+5:44
+one would be nightmares to maintain in
+5:46
+production environments and how it would
+5:48
+work operationally. Most importantly,
+5:50
+when I presented architectural designs
+5:52
+to engineering teams, I had the
+5:53
+credibility because they knew I'd
+5:56
+actually build and maintain similar
+5:57
+systems. You can't get hired as a cloud
+5:59
+architect without significant hands-on
+6:01
+experience. So if you're just starting
+6:03
+out, the path seems very clear. You want
+6:06
+to begin as a cloud engineer and you
+6:07
+want to build deep technical expertise
+6:09
+before moving to more senior roles like
+6:11
+a cloud architect. So don't fall for it.
+6:14
+There's no such thing as a junior cloud
+6:16
+architect. It doesn't exist in the real
+6:18
+world. Okay? It just doesn't, right? No
+6:21
+one is hiring real junior architects and
+6:24
+assigning them to clients so they can
+6:25
+make big strategic decisions. And trust
+6:27
+me, I know I've worked with many
+6:29
+organizations from Fortune 500s to
+6:31
+startups to government agencies. But
+6:33
+anyway, this traditional linear
+6:35
+progression is being disrupted by
+6:37
+something most people haven't even
+6:39
+noticed yet because there's something
+6:40
+happening in 2025 that's fundamentally
+6:43
+changing these traditional career paths.
+6:45
+Now, the boundaries between a cloud
+6:47
+engineer and a cloud architect are
+6:49
+slowly dissolving. And a big driving
+6:51
+factor of this is AI. Companies are
+6:53
+realizing that engineers can be way more
+6:55
+efficient today and get more done with
+6:58
+way less time. So naturally, they expect
+7:00
+you to have a more well-rounded skill
+7:02
+set. So this is creating opportunities
+7:04
+for a specific type of engineer. Let me
+7:06
+explain. When I look at the most
+7:07
+successful people in tech today, Elon
+7:10
+Musk, Jensen Huang, Sund Pachai, Satia
+7:12
+Nadella, these big-time CEOs, they all
+7:14
+have one thing in common. They are all
+7:16
+what I call technical leaders. They
+7:19
+understand technology deeply enough to
+7:21
+make strategic decisions, but they also
+7:23
+understand business and implementation
+7:25
+realities. Take Elon Musk as the perfect
+7:27
+example. Now, whether you like him or
+7:29
+not, before becoming the CEO of Tesla
+7:31
+and SpaceX, he was hands-on engineering.
+7:33
+At SpaceX, he taught himself rocket
+7:36
+engineering and was personally involved
+7:38
+in designing the Falcon 1 rocket. At
+7:40
+Tesla, he understood both the software
+7:43
+and the hardware engineering and the
+7:44
+challenges of electric vehicles. This
+7:47
+true engineering background is exactly
+7:49
+why he can make strategic decisions that
+7:51
+other CEOs simply cannot do. When SpaceX
+7:53
+needed to reduce cost, he understood the
+7:55
+technical constraints well enough to
+7:57
+give specific engineering solutions like
+7:59
+reusable rockets. These guys are no
+8:01
+longer just visionaries. Long gone are
+8:03
+the days where CEOs of big tech
+8:05
+companies can just be business people.
+8:07
+You need technical understanding and
+8:09
+real implementation skills which all of
+8:11
+these leaders have in common. And I see
+8:13
+a similar pattern emerging in cloud. The
+8:16
+engineers who are absolutely crushing it
+8:18
+in today's market aren't just pure cloud
+8:20
+engineers or pure cloud architects. They
+8:22
+are technical leaders who can operate
+8:24
+effectively at both of these levels.
+8:26
+These are people who can just sit in a
+8:28
+boardroom and explain to executives why
+8:31
+a particular architectural approach will
+8:33
+save the company $2 million annually.
+8:35
+And then they can just go back to their
+8:37
+desk and actually build the solution
+8:39
+that they've just proposed. They
+8:41
+understand business requirements deeply
+8:43
+enough to design the appropriate
+8:44
+solutions. but they also have the
+8:46
+technical skills to validate that their
+8:48
+designs actually work in practice. And
+8:50
+because of this combined skill set,
+8:52
+these engineers will just make more
+8:54
+money as well. And that's exactly why
+8:56
+inside of my academy, I teach my
+8:58
+students system design and cloud
+9:00
+architecture principles from day one.
+9:02
+Not because I expect them to become
+9:04
+cloud architects immediately. But it's
+9:06
+more about the fact that when you
+9:07
+understand system design principles, you
+9:10
+just make better architectural decisions
+9:12
+and then ending up building way better
+9:14
+cloud solutions. This approach gives you
+9:16
+the launch pad to become a technical
+9:17
+leader from the very beginning of your
+9:19
+career. And they don't teach you this on
+9:20
+Udemy or anywhere in YouTube in fact. So
+9:23
+how do you become one of these technical
+9:24
+leaders? It starts with a fundamental
+9:26
+mindset shift about how you approach
+9:28
+these problems. Most engineers think in
+9:30
+terms of how do I implement this? Most
+9:32
+architects think in terms of what should
+9:34
+the design actually look like. But
+9:36
+technical leaders think differently. And
+9:38
+here is how you can implement that shift
+9:40
+today. For every technical project that
+9:42
+you complete, ask yourself questions
+9:43
+like this. What business problem does
+9:46
+this solve? How does this create value
+9:48
+for the organization? What would happen
+9:50
+if this system failed? How does this fit
+9:52
+into the broader technical strategy for
+9:54
+the company? First, it makes you
+9:55
+dramatically more valuable because you
+9:57
+can connect technical work to business
+9:59
+outcomes. Secondly, it accelerates your
+10:01
+career progression because you're
+10:02
+already thinking like a senior
+10:04
+professional from day one, even while
+10:06
+building foundational technical skills.
+10:08
+Now, you're probably asking, "What does
+10:09
+all of this mean for your career
+10:11
+choice?" My recommendation is not to
+10:13
+choose between cloud engineer and cloud
+10:14
+architect. Don't box yourself into one
+10:17
+title because at every company, titles
+10:19
+mean slightly different things. Instead,
+10:21
+become a technical leader who can
+10:22
+operate at both levels and acquire a
+10:24
+well-rounded skill set. And this matters
+10:26
+because let's say you land a job at a
+10:28
+big tech company like AWS. They're going
+10:30
+to expect you to think strategically and
+10:32
+understand the business side of things,
+10:34
+even as a cloud engineer. But maybe you
+10:36
+want to work at a startup instead, which
+10:38
+is fine. But guess what? You're probably
+10:40
+going to be the only cloud person in a
+10:42
+team of five. They need you to design
+10:44
+the system and build it, the jack of all
+10:47
+trades. And who knows, maybe one day you
+10:49
+want to start your own company. And I've
+10:50
+done that many times. But you can do
+10:52
+that when you can spot a real problem in
+10:54
+the market and actually have the skills
+10:55
+to build the solution yourself. That's
+10:57
+where the real magic happens because
+10:59
+most people don't think like this. They
+11:00
+are stuck in the I'm either this or I'm
+11:03
+either that mentality. But the people
+11:05
+making the real money with the most
+11:06
+opportunities, well, they simply blur
+11:08
+those lines. So, if you want to learn
+11:10
+more about being a cloud engineer, then
+11:11
+check this video right here for my free
+11:13
+full cloud engineer course where I break
+11:15
+down everything that you need to know.
+11:16
+And if you want my one-on-one help to
+11:18
+learn cloud engineering, then click the
+11:19
+link in the bio to accelerate your
+11:21
+progress.

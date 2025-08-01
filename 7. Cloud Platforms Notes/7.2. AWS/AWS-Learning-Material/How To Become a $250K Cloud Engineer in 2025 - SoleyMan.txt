@@ -1,0 +1,781 @@
+How To Become a $250K Cloud Engineer in 2025
+
+Serious about starting your career in Cloud and AI today? Book a call and see how my Academy can help you → https://www.cloudengineeracademy.io/?...
+
+There are 6 levels every Cloud Engineer needs to master to make over $250K but most engineers are stuck at the wrong level.
+
+
+0:00
+There are six levels of cloud that every
+0:02
+engineer should understand and each of
+0:04
+these six levels leads to a completely
+0:07
+different level of result. Now,
+0:09
+unfortunately, most of the engineers
+0:11
+that I've worked with are stuck in the
+0:13
+first few levels. And the reason that
+0:15
+they struggle to get hired is because
+0:16
+they are operating at the wrong level.
+0:19
+And when this happens, it can be very
+0:22
+frustrating. It could feel impossible to
+0:24
+break into the cloud or any tech
+0:26
+position for that matter, let alone
+0:28
+applying for senior engineering roles
+0:30
+with any degree of confidance. But the
+0:32
+thing is, most of that probably isn't
+0:35
+true. For me, learning how to operate
+0:37
+deliberately at the right level is one
+0:39
+of the main reasons that I was able to
+0:41
+build my own AI cloud security
+0:42
+consultancy and help over 500 students
+0:45
+learn cloud and AI with my first
+0:47
+principles blueprint for engineers. And
+0:49
+trust me, I'm certainly not a genius,
+0:51
+although I like to tell myself that I
+0:53
+am. I've seen similar results with
+0:56
+hundreds of engineers that I've trained
+0:58
+over the years. By the end of this
+0:59
+video, you'll be able to see what level
+1:02
+that you tend to operate at and how you
+1:04
+can get to the next level that you need
+1:06
+to be at. And just a heads up, the level
+1:08
+that you need to be at is probably
+1:10
+higher than you think. Let's start with
+1:12
+level one. And this is actually where
+1:14
+most people get stuck. This level is all
+1:17
+about memorization. You're sitting there
+1:19
+with flashcards or notes trying to cram
+1:22
+every single AWS service name into your
+1:24
+head. You're writing down definitions
+1:26
+like S3 stands for simple storage
+1:28
+service and EC2 is elastic compute
+1:30
+cloud. And look, I get it. When you're
+1:33
+starting out, this feels productive,
+1:35
+right? You think, okay, I am learning.
+1:37
+I'm making progress. But here is the
+1:39
+thing. This approach is actually setting
+1:41
+you up for failure. We call this level
+1:43
+remember this level. You might be able
+1:45
+to pass an AWS certification exam, but
+1:47
+when a hiring manager asks you a
+1:49
+question like, "How would you architect
+1:51
+a solution for a company that needs to
+1:53
+handle 100,000 users," you are stuck
+1:55
+because memorizing service names doesn't
+1:58
+teach you how to actually solve real
+2:00
+business problems. And the worst part,
+2:02
+even though that you spent all of this
+2:03
+time remembering stuff, is actually not
+2:05
+a good way to retain the information
+2:08
+long term. But we'll talk about that
+2:10
+later in the video. Now, level two is
+2:12
+where things start to get a little bit
+2:14
+more interesting. Instead of trying to
+2:16
+memorize everything here, you're
+2:17
+actually trying to comprehend what these
+2:19
+services do and why they exist. And what
+2:22
+I mean by that is that you could have
+2:23
+two people both reading the exact same
+2:26
+AWS documentation. And from the outside,
+2:28
+it looks like they're doing the same
+2:30
+thing, but mentally they are attacking
+2:32
+it with a different intention. The level
+2:34
+one person is thinking, okay, I need to
+2:37
+remember that RDS is a database service
+2:39
+and Dynamo DB is also a database
+2:41
+service. I need to memorize their
+2:43
+definitions. The level two person is
+2:45
+thinking, wait, why does AWS have two
+2:48
+different database services? What's the
+2:50
+difference? At level two, we call this
+2:52
+understand. And what you unlock is the
+2:54
+ability to explain things. So now when
+2:56
+someone asks you a question like why
+2:58
+would you choose RDS over DynamoB? You
+3:00
+can actually give them a real answer.
+3:02
+you understand that RDS is a relational
+3:04
+database, stores data in tables, and
+3:06
+Dynav is way more flexible and a NoSQL
+3:09
+database. This is the level where you
+3:11
+can start having actual conversations
+3:13
+about cloud architecture instead of just
+3:15
+reciting definitions. And honestly, this
+3:17
+is typically how most junior cloud
+3:19
+engineer interviews go. They just want
+3:21
+to know that you understand how these
+3:23
+services work together and not that you
+3:25
+can just list them off. But here is the
+3:27
+problem. Most people think that level
+3:29
+two is enough and they stop right there.
+3:31
+However, understanding services and
+3:33
+actually building with them, those are
+3:35
+two completely different things, which
+3:37
+is where level three comes in. This is
+3:40
+where you start actually building
+3:41
+projects. At this level, you can take
+3:43
+what you've learned and solve
+3:45
+straightforward problems. We call this
+3:47
+apply, and you unlock simple problem
+3:49
+solving. Let's say that you want to
+3:51
+store some files in the cloud. You know,
+3:53
+to use S3. Maybe you want to run some
+3:55
+code and have it completely hands-off
+3:57
+for you. You know, to use serverless
+3:59
+compute like Lambda. It's basically one
+4:01
+problem and one solution. Pretty
+4:03
+straightforward. And look, this isn't a
+4:05
+bad thing. You're actually building
+4:06
+projects at this level. You're following
+4:08
+tutorials, deploying E2 instances,
+4:10
+setting up S3 buckets, creating Lambda
+4:12
+functions. You've got something to show
+4:15
+for your learning, which makes you feel
+4:17
+great, right? But the reality is in the
+4:20
+real world when you're working as an
+4:21
+engineer, problems aren't this simple. A
+4:24
+company doesn't just come to you and
+4:25
+say, "Hey, we need exactly one lambda
+4:28
+function." Obviously not, right? They
+4:29
+come to you and they say something like,
+4:31
+"We have a mobile app with 50,000 users.
+4:34
+It's getting a little bit slow.
+4:35
+Customers are complaining. Our database
+4:36
+is also struggling and we need to fix
+4:38
+this ASAP whilst keeping our cost under
+4:41
+control." And that's why most people hit
+4:43
+a wall and get stuck. So, if you want to
+4:45
+get hired and actually succeed in this
+4:47
+field, you need to get at least to level
+4:49
+number four. Now, this is where things
+4:51
+get serious. Level four is where you
+4:53
+separate yourself from 90% of other
+4:55
+aspiring cloud engineers. And here is
+4:57
+the irony. Most people can reach level
+4:59
+four, but they don't. And I'll tell you
+5:01
+why in just a moment. But first, at this
+5:04
+level, you're not just using services to
+5:06
+build simple projects anymore. You are
+5:08
+analyzing different options and
+5:09
+understanding trade-offs. This unlocks
+5:11
+comparison, the ability to actually make
+5:13
+informed decisions about which services
+5:16
+to use and when. So instead of just
+5:18
+knowing, oh, I need compute, so I'll use
+5:20
+EC2. Here you're thinking, do I need
+5:23
+EC2, Lambda, ECS, or Fargate for this
+5:26
+use case? What about scalability? What
+5:28
+if traffic spikes? What happens when a
+5:30
+component fails? This is where you start
+5:32
+thinking like an actual engineer instead
+5:35
+of someone who just follows tutorials
+5:37
+because at level three, you're just
+5:39
+clicking around following along and not
+5:41
+actually thinking why. Which mean the
+5:43
+moment the tutorial is finished, your
+5:45
+understanding disappears with it too. So
+5:47
+a quick tip to actually help you operate
+5:49
+at level four after this video, go to
+5:51
+chatbt and ask it this question. Give me
+5:53
+cloud architecture interview questions
+5:55
+that analyze trade-offs between AWS
+5:57
+services in real world scenarios. Every
+5:59
+single question that you get will force
+6:02
+you to think at level four. But there is
+6:04
+a problem. As soon as you try to operate
+6:06
+at level four, it feels harder. You're
+6:09
+not getting quick easy wins anymore.
+6:11
+There's no instant dopamine because
+6:13
+you're actually having to think deeply
+6:14
+about problems. And most people
+6:16
+interpret this as that I am doing
+6:18
+something wrong or that I'm getting
+6:20
+slower. So they go default back to their
+6:22
+old habits and they drop down to level
+6:24
+two or level three where things feel
+6:27
+easier and faster. And this is what I
+6:28
+like to call misinterpreted effort
+6:31
+hypothesis. When something requires more
+6:33
+mental effort, we think that it's not
+6:35
+working even though that the effort is
+6:37
+exactly what builds real expertise.
+6:39
+That's why level four engineers are
+6:41
+rare. Not because they can't do it, but
+6:43
+because they choose not to do it when
+6:45
+things get challenging. But what about
+6:47
+really complex strategic decisions that
+6:49
+senior engineers and solutions
+6:51
+architects make every single day? And
+6:53
+this is where level five comes in. And
+6:55
+if you can operate at this level, level
+6:57
+five, you're looking at earning over
+6:59
+$250,000 a year quite easily. That said,
+7:02
+this is a level that confuses most
+7:04
+engineers. So, let me break it down for
+7:06
+you really simply. Level five is all
+7:08
+about judgment. At level four, you could
+7:10
+analyze different options and understand
+7:12
+the trade-offs. But at level five,
+7:14
+you're asking the business questions. So
+7:16
+what? Why does this matter? What's the
+7:19
+impact on the company? We call this
+7:21
+evaluate. And it unlocks prioritization,
+7:24
+the ability to make strategic decisions.
+7:26
+And here is the difference. At level
+7:28
+four, you might compare serverless
+7:29
+versus containers and think, okay, you
+7:31
+know, serverless scales automatically,
+7:33
+but containers give me more control. At
+7:35
+level five, you are thinking given that
+7:38
+our team has no DevOps experience, our
+7:40
+budget is tight, and we need to launch
+7:42
+in 3 months, serverless makes more
+7:45
+business sense, even though it might be
+7:47
+a little bit more expensive per
+7:48
+transaction. See how that changes
+7:50
+everything. You're not just making
+7:52
+technical decisions anymore. You are
+7:54
+understanding what the impact and the
+7:56
+consequence of your technical decisions
+7:58
+will have on the business directly. And
+8:00
+at this level, first principles thinking
+8:03
+becomes critical. Instead of just
+8:04
+looking what everyone else is doing or
+8:06
+following the latest trends, you are
+8:08
+asking the fundamental questions. What
+8:10
+problems are we actually trying to
+8:12
+solve? What are the core constraints?
+8:13
+What does success look like for this
+8:15
+business? This is how the best cloud
+8:18
+engineers approach problems. They strip
+8:20
+away all the noise and get to the
+8:22
+fundamentals. You know that you're
+8:24
+operating at level five when you catch
+8:26
+yourself going back and forth between
+8:27
+your ideas and speaking to the
+8:29
+leadership team, asking questions like,
+8:31
+"What's our growth projections? What's
+8:33
+the team skill level? What's our budget
+8:35
+ceiling? Because at this level, the best
+8:37
+technical solution isn't always the
+8:39
+right business solution. And I can't
+8:41
+stress this enough. You can draw the
+8:43
+best architecture diagrams. You can
+8:44
+write detailed technical proposals. You
+8:46
+can build proof of concepts. But if
+8:49
+you're not thinking strategically about
+8:50
+business context, you're not really at
+8:52
+level five. And I see this all of the
+8:55
+time. engineers who can create
+8:56
+impressive architectures, but they
+8:58
+haven't even considered whether the team
+9:00
+can actually maintain it or if the
+9:03
+company can even afford to be able to
+9:05
+scale it. That's the difference between
+9:07
+a technical engineer and a first
+9:09
+principles engineer who thinks
+9:11
+strategically. Now, you might be
+9:13
+wondering, is there a level six? There
+9:15
+is, actually, but unless you're aiming
+9:17
+to invent entirely new ways of using
+9:20
+cloud services that don't exist yet, you
+9:22
+probably don't even need it. Level six
+9:24
+is called create and it unlocks
+9:26
+innovation. Level six is where you're
+9:28
+solving problems that literally don't
+9:30
+even have solutions anywhere. Not in AWS
+9:33
+documentations, not in best practice
+9:35
+guides, not in any sort of architectural
+9:37
+patterns that you can find online.
+9:39
+You're basically identifying gaps in the
+9:41
+market in what's possible and then
+9:42
+creating completely new approaches. But
+9:44
+here is the reality. You don't need to
+9:46
+operate at this level. Most engineers
+9:49
+will be at the top of their game,
+9:50
+earning great salaries, getting
+9:52
+promotions and bonuses, solving business
+9:54
+problems just by operating at level five
+9:57
+consistently. Level six is for the tiny
+9:59
+percentage of engineers who are
+10:01
+literally pushing the boundaries of
+10:03
+what's possible in cloud computing and
+10:05
+technology as a whole. For everyone
+10:06
+else, mastering level five is your
+10:08
+ticket to success, which naturally begs
+10:10
+the question, how do you even get to
+10:13
+level five then? Well, there are
+10:15
+actually two different methods. The
+10:17
+first of which is to start learning and
+10:19
+just go through each level from bottom
+10:21
+to top. First you memorize cloud
+10:23
+services, then you understand them, then
+10:25
+you apply them, then you analyze them,
+10:27
+and so on. This obviously sounds logical
+10:29
+to a beginner. It makes sense on paper,
+10:31
+but for most people, this won't actually
+10:33
+work. And let me explain why. The
+10:36
+problem with starting at the bottom is
+10:37
+that it's very timeconuming. And most
+10:40
+people do not have enough time to even
+10:42
+reach level five, let alone actually
+10:44
+master it. So in reality what happens is
+10:47
+most people will just do a little bit at
+10:49
+each level kind of going back and forth.
+10:52
+Maybe they'll memorize some services,
+10:53
+understand a few concepts, build a
+10:55
+simple project and never really
+10:57
+progress. Now this doesn't work very
+10:59
+well because we always forget things
+11:02
+over time. We call this knowledge decay.
+11:04
+While you're working on level two and
+11:05
+level three, your knowledge of level one
+11:07
+will slowly decay away. Unless you're
+11:09
+actively practicing it, you're going to
+11:11
+forget it. So instead of actually moving
+11:13
+up the levels, you're spending most of
+11:15
+your time relearning things that you
+11:17
+continuously forgot. So what's the
+11:19
+solution, right? What do you do? You
+11:21
+should start at level five and then work
+11:23
+your way down. The reason this works is
+11:26
+because your brain actually processes
+11:28
+cloud knowledge and form stronger
+11:30
+understanding at level five than it does
+11:32
+at level one. When you set your sights
+11:34
+on strategic business focused cloud
+11:36
+solutions, your brain will automatically
+11:39
+fill in and achieve the lower levels as
+11:42
+almost a side effect. This doesn't work
+11:44
+the other way around. If you're trying
+11:45
+to memorize cloud services, your brain
+11:48
+is not going to automatically be able to
+11:50
+make strategic architectural decisions.
+11:53
+But if you're trying to evaluate and
+11:54
+prioritize cloud solutions for business
+11:57
+problems, then you will gain even better
+11:59
+attention so you can explain and solve
+12:01
+simple problems when needed. Level five
+12:04
+actually takes more effort and
+12:05
+technically speaking, it's a little bit
+12:07
+slower, but it pays off big time in the
+12:09
+long term. This means when you start
+12:10
+learning cloud, don't focus on trying to
+12:13
+remember service names, understand
+12:14
+individual services. focus most of your
+12:17
+attention on trying to evaluate cloud
+12:19
+solutions for real business problems
+12:22
+which forces you to understand and
+12:24
+analyze services in the first place. So
+12:27
+how do you actually apply all of this?
+12:29
+Now instead of starting with what is S3
+12:32
+start with the question of how would I
+12:34
+architect a cost-effective scalable
+12:36
+solution for a company that needs to
+12:38
+store and serve millions of images. This
+12:40
+immediately forces you to do a few
+12:42
+things. Understand what S3 does which is
+12:44
+level two. know how to apply it, which
+12:46
+is level three. Compare it with other
+12:48
+storage solutions, which is level four.
+12:50
+Make strategic decisions based on
+12:52
+business requirements, which is level
+12:54
+five. The business context is what makes
+12:57
+all of the difference. When you approach
+12:59
+learning cloud in this way, you're
+13:01
+building strategic thinking from first
+13:03
+principles literally from day one. And
+13:05
+when you constantly operate at level 5,
+13:08
+that's when you will start earning more
+13:09
+money than you have ever done before.
+13:11
+Now, if you found this framework useful
+13:13
+and you actually want to become a cloud
+13:14
+engineer, then check out my ultimate
+13:16
+road map that takes you from zero to
+13:18
+hired in the cloud, covering every
+13:20
+single thing that you need to know. Good
+13:23
+luck.
