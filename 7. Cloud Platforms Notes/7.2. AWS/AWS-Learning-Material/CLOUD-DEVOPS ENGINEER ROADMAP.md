@@ -26,15 +26,15 @@ Absolutely, Mthokozisi. Here is a \*\*properly structured but simply formatted A
 
 
 
-&nbsp;  \* Understand cloud models: IaaS, PaaS, SaaS
+   \* Understand cloud models: IaaS, PaaS, SaaS
 
-&nbsp;  \* Learn AWS global infrastructure: Regions, AZs, Edge Locations
+   \* Learn AWS global infrastructure: Regions, AZs, Edge Locations
 
-&nbsp;  \* Understand pricing, billing, Free Tier
+   \* Understand pricing, billing, Free Tier
 
-&nbsp;  \* AWS Shared Responsibility Model
+   \* AWS Shared Responsibility Model
 
-&nbsp;  \* Intro to core services: EC2, S3, RDS, Lambda, IAM
+   \* Intro to core services: EC2, S3, RDS, Lambda, IAM
 
 
 
@@ -42,17 +42,17 @@ Absolutely, Mthokozisi. Here is a \*\*properly structured but simply formatted A
 
 
 
-&nbsp;  \* TCP/IP, DNS, Subnetting (CIDR blocks)
+   \* TCP/IP, DNS, Subnetting (CIDR blocks)
 
-&nbsp;  \* VPC: public/private subnets, route tables, internet/NAT gateways
+   \* VPC: public/private subnets, route tables, internet/NAT gateways
 
-&nbsp;  \* Elastic IPs, VPC peering
+   \* Elastic IPs, VPC peering
 
-&nbsp;  \* Security Groups vs NACLs
+   \* Security Groups vs NACLs
 
-&nbsp;  \* Route 53 (DNS and domain hosting)
+   \* Route 53 (DNS and domain hosting)
 
-&nbsp;  \* Load Balancers (ALB, NLB)
+   \* Load Balancers (ALB, NLB)
 
 
 
@@ -60,15 +60,15 @@ Absolutely, Mthokozisi. Here is a \*\*properly structured but simply formatted A
 
 
 
-&nbsp;  \* Basic shell commands (cd, ls, mkdir, etc.)
+   \* Basic shell commands (cd, ls, mkdir, etc.)
 
-&nbsp;  \* SSH into EC2
+   \* SSH into EC2
 
-&nbsp;  \* File permissions (chmod, chown)
+   \* File permissions (chmod, chown)
 
-&nbsp;  \* Install packages (apt, yum)
+   \* Install packages (apt, yum)
 
-&nbsp;  \* System logs and process monitoring (journalctl, ps, top)
+   \* System logs and process monitoring (journalctl, ps, top)
 
 
 
@@ -76,77 +76,77 @@ Absolutely, Mthokozisi. Here is a \*\*properly structured but simply formatted A
 
 
 
-&nbsp;  Compute:
+   Compute:
 
 
 
-&nbsp;  \* EC2
+   \* EC2
 
-&nbsp;  \* Lambda
+   \* Lambda
 
-&nbsp;  \* AWS Fargate
+   \* AWS Fargate
 
-&nbsp;  \* Auto Scaling
+   \* Auto Scaling
 
-&nbsp;  \* App Runner
-
-
-
-&nbsp;  Storage:
+   \* App Runner
 
 
 
-&nbsp;  \* S3
-
-&nbsp;  \* EBS
-
-&nbsp;  \* EFS
-
-&nbsp;  \* Glacier
-
-&nbsp;  \* DynamoDB
+   Storage:
 
 
 
-&nbsp;  Databases:
+   \* S3
+
+   \* EBS
+
+   \* EFS
+
+   \* Glacier
+
+   \* DynamoDB
 
 
 
-&nbsp;  \* RDS (MySQL, PostgreSQL, MariaDB, etc.)
-
-&nbsp;  \* Aurora
-
-&nbsp;  \* DynamoDB
-
-&nbsp;  \* Redshift
-
-&nbsp;  \* ElastiCache
+   Databases:
 
 
 
-&nbsp;  Networking \& Security:
+   \* RDS (MySQL, PostgreSQL, MariaDB, etc.)
+
+   \* Aurora
+
+   \* DynamoDB
+
+   \* Redshift
+
+   \* ElastiCache
 
 
 
-&nbsp;  \* IAM
+   Networking \& Security:
 
-&nbsp;  \* VPC
 
-&nbsp;  \* API Gateway
 
-&nbsp;  \* Cognito
+   \* IAM
 
-&nbsp;  \* Route 53
+   \* VPC
 
-&nbsp;  \* WAF
+   \* API Gateway
 
-&nbsp;  \* GuardDuty
+   \* Cognito
 
-&nbsp;  \* Security Hub
+   \* Route 53
 
-&nbsp;  \* AWS Shield
+   \* WAF
 
-&nbsp;  \* KMS
+   \* GuardDuty
+
+   \* Security Hub
+
+   \* AWS Shield
+
+   \* KMS
 
 
 
@@ -154,17 +154,17 @@ Absolutely, Mthokozisi. Here is a \*\*properly structured but simply formatted A
 
 
 
-&nbsp;  \* Lambda
+   \* Lambda
 
-&nbsp;  \* API Gateway
+   \* API Gateway
 
-&nbsp;  \* DynamoDB
+   \* DynamoDB
 
-&nbsp;  \* Step Functions
+   \* Step Functions
 
-&nbsp;  \* EventBridge
+   \* EventBridge
 
-&nbsp;  \* S3 Triggers
+   \* S3 Triggers
 
 
 
@@ -172,15 +172,15 @@ Absolutely, Mthokozisi. Here is a \*\*properly structured but simply formatted A
 
 
 
-&nbsp;  \* AWS CloudFormation
+   \* AWS CloudFormation
 
-&nbsp;  \* AWS CDK (Python or TypeScript)
+   \* AWS CDK (Python or TypeScript)
 
-&nbsp;  \* AWS SAM
+   \* AWS SAM
 
-&nbsp;  \* Terraform (preferred for multi-cloud)
+   \* Terraform (preferred for multi-cloud)
 
-&nbsp;  \* Pulumi (optional)
+   \* Pulumi (optional)
 
 
 
@@ -188,21 +188,21 @@ Absolutely, Mthokozisi. Here is a \*\*properly structured but simply formatted A
 
 
 
-&nbsp;  \* AWS CodePipeline
+   \* AWS CodePipeline
 
-&nbsp;  \* AWS CodeBuild
+   \* AWS CodeBuild
 
-&nbsp;  \* CodeDeploy
+   \* CodeDeploy
 
-&nbsp;  \* Jenkins
+   \* Jenkins
 
-&nbsp;  \* GitHub Actions
+   \* GitHub Actions
 
-&nbsp;  \* Ansible (for config management)
+   \* Ansible (for config management)
 
-&nbsp;  \* AWS CLI \& Boto3 (Python SDK)
+   \* AWS CLI \& Boto3 (Python SDK)
 
-&nbsp;  \* Systems Manager
+   \* Systems Manager
 
 
 
@@ -210,15 +210,15 @@ Absolutely, Mthokozisi. Here is a \*\*properly structured but simply formatted A
 
 
 
-&nbsp;  \* Docker (build, push, run images)
+   \* Docker (build, push, run images)
 
-&nbsp;  \* ECS (Fargate or EC2 launch types)
+   \* ECS (Fargate or EC2 launch types)
 
-&nbsp;  \* EKS (managed Kubernetes)
+   \* EKS (managed Kubernetes)
 
-&nbsp;  \* Helm (Kubernetes package manager)
+   \* Helm (Kubernetes package manager)
 
-&nbsp;  \* ArgoCD (GitOps for K8s)
+   \* ArgoCD (GitOps for K8s)
 
 
 
@@ -226,17 +226,17 @@ Absolutely, Mthokozisi. Here is a \*\*properly structured but simply formatted A
 
 
 
-&nbsp;  \* CloudWatch Metrics \& Logs
+   \* CloudWatch Metrics \& Logs
 
-&nbsp;  \* AWS X-Ray (tracing)
+   \* AWS X-Ray (tracing)
 
-&nbsp;  \* Prometheus + Grafana
+   \* Prometheus + Grafana
 
-&nbsp;  \* ELK Stack (ElasticSearch, Logstash, Kibana)
+   \* ELK Stack (ElasticSearch, Logstash, Kibana)
 
-&nbsp;  \* AWS Config
+   \* AWS Config
 
-&nbsp;  \* AWS Trusted Advisor
+   \* AWS Trusted Advisor
 
 
 
@@ -573,6 +573,4 @@ You grow the most by \*\*doing\*\* and \*\*sharing\*\* your work.
 
 
 Let me know when you're ready for a project, breakdown, or AWS exam plan—I got you!
-
-
 

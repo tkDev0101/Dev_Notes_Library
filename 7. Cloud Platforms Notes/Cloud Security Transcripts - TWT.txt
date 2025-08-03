@@ -1,0 +1,5494 @@
+Cloud Security Transcripts - TWT
+
+consider the following cloud security YouTube video transcripts and based off them as well as your own knowledge give me the technical skills, tech stack and roadmap to become a cloud security engineer
+
+
+====================================================
+
+The Best Cloud Security Projects To Get You Hired FAST (2025)
+
+In this video, I reveal The Best Cloud Security Projects that will get you hired fast in 2025. 
+
+0:00
+more than 95% of cloud security
+0:02
+engineers are building the wrong
+0:04
+projects I know this because I used to
+0:06
+think a static website built on Amazon
+0:08
+S3 would get me hired until I discovered
+0:11
+exactly what hiring managers are
+0:14
+actually looking for in 2025 I'm Slay
+0:16
+Man I've worked in tech for a decade and
+0:18
+I've built my own AI cloud security
+0:20
+consultancy and through my academy I've
+0:22
+helped over 400 students learn cloud and
+0:25
+AI with my first principles blueprint
+0:27
+for engineers And in this video I'll
+0:29
+reveal the best cloud security projects
+0:32
+to get you hired fast Starting with
+0:34
+project number one secure file vault
+0:37
+When you're working in a team and you're
+0:39
+sharing sensitive financial and client
+0:41
+information there's always that nagging
+0:43
+concern unauthorized access What happens
+0:46
+when files get into the wrong hands
+0:48
+damaged reputation potential fines and
+0:51
+loss of client trust So what's the
+0:54
+approach that actually delivers results
+0:57
+let me show you how I approach security
+0:59
+from first principles So when I have a
+1:01
+problem or I'm trying to build an actual
+1:03
+solution for a client I always ask what
+1:06
+are we trying to accomplish here we want
+1:10
+information flowing between authorized
+1:12
+parties whilst keeping everyone else out
+1:14
+Now to ensure we achieve this we have to
+1:17
+address three fundamental questions What
+1:20
+exactly are we protecting who should
+1:22
+have access and how does the access
+1:25
+change over time this leads us to three
+1:28
+requirements that will form the core of
+1:30
+our project Your sensitive files need
+1:32
+proper encryption This is a
+1:34
+non-negotiable Using Amazon S3 with
+1:36
+serverside encryption it means that your
+1:38
+data remains protected even if other
+1:41
+security layers fail If someone somehow
+1:44
+accesses the underlying storage they'll
+1:46
+face encrypted data that it can't
+1:48
+interpret I found that that is typically
+1:50
+where most security breaches happen
+1:52
+You'll need to verify who someone is So
+1:54
+the authentication and what they are
+1:56
+allowed to see the authorization AWS
+1:59
+services like Cognito handle the
+2:00
+verification process while IM policies
+2:03
+enforce the lease privilege principle
+2:05
+giving people access only to what they
+2:08
+absolutely need Now when these controls
+2:10
+work together you get a system that's
+2:12
+both secure and functional Now without
+2:14
+visibility into who's accessing what and
+2:16
+when you don't have complete security
+2:19
+Crowd records every action creating a
+2:21
+reliable record of all file interactions
+2:24
+This visibility means you can detect
+2:26
+unusual patterns and respond quickly to
+2:28
+potential issues Now let's build a
+2:30
+secure file sharing portal Starting with
+2:32
+step number one creating an S3 bucket
+2:35
+with serverside encryption This is
+2:36
+specifically designed to handle
+2:38
+sensitive documents whilst maintaining
+2:41
+high availability And when we enable
+2:43
+serverside encryption with AWS KMS keys
+2:46
+we are adding a critical protective
+2:48
+layer Every file uploaded to our system
+2:50
+automatically gets encrypted before it
+2:52
+even lands on the storage media Users
+2:55
+don't even notice that this happens The
+2:57
+encryption is completely transparent to
+2:59
+them And the beauty of this approach is
+3:01
+that our files remain protected at rest
+3:04
+until an authorized user needs them and
+3:06
+at that point only then the system will
+3:09
+decrypt them for legitimate access Now
+3:11
+with our storage foundation secure we
+3:13
+now focus on controlling who can access
+3:16
+what This is where we design IM roles
+3:18
+that match our organization's structure
+3:20
+creating specific profiles for viewers
+3:22
+who only need to read documents editors
+3:25
+who need to make changes and
+3:26
+administrators who manage the overall
+3:28
+system Now each role is carefully
+3:30
+crafted to provide only the permissions
+3:33
+absolutely necessary for that specific
+3:36
+job function We take it a step further
+3:38
+by scoping these permissions to specific
+3:40
+folders or file types whenever possible
+3:43
+Now for extra added security we could
+3:44
+implement IM conditions that can
+3:46
+restrict access based on factors like
+3:48
+time of the day IP addresses or whether
+3:51
+the user is using multiffactor
+3:53
+authentication And as our team evolves
+3:56
+we audit and update these permissions to
+3:58
+ensure they remain appropriate But that
+4:00
+is not enough We also need a way to
+4:02
+reliably verify who's accessing our
+4:05
+system We'll use Amazon Cognito to
+4:07
+implement a registration flow for users
+4:09
+Cognito handles all the complex identity
+4:12
+verification and will enable
+4:14
+multiffactor authentication for that
+4:15
+crucial extra layer of security And when
+4:18
+users log in Cognito doesn't just grant
+4:20
+the access it issues temporary
+4:22
+credentials that are specifically
+4:24
+aligned with their IM role These
+4:26
+credentials only work for resources
+4:28
+they're authorized to access and
+4:30
+automatically expire after a short
+4:32
+period And this creates a seamless yet
+4:34
+highly secure authentication process
+4:36
+that's difficult for attackers to
+4:38
+compromise Now that our security is in
+4:40
+place we have to design a clean
+4:42
+interface that brings all of it together
+4:45
+If it's hard to navigate nobody will use
+4:47
+it And when users want to upload new
+4:49
+files a simple drag and drop area makes
+4:52
+it effortless And as they work with
+4:54
+documents all downloads happen through
+4:56
+pre-signed URLs that verify permissions
+4:59
+before allowing access Now if they need
+5:02
+to share a document with a colleague
+5:03
+they can do so through a permission
+5:05
+management system that clearly shows who
+5:08
+has access to each file So we can use
+5:11
+AWS Amplify to host our UI So our web
+5:14
+interface which is beautifully
+5:15
+integrated with Cognito and S3 to build
+5:18
+this because our users need to see where
+5:20
+they're dragging their files to
+5:21
+Something to think about is that cloud
+5:23
+security isn't just about prevention
+5:25
+It's also about visibility That's why in
+5:27
+step five we implement Cloud Trail to
+5:29
+record every single action that happens
+5:32
+with our S3 objects So when someone
+5:34
+uploads downloads or even shares a file
+5:37
+we capture who performed that action
+5:40
+exactly when it happens and where they
+5:42
+were connecting from These logs are
+5:44
+stored securely in their own dedicated
+5:46
+bucket where they can't be tampered with
+5:48
+And we set up automated alerts that
+5:50
+trigger when suspicious patterns emerge
+5:52
+For example someone downloading an
+5:55
+unusual number of files or accessing the
+5:57
+system at 3 or 4:00 a.m Our system will
+6:00
+also perform regular log analysis to
+6:02
+help identify normal access patterns
+6:05
+versus potential security incidents We
+6:07
+also ensure our logs are retained
+6:10
+according to compliance requirements
+6:11
+creating an audit trail that we might
+6:13
+need in the future Now there's an
+6:15
+overlooked cloud security risk that we
+6:18
+have to address Data that stays in your
+6:20
+system for too long That's why we in
+6:22
+step number six will set up a data life
+6:25
+cycle by defining retention periods
+6:27
+based on both sensitive and business
+6:29
+needs Once we have these policies in
+6:31
+place S3 life cycle rules automatically
+6:34
+move older files to cheaper storage
+6:36
+tiers to optimize for cost And when
+6:39
+files reach the end of their retention
+6:41
+period our system will automatically
+6:43
+delete them reducing both storage costs
+6:45
+and also potential compliance issues Now
+6:48
+for regulatory requirements we can
+6:50
+implement special handling for files
+6:52
+that need longer retention periods And
+6:54
+the system provides regular reporting on
+6:56
+the status of data across its life cycle
+7:00
+and verifies compliance with retention
+7:02
+policies This way we ensure that data
+7:05
+doesn't live forever reducing both the
+7:07
+cost and the risk over time Can you see
+7:10
+how when you set out the core
+7:12
+requirements for a problem and then
+7:13
+break it down to first principles you
+7:16
+create a system where each component has
+7:18
+a clear purpose and delivers real
+7:21
+benefits And most importantly your
+7:23
+entire solution directly addresses real
+7:25
+business needs rather than theoretical
+7:27
+threats And when you think about cloud
+7:29
+security in this way it becomes a
+7:31
+competitive advantage and businesses
+7:34
+will desperately want your expertise And
+7:36
+that's not the only critical cloud
+7:38
+security challenge that businesses face
+7:40
+today Because in modern cloud
+7:42
+environments the sheer volume of
+7:43
+resources like S3 buckets EC2 instances
+7:47
+databases and way more creates a
+7:50
+specific problem Manually tracking all
+7:52
+security configurations is impossible So
+7:55
+project number two we're going to build
+7:57
+the cloud security scout But first we
+7:59
+have to approach the problem from first
+8:02
+principles And again we have to ask the
+8:05
+questions what are we really trying to
+8:07
+achieve at its core we want to ensure
+8:10
+that every single resource in our cloud
+8:12
+environment adheres to our security
+8:14
+baseline regardless of who created it or
+8:17
+when they created it And we can't just
+8:19
+set it and forget about it It has to be
+8:21
+continuously monitored because resources
+8:23
+are being created and modified all of
+8:25
+the time in our cloud environments Next
+8:27
+let's set our core requirements for this
+8:30
+project And this time we have four And
+8:32
+starting with number one comprehensive
+8:34
+discovery which just means finding all
+8:36
+resources across your environment
+8:38
+because you can't secure what you don't
+8:40
+know This discovery process must be
+8:42
+automated and thorough identifying
+8:45
+resources across all accounts Number two
+8:47
+consistent evaluation We have to ensure
+8:50
+that each resource is checked against
+8:52
+the same security baseline every single
+8:54
+time and we'll set this baseline
+8:56
+ourselves And number three timely
+8:58
+protection The window between a
+9:00
+misconfiguration appearing and being
+9:02
+exploited can be remarkably short
+9:04
+sometimes just a few hours So we have to
+9:08
+shrink that window of vulnerability by
+9:10
+detecting issues quickly And finally
+9:12
+requirement number four prioritize
+9:14
+remediation This is like triaging We
+9:16
+have to focus attention on the highest
+9:19
+risk issues first Not all security
+9:21
+findings are equal Some represent
+9:23
+immediate threats whilst others are more
+9:25
+theoretical risks Now here is how we're
+9:28
+going to build it Starting with step
+9:29
+number one identifying the high impact
+9:32
+vulnerabilities Examples of this include
+9:34
+S3 buckets that allow public reads or
+9:36
+rights security groups that open
+9:38
+critical ports to the entire internet
+9:40
+and RDS databases lacking encryption at
+9:42
+rest It's very simple Here we are
+9:44
+applying the Pareto principle to
+9:46
+security Roughly 20% of security issues
+9:49
+will represent 80% of your risk By
+9:51
+focusing on high impact vulnerabilities
+9:53
+first you get the most security
+9:55
+improvement for your initial effort And
+9:58
+this is the first principle thinking in
+10:00
+its essence What problems would have
+10:02
+caused the most damage if exploited Next
+10:05
+we can leverage AWS Lambda to run our
+10:07
+security checks without having to manage
+10:09
+any servers Using Python and the AWS SDK
+10:13
+we write the code that systematically
+10:14
+examines our cloud resources For
+10:17
+instance when checking S3 you want to
+10:19
+list all your buckets and examine their
+10:21
+access control policies to see if they
+10:23
+are public For security groups you want
+10:25
+to list every rule and look for rules
+10:27
+allowing inbound traffic from the
+10:29
+internet on sensitive ports For RDS you
+10:31
+want to verify that each database is
+10:33
+encrypted at rest Now having programming
+10:35
+checks in this way ensures consistency
+10:38
+and scalability We don't want to do this
+10:40
+manually This way we're directly
+10:41
+addressing the discovery and the
+10:43
+evaluation requirements ensuring nothing
+10:46
+is missed due to human error For step
+10:48
+three as you know by now cloud security
+10:50
+isn't something that we just fix once
+10:52
+It's an ongoing process So we're going
+10:55
+to use Amazon Event Bridge to schedule
+10:57
+our Lambda function to run automatically
+10:59
+at regular intervals like every day at 2
+11:02
+a.m And if a new misconfiguration
+11:04
+appears we'll discover it really quickly
+11:07
+after each scan Step number four will
+11:09
+store the results in DynamoB This lets
+11:11
+you track the changes over time and then
+11:13
+from there you might notice over time a
+11:16
+particular team repeatedly opens up port
+11:18
+22 to your entire internet You can then
+11:21
+send them to highlight trends and
+11:22
+educate the team on the most secure
+11:25
+approaches Now this gets you in the
+11:26
+mindset of not treating cloud security
+11:28
+incidents in isolation but instead
+11:30
+you're identifying reoccurring problems
+11:32
+across the business From first
+11:34
+principles you are acknowledging that
+11:36
+security improvement requires
+11:38
+understanding and not just what's gone
+11:40
+wrong but why it keeps happening Now
+11:42
+with security issues that are urgent
+11:44
+such as an open database port accessible
+11:46
+to just anyone step number five means we
+11:48
+are going to integrate SNS or Slack
+11:51
+notifications to alert security teams By
+11:53
+prioritizing these alerts we make sure
+11:55
+that the most severe risk are addressed
+11:58
+immediately directly addressing one of
+12:00
+our four core requirements Prioritize
+12:02
+remediation From first principles we
+12:04
+understand that not all risks are equal
+12:07
+So a tiered alerting approach ensures
+12:09
+critical issues are fixed straight away
+12:11
+Now with the automated assessment tools
+12:13
+set up is that all well no because in
+12:16
+step number six we now have to iterate
+12:18
+and expand with new checks For example
+12:20
+you might look for IM users who lack
+12:23
+multiffactor authentication or you might
+12:25
+verify that EBS volumes are encrypted
+12:28
+Now this iterative approach starting
+12:30
+with the biggest risks and then
+12:31
+expanding is a direct application of
+12:34
+first principles thinking Address the
+12:36
+basics first then refine and extend your
+12:39
+coverage as you gain confidence in your
+12:41
+automation Here we are acknowledging
+12:43
+that the perfect cloud security is
+12:45
+impossible from day one By starting with
+12:48
+high impact issues and gradually
+12:49
+expanding you create a sustainable
+12:51
+improvement process rather than an
+12:54
+overwhelming project that tries to do
+12:56
+everything at once You have to see cloud
+12:58
+security as a continuous journey and not
+13:01
+a destination So this project will help
+13:03
+you get hired fast because it shows you
+13:05
+that you can do way more than just
+13:07
+follow basic rules You understand what
+13:09
+really matters for security in your
+13:11
+cloud setup And most importantly you
+13:13
+understand why And as cloud services
+13:15
+change you can easily adapt your
+13:17
+security approach So instead of checking
+13:19
+security once in a while by hand i.e
+13:22
+manually You've made it an automatic
+13:25
+ongoing process that keeps up with fast
+13:28
+development Your system finds problems
+13:30
+evaluates them consistently catches
+13:32
+issues quickly and helps fix the most
+13:35
+important things first And in 2025
+13:38
+companies are continuing to adopt
+13:40
+containerbased applications which means
+13:42
+they are packaging their software into
+13:44
+units called containers using
+13:46
+technologies like Docker or Amazon ECS
+13:49
+These containers run consistently across
+13:51
+any computing environment allowing for
+13:54
+seamless deployment to the cloud But
+13:56
+here is the problem They often
+13:58
+prioritize speed and portability at the
+14:00
+expense of security And when you
+14:02
+consider that 87% of container images
+14:04
+contain at least one high or critical
+14:07
+vulnerability Container security
+14:08
+obviously shouldn't be an afterthought
+14:10
+So we're going to build project number
+14:12
+three the container security falcon But
+14:14
+first we have to understand container
+14:16
+security at its core And again applying
+14:19
+the first principles and stripping away
+14:21
+the complexity there is two essential
+14:23
+areas that we have to focus on Verifying
+14:25
+what goes into the container image and
+14:27
+restricting what the container can do
+14:30
+once deployed in the cloud Now there is
+14:32
+four core requirements for this project
+14:34
+Number one we want to minimize the
+14:36
+attack surface which means including
+14:38
+only what's necessary in your container
+14:40
+to reduce total number of
+14:42
+vulnerabilities Number two the principle
+14:43
+of lease privilege ensures containers
+14:46
+run with only the permissions that they
+14:48
+need to function and nothing more What
+14:50
+this does is that it limits the damage
+14:52
+an attacker can do if they compromise a
+14:54
+container Number three verification
+14:57
+before deployment This ensures that
+14:59
+we're catching vulnerabilities before
+15:01
+containers reach to production and in
+15:03
+front of live customers And number four
+15:05
+runtime protection and monitoring
+15:07
+provides visibility into container
+15:09
+behavior allowing you to detect and
+15:12
+respond to suspicious activity quickly
+15:14
+So we begin our secure container journey
+15:16
+at the most fundamental level the
+15:18
+container image itself A Docker file
+15:20
+starts with a base image And our first
+15:23
+choice here is crucial for security We
+15:25
+select the smallest possible base image
+15:28
+often the Alpine Linux or Alpine Linux
+15:30
+if you're into Formula 1 which is less
+15:31
+than 5 megabytes and contains far fewer
+15:34
+potential vulnerabilities than larger
+15:36
+alternatives Next we configure
+15:37
+application to run as a non-root user
+15:39
+inside of the container By the way root
+15:41
+access gives total privileges and
+15:43
+control in a system So if an attacker
+15:46
+manages to exploit our application
+15:47
+without root access many attack
+15:49
+techniques become more difficult or
+15:51
+basically impossible to execute And we
+15:54
+also carefully audit every package and
+15:56
+dependency and we add it to the
+15:58
+container The attack service of our
+16:00
+container would directly correlate with
+16:02
+its contents The less we include the
+16:04
+more secure our container becomes With
+16:06
+our minimized container image built we
+16:08
+move on to step number two storing and
+16:10
+analyzing it securely Amazon Elastic
+16:12
+Container Registry or ECR provides a
+16:15
+managed service specifically designed
+16:16
+for container images After building our
+16:18
+image locally we push it to ECR where
+16:21
+it's stored with encryption at rest ECR
+16:24
+has built-in image scanning which
+16:25
+automatically checks our image against a
+16:28
+database of known vulnerabilities CVEes
+16:31
+And if our base image contains a
+16:33
+critical security flaw the scan report
+16:35
+identifies it immediately This gives us
+16:37
+the opportunity to fix these issues
+16:39
+before the container ever reaches a
+16:41
+production environment So rather than
+16:42
+expecting developers to stay current on
+16:44
+all security advisories affecting their
+16:47
+dependencies which is an impossible task
+16:49
+given the volume automated scanning
+16:51
+provides consistent verification This
+16:53
+verification step embodies the security
+16:55
+principle of trust but verify We trust
+16:58
+developers to write secure code but we
+17:00
+verify that their dependencies don't
+17:02
+introduce any known vulnerabilities Now
+17:05
+what individual security steps are good
+17:07
+a comprehensive cloud security approach
+17:09
+requires connecting these steps into a
+17:12
+consistent automated workflow So step
+17:14
+number three we'll use AWS code pipeline
+17:17
+to help us stitch together each stage
+17:19
+retrieving code from our repository
+17:20
+building the Docker image scanning for
+17:22
+vulnerabilities and finally deploying to
+17:25
+production And the real benefit here is
+17:27
+that every time a developer pushes new
+17:29
+code these stages run automatically
+17:32
+ensuring no one forgets critical
+17:34
+security steps like vulnerability
+17:37
+scanning So if code pipeline detects
+17:39
+serious security issues at any stage it
+17:41
+halts the process completely preventing
+17:43
+insecure containers from reaching
+17:44
+production environments where they could
+17:47
+be exploited In our for container passes
+17:49
+all security checks Step number four we
+17:51
+need to deploy in a way that maintains
+17:52
+our security posture Amazon Elastic
+17:54
+Container Service ECS orchestrates how
+17:57
+many container instances run and where
+18:00
+they are deployed In ECS we define tasks
+18:02
+that specify not just the container
+18:04
+image but the precise resources and
+18:06
+permissions it requires This is where we
+18:08
+implement the principle of lease
+18:10
+privilege at the deployment level We
+18:12
+assign an IM role to each task granting
+18:15
+it only the permissions necessary for
+18:17
+the application specific functions And
+18:19
+if our application doesn't need to read
+18:21
+from Dynamo DB for example we explicitly
+18:24
+exclude that permission and we only give
+18:27
+access to what it needs And if it only
+18:29
+needs to write logs to cloudatch but not
+18:31
+read them we will configure exactly that
+18:33
+by limiting privileges in this granular
+18:35
+way Even a compromised container has
+18:38
+dramatically narrower set of actions
+18:40
+that it can perform So we've deployed
+18:43
+our containers securely Is that it well
+18:46
+no Step number five we need ongoing
+18:49
+visibility AWS Cloudatch captures logs
+18:51
+from our containers in real time If an
+18:53
+application suddenly starts logging
+18:55
+unusual errors experiencing a sharp
+18:57
+increase in CPU usage we can investigate
+19:00
+immediately And this early detection of
+19:01
+unexpected behavior helps us identify or
+19:04
+respond to potential security incidents
+19:06
+before they can cause significant damage
+19:08
+This creates a security feedback loop
+19:10
+allowing us to continuously improve our
+19:12
+defenses based on observed behavior and
+19:15
+real world attack patterns Step number
+19:17
+six with our secure pipeline in place
+19:19
+our work isn't done It's just actually
+19:20
+the beginning of a new phase So once our
+19:23
+basic pipeline is operating smoothly we
+19:25
+continuously refine and enhance it We
+19:28
+might implement stricter scanning rules
+19:30
+as a security maturity increases or
+19:32
+integrate more specialized third-party
+19:35
+tools for deeper static code analysis
+19:37
+And perhaps we add container runtime
+19:39
+security monitoring that can detect
+19:41
+unusual behavior patterns that might
+19:43
+indicate an intrusion attempt The first
+19:45
+principal idea here is to continually
+19:48
+limit the containers attack service and
+19:50
+improve our ability to monitor its
+19:52
+behavior And as we identify new
+19:54
+vulnerabilities or security gaps through
+19:56
+our monitoring or through industry
+19:57
+advisories we update our pipeline to
+20:00
+enforce newly identified best practices
+20:03
+So security is never done It evolves as
+20:06
+threats and technologies change A
+20:08
+container security pipeline isn't just a
+20:10
+one-time project but a continuous
+20:12
+improvement process So can you see how
+20:14
+approaching container security from
+20:16
+first principles you create multiple
+20:19
+layers of protection each step with
+20:21
+minimal images non-root users
+20:23
+vulnerability scanning automated
+20:25
+pipelines lease privilege deployments
+20:27
+and continuous monitoring addresses a
+20:29
+fundamental security requirement We are
+20:32
+integrating security throughout the
+20:34
+container life cycle and not as an
+20:36
+afterfall and that mentality will get
+20:38
+you hired fast in 2025 Now to build
+20:41
+these projects that I've mentioned
+20:42
+you'll want to know all of the skills
+20:44
+that a cloud security engineer needs So
+20:46
+click right here to watch my complete
+20:48
+cloud security road map for 2025
+20:50
+detailing every single thing that you
+20:53
+need to
+
+
+====================================================
+What does a Cloud Security Engineer ACTUALLY Do?
+
+In this video I share, what a Cloud Security Engineer really does and why they earn $134,398+ per year! From securing cloud environments to protecting Fortune 500 companies, this comprehensive guide breaks down the daily responsibilities, required skills, and incredible career opportunities in cloud security. 
+
+
+0:00
+what does a cloud security engineer
+0:02
+actually do now I've been in the tech
+0:05
+industry for a decade and it's allowed
+0:07
+me to work with Fortune 500 companies
+0:10
+startups government organizations
+0:12
+architecting and implementing
+0:14
+multi-million dollar Cloud Solutions I
+0:16
+now run my own cloud security business
+0:20
+helping startups build more securely on
+0:22
+the cloud through governance compliance
+0:25
+security engineering and Dev setups but
+0:27
+here's the thing the demand for cl
+0:30
+security Engineers is skyrocketing with
+0:33
+the adoption of cloud Technologies and
+0:35
+the increasing threats of cyber
+0:37
+criminals businesses are Desperately
+0:39
+Seeking for skilled professionals who
+0:42
+can keep their Cloud environment safe
+0:44
+and secure in fact the average Cloud
+0:47
+security engineer earns over
+0:50
+$134,000 and I'm confident that you can
+0:52
+achieve the same level of success but
+0:55
+it's not just about the money this role
+0:57
+offers incredible job satisfaction
+1:00
+knowing that you are playing a critical
+1:02
+part in protecting an organization from
+1:05
+cyber threats and in this video we'll
+1:07
+dive into the day-to-day task of a cloud
+1:10
+security engineer we're going to explore
+1:12
+the skills that you need to succeed in
+1:14
+this role discuss the incredible
+1:16
+salaries that you can expect and take a
+1:18
+look at the future job outlook for this
+1:21
+in demand career path now before we get
+1:23
+started you should check out my weekly
+1:25
+Cloud newsletter where I share free
+1:27
+resources tutorials boot camps and so
+1:29
+much much more helping you with your
+1:31
+Cloud move and also smash that like
+1:33
+button and subscribe if you haven't
+1:34
+already because I'm so close to hitting
+1:37
+100,000 subscribers now this video is
+1:39
+super long so to help I've done you a
+1:40
+massive favor and created timestamps for
+1:43
+you to skip around if you want to now
+1:45
+before you learn and understand what
+1:47
+cloud security engineering is I think
+1:50
+it's important for you to get a view of
+1:52
+the bigger picture a step back and how
+1:55
+Cloud security fits into cyber security
+1:57
+and Cloud engineering you see cloud
+2:00
+security engineering is like a subset or
+2:02
+a specialized area that falls under both
+2:05
+cyber security and Cloud engineering
+2:07
+it's the point where these two domains
+2:09
+intersect and work together to protect a
+2:12
+company's assets in the cloud cyber
+2:14
+security as you might know it's all
+2:16
+about protecting computer systems
+2:18
+networks and data from digital attacks
+2:21
+unauthorized access and other security
+2:24
+threats it involves a wide range of
+2:26
+practices tools and Technologies to keep
+2:28
+an organizations digital assets safe now
+2:31
+on the other hand Cloud engineering is
+2:33
+about designing building and managing
+2:36
+systems that applications run on cloud
+2:38
+computing platforms such as AWS
+2:41
+typically Cloud Engineers are
+2:43
+responsible for architecting and
+2:44
+implementing scalable reliable and coste
+2:47
+effective Cloud Solutions and when you
+2:49
+bring together these two domains you get
+2:52
+Cloud security engineering it's a
+2:54
+specialized area that focuses on
+2:56
+securing the systems data and
+2:58
+applications that live in the cloud
+3:01
+cloud security Engineers apply the
+3:03
+principles and best practices of cyber
+3:05
+security to the unique challenges and
+3:07
+opportunities presented by cloud
+3:09
+computing and think of it like this if
+3:12
+cyber security is about protecting
+3:13
+digital Assets in general and Cloud
+3:15
+engineering is about building and
+3:17
+managing systems in the cloud then Cloud
+3:19
+security engineering is about protecting
+3:22
+those specific cloud-based systems and
+3:24
+assets and here is how these three areas
+3:27
+coexist and work together cyber security
+3:30
+provides the overall framework
+3:32
+principles and best practices for
+3:34
+protecting digital assets from threats
+3:37
+it defines security protocols policies
+3:39
+and processes that organizations should
+3:42
+follow to mitigate these risks where
+3:45
+Cloud engineering leverages the power
+3:47
+and flexibility of cloud computing to
+3:49
+design and build scalable resilience
+3:51
+systems Cloud Engineers Architects
+3:53
+solutions that take advantage of cloud
+3:56
+capabilities whilst also considering
+3:59
+factors like cost optimization and
+4:01
+performance Cloud security engineering
+4:03
+brings the principles of cyber security
+4:06
+into the context of the cloud it adapts
+4:09
+and applies security best practices to
+4:11
+the unique characteristics of cloud
+4:13
+environments Cloud security Engineers
+4:15
+work to ensure that the systems and data
+4:18
+in the cloud are protected from
+4:20
+unauthorized access data breaches and
+4:22
+other security threats specific to cloud
+4:25
+computing in practice this means that
+4:28
+cloud security engineers collaborate
+4:30
+closely with both cyber security and
+4:32
+Cloud engineering teams they work with
+4:35
+cyber Security Professionals to Define
+4:37
+and Implement security controls policies
+4:39
+and incident response plans tailored to
+4:42
+the cloud and at the same time they
+4:44
+partner with Cloud Engineers to design
+4:47
+and build secure Cloud architectures
+4:49
+Implement Security Solutions and ensure
+4:52
+that security is integrated through the
+4:54
+development and deployment process for
+4:57
+example a cloud security engineer might
+4:59
+work work with the cyber security team
+5:01
+to Define identity and access management
+5:03
+policies ensuring that only authorized
+5:05
+users can access sensitive data and
+5:08
+systems they would then collaborate with
+5:10
+Cloud Engineers to implement these IM
+5:13
+policies using the native Security
+5:15
+Services of platforms such as AWS im a
+5:18
+cloud security engineer might also work
+5:20
+with cyber security team to develop a
+5:22
+data classification and protection
+5:25
+strategy categorizing data based on its
+5:27
+sensitivity and defining incred ion and
+5:30
+access control requirements they would
+5:32
+then partner with Cloud Engineers to
+5:34
+implement the data protection Solutions
+5:36
+such as encrypting data at rest using
+5:38
+aws's Key Management Services such as
+5:41
+KMS fundamentally Cloud security
+5:44
+engineering is a critical area that
+5:47
+brings together the world of cyber
+5:48
+security and Cloud engineering it
+5:50
+ensures that the benefits of cloud
+5:52
+computing is realized while also
+5:55
+maintaining security and the Integrity
+5:58
+of an organization's digital Assets Now
+6:00
+by working at the intersection of these
+6:02
+two domains Cloud security Engineers
+6:05
+play a key role in protecting a
+6:07
+companies's data and systems in the
+6:09
+cloud and the reason that I love Cloud
+6:12
+security is that you get the best of
+6:14
+both worlds cyber security and Cloud
+6:17
+engineering all right so let's dive into
+6:20
+the day-to-day task of a cloud security
+6:22
+engineer and I've broken these down into
+6:24
+four key areas tasks Technologies
+6:27
+operations and projects and we going to
+6:29
+cover the most common and important
+6:31
+parts of these areas because otherwise
+6:34
+this video wouldn't finish until 2025
+6:37
+starting with the task now as a cloud
+6:39
+security engineer one of your key tasks
+6:41
+is to conduct regular security Audits
+6:44
+and assessments of your Cloud
+6:45
+environment this involves reviewing
+6:47
+security configurations identifying
+6:49
+potential vulnerabilities and ensuring
+6:52
+compliance with industry standards and
+6:54
+best practices Now by examining your
+6:56
+Cloud infrastructure you can uncover
+6:59
+areas for improvement and then develop
+7:01
+strategies to strengthen the overall
+7:03
+security posture another crucial task is
+7:06
+threet modeling and risk assessment this
+7:08
+process involves analyzing your Cloud
+7:10
+architecture identifying potential
+7:13
+attack vectors and assessing the impact
+7:15
+of potential security breaches by
+7:18
+understanding the unique risks facing
+7:20
+your environment you can prioritize
+7:22
+security efforts and Implement targeted
+7:25
+controls to mitigate those risks this
+7:27
+proactive approach helps you stay one
+7:30
+step ahead of potential threats Cloud
+7:32
+security Engineers are also responsible
+7:34
+for developing and maintaining
+7:36
+comprehensive security policies and
+7:38
+procedures this includes creating
+7:40
+guidelines for secure configuration of
+7:42
+cloud resources defining Access Control
+7:44
+policies and establishing incident
+7:47
+response plans now by documenting and
+7:49
+enforcing these policies and procedures
+7:52
+you ensure a consistent and robust
+7:54
+security approach across your
+7:56
+organization all right so those were the
+7:57
+three common tasks but let's dive into
+7:59
+some of the Technologies and tools a
+8:01
+cloud security engineer uses now as a
+8:04
+cloud security engineer you need to be
+8:06
+confident with a wide range of AWS
+8:09
+Security Services this includes services
+8:11
+like AWS identity access management also
+8:14
+known as IM for Access Control Amazon
+8:16
+virtual private Network VPC for network
+8:19
+security AWS Key Management Service KMS
+8:22
+for encryption key management and Amazon
+8:24
+guard Duty for fret detection now
+8:27
+understanding how these Services work
+8:29
+together to provide a layer security
+8:31
+approach is essential of course there's
+8:33
+some more Security Services but I don't
+8:35
+want to cover everything for you cuz
+8:37
+that would be just so long and too much
+8:39
+information now in addition to the AWS
+8:41
+native Services Cloud security Engineers
+8:44
+also need to leverage third-party
+8:46
+security tools to enhance their security
+8:49
+capabilities one tool is Sneak who have
+8:52
+kindly sponsored this video sneak is a
+8:54
+developer First Security platform that
+8:56
+integrates with AWS to help you secure
+8:59
+for your applications and infrastructure
+9:01
+sneak offers a range of features that
+9:04
+complement and extend AWS Security
+9:06
+Services for example you can use sneak
+9:08
+to scan your code dependencies
+9:10
+containers and infrastructures code for
+9:12
+vulnerabilities sneak also works well
+9:15
+with your existing tools like your idees
+9:18
+clis repositories pipelines Docker Hub
+9:21
+and the best part is how sneak
+9:23
+integrates well with your AWS
+9:25
+environment and services such as code
+9:28
+pipeline allowing you to automatically
+9:30
+scan your code as part of your cicd
+9:33
+workflow it also works well with Amazon
+9:35
+ECR elastic container registry enabling
+9:38
+you to scan your container images for
+9:41
+vulnerability and get recommendations
+9:43
+for base image upgrades and what's
+9:45
+amazing about my partnership with sneak
+9:48
+who have actually been a long-term
+9:49
+sponsor here on the channel is that you
+9:52
+can play around with sneak for yourself
+9:54
+and find out if there's any
+9:56
+vulnerabilities affecting your Cloud
+9:58
+projects and if you sign up using my
+9:59
+link sak.com man you can use sneak for
+10:03
+free forever another powerful feature of
+10:06
+sneak is its ability to detect
+10:08
+misconfigurations in your AWS cloud
+10:11
+formation templates and terapon files
+10:13
+but identifying insecure configurations
+10:16
+before they're deployed sneak helps you
+10:18
+prevent potential security issues from
+10:20
+ever reaching your production
+10:22
+environment and affecting your customers
+10:24
+now with sneak you can also leverage
+10:25
+Amazon event bridge to set up real time
+10:28
+notification and response workflows
+10:31
+based on sneak security findings this
+10:33
+allows you to quickly respond to
+10:35
+potential threats and vulnerabilities
+10:37
+minimizing the risk of security
+10:39
+incidents now whether I'm working on my
+10:42
+own personal projects or any client
+10:44
+projects I always add sneak into the mix
+10:47
+as I know it can help me build more
+10:48
+secure platforms for my clients and if
+10:51
+you want to use sneak go click the link
+10:52
+in my bios. co/ slman and you sneak for
+10:56
+free forever thanks again for sneak for
+10:59
+being an amazing partner for our Channel
+11:01
+another technology and tool that you
+11:03
+need to be comfortable with as a cloud
+11:05
+security engineer is of course
+11:06
+infrastructures code such as terraform
+11:09
+and cloud formation by defining your AWS
+11:11
+infrastructure as code you can ensure
+11:14
+consistent and secure deployments and
+11:16
+easily manage changes over time IAC
+11:19
+allows you to Version Control your
+11:21
+infrastructure enabling you to track
+11:23
+changes and roll back if needed okay so
+11:26
+those were the tasks and Technologies
+11:28
+covered but another big part of a cloud
+11:31
+security engineer role is of course
+11:33
+operations continuous monitoring is
+11:36
+essential for detecting and responding
+11:38
+to security incidents in your Cloud
+11:39
+environment Cloud security Engineers can
+11:41
+of course use tools like AWS guard Duty
+11:44
+or security Hub and even Cloud watch for
+11:47
+monitor for suspicious activity un aized
+11:49
+access attempts and potential
+11:51
+vulnerabilities when an incident happens
+11:53
+you'll need to follow an established
+11:55
+incident response plan that contains the
+11:58
+Fret investigates the root cause and
+12:00
+Implement remediation measures it's all
+12:02
+about taking action with a plan that can
+12:05
+help prevent any more attacks now
+12:07
+managing access to AWS resources is
+12:09
+another critical operational task for
+12:12
+cloud security Engineers this involves
+12:14
+implementing the principle of lease
+12:16
+privilege ensuring that users and
+12:18
+applications have only the permissions
+12:20
+that they need to perform their tasks
+12:22
+you'll work with tools like AWS IM to
+12:25
+Define and enforce granular access
+12:27
+policies across your Cloud environment
+12:28
+keep keeping your AWS environment up to
+12:31
+date with the latest security patches is
+12:33
+another ongoing operational task Cloud
+12:36
+security Engineers work with it and
+12:38
+development teams to ensure that the
+12:40
+operating systems applications and
+12:42
+Library are always updated to address
+12:45
+known vulnerabilities this helps
+12:47
+minimize the attack surface and reduces
+12:49
+the risk of exploitation okay perfect so
+12:52
+we've covered fre key errors but let's
+12:54
+understand more about the projects that
+12:56
+cloud security engineers get their hands
+12:58
+dirty with Cloud security Engineers work
+13:00
+on projects to design secure
+13:02
+architectures for new applications and
+13:05
+services this involves collaboration
+13:07
+with development teams to ensure the
+13:09
+security is built in from the start
+13:11
+rather than bolted on later by
+13:13
+incorporating security best practices
+13:15
+and design principles you can create
+13:17
+resilient and secure architectures and
+13:20
+also withstand potential threats most
+13:22
+people think about security when it's
+13:24
+too late but it's time we all start
+13:26
+thinking about security from the start
+13:28
+now depending on your industry and
+13:29
+location you will be involved in
+13:31
+projects to ensure compliance and
+13:33
+various standards such as Hippa PCI DSS
+13:37
+or gdpr Cloud security Engineers play a
+13:39
+key role in assessing compliance
+13:41
+requirements implementing necessary
+13:43
+controls and maintaining audit Trails
+13:46
+this involves working closely with
+13:48
+compliance teams and Auditors to
+13:50
+demonstrate that you're adhering to
+13:52
+relevant standards to be honest I think
+13:55
+compliance and Regulatory standards is
+13:57
+very boring but don't tell anyone that
+13:59
+anyway Cloud security Engineers also
+14:01
+work on projects to automate security
+14:03
+tasks and optimize security processes
+14:06
+this can involve developing scripts and
+14:08
+tools to automate security assessments
+14:10
+implementing security orchestration and
+14:12
+response platforms or integrating
+14:14
+security tools with AWS Services Now by
+14:17
+automating repetitive task and
+14:19
+streamlining processes you can improve
+14:22
+the efficiency and reduce the risk of
+14:24
+human error and by focusing on these key
+14:27
+tasks Technologies Opera
+14:29
+and projects Cloud security Engineers
+14:32
+can effectively secure and protect Cloud
+14:34
+environments leveraging the power of AWS
+14:37
+native services along with third-party
+14:39
+tools like sneak enables you to take a
+14:41
+comprehensive and proactive approach to
+14:44
+Cloud security okay so what skills and
+14:47
+certifications do you need to learn and
+14:49
+become a cloud security engineer and for
+14:51
+this role having a right mix of
+14:53
+Technical and soft skills is crucial so
+14:56
+let's break down some of these key areas
+14:58
+that you should focus on first and
+14:59
+foremost you need a solid understanding
+15:02
+of General it in Cloud engineering
+15:04
+fundamentals before going into Cloud
+15:07
+platforms like AWS Azure or Google cloud
+15:10
+and their respective Security Services
+15:12
+each platform has its own unique set of
+15:14
+tools and best practices for securing
+15:16
+Cloud environments so you need to be
+15:18
+familiar with those areas next you want
+15:20
+to dive into Network and application
+15:22
+security Concepts this includes things
+15:24
+like understanding common
+15:26
+vulnerabilities implementing secure
+15:27
+network architecture and protecting
+15:29
+against web application attacks a strong
+15:32
+foundation in these areas will serve you
+15:35
+well as you design and Implement
+15:37
+security controls in the cloud identity
+15:39
+and access management or IM am is
+15:41
+another key skill area in the cloud IM
+15:44
+am is all about ensuring the right users
+15:46
+have the right level of access to the
+15:48
+right resources you need to master
+15:50
+Concepts like user and role management
+15:53
+authentication and authorization along
+15:55
+with multiactor authentication as a
+15:57
+cloud security engineer you need to be
+15:59
+well-versed in security Frameworks and
+16:02
+compliance standards such as ISO and
+16:04
+gdpr to provide guidelines and best
+16:07
+practices for securing systems and
+16:09
+protecting data understanding these
+16:11
+Frameworks will help you design and
+16:13
+Implement security controls that meet
+16:15
+industry standards and regulatory
+16:17
+requirements I know it's a lot and it's
+16:19
+not easy but you can do it scripting and
+16:21
+automation skills are also incredibly
+16:23
+valuable being able to write scripts in
+16:26
+a language like python or bash can help
+16:28
+you autom make repetitive security task
+16:30
+like provisioning resources or analyzing
+16:32
+log files this not only saves time but
+16:36
+also reduces the risk of human error
+16:38
+incident response and forensic skills
+16:40
+are crucial for dealing with security
+16:42
+breaches when they happen you need to
+16:44
+know how to quickly contain and mitigate
+16:46
+incidents as well as how to conduct far
+16:49
+investigations to determine the root
+16:51
+cause and prevent any future occurrences
+16:55
+risk assessment and management is
+16:56
+another key area as a cloud security
+16:59
+engineer you'll be responsible for
+17:01
+identifying and assessing potential
+17:03
+security risks and then developing
+17:05
+strategies to mitigate those risks this
+17:07
+requires an understanding of the threet
+17:09
+landscape as well as the ability to
+17:11
+prioritize and address the risk based on
+17:14
+the potential impact and finally don't
+17:17
+underestimate the importance of soft
+17:19
+skills like communication and
+17:21
+collaboration as a cloud security
+17:23
+engineer you'll be working closely with
+17:25
+teams across the business from
+17:27
+developers to operations to Executives
+17:30
+being able to clearly communicate
+17:32
+complex security Concepts and
+17:33
+collaborate effectively with others is
+17:35
+essential for success in this role all
+17:38
+right now let's talk about
+17:39
+certifications while hands-on experience
+17:41
+is obviously very important and valuable
+17:43
+certifications can validate your skills
+17:45
+and give you a bit of credibility and
+17:48
+make you more marketable to potential
+17:50
+employers one great starting point is
+17:52
+the CompTIA Security Plus certification
+17:55
+this vendor neutral certification covers
+17:57
+a wide range of cyber security topics
+17:59
+from network security to compliance to
+18:01
+operational security it's a great way to
+18:03
+demonstrate a solid foundation in
+18:05
+security principles for those looking to
+18:08
+specialize in Cloud security which is of
+18:10
+course all of you guys AWS security
+18:12
+speciality is a popular choice this
+18:15
+certification demonstrates Advanced
+18:17
+knowledge of securing AWS environments
+18:20
+including data protection infrastructure
+18:22
+security instant response and of course
+18:25
+security automation another highly
+18:27
+regarded certification is the certified
+18:30
+Cloud security professional or the ccsp
+18:32
+this certification validates Knowledge
+18:34
+and Skills in Cloud security
+18:36
+architecture design operations and
+18:38
+service orchestration finally the
+18:41
+certified information system security
+18:43
+professional also known as cisp is often
+18:45
+considered the golden standard in cyber
+18:48
+security certifications while it's not
+18:50
+Cloud specific cisp covers a broad range
+18:53
+of security topics and he highly valued
+18:55
+by employers across Industries across
+18:58
+countries across companies now to excel
+19:00
+as a cloud security engineer focus on
+19:02
+building a strong foundation in Cloud
+19:04
+platforms networking and application
+19:06
+security of course identity access
+19:08
+management security framework scripting
+19:10
+automation instant response risk
+19:12
+management and soft skills I know it's a
+19:15
+lot guys it is a lot but nothing comes
+19:17
+easy and of course you don't need to
+19:18
+learn all of these at once take your
+19:20
+time take it slow and remember it's a
+19:23
+marathon and not a Sprint so far we've
+19:25
+covered everything but the important
+19:27
+parts salary and job outlook now when it
+19:30
+comes to earning potential Cloud
+19:31
+security Engineers are among the highest
+19:34
+paid Professionals in the IT industry
+19:36
+with an average salary of over
+19:39
+$145,000 per year in the United States
+19:42
+according to the recent Market data it's
+19:44
+clear that businesses are willing to
+19:46
+invest heavily in talent that can help
+19:48
+them secure their Cloud environments but
+19:50
+this figure is just an average in
+19:52
+reality Cloud security Engineers can
+19:55
+earn a lot more depending on location
+19:57
+industry exper experience level and of
+19:59
+course company size now in major Tech
+20:02
+hubs like San Francisco New York and
+20:04
+Seattle for example it's not uncommon
+20:06
+for senior level cloud security
+20:08
+Engineers to have salaries of upwards of
+20:11
+$200,000 per year and don't get me
+20:13
+started on contractors and Freelancers
+20:16
+and these figures are only expected to
+20:18
+rise in the coming years as more and
+20:20
+more businesses migrate their operations
+20:22
+to the cloud the demand for skilled
+20:24
+Cloud Security Professionals is only
+20:26
+getting higher in fact according to a
+20:29
+recent report from the research dive the
+20:31
+global Cloud security Market is expected
+20:34
+to grow at a compound annual growth rate
+20:37
+of over 17.5% from 2001 to
+20:41
+2028 reaching a total Market size of
+20:45
+over $75 billion now this explosive
+20:48
+growth is driven by a number of
+20:50
+different factors the adoption of cloud
+20:52
+computing the increasing complexity of
+20:54
+cyber threats and the growing importance
+20:57
+of data privacy and compliance are all
+21:00
+contributing to the need of robust Cloud
+21:02
+security measures and as a result of
+21:04
+this businesses across Industries are
+21:06
+scrambling to hire Cloud security
+21:09
+Engineers who can help them navigate
+21:10
+this complex landscape the job outlook
+21:13
+for cloud security Engineers is also
+21:15
+equally promising according to the US
+21:17
+Bureau of Labor Statistics and
+21:19
+employment of information security
+21:21
+analyst which of course includes Cloud
+21:24
+security Engineers is projected to grow
+21:26
+by 31% from 20 19 2029 which is much
+21:31
+faster than the average for all
+21:33
+occupations to put this into perspective
+21:35
+the average growth rate for all
+21:36
+occupations is just 4% this means that
+21:39
+over the next decade we can expect to
+21:41
+see the creation of over 40,000 new jobs
+21:43
+in the information security field in the
+21:46
+us alone and with the growing prominence
+21:48
+of cloud computing it's safe to say that
+21:50
+a significant portion of these jobs will
+21:53
+be focused on cloud security but it's
+21:55
+not just the number of jobs that make
+21:57
+this field so attractive Ive it's also
+21:59
+the nature of the work itself as a cloud
+22:02
+security engineer you'll have the
+22:04
+opportunity to work at a key part of
+22:06
+Technology tackling complex challenges
+22:09
+and playing a key role in protecting an
+22:11
+organization from cyber threats you'll
+22:13
+be part of a fastpaced and constantly
+22:16
+evolving industry where no two days are
+22:19
+the same the skills you develop as a
+22:20
+cloud security engineer are also highly
+22:22
+transferable across Industries whether
+22:24
+you're working for a financial
+22:26
+institution a healthc care provider a
+22:28
+government agency or a tech startup the
+22:30
+fundamental principles of cloud security
+22:33
+remain the same across these industries
+22:35
+this means that once you build a strong
+22:37
+foundation in Cloud security you'll have
+22:39
+a wide range of career options to choose
+22:41
+from and of course with such high demand
+22:44
+and attractive salaries the competition
+22:46
+for cloud security engineer roles can
+22:48
+also be high to stand out in this market
+22:50
+it's important to continuously invest in
+22:52
+your skills and your knowledge staying
+22:54
+up to date with the latest Cloud
+22:56
+security tools best practices and of
+22:57
+course fret landscape will be key to
+23:00
+your success in this area and there you
+23:02
+have it a complete guide and breakdown
+23:04
+on what a cloud security engineer
+23:07
+actually does and I hope this gives you
+23:09
+a good guide a plan and helps you take
+23:12
+action as always thank you for watching
+23:14
+don't forget to like And subscribe and
+23:16
+I'll see you on the next one
+
+
+====================================================
+How I would learn Cloud Security (If I could start over)
+
+In this video, I reveal my proven 3-step blueprint to Learn Cloud Security and ACTUALLY get a Job.
+
+I'll share the Cloud Security foundations you must learn, what projects you need, and, the new way to get hired that nobody's talking about.
+
+
+0:00
+if you clicked on this video chances are
+0:01
+that you want to land a job in Cloud
+0:03
+security and with good reason the cloud
+0:05
+computing Market is exploding projected
+0:08
+to reach an insane 1.6 trillion by 2030
+0:11
+now combined with the fact that 35% of
+0:14
+organizations say cloud security is
+0:17
+their biggest talent Gap and nearly 40%
+0:19
+of it professionals report it as their
+0:21
+most critical skills shortage so what is
+0:25
+that creating an unprecedented
+0:27
+opportunity you see companies are
+0:30
+scrambling to hire and they're willing
+0:31
+to pay top dollar to secure top talent
+0:34
+Cloud security Engineers are commanding
+0:36
+on average
+0:37
+$133,000 with total compensation
+0:40
+packages reaching over
+0:42
+$160,000 but there's a catch as always
+0:46
+so if you're new here hi I'm slan I've
+0:49
+worked in tech for a decade and today I
+0:51
+help businesses scale and secure the
+0:53
+cloud infrastructure on AWS now also
+0:56
+running my education company I've
+0:58
+discovered that most people are approach
+1:00
+in this golden opportunity in Cloud
+1:02
+security completely wrong they pass a
+1:04
+few certifications and watch a few
+1:06
+YouTube tutorials and then they wonder
+1:08
+why they're not able to get a job if
+1:11
+that's you right now then don't worry
+1:13
+it's not your fault the rules of the
+1:15
+game for 2025 have completely changed
+1:18
+and nobody told you the new rules so I'm
+1:22
+going to give away my fre step blueprint
+1:24
+for the fastest way to learn Cloud
+1:26
+security and actually land a job and no
+1:29
+I'm not teaching teaching you anything
+1:30
+that doesn't work this is the same route
+1:33
+that students inside of my Academy are
+1:35
+leveraging to land jobs like mac and J
+1:38
+but we'll get to that later on and by
+1:39
+the way join over 10,000 engineers and
+1:42
+grab our beginner's guide to the cloud
+1:43
+it's completely free Linked In the
+Foundation
+1:45
+description so the first step to Landing
+1:47
+your Cloud security jobs is actually
+1:49
+building a solid foundation in the cloud
+1:51
+you have to understand how it works like
+1:53
+before you can go out and about and
+1:55
+secure things you need to know what you
+1:57
+are actually securing I know it s sounds
+2:00
+obvious but you'd be surprised how many
+2:02
+people ski this important step so you
+2:04
+got to understand what cloud computing
+2:06
+is why we use a cloud and delve in deep
+2:09
+and I also want you to focus on AWS not
+2:12
+only is it the market leader so it has
+2:14
+the most opportunities but everything
+2:16
+that you learn in AWS is also applicable
+2:18
+to Azure and gcp and because I'm an
+2:21
+expert so you know I'm never going to
+2:23
+recommend you something that I'm not
+2:24
+already an expert in so some of the
+2:26
+things that you will cover is what the
+2:28
+shared responsibility model is right how
+2:31
+do Cloud providers manage the physical
+2:33
+security and some of the infrastructure
+2:35
+but you as the user will be responsible
+2:37
+for the data the permissions and the
+2:38
+applications that you deploy this step
+2:40
+is just about getting comfortable with
+2:42
+new Concepts and you're not going to
+2:43
+become an expert after a single week but
+2:46
+you're going to be picking things up
+2:48
+really quickly and honestly if you are a
+Virtualization
+2:51
+beginner you should get your AWS Cloud
+2:53
+practitioner certification as well that
+2:55
+won't really take you more than just 2
+2:56
+weeks and it's a good way to build your
+2:58
+confidence so you also come across
+3:00
+virtualization this is fundamental to
+3:03
+how the cloud works because it allows
+3:05
+you to split one physical computer into
+3:07
+multiple separate virtual machines and
+3:09
+why is that good now each virtual
+3:11
+computer has its own operating system
+3:13
+memory and it runs independently which
+3:16
+means that if things go wrong or one of
+3:18
+the machines crashes the whole system
+3:20
+doesn't fail just the individual machine
+3:22
+so for example if one of them virtual
+3:24
+machines gets infected with malware
+3:26
+because you haven't secured it properly
+3:27
+it can't spread to others and this this
+3:29
+is how Cloud providers like AWS run all
+3:32
+these customer workflows on the same
+3:33
+physical Hardware whilst keeping
+3:35
+everyone's data separate and secure it's
+3:37
+through virtualization now I've covered
+3:40
+virtualization but there's also storage
+3:42
+networking understanding what operating
+3:44
+systems are and just basic Cloud
+3:46
+architecture then it's time to layer in
+3:49
+the cloud security principles on top and
+Cloud Security Principles
+3:51
+you will start with the CIA Triad and
+3:53
+learn what we mean by confidentiality
+3:56
+integrity and availability you need to
+3:58
+learn IM am identity access management
+4:00
+which is actually a huge section of
+4:02
+cloud security just by itself I actually
+4:05
+have a friend that works in this field
+4:07
+and is definitely a lucrative field to
+4:09
+be in with plenty of money now you also
+4:11
+need to cover encryption fundamentals
+4:13
+threet detection Basics and how we
+4:16
+Implement these Concepts into Cloud
+4:18
+environments vpcs are also crucial
+4:20
+virtual private cloud like find out what
+4:23
+that even means as well as security
+4:25
+groups and knackles these are all Cloud
+4:27
+security fundamentals that complement a
+4:29
+a lot of the cloud knowledge that you
+4:31
+would have already built and just to
+4:32
+make sure you're not cutting any corners
+4:34
+or missing any gaps you should also get
+First Principle Thinking
+4:36
+your comp Tia Security Plus certificate
+4:39
+again it's just good for your confidence
+4:40
+boost and gives you a little bit more
+4:42
+structured learning that said these
+4:44
+certificates won't get you a job but
+4:46
+make sure you wait until step number
+4:48
+three in this blueprint because I'll be
+4:50
+giving away the new way to actually land
+4:52
+a cloud security job in 2025 so to
+4:55
+really get the most out of step one and
+4:57
+this is something that I go by myself
+4:59
+when whenever I'm tackling something new
+5:01
+you need to have an inquisitorial
+5:02
+mindset question everything take Elon
+5:05
+Musk and how he's always drumming on
+5:07
+about his first principal thinking and
+5:09
+how he leveraged that to build Tesla and
+5:11
+SpaceX and all these other great
+5:13
+companies that he's leading and if you
+5:14
+don't know first principles thinking is
+5:17
+basically breaking everything down to
+5:18
+the most fundamental truths so instead
+5:20
+of just accepting that oh yeah we need a
+5:23
+VPC because everyone says so ask
+5:25
+yourself why do we need it what problem
+5:27
+is it actually solving how does it make
+5:29
+our infrastructure more secure like when
+5:31
+you're learning about security groups
+5:33
+don't just memorize the details
+5:35
+understand what that actually means in
+5:37
+practice what happens when you allow
+5:39
+inbound traffic what about the return
+5:41
+traffic why would you choose a security
+5:43
+group over a knle what are the
+5:45
+differences do you see what I mean it's
+5:47
+about digging deeper than just the
+5:48
+service level stuff that you find in
+5:50
+certification courses because here is
+5:52
+the thing in the real world when you're
+5:54
+working as a cloud security engineer
+5:57
+you're going to face problems that
+5:58
+aren't in any study guide and that's
+6:01
+when this kind of thinking will really
+6:03
+pay off and that's why I always tell my
+6:05
+students don't just learn what to do
+6:07
+learn why we do it when you understand
+6:10
+the why you can make better decisions
+6:12
+about security you can look at a
+6:13
+company's infrastructure and actually
+6:15
+understand the security needs so as
+6:18
+you're going through step one keep
+6:19
+asking questions and once you get that
+6:21
+breadth of knowledge you're ready for
+Build Projects
+6:23
+step two and that's to apply your
+6:25
+knowledge and start building projects
+6:27
+now this actually by far the most
+6:28
+important step make sure you stay for
+6:30
+what I'm going to tell you in Step
+6:31
+number three because when you combine it
+6:33
+with projects that's the fastest way to
+6:36
+actually get hired as a cloud security
+6:38
+engineer and that's the reason why I
+6:40
+made this video so a lot of beginners
+6:42
+get caught up in just collecting
+6:44
+certifications and you're not going to
+6:46
+make the same mistake because if you
+6:47
+want to actually land a cloud security
+6:49
+job you have to get building real world
+6:52
+solutions that actually solve problems
+6:55
+and if you're just starting out you can
+6:56
+start by securing a static website on S3
+6:59
+which will teach you about bucket
+7:00
+policies encryption and access control
+7:03
+the foundation you'll be using is Amazon
+7:04
+s3e for hosting but we are focusing on
+7:07
+implementing proper security rather than
+7:09
+just getting our files online you'll
+7:11
+learn how to configure bucket policies
+7:13
+that maintain public access to website
+7:15
+content while preventing unauthorized
+7:17
+modifications now the IM am
+7:19
+configuration the identity and access
+7:20
+management is where you implement proper
+7:23
+Access Control you'll create your roles
+7:24
+with minimum required permissions this
+7:26
+prevents potential security breaches
+7:28
+from overly permissive settings and when
+7:30
+you build this you're learning real
+7:32
+security architecture that companies are
+7:34
+actually using and yes this will require
+7:36
+coding specifically infrastructures code
+7:39
+with pyone or typescript or terapon
+7:41
+which adds efficiency and you'll write
+7:43
+scripts that will handle deployment was
+7:45
+also verifying security configurations
+7:47
+this prevents common security gaps that
+7:50
+happen with manual deployments and these
+7:52
+scripts can check bucket policies file
+7:54
+permissions and encryption settings
+7:56
+before allowing uploads you also
+7:58
+integrate guard Duty which provides
+8:00
+active security monitoring you'll set up
+8:02
+alerts for suspicious activities and
+8:03
+learn how to respond to potential
+8:05
+threats and to tie everything together
+8:07
+you'll want to use GitHub perversion
+8:09
+control and documentation now this gives
+8:11
+you a complete history of infrastructure
+8:13
+changes and provides rollback
+8:14
+capabilities if security issues are
+8:17
+discovered that said I can also give you
+8:18
+loads of project ideas but I've already
+8:20
+done this in previous videos
+8:21
+step-by-step breakdowns so I'm not going
+8:23
+to cover that anymore but that's a great
+8:25
+one to get started on but if you're
+8:26
+watching this and thinking okay I'm
+8:28
+super motivated and want to start
+8:30
+learning and building projects then I
+8:31
+want to tell you that I am running a
+8:33
+special cohort right now and we're
+8:35
+taking in new students so if you're
+8:37
+interested and ready to take action just
+8:39
+like Jay Martinez one of our students
+8:41
+that got laid off as a banker and got
+8:43
+hired as a cloud engineer in just a few
+8:45
+months or Mac who after joining my
+8:47
+Academy landed a job as a systems
+8:48
+engineer at AWS then click the link in
+8:51
+the description and book a call with my
+8:52
+team but just no this isn't for everyone
+8:54
+because it's just not possible for us to
+8:56
+bring in a 100 people at once because
+8:58
+the demand is really high and right now
+9:00
+the cloud is booming so we want to make
+9:02
+sure we can actually help the people
+9:04
+that we bring on so yeah book a call to
+9:06
+see if you qualify for our special
+My Secret
+9:08
+cohort now that brings me to step number
+9:10
+three which is one key strategy that
+9:12
+will actually get you a job but we can
+9:14
+only get to the solution once we've
+9:15
+covered the current state of the job
+9:17
+market so throughout the years of
+9:19
+working multiple sixf figure roles I
+9:21
+never really had to apply for them and
+9:22
+I'm going to share you my secret right
+9:24
+now so everyone's out there thinking oh
+9:26
+I'll just apply for hundreds of jobs
+9:28
+send my TV write a nice cover letter but
+9:31
+let me tell you what's actually
+9:32
+happening behind the scenes and why you
+9:34
+might be struggling I'm seeing
+9:36
+businesses especially smaller ones right
+9:38
+now getting absolutely flooded with
+9:40
+applications I listed a job application
+9:42
+not long ago and I got hundreds of
+9:43
+applications in fact I get daily
+9:45
+messages of people wanting to work for
+9:48
+me for free despite having many years of
+9:50
+experience people aren't able to find a
+9:53
+job and the thing is with how chat GPT
+9:55
+and AI tools are making it very easy to
+9:57
+apply for jobs and what is that called
+9:59
+these businesses are just getting
+10:01
+overwhelmed with applications they're
+10:03
+getting all of these applications that
+10:05
+look amazing on paper but there's no
+10:07
+trust there there's no real connection
+10:10
+and that's where I want you to pay
+10:11
+attention because this is the key thing
+10:14
+that most people are missing in today's
+10:16
+market 2025 is not about just having the
+10:18
+technical skills anymore yes you need
+10:21
+them don't get me wrong that's your
+10:22
+foundation but what's actually going to
+Trust
+10:24
+land you that job it is trust it's
+10:27
+building real connections in a community
+10:30
+and think about it from a business
+10:32
+owner's perspective if I'm running a
+10:34
+small team and I need to hire someone am
+10:36
+I going to read and look through all of
+10:38
+these thousands of AI generated
+10:41
+applications absolutely not I am going
+10:44
+to look at my network I'm looking at the
+10:46
+people who've been consistently showing
+10:48
+up the ones who've been adding value in
+10:50
+my community the people who are landing
+10:52
+jobs aren just Mass applying for them
+10:54
+they're the ones who are in there every
+10:55
+day helping others solve problems
+10:57
+sharing their knowledge they are
+10:59
+building trust before they even need to
+11:01
+ask for a job now I know what some of
+11:03
+you might be thinking but I don't have
+11:06
+time for all that I need a job right now
+11:09
+and listen I get it I understand but in
+11:12
+today's job market you've got to play
+11:14
+the long game you've got to be genuine
+11:17
+about it if you're not actually
+11:18
+passionate about Cloud security if
+11:20
+you're not willing to put in the
+11:22
+groundwork to build those relationships
+11:24
+to provide the value is going to be
+11:27
+really tough for you and look here is
+11:29
+something that I've learned from running
+11:30
+my own businesses we have to get every
+11:33
+hiring decision right I need to
+11:35
+genuinely believe that it's the right
+11:36
+decision because the implications for me
+11:39
+are big so ask yourself am I going to
+11:41
+trust a random application or someone in
+11:44
+my community that's been providing value
+11:46
+exactly and this isn't just me do you
+11:49
+know why Amazon and JP Morgan and all
+11:51
+these big tech companies always ask for
+11:54
+referrals or if you've been referred by
+11:56
+someone it's because of trust they
+11:58
+FastTrack these candidates straight to
+12:00
+interviews because someone they trust is
+12:02
+vouching for them now I'm not going to
+12:04
+lie to you yes applying for hundreds of
+12:06
+job applications will get you somewhere
+12:08
+and it's a numbers game and if you keep
+12:10
+at it something will stick and that's
+12:12
+worked for me in the past but let's be
+12:14
+real most people get demoralized and
+12:17
+will give up after just 10 applications
+12:19
+and here is the reality 90% of
+12:21
+recruiters are on LinkedIn actively
+12:24
+searching for candidates they are
+12:25
+literally there looking for people like
+12:27
+yourself and this is what I'm seeing for
+12:29
+my own students right and when they
+12:30
+start implementing their LinkedIn
+12:32
+strategies they start getting inbound
+12:33
+from recruiters and think about it if a
+12:35
+recruiter searches for cloud security
+12:37
+engineer and you're not showing up in
+12:39
+those searches then you don't exist to
+12:41
+them you are invisible but when you're
+12:43
+actively posting now you are on their
+12:46
+radar and that's what's happening with
+12:48
+all of our students they're not just
+12:50
+sitting there sending out applications
+12:52
+into the void because when recruiters
+12:54
+come to you you are already positioned
+12:56
+as someone valuable because they want to
+12:59
+to you and The Leverage that that gives
+13:01
+you it's night and day and a secret tip
+13:03
+for you right now especially on LinkedIn
+13:06
+videos are the way to go just look at my
+13:08
+LinkedIn if you haven't seen already I'm
+13:10
+doubling down on this myself on my own
+13:12
+LinkedIn and posting videos every single
+13:14
+day and I'm getting so many more
+13:16
+Impressions and therefore leads for my
+13:19
+businesses and if you want the
+13:20
+step-by-step road map for everything
+13:22
+that you need to learn in Cloud security
+13:24
+then go check out this video right here
+
+
+====================================================
+What is Cloud Security? Explained in 15 minutes
+
+Cloud Security, what is it? Why is it important, and why are cloud security jobs the most in demand roles in tech right now.
+
+
+
+0:00
+Cloud security what is it why is it
+0:03
+important and why are Cloud security
+0:05
+jobs the most in demand roles in Tech
+0:08
+right now I've got my own cloud security
+0:11
+business and we help startups and
+0:12
+businesses around the world secure their
+0:15
+Cloud environments now if you're not
+0:17
+paying attention to Cloud security then
+0:19
+you are going to get left behind and I'm
+0:22
+here to make sure that that doesn't
+0:24
+happen to you the world is moving to the
+0:27
+cloud at an insane pace it's like a gold
+0:31
+rush and everyone wants a piece of the
+0:33
+action in fact by 2028 if businesses are
+0:38
+not using Cloud technology it's very
+0:40
+likely that they will no longer exist
+0:43
+but here is the thing with great power
+0:45
+comes great responsibility and when it
+0:47
+comes to the cloud that responsibility
+0:50
+is all about keeping your data and
+0:52
+applications safe from the bad guys you
+0:55
+might be thinking but San I'm just a
+0:58
+beginner do I really need to worry about
+1:01
+Cloud security Now the answer is a
+1:04
+resounding yes it doesn't matter if
+1:06
+you're a solar developer or a big
+1:09
+Enterprise if you're using the cloud you
+1:12
+need to prioritize security the reality
+1:14
+is that the cloud is a whole different
+1:17
+world compared to traditional it
+1:19
+environments you've got data flying
+1:22
+around everywhere people accessing
+1:24
+resources from all over the world and a
+1:27
+ton of moving parts to keep track track
+1:30
+of it's like trying to secure a massive
+1:33
+complex puzzle with pieces that are
+1:36
+constantly changing but don't let that
+1:38
+scare you off the key is to educate
+1:40
+yourself and stay vigilant you need to
+1:43
+understand the common threats the best
+1:45
+practices and the tools at your disposal
+1:48
+to keep your Cloud environment locked
+1:51
+down tight and that's exactly what we're
+1:53
+going to cover in this video I'm going
+1:55
+to break down Cloud Security in a way
+1:58
+that even a complete new gr can
+2:00
+understand we'll talk about the shared
+2:02
+responsibility model the different
+2:04
+layers of security best practices and
+2:07
+practical steps that you can take to
+2:09
+secure your Cloud setup before we get
+2:11
+started you should check out my weekly
+2:13
+Cloud newsletter where I share free
+2:15
+resources tutorials boot camps and so
+2:18
+much more helping you get started with
+2:20
+the cloud when you're are working in the
+2:22
+cloud you are part of a larger ecosystem
+2:25
+a single week link can have effects that
+2:27
+impact everyone that's why it's crucial
+2:30
+for every cloud professional to
+2:32
+prioritize security and work together to
+2:35
+create a safer Cloud environment for
+2:37
+everyone remember the cloud is the
+2:39
+future and security is a non-negotiable
+2:41
+you can either learn to secure it now or
+2:44
+get left in the dust the choice is yours
+2:47
+before you learn about Cloud security
+2:49
+you need to understand what cloud
+2:51
+engineering and cloud computing is so
+2:54
+let's go over it cloud computing is the
+2:56
+delivery of Computing Services over the
+2:58
+Internet with we're talking about things
+3:00
+like servers storage databases software
+3:04
+and more instead of having all of this
+3:06
+stuff on your own computer or in your
+3:08
+own data center is all hosted remotely
+3:12
+and access through the web now cloud
+3:14
+computing has some key characteristics
+3:17
+that make it a complete GameChanger the
+Key Characteristics
+3:19
+cloud is on demand self-service where
+3:22
+you can spin up Cloud resources whenever
+3:25
+you need them without having to go
+3:27
+through a bunch of red tape it's like
+3:30
+having a vending machine for computing
+3:32
+power Cloud gives you a broad network
+3:34
+access that you can access your Cloud
+3:37
+resources from anywhere with just an
+3:39
+internet connection whether you're on
+3:41
+your phone a tablet or a computer the
+3:43
+cloud is always within your reach and
+3:46
+finally rapid elasticity with the cloud
+3:49
+this means you can scale up or down
+3:52
+instantly based on your needs if you
+3:54
+suddenly get a surge of traffic the
+3:56
+cloud can handle it without breaking a
+3:59
+sweat now when it comes to cloud service
+4:01
+models there are three main parts
+4:04
+infrastructure as a service this is when
+4:06
+you rent the basic building blocks of
+4:09
+computing like virtual machines and
+4:11
+storage you have a lot of control but
+4:13
+you also have to manage a lot of the
+4:15
+underlying infrastructure then we also
+Cloud Deployment Models
+4:18
+have platform as a service with platform
+4:20
+as a service you get preconfigured
+4:22
+environments for developing testing and
+4:25
+deploying your applications you don't
+4:27
+have to worry about the underlying
+4:29
+infrastructure you can focus on writing
+4:31
+code for your applications and then we
+4:34
+have software as a service this is where
+4:36
+you use software that's hosted and
+4:38
+managed by the cloud provider think of
+4:41
+things like email office suites and
+4:43
+customer relationship management tools
+4:46
+also known as CRM finally let's talk
+4:48
+about Cloud deployment models we have
+4:51
+public Cloud private Cloud hybrid cloud
+4:54
+and also multic Cloud public cloud is
+4:56
+where you use a cloud providers
+4:58
+infrastructure and your resources are
+5:00
+shared with other customers it's like
+5:03
+living in an apartment complex private
+5:05
+cloud is where you have dedicated
+5:08
+resources that are only used by your
+5:10
+business or your organization this is
+5:12
+like having your own house hybrid cloud
+5:15
+has a mix of public and private clouds
+5:18
+where you can move your workloads
+5:20
+between them as needed it's like having
+5:22
+a vacation home in addition to your
+5:24
+primary residence in your usual location
+Cloud Security
+5:27
+and finally multicloud this this is
+5:29
+where you use multiple Cloud providers
+5:31
+for different services this is like
+5:33
+having a diverse Investment Portfolio so
+5:37
+there you have it the basics of cloud
+5:39
+computing it's definitely complex but
+5:41
+understanding these fundamentals is
+5:43
+crucial if you want to succeed in the
+5:45
+cloud and Cloud security so what is
+5:47
+cloud security Now picture this you've
+5:49
+got your data your applications and your
+5:51
+infrastructure all running smoothly in
+5:53
+the cloud life is good right but then
+5:56
+disaster strikes a hacker finds a way to
+5:59
+steal your data and takes down your
+6:01
+services suddenly your business is in
+6:04
+shambles and you've left wondering what
+6:07
+went wrong that's where Cloud security
+6:10
+comes in it's the armor that protects
+6:13
+your assets in the cloud keeping the bad
+6:16
+guys out and ensuring that your business
+6:18
+can Thrive without any Interruption at
+6:21
+its core Cloud security is all about
+6:23
+safeguarding your data your applications
+6:26
+and your infrastructure from
+6:27
+unauthorized access and damage it's
+6:30
+about maintaining the confidentiality
+6:33
+integrity and availability of your
+6:35
+resources in the face of the constant
+6:38
+evolving threats but here is the thing
+6:40
+Cloud security isn't just the
+6:42
+responsibility of your cloud provider
+6:45
+it's a shared responsibility model which
+6:47
+means that both you and your provider
+6:50
+like AWS have a role to play your cloud
+6:53
+provider is responsible for securing the
+6:55
+underlying infrastructure like the
+6:57
+physical data centers the network and
+6:59
+the virtualization layer they make sure
+7:02
+that the foundation is solid and that
+7:04
+the basic security measures are in place
+7:07
+but you as the customer are responsible
+7:10
+for securing everything you put on top
+7:13
+of that infrastructure this includes
+7:15
+your operating system your applications
+7:18
+and your data you need to make sure that
+7:20
+you are configuring your resources
+7:22
+properly managing access controls and
+7:24
+staying on top of patches and updates so
+7:27
+what are the key aspects of cloud
+7:29
+security that you need to focus on let's
+7:32
+break it down firstly we have data
+Key Aspects of Cloud Security
+7:34
+protection this is about keeping your
+7:36
+data safe for many prying eyes and
+7:39
+ensuring that your data is always
+7:42
+available when you need it encryption
+7:44
+backup and Disaster Recovery are all
+7:47
+crucial components of data protection
+7:50
+next we have access control and identity
+7:52
+management you need to be able to
+7:54
+control who has access to your resources
+7:57
+and what they can do with them this
+7:59
+means implementing strong authentication
+8:02
+authorization and identity management
+8:04
+practices let's talk about network
+8:05
+security because your Cloud resources
+8:07
+are only as secure as the network that
+8:10
+they're running on you need to make sure
+8:12
+that your network is properly segmented
+8:14
+the traffic is filtered and monitored
+8:16
+and that you have defenses in place
+8:18
+against common attacks like dos we can't
+8:21
+talk about Cloud protection and Cloud
+8:23
+security without compliance and
+8:25
+regulatory requirements depending on
+8:27
+your industry and location you may be
+8:30
+subject to various regulations and
+8:32
+standards such as Hippa PCI DSS or gdpr
+8:36
+you need to ensure that your Cloud
+8:38
+environment is compliant with these
+8:39
+requirements and that you have the
+8:41
+necessary controls in place now no
+8:44
+matter how strong your defenses are
+8:46
+there's always a chance that something
+8:48
+could go wrong that's why you need to
+8:49
+have a plan in place for detecting
+8:52
+responding to and recovering from
+8:54
+security incidents and disasters now I
+8:57
+know this all sounds like a lot to take
+9:00
+in but do not worry because you don't
+9:02
+have to go at it alone there are plenty
+9:05
+of tools best practices and partners out
+9:08
+there that can help and secure your
+9:10
+Cloud environment including my company
+9:12
+Soul security the key is to prioritize
+9:15
+security from the start and to make it
+9:17
+an integral part of your Cloud strategy
+9:19
+and that's why at my company Soul
+9:21
+security we help businesses secure their
+9:23
+Cloud environments and keep their
+9:25
+applications data and customers safe all
+9:28
+right so now that we know what cloud
+9:29
+computing Cloud security and some of the
+9:31
+key aspects are but what are some of the
+Cloud Security Threats
+9:33
+cloud security threats and challenges
+9:37
+that we and businesses all need to be
+9:40
+aware of first up we've got data
+9:42
+breaches and unauthorized access this is
+9:45
+the stuff of nightmares imagine waking
+9:48
+up one morning to find out that your
+9:50
+sensitive data has been stolen and
+9:53
+splashed all over the dark web it's not
+9:55
+a pretty picture but it's the reality
+9:57
+that far too many organiz ations have
+10:00
+had to face next we've got insecure apis
+10:03
+and interfaces these are like the back
+10:05
+doors into your Cloud environment if
+10:08
+they're not properly secured hackers can
+10:10
+walk right in and create absolute Havoc
+10:13
+think of it as leaving your front door
+10:15
+wide open and then being surprised when
+10:17
+someone comes in and robs your house but
+10:20
+here is the thing sometimes the biggest
+10:22
+threat to your Cloud security isn't some
+10:25
+random hacker on the Internet it's
+10:27
+actually the people within your
+10:29
+organization misconfiguration and human
+10:31
+error are responsible for a staggering
+10:33
+number of security breaches one wrong
+10:36
+click one misconfigured setting and
+10:38
+suddenly your data is out there for the
+10:41
+world to see in fact I followed this
+10:43
+Twitter page and they always share data
+10:45
+breaches that are happening live around
+10:47
+the world and you'll be surprised how
+10:49
+many breaches are happening every single
+Insider Threats
+10:52
+day and let's not forget about Insider
+10:54
+frats these are the people who have
+10:57
+legitimate access to your systems but
+10:59
+use that access for really bad purposes
+11:02
+it could be a disgruntled employee
+11:04
+looking to cause damage or even a
+11:07
+malicious actor who's managed to
+11:09
+infiltrate your ranks either way inside
+11:12
+a threet can be incredibly difficult to
+11:14
+detect and to prevent but wait there's
+11:18
+actually more denial of service also
+11:20
+known as dos attacks these are like the
+11:22
+schoolyard bullies of the cloud World
+11:25
+they flood your systems with so much
+11:27
+traffic that you grind to a halt leaving
+11:30
+your legitimate users out in the cold is
+11:33
+a frustrating and costly problem that
+11:36
+can be tough to defend against and if
+11:38
+you really want to lose sleep at night
+11:40
+let me introduce to you to advanced
+11:42
+persistent threats also known as APS
+11:44
+these are the Elite hackers the ones who
+11:47
+are in it for the long haul they quietly
+11:49
+infiltrate your systems establish a
+11:51
+foothold and then slowly pull your data
+11:54
+over time and by the time that you
+11:56
+realize what's happening it's often too
+11:58
+late now with the right tools strategies
+12:01
+and mindset you can fight back and keep
+12:03
+your Cloud environment safe and secure
+12:05
+it's not going to be easy and it's not
+12:07
+going to be a one-time thing Cloud
+12:08
+security is an ongoing battle a
+12:10
+NeverEnding game of cat and mouse
+12:13
+between the good guys and the bad guys
+12:15
+but with vigilance determination and a
+12:17
+healthy dose of paranoia you can stay
+12:20
+one step ahead of the threats and keep
+12:22
+your data and applications out of Harm's
+12:25
+Way all right so you've heard about all
+12:26
+the nasty threats and challenges that
+12:28
+come within the cloud it's enough to
+12:30
+make you want to unplug your router and
+12:32
+then just go live in a cave but before
+12:34
+you do that let me give you some good
+12:36
+news there are plenty of best practices
+Best Practices
+12:38
+and solutions that can help keep your
+12:40
+Cloud environment locked down and I'm
+12:42
+going to share some of those best
+12:43
+practices with you so first and foremost
+12:46
+you need to implement strong access
+12:47
+controls and identity management this is
+12:50
+like having a bouncer at an exclusive
+12:52
+nightclub if you're not on the list you
+12:54
+are not getting in make sure you're
+12:56
+using MFA to add an extra layer of
+12:58
+security
+12:59
+Beyond just passwords you also want to
+13:02
+implement role based Access Control to
+13:04
+ensure that users only have access to
+13:06
+the resources that they need to do their
+13:08
+jobs always follow the least privileged
+13:11
+principle give users the minimum level
+13:13
+of access required and not a single bit
+13:16
+more next encryption encryption is your
+13:19
+best friend encrypting data at rest and
+13:22
+in transit is like putting your
+13:24
+sensitive information in a high tech
+13:26
+safe even if the bad guys get get their
+13:29
+hands on it they won't be able to read
+13:31
+it without the key so make sure you are
+13:33
+using strong encryption methods and
+13:35
+managing your keys securely now let's
+13:37
+talk about network security you need to
+13:39
+make sure that your network is segmented
+13:42
+and secured you can use vpns to create
+13:44
+secure Tunnels for remote access you can
+13:46
+Implement Network segmentation and micro
+13:49
+segmentation to create smaller and more
+13:51
+manageable security zones it's like
+13:53
+putting up walls and checkpoints through
+13:55
+your network to keep the bad guys out of
+13:58
+your cloud environment but security
+14:00
+isn't just about keeping the bad guys
+14:03
+out it's about keeping a watchful eye on
+14:06
+what's Happening inside of your Cloud
+14:09
+environment and this is where monitoring
+14:11
+and logging come into the picture
+14:13
+Implement centralized logging and
+14:14
+monitoring to keep track of all of your
+14:17
+activity in your Cloud you can also use
+Security Tools
+14:19
+security information and event
+14:21
+management tools to analyze logs and
+14:23
+detect potential threats and don't
+14:25
+forget about intrusion detection and
+14:27
+prevention systems ID PPS these are like
+14:30
+your personal security guards constantly
+14:32
+watching for suspicion activities and
+14:34
+sounding the alarm when something looks
+14:37
+a little bit fishy now of course even
+14:39
+the best security tools are useless if
+14:42
+they're not kept up to dat that's why
+14:44
+patch management and vulnerability
+14:46
+scanning are so crucial make sure you're
+14:49
+patching your systems and applications
+14:51
+to close any known security holes always
+14:54
+do this automatically and conduct
+14:56
+regular vulnerability scans to identify
+14:58
+any any weaknesses before the bad guys
+15:00
+can come in and exploit them but here is
+15:03
+the thing security isn't just about
+15:06
+technology it's about people that's why
+15:08
+you need employee training and awareness
+15:11
+because that's so important you want to
+15:13
+make sure your employees know how to
+15:15
+spot fishing create strong passwords and
+15:17
+handle sensitive data securely a
+15:19
+well-informed workplace is your first
+15:21
+line of defense against any sort of
+15:24
+hacks so there you have it the best
+15:26
+practices and solutions to keep your
+15:27
+Cloud environment secure it's not going
+15:29
+to be easy and it's going to require
+15:31
+constant vigilance and effort but with
+15:33
+the right tools strategies and mindset
+15:35
+and a right partner AKA Soul security
+15:38
+you can make sure your Cloud environment
+15:39
+is secure and there you have it you know
+15:41
+what cloud computing is cloud security
+15:43
+is the best practices common threets and
+15:46
+what to do with the Frets now it's not
+15:48
+going to be easy you need to constantly
+15:49
+learn constantly evolve and constantly
+15:51
+train your employees but if you need any
+15:53
+help reach out to Soul curity like the
+15:56
+video subscribe if you haven't already
+15:57
+and book a call with soul security if
+15:59
+you're a business requiring any sort of
+16:01
+cloud security and I'll see you guys on
+16:03
+the next video
+
+
+====================================================
+The Complete Cloud Security Engineer Roadmap (2025)
+
+Having worked in IT for 10 years and now as a Cloud Security Specialist, I know exactly what it takes to work in this industry.
+
+In this video, I'll show you the exact step by step path I'd take if I wanted to become Cloud Security Engineer in 2025. 
+
+
+0:00
+last week I rejected a
+0:02
+$348,000 cloud security job offer 5
+0:05
+years ago I couldn't even get companies
+0:07
+to look at my resume what changed well I
+0:10
+discovered the secret that companies
+0:12
+actually want and it's not what you
+0:14
+think hi I'm San I'm A Cloud engineer
+0:16
+and I run my own cloud Security
+0:18
+consultancy today I'm revealing the
+0:20
+exact road map that you need to become a
+0:22
+cloud security engineer after a decade
+0:24
+in it and helping hundreds of students
+0:26
+succeed I know one thing for certain you
+0:29
+don't need a degree or years of
+0:31
+experience to break into Cloud security
+0:33
+I've broken it down into three simple
+0:35
+phases that anyone can follow learn
+0:38
+build own and if you stay until the end
+0:40
+of this video you'll know exactly how to
+0:42
+land a cloud security job by the way
+0:44
+grab my beginner's guide to the cloud
+0:46
+it's free Link in the description so
+0:48
+phase one learn but what do you need to
+0:51
+learn well there is three steps starting
+0:54
+with step number one building your
+0:56
+foundational it knowledge Begin by
+0:58
+understanding TCP and IP the main
+1:01
+protocol for internet communication like
+1:03
+the postal service for sending and
+1:05
+receiving data online next you want to
+1:07
+learn about DNS domain name system the
+1:09
+phone book of the internet which
+1:11
+translates domain names into IP
+1:13
+addresses that computers use to locate
+1:16
+each other finally dive into subnetting
+1:18
+which divides large networks into
+1:20
+smaller organized segments making it
+1:22
+easier to manage and secure Cloud
+1:24
+infrastructure you'll need to cover
+1:25
+operating systems as well focusing on
+1:28
+both windows and Linux so start by
+1:30
+practicing basic commands in Windows
+1:32
+Powershell and linux's Bash terminal get
+1:34
+familiar with file manipulation Process
+1:36
+Management and system monitoring since
+1:38
+most Cloud servers use Linux you'll need
+1:41
+to get comfortable with Linux specific
+1:43
+tasks like package management
+1:44
+configuring services and basic system
+1:46
+administration you also need to
+1:48
+understand cyber security foundations
+1:50
+start with the CIA Triad confidentiality
+1:53
+integrity and availability understand
+1:56
+common threats like malware and social
+1:58
+engineering to recognize ize how attacks
+2:01
+happen get comfortable with
+2:02
+authentication methods access control
+2:04
+and basic encryption to protect data you
+2:07
+also need to learn how to use firewalls
+2:09
+Network protocols and intrusion
+2:11
+detection tools to keep systems secure
+2:13
+step two you need to learn free cloud
+2:15
+computing basic concepts so cloud
+2:18
+computing relies on virtualization which
+2:20
+allows a single physical machine to run
+2:22
+multiple virtual environments now in
+2:24
+these virtualized environments you'll
+2:26
+often work with virtual machines and
+2:28
+containers virtual machines act as
+2:30
+independent computers each with its own
+2:33
+operating system while containers are
+2:34
+more lightweight sharing the operating
+2:36
+system but including only application
+2:39
+dependencies now each has unique
+2:41
+security requirements so understanding
+2:43
+how to secure VMS virtual machines and
+2:45
+containers individually is crucial
+2:48
+secondly cloud services are typically
+2:50
+offered in free forms infrastructure as
+2:52
+a service platform as a service and
+2:54
+software as a service each model offers
+2:57
+different levels of control with
+2:58
+infrastructure as a service you manage
+3:00
+virtual machines networking and storage
+3:03
+platform as a service manages the
+3:05
+infrastructure allowing you to focus on
+3:07
+development and deployment in software
+3:09
+as a service everything is handled by
+3:11
+the provider leaving you to focus only
+3:14
+on the application Level security it's
+3:16
+also valuable to explore the main Cloud
+3:18
+providers AWS Azure and Google Cloud as
+3:21
+each excels in different areas but we
+3:24
+stick with AWS because it has the
+3:26
+largest market share finally
+3:28
+responsibilities are shared between you
+3:30
+and the cloud provider like AWS while
+3:33
+the provider handles the physical
+3:35
+security and the infrastructure aspects
+3:37
+you are responsible for securing your
+3:39
+data managing access and setting
+3:41
+permissions step three because you want
+3:43
+to work as a cloud security engineer you
+3:45
+have to understand Cloud security
+3:47
+fundamentals identity and access
+3:49
+management controls who can access which
+3:52
+resources so learning identity and
+3:53
+access management or IM am means knowing
+3:56
+user roles permissions groups and access
+3:58
+controls all of which help you keep your
+4:00
+Cloud environment safe and secure data
+4:03
+security is a priority and encryption
+4:05
+plays a big role so get familiar with
+4:07
+the types of encryption data at rest
+4:10
+data in transit and client side
+4:12
+encryption and finally network security
+4:15
+learn to configure virtual private
+4:16
+clouds vpcs security groups and access
+4:19
+control lists ACLS both host based and
+4:22
+network-based firewalls are important
+4:24
+for managing access Now by setting up
+4:26
+these controls you can reduce the risk
+4:29
+of unal access and other security issues
+4:32
+now as a bonus option in a learn phase
+4:34
+you also need to get certified beginners
+4:36
+make the mistake in thinking that these
+4:38
+are the golden ticket that cloud
+4:39
+security jobs now for normal Cloud roles
+4:41
+I would say that these do not matter but
+4:43
+for specialized roles like Cloud
+4:45
+security they are definitely important
+4:47
+they are there for you to consolidate
+4:49
+your learning and give yourself some
+4:50
+credibility begin with the CompTIA
+4:53
+Security Plus because it covers the core
+4:55
+security Concepts and then go through
+4:56
+the AWS certifications practitioner
+4:59
+solution arit associate professional and
+5:01
+also the security speciality because
+5:04
+that one stands out in the class
+5:05
+security industry specifically for AWS
+5:08
+Cloud security roles now you are ready
+5:10
+for phase two build if you really want
+5:12
+to land a job in Cloud security then
+5:14
+learning theory isn't enough I get so
+5:17
+many applications come through every
+5:18
+week and when I check people's resumés
+5:20
+they are just listing their degrees and
+5:22
+certificates that they've completed but
+5:23
+they lack hands-on experience to really
+5:26
+excel in the build phase you have to not
+5:28
+only apply the the you've learned but
+5:30
+actually be creative and build real
+5:33
+solutions that businesses need in 2025
+5:35
+eventually you'll have to integrate AI
+5:37
+machine learning into your projects you
+5:39
+can't just build a static website a file
+5:41
+backup system an s3e privacy Checker and
+5:44
+believe that is enough to land a job are
+5:46
+they good starting points sure but I'm
+5:48
+here to give you the reality of the job
+5:50
+market and the industry you are already
+5:52
+fighting an uphill battle if you have no
+5:55
+prior industry experience so this is the
+5:57
+way to get your foot in the door by
+5:59
+building building more complex projects
+6:01
+to Showcase you know what you are doing
+6:03
+remember I quit my job and landed a new
+6:06
+run as a cloud engineer 5 years ago and
+6:08
+that would never have been possible if I
+6:10
+didn't build real projects and get
+6:12
+hands-on experience and of course it's
+6:14
+not easy you have plenty of roadblocks
+6:16
+along the way but to me everything in
+6:19
+life that's worth having isn't easy to
+6:21
+accomplish otherwise every single person
+6:23
+and a dog will be successful I can't
+6:25
+stress this enough building Hands-On
+6:27
+projects as soon as possible will
+6:29
+accelerate your Learning Journey because
+6:31
+it reinforces the theory it also gives
+6:33
+you the confidence to believe in what
+6:35
+you are doing you can apply for jobs
+6:37
+because you've been building and using
+6:39
+the tools that employers want to see for
+6:41
+the last few months so the build phase
+6:43
+is split into two parts part one you'll
+6:45
+be learning practical skills part two
+6:47
+you'll be building projects so part one
+6:50
+the practical skills that you need to
+6:51
+learn get familiar with awss fre ec2 for
+6:55
+running applications and go over
+6:56
+identity and access management for
+6:57
+controlling access again and of course
+6:59
+don't forget vpcs now these core
+7:01
+services will let you securely store
+7:03
+host and manage access to your services
+7:06
+learn how to use Python to automate
+7:08
+tasks like uploading files and setting
+7:10
+up servers learn basic commands like get
+7:12
+in it get add get commit get push to
+7:15
+keep track of changes in your code use
+7:17
+GitHub to store your projects and build
+7:19
+your portfolio now I also recommend
+7:21
+getting familiar with monitoring tools
+7:22
+like AWS guard Duty and cloudwatch for
+7:25
+logging and setting up alerts when
+7:27
+something unusual happens in your Cloud
+7:29
+sec security environment learn cicd
+7:31
+pipelines automate processes that check
+7:33
+code quality and push updates to
+7:35
+customers tools like Jenkins and GitHub
+7:37
+actions make it easy for this to be
+7:39
+implemented learn how to use AWS cloud
+7:41
+formation or terraform to set up Cloud
+7:44
+Resources with code this makes it easy
+7:46
+to set up change and duplicate your
+7:48
+infrastructure as needed learn Docker to
+7:50
+package applications with all their
+7:52
+dependencies this keeps your application
+7:54
+consistent across different environments
+7:57
+add security scans to your cicd pipeline
+7:59
+with tools like Bandit for python this
+8:01
+helps you catch security issues early in
+8:03
+the process now it's time to build
+8:05
+projects project number one you're going
+8:07
+to host a secure website on s3e focusing
+8:10
+on permissions Automation and monitoring
+8:12
+with infrastructure code you want to set
+8:14
+up your s3e bucket and store your
+8:16
+website files in there whilst also
+8:18
+managing the access configure your IM
+8:20
+roles automate file uploads and
+8:22
+permission checks of python and an
+8:23
+enable guard duty to monitor for
+8:25
+security alerts use git to track changes
+8:28
+and document your project s on GitHub
+8:30
+now with your second project you're
+8:31
+going to deploy a web application on ec2
+8:34
+with network security automated
+8:36
+infrastructure and of course
+8:37
+infrastructure as code firstly you want
+8:39
+to use cloud formation to spin up your
+8:41
+ec2 and then deploy your python flask
+8:43
+app on your ec2 use security groups to
+8:45
+limit access to your resources so your
+8:47
+ec2 then you want to automate your
+8:49
+server setup like installing
+8:50
+dependencies then set up GitHub actions
+8:52
+for automated deployment of your python
+8:55
+app finally use clat for logging and
+8:56
+monitoring alerts and the final project
+8:58
+you're going to use Docker for
+9:00
+containerization and set up a cicd
+9:02
+pipeline with Security checks as always
+9:04
+start by defining your infrastructures
+9:06
+code for your container so you can use
+9:08
+ECS with AWS and then you want to
+9:10
+package your web app in a Docker
+9:11
+container and then use Bandit for python
+9:14
+Security checks you can also add
+9:15
+compliance checks to your pipeline and
+9:18
+then what you want to do is simulate an
+9:19
+incident and review your logs in
+9:21
+cloudwatch now if you like the sound of
+9:24
+these projects but you don't know how to
+9:25
+start building them then check out my
+9:27
+cloud engineer Academy you'll get plenty
+9:30
+of hands-on experience building projects
+9:31
+and access to a private Discord group
+9:33
+with over 300 Cloud students I also run
+9:36
+monthly live workshops as well at no
+9:39
+extra cost last month I run a class on
+9:41
+deploying AI models to AWS so if you're
+9:44
+interested go check out the link in the
+9:46
+description so you've learned all the
+9:47
+skills and built the projects along the
+9:49
+way now you are ready for phase number
+9:51
+three own the first part of phase number
+9:54
+three is landing your Cloud security job
+9:56
+there is of course a lot of cloud
+9:58
+security jobs out there and this is
+10:00
+where you'll build your foundation when
+10:02
+you get your job you'll gain real
+10:03
+experience and develop core cloud and
+10:06
+security skills now even if you have to
+10:08
+take adjacent roles that's not a cloud
+10:10
+security engineer then just take it just
+10:12
+get your foot in the door now specific
+10:15
+job advice and interview tips I'm not
+10:17
+going to cover in this video instead I'm
+10:18
+going to teach you how to own what you
+10:20
+do but what does that even mean to me if
+10:23
+you want to own and dominate and I knew
+10:25
+this from day one back when I was 19
+10:27
+working as an apprentice you need to to
+10:29
+work for yourself own your future own
+10:32
+your projects own your time now some
+10:34
+people want to work at 9 to5 retire when
+10:36
+they're 65 and that's totally fine they
+10:38
+don't want to dominate but that's not
+10:40
+you your goal isn't to work your whole
+10:42
+life for someone else instead you're
+10:44
+going to use that time to strategically
+10:46
+learn specialize and eventually work for
+10:49
+yourself the thought of having to ask
+10:50
+your boss for a holiday should give you
+10:53
+enough desire to want to work for
+10:55
+yourself and for your own future so you
+10:57
+can take time off whenever you want like
+10:59
+I knew I could take my security and
+11:01
+Cloud expertise and build my own cloud
+11:03
+security consultancy and you can do the
+11:05
+same you don't have to reinvent the whe
+11:07
+Niche down as well maybe it's identity
+11:09
+and access management network security
+11:11
+or Ai and ml security whatever it is I
+11:14
+used to wake up at 5 a.m. to work on
+11:16
+cloud security before my 9 to-5 job then
+11:18
+spend my evenings building my YouTube
+11:20
+channel was it exhausting of course it
+11:22
+was but I knew the alternative was that
+11:24
+I'd be stuck in my 9 to-5 job forever
+11:26
+whereas this would only be temporary
+11:28
+pain that's why growing my YouTube
+11:30
+channel and Linkedin has given me so
+11:32
+much leverage your personal brand
+11:35
+multiplies everything that you do and
+11:37
+when you stick with it even on days when
+11:38
+you are dead tired your personal brand
+11:41
+is working in the background for you
+11:43
+recruiters reach out to you directly
+11:45
+people want to work with you you become
+11:47
+a trusted voice of authority in your
+11:49
+Niche why do you think recruiters reach
+11:51
+out to me every single day yes I have a
+11:55
+lot of experience if I'm not creating
+11:57
+content and posting on LinkedIn every
+11:59
+every single day then they don't see me
+12:01
+they don't even know who I am why do you
+12:03
+think Mark Zuckerberg is suddenly
+12:05
+creating content you're seeing his face
+12:07
+everywhere now because billionaires know
+12:09
+the true value of a personal brand in a
+12:12
+world where AI is developing faster than
+12:14
+we could ever imagine don't forget your
+12:16
+employer ultimately doesn't care about
+12:19
+you you're just there to make them as
+12:20
+much money as possible for as long as
+12:22
+you can as soon as you can be replaced
+12:24
+they won't hesitate that's why you need
+12:27
+to own something that's truly yours
+12:30
+something that gives you the freedom to
+12:32
+work on your own terms something that
+12:34
+rewards all those early mornings and
+12:36
+late nights the journey isn't easy but I
+12:39
+promise you it's worth every single step
+12:42
+and if you want a deeper step-by-step
+12:44
+breakdown then check out this video
+12:45
+right here where I explain the cloud
+12:47
+career path that will make you filthy
+12:49
+rich
+
+
+====================================================
+How to Secure Your AWS Environment: A Step-by-Step Guide
+
+If you're building your business on the cloud, you know how important it is to keep your cloud environments secure. In today's digital world, a single security breach can be catastrophic, leading to data loss, reputational damage, and financial impact. 
+
+
+0:00
+if you're building your business on the
+0:01
+cloud you know how important it is to
+0:04
+keep your Cloud environment secure in
+0:06
+today's Digital World a single security
+0:08
+breach can be catastrophic leading to
+0:11
+data loss reputational damage and
+0:14
+financial impact but don't worry in this
+0:16
+video I'll walk you through the
+0:18
+actionable steps that you can take to
+0:20
+secure your Cloud environments and
+0:22
+protect your valuable assets we'll cover
+0:24
+everything from understanding the shared
+0:26
+responsibility model to implementing
+0:29
+strong identity and access management
+0:31
+securing your network architecture
+0:32
+encrypting your data and so much more
+0:35
+before we get started you should check
+0:36
+out my weekly Cloud newsletter where I
+0:39
+share free resources tutorials boot
+0:41
+camps and so much more helping you make
+0:43
+your Cloud move and also subscribe to
+0:45
+the channel because we're so close to
+0:47
+hitting our first 100,000 subscribers so
+Shared Responsibility Model
+0:50
+first things first let's talk about the
+0:52
+shared responsibility model when you're
+0:54
+working with a cloud provider like AWS
+0:57
+security is a team effort your provider
+1:00
+is responsible for securing the
+1:02
+underlying infrastructure such as the
+1:04
+physical data centers the network and
+1:06
+the virtualization layer but when it
+1:08
+comes to securing your applications data
+1:11
+and access management that's completely
+1:13
+your responsibility a lot of Founders
+1:16
+and Tech teams make this mistake they
+1:18
+think that the cloud is secure by
+1:21
+default this is not the case you need to
+1:23
+understand the split responsibility
+1:25
+between you and the provider imagine you
+1:28
+are in a boat with your cloud provider
+1:30
+you're both responsible for keeping the
+1:32
+boat afloat and getting to your
+1:34
+destination safely but you have
+1:36
+different roles and responsibilities
+1:38
+your cloud provider is like the captain
+1:40
+of the ship they're responsible for the
+1:42
+underlying infrastructure making sure
+1:45
+the boat is sea worthy the engines are
+1:48
+running smoothly and the navigation
+1:50
+systems are working properly in Cloud
+1:52
+terms this means they take care of
+1:54
+things like the physical security of
+1:55
+data centers Network infrastructure and
+1:57
+security virtualization layer ensuring
+2:00
+the availability and resilience of the
+2:02
+cloud platform I.E your boat but here is
+2:05
+the Thing Once you are on the boat you
+2:07
+are responsible of your own safety and
+2:10
+the safety of your passengers in the
+2:12
+cloud your passengers are your
+2:14
+applications your data and your users so
+2:17
+it's up to you secure applications and
+2:19
+code manage access to your resources and
+2:22
+data configure your network and security
+2:24
+settings encrypt sensitive data and
+2:26
+ensure compliance and relevant
+2:29
+regulations and standards that is a lot
+2:31
+but think of it like this your cloud
+2:33
+provider will make sure the boat doesn't
+2:35
+sink but it's up to you to make sure
+2:37
+your passengers are wearing life jackets
+2:40
+you're not overloading the boat and
+2:42
+you're following the rules of the sea
+2:45
+now the specifics of the shared
+2:46
+responsibility model can vary depending
+2:49
+on the service model that you're using
+Service Models
+2:51
+infrastructure as a service platform as
+2:53
+a service or software as a service with
+2:56
+infrastructure as a service you have the
+2:58
+most control and responsib ability
+3:00
+you're responsible for securing your
+3:02
+operating systems your applications and
+3:04
+your data whilst your cloud provider
+3:06
+takes care of the underlying
+3:08
+infrastructure this is like using Amazon
+3:10
+ec2s with platform as a service your
+3:13
+provider manages the operating system
+3:15
+the runtime but you're still responsible
+3:17
+for your applications and your data this
+3:19
+is more like using AWS Lambda or AWS
+3:22
+beant stock and with software as a
+3:24
+service your provider takes on most of
+3:27
+the responsibility managing everything
+3:30
+from the infrastructure to the
+3:31
+application layer but you are still
+3:34
+responsible for securing your data and
+3:36
+managing user access software as a
+3:38
+service in AWS is like using AWS
+3:41
+workspaces or work docs now no matter
+3:44
+which model that you're using it's
+3:46
+crucial to understand where your
+3:49
+responsibilities lie and to take a
+3:51
+proactive approach to security this
+3:53
+means clearly defining security roles
+3:56
+and responsibilities within your own
+3:58
+business implementing strong identity
+4:00
+and access management policies assessing
+4:02
+and monitoring your security posture and
+4:05
+staying up to dat with the latest
+4:07
+security practices and frat landscape
+4:09
+remember security is a shared
+4:12
+responsibility but it's ultimately up to
+4:14
+you to ensure the safety and security of
+4:17
+your applications and data in the cloud
+Security
+4:20
+by understanding the shared
+4:21
+responsibility model and taking
+4:23
+ownership of your own security
+4:25
+responsibilities you can build and scale
+4:28
+on the cloud with conf confidence
+4:30
+knowing that you're doing everything in
+4:32
+your power to protect your business and
+4:34
+your customers and if you feel lost or
+4:36
+overwhelmed then drop me an email my
+4:38
+business so security helps secure Cloud
+4:41
+environments for businesses all over the
+4:43
+world and we can certainly help you do
+4:45
+the same now let's move on to the next
+4:47
+critical aspect of securing your Cloud
+4:50
+environment implementing strong identity
+4:52
+and access management think of I am like
+4:54
+the security system of a building it's
+4:57
+responsible for controlling who can
+4:59
+enter the building building which floors
+5:00
+and rooms they can access and what
+5:03
+actions they are allowed to perform once
+5:05
+they're inside the building getting I am
+5:08
+right is crucial because just like a
+5:10
+building you want to make sure only
+5:12
+authorized people are getting in and
+5:15
+they're not accessing areas that they
+5:17
+shouldn't so what are the best practices
+Best Practices
+5:19
+for identity and access management first
+5:22
+and foremost you need to implement
+5:23
+multifactor authentication MFA is like
+5:26
+having a second form of verification to
+5:28
+enter the building it's not enough to
+5:30
+just have the key card which can be lost
+5:32
+or stolen you need another Factor like
+5:35
+biometric scanning or code sent to your
+5:37
+phone to prove you are exactly who you
+5:40
+say you are next you need to implement
+5:42
+leas privilege access this means giving
+5:45
+users the minimum level of access that
+5:47
+they need to do their job and nothing
+5:49
+more it's like having restricted areas
+5:51
+in the building not everyone needs
+5:54
+access to the Executive Suite or the
+5:56
+server room by restricting access to
+5:58
+sensitive resources and data you can
+6:00
+minimize the damage if an account is
+6:03
+compromised now it's also important to
+6:05
+review and audit user permissions often
+6:09
+people's roles and responsibilities can
+6:11
+change over time and you need to make
+6:13
+sure that access levels are adjusted
+6:16
+accordingly it's like keeping your
+6:17
+building's Access Control list up to
+6:19
+date you don't want to allow access to
+6:21
+someone who no longer works for your
+6:24
+company another key aspect of IM is
+6:26
+using role based Access Control this
+6:28
+allows you to Define roles within
+6:31
+specific permissions and assign users to
+6:33
+those roles it's like having different
+6:35
+job functions in the buildings managers
+6:37
+engineers and admin staff each with
+6:40
+their own specific areas of access and
+6:43
+responsibilities now the key is to be
+6:45
+thoughtful and deliberate in how you set
+6:47
+up your IM IM permissions don't just
+6:49
+give everyone admin access because it's
+6:51
+easier but it's also very lazy take the
+6:54
+time to define the roles and permissions
+6:56
+that align with your business needs and
+6:58
+security best practice ices and remember
+7:00
+IM am is not a oneandone task you need
+7:03
+to continuously Monitor and manage your
+7:05
+IM am Setup Review users and roll
+7:08
+permissions and make sure to remove
+7:10
+access for users who no longer need it
+7:13
+for example when an employee leaves your
+7:16
+company I've seen countless times where
+7:18
+ex employees still have access to
+7:20
+systems and applications even though
+7:23
+they left that business many many months
+7:25
+ago now let's talk about securing your
+Network Architecture
+7:28
+network architecture imagine your Cloud
+7:30
+Network as a bustling City like New York
+7:33
+London or Dubai with data and services
+7:37
+constantly moving around like cars and
+7:39
+pedestrians just like a well-planned
+7:41
+city your network needs to be designed
+7:44
+with security in mind and from the
+7:46
+ground up the foundation of your secure
+7:49
+Cloud network is a VPC in AWS VPC is
+7:53
+your gated communities providing a
+7:55
+private and isolated environment for
+7:58
+your resources but just like a gated
+8:00
+community you need to carefully plan
+8:02
+your entry and your exit points as well
+8:05
+as your internal security measures when
+8:07
+you're setting up your VPC you should
+8:09
+Implement Network segmentation and
+8:12
+subnets this is like dividing your city
+8:15
+into different districts each with its
+8:17
+own security requirements you might have
+8:20
+a downtown subnet for your public facing
+8:22
+web service a residential subnet for
+8:24
+your internal databases and an
+8:26
+industrial subnet for your backend Pro
+8:29
+processing systems by segmenting your
+8:31
+network you can apply granular security
+8:34
+controls to each subnet this is like
+8:37
+having different security measures for
+8:39
+each district in your city your downtown
+8:42
+area might have surveillance cameras and
+8:45
+regular police patrols whilst your
+8:47
+residential area has neighborhood watch
+8:49
+programs and gated access in the cloud
+8:52
+these security controls are implemented
+8:54
+through security groups and network
+8:56
+access control list security groups are
+8:59
+like your buildings security system
+9:01
+controlling which traffic can enter and
+9:04
+exit each resource such as your servers
+9:06
+and your databases network access
+9:09
+control list are like the city
+9:10
+checkpoints controlling traffic between
+9:13
+subnets so between your residential area
+9:16
+and your downtown when configuring your
+9:18
+security groups and network access
+9:20
+control list you should follow the
+9:21
+principle of leas privilege this means
+9:24
+only allowing the minimum access
+9:26
+required for each resource to function
+9:28
+it's like only giving keys to specific
+9:30
+rooms a person needs access in a
+9:33
+building rather than the master key to
+9:35
+the entire complex another critical
+9:38
+aspect of network security is protecting
+9:40
+data in transit whenever data moves
+9:43
+across your network whether between your
+9:45
+subnets or in and out of your VPC is
+9:47
+exposed to potential interception and
+9:50
+tampering now to skew data in transit
+9:53
+you should use encryption protocols like
+9:55
+https for web traffic and vpns for
+9:58
+remote access https is like armoring
+10:01
+your cars protecting the passengers I.E
+10:03
+the data inside as they move across the
+10:06
+city VPN is like building secure tunnels
+10:09
+between buildings ensuring safe passage
+10:12
+for all fries Personnel but network
+10:14
+security doesn't stop at the boundaries
+10:17
+of your Cloud environment many
+10:19
+businesses run in a hybrid cloud model
+10:22
+with resources spread across public
+10:24
+Cloud private cloud and on premise
+10:26
+environments in this case you need to
+10:28
+ensure connectivity between these
+10:30
+different Cloud environments using a
+10:32
+service such as Direct Connect and
+10:34
+lastly let's not forget about the
+10:36
+outskirts of your city the internet
+10:39
+while your VPC provides a secure
+10:41
+internal environment you still need to
+10:43
+protect against external threats when
+10:45
+your resources communicate with the
+10:47
+outside world and this is where services
+10:50
+like AWS WAFF a web application firewall
+10:53
+can come into the picture these are like
+10:55
+your city's border of security
+10:57
+inspecting incoming traffic pick for
+10:59
+potential threats like SQL injection or
+11:02
+cross- site scripting attacks a w
+11:05
+provides an additional layer of security
+11:07
+for your public facing resources
+11:09
+securing your network architecture
+11:12
+requires a multi-layered approach much
+11:15
+like securing a city by using vpcs
+Encryption
+11:18
+implementing Network segmentation and
+11:20
+access controls encrypting data in
+11:22
+transit ensuring secure hybrid
+11:25
+connectivity and protecting against
+11:27
+external web threats you can build a
+11:29
+robust and resilient network security
+11:32
+posture remember your network is the
+11:34
+backbone of your Cloud environment
+11:36
+investing time and effort into securing
+11:39
+it properly will pay off in the long run
+11:41
+providing a solid foundation for your
+11:43
+applications and your data now in
+11:46
+addition to securing your network you
+11:48
+also need to protect your data itself
+11:50
+through encryption encryption is like
+11:52
+putting your data in a safe even if
+11:55
+someone manages to get their hands on it
+11:57
+they won't be able to read it without
+11:59
+the key in the cloud you should encrypt
+12:01
+your data both at rest I.E when it's
+12:03
+stored and in transit when it's moving
+12:06
+across the network many Cloud providers
+12:08
+provide easy to ous encryption services
+12:11
+such as AWS KMS the Key Management
+12:14
+Service when setting up encryption is
+12:16
+best practice to use customer manage
+12:19
+keys this means you not your cloud
+12:22
+provider can control the encryption Keys
+12:25
+it's like keeping the key to your safe
+12:27
+yourself rather than giving it to
+12:29
+someone else to hold on to you should
+12:31
+also Implement secure key management
+12:33
+practices this includes rotating your
+Monitoring Logging
+12:35
+encryption Keys often storing them
+12:38
+securely and tightly controlling access
+12:41
+to them finally to maintain the security
+12:43
+of your Cloud environment you need to
+12:45
+continuously Monitor and log all
+12:48
+activities monitoring and log in is like
+12:50
+having security cameras and guards
+12:53
+patrolling your building they keep an
+12:55
+eye out for any suspicious activities
+12:57
+and provide a record of everything that
+13:00
+happens in the cloud you should enable
+13:02
+logging for all critical resources and
+13:05
+activities this includes things like
+13:07
+user logins API calls resource
+13:10
+configurations and network traffic it's
+13:12
+also important to centralize your log
+13:14
+management and Analysis this is like
+13:16
+having your security cameras feed into a
+13:19
+single monitoring room by aggregating
+13:21
+your logs in a central location you can
+13:23
+more easily monitor for potential
+13:25
+security incidents across your entire
+13:28
+cloud environments now to help with this
+13:30
+consider using security information and
+13:33
+event management tools these are like AI
+13:35
+powered security systems that can
+13:37
+automatically detect unusual activities
+13:40
+and potential threats based on your logs
+13:43
+and your metrics finally make sure you
+13:45
+set up alerts and notifications for any
+13:48
+unusual or suspicious activities
+13:50
+detected by getting immediate alerts you
+13:53
+can quickly investigate and respond to
+13:55
+potential security incidents the key
+13:57
+with monitoring and logging is to be
+13:59
+proactive don't wait until security
+14:02
+incident happens to start looking at
+14:04
+your logs you want to review your logs
+14:06
+and monitor them often for any unusual
+14:09
+activities again you can set up alerting
+14:12
+and AI to monitor these on your behalf
+14:15
+even when everything seems to be running
+14:17
+smoothly building Security in your Cloud
+14:19
+environments takes time patience and
+14:22
+expertise but you are way better off
+14:24
+building with security at the start and
+14:27
+Security in mind to prevent any breaches
+14:30
+and hacks if you need help with your
+14:32
+Cloud security environments go check out
+14:33
+Soul security or drop me an email Linked
+14:36
+In My description as always thank you so
+14:38
+much for watching subscribe if you
+14:39
+haven't already and I'll see you on the
+14:41
+next one
+
+
+====================================================
+
+
+
