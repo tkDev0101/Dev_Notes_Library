@@ -1,0 +1,1171 @@
+FASTEST way to become Cloud Security Engineer and ACTUALLY get a job – UPDATED (2024)
+
+
+0:00
+someone in our Discord his name is Chad
+0:02
+asked me about the best way to become a
+0:04
+cloud security engineer I tried to
+0:06
+answer this question but I quickly
+0:08
+realize that the answer is not
+0:09
+straightforward because as a cloud
+0:11
+security engineer people expect you to
+0:14
+not only provide security
+0:15
+recommendations on how to secure the
+0:17
+cloud but they also want you to know how
+0:19
+to configure those security
+0:21
+recommendations and settings now having
+0:23
+said all of that cloud engineering and
+0:25
+cyber security are the two highest
+0:27
+growth carriers at the moment they offer
+0:29
+the highest salaries with lots and lots
+0:31
+of career progression and sometimes with
+0:34
+the option of remote work for some
+0:35
+organizations so to solve this issue I
+0:38
+created a step-by-step road map that
+0:40
+will give you the skills of both cloud
+0:42
+and cyber security in the fastest way
+0:45
+possible whether you have some cyber
+0:46
+security experience or some it
+0:48
+experience or if you're someone who's
+0:50
+brand new without a degree without any
+0:52
+it or coding or networking knowledge
+0:55
+this is the video breakdown but not only
+0:57
+that I will also be sharing with you the
+1:00
+top three mistakes that people make as
+1:02
+they are trying to become Cloud Security
+1:04
+Professionals let's get into it so we
+1:05
+need to start to build our foundation in
+1:08
+both cyber security and Cloud both at
+1:10
+the same time the best and quickest
+1:12
+start in my opinion is the Microsoft
+1:15
+cyber security analyst certification
+1:17
+because it will not only introduce you
+1:19
+to the basics and foundations of it
+1:21
+networking but it will also teach you
+1:23
+how to use the Azure Cloud which is the
+1:25
+Microsoft Cloud solution that it's
+1:27
+extremely popular in the industry this
+1:29
+search will cover your basis in terms of
+1:31
+General it knowledge and networking so
+1:33
+don't worry about doing things like comp
+1:35
+A+ or CCNA or Security Plus if you've
+1:38
+done those certifications that's
+1:40
+perfectly fine by the way these are good
+1:42
+skills to have but doing this
+1:43
+certificate will quickly introduce you
+1:45
+to those Concepts and give you what you
+1:47
+need to become a cloud security engineer
+1:49
+now I did a deep dive into this
+1:50
+certification in this video so you can
+1:52
+watch it for a more detailed view of the
+1:54
+certification but before we move on I
+1:56
+know you might have the question of so
+1:58
+what if I did the Google cyber security
+2:00
+certification do you still need to do
+2:02
+the Microsoft cyber security analyst
+2:04
+certification to be honest it really
+2:06
+depends if you feel like you're
+2:07
+confident with the foundational Concepts
+2:09
+you might be missing that introduction
+2:11
+to Microsoft Azure so I want you to
+2:13
+somehow learn the Microsoft Azure before
+2:15
+jumping into the next recommendation
+2:17
+alternatively you can still do the
+2:19
+Microsoft cyber security analyst even if
+2:21
+you've done the Google cyber security
+2:22
+certificate because it will give you a
+2:24
+chance to revisit those topics make sure
+2:26
+you understand them really well but
+2:27
+you'll also be able to finish it really
+2:29
+quickly and you will get a chance to
+2:31
+practice with the Microsoft Azure Cloud
+2:33
+now this is not the only reason I'm
+2:34
+recommending the Microsoft cyber analyst
+2:36
+certificate but the most important
+2:38
+reason is that at the end of this
+2:39
+certificate you get a free practice exam
+2:42
+for the Microsoft sc900 exam which is
+2:45
+the Microsoft security compliance and
+2:47
+identity fundamental certification this
+2:49
+way you can finish the Microsoft cyber
+2:51
+analyst certificate learn about cyber
+2:53
+security but also get an additional
+2:54
+certification from Microsoft that will
+2:56
+signal to potential employers that
+2:58
+you're someone who have Cloud security
+3:00
+skills that you are serious about
+3:02
+pursuing a career in Cloud security
+3:04
+while keeping in mind we are still at
+3:05
+the beginning of our journey but this is
+3:08
+where the fun really begins when we do
+3:10
+practical projects I don't want you just
+3:12
+to pass certifications especially
+3:13
+multiple choice certifications because
+3:15
+as I said in the beginning of the video
+3:17
+being a cloud security professional you
+3:19
+need to know how to configure those
+3:21
+security recommendations in the cloud
+3:23
+you can't theorize your way around it
+3:25
+and the best way to get those Hands-On
+3:26
+skills is by doing what we refer to as
+3:29
+guided projects those are projects
+3:31
+designed to get you to practice some of
+3:33
+the concepts that we see in the industry
+3:34
+but more importantly you get to improve
+3:36
+your confidence which will enable you to
+3:38
+apply to more jobs get into interviews
+3:41
+and land your first Cloud security job
+3:43
+the first project will get you to create
+3:44
+a virtual machine on the Microsoft Azure
+3:47
+cloud and you will deploy a web server
+3:49
+on that virtual machine it's a really
+3:51
+quick introductory project it will take
+3:53
+you two to four hours to finish but it's
+3:55
+a great classic project that even when I
+3:57
+was learning Unix long time ago one of
+3:59
+the first tasks that we used to do we
+4:01
+used to install a web server on a Linux
+4:03
+machine so now you get to do it in the
+4:04
+cloud similar concept not only that it
+4:06
+will get you more comfortable of
+4:08
+spinning your own Azure cloud and
+4:10
+configure and deploy things in the cloud
+4:12
+the second project that I want you to do
+4:14
+will get you to secure an SQL database
+4:16
+in the Microsoft Azure Cloud this is a
+4:18
+cloud security task and as you will see
+4:21
+when you do the project most
+4:22
+applications noway live in the cloud for
+4:24
+example your banking data is stored
+4:27
+somewhere on an application in the cloud
+4:29
+that the Bank owns which ultimately
+4:31
+resides in a database so this is a
+4:33
+crucial task that you will be performing
+4:35
+as a cloud security engineer and it will
+4:37
+look great on your resume or your CV and
+4:39
+this is how I want you to add it on your
+4:41
+CV so under a section called skills add
+4:43
+these keywords to your CV and then have
+4:46
+another section called projects where
+4:48
+you have bullet items for each project
+4:50
+that you did I know many people get so
+4:52
+concerned about HR filters and keywords
+4:54
+well these are keywords having Microsoft
+4:56
+Azure or SQL Security on your CV is
+4:59
+something we look for as hiring managers
+5:01
+so trust me with this one guided
+5:03
+projects is the single best thing that
+5:05
+you will do for your career and your
+5:06
+development and this brings me to the
+5:08
+first mistake that people make when
+5:10
+they're trying to land their first Cloud
+5:12
+security job people tend to do a lot of
+5:14
+intermediate and even sometimes Advanced
+5:16
+certifications that are multiple choice
+5:18
+based Without Really spending the time
+5:20
+configuring things in the cloud this
+5:22
+will lead to a lot of bad habits but you
+5:24
+will also tend to forget a lot of the
+5:26
+stuff that you learn but a lot of the
+5:27
+things that you memorize to pass the
+5:29
+exam will not make any sense to you
+5:31
+things will only make sense when you put
+5:33
+them to practice only when you get to
+5:35
+configure these settings and configure
+5:36
+these security recommendations that all
+5:38
+of this Theory will make sense to you
+5:40
+now in this part we will do a deep dive
+5:42
+into securing the cloud and we will pass
+5:45
+an intermediate SL Advanced Cloud
+5:47
+security certification the Microsoft
+5:49
+Azure security engineer associate is a
+5:51
+fantastic certification for you because
+5:53
+the topic of this certification pretty
+5:55
+much mirrors the tasks that you will do
+5:57
+as a cloud security engineer so so this
+5:59
+certification is probably the one that
+6:01
+will prepare you the most to perform
+6:03
+Cloud security engineering tasks this is
+6:05
+a fantastic training that will prepare
+6:07
+you to pass this certification it
+6:09
+includes a practice test at the end but
+6:11
+not only that it is full of
+6:13
+opportunities to practice all these
+6:15
+Concepts in a lab so you'll get to spin
+6:16
+up Microsoft azour cloud and you'll get
+6:18
+to configure all of these security
+6:20
+settings because as you're applying all
+6:22
+of these Concepts in a practical
+6:24
+environment things will make sense all
+6:26
+of these concept that you've learned
+6:27
+will get reemphasized which will make
+6:29
+you a lot more confident in an interview
+6:32
+setting because you will know what
+6:33
+you're talking about you can quickly
+6:34
+come up with scenarios because you've
+6:36
+done them practically so if we look at
+6:38
+the content of the certification part
+6:40
+one is secure access with azour active
+6:42
+directory azour ad is the domain
+6:44
+controller that lives in the cloud there
+6:46
+is 100% chance that you will run into
+6:48
+active directory as a cyber security
+6:50
+professional so this part will cover
+6:52
+this really nicely for you it will show
+6:54
+you what an azour security engineer do
+6:56
+it will tell you a little bit about the
+6:58
+azour 500 exam that you will pass after
+7:00
+this course and then it will do a deep
+7:02
+dive into azour active directory then
+7:04
+you will explore how to manage user
+7:06
+access within the aure ad in fact last
+7:09
+month I was helping an organization that
+7:11
+got compromised and upon investigation
+7:13
+we found that the reason that they were
+7:14
+compromised was without user permissions
+7:16
+and identity in general in the cloud was
+7:18
+not configured properly this happens a
+7:21
+lot more than you think people spin up
+7:23
+these Cloud instances without spending
+7:25
+enough time and resources into securing
+7:27
+users and permissions which are all done
+7:29
+using azour ad you will also get to
+7:31
+configure multiactor authentication and
+7:33
+passwordless authentication again these
+7:36
+are all Concepts we ask about in the
+7:38
+interviews and then at the end of the
+7:39
+first module you have a project to
+7:41
+practice everything that you've learned
+7:43
+part two is identify protection and
+7:45
+governance this is another Deep dive
+7:47
+into identity and access within the
+7:49
+cloud again extremely important topic
+7:51
+within the cloud and one that I see
+7:53
+organizations struggle with the most so
+7:55
+the fact that you're getting proficient
+7:57
+with this at this part of your career is
+7:59
+extremely valuable you will also get
+8:01
+introduced to some fairly advanced
+8:03
+concepts such as role based access
+8:04
+control and how to implement that in the
+8:06
+cloud you will also get to understand
+8:08
+privileged access management and how
+8:10
+this applies to Azure ad so as you can
+8:12
+see as you're going through it you are
+8:14
+learning fairly Advanced cyber security
+8:16
+Concepts and you're getting a chance to
+8:18
+applying them in the cloud this is
+8:20
+pretty much what a cloud security
+8:21
+professional does and as you can see
+8:23
+this is why Cloud Security Professionals
+8:25
+get paid High salaries because they need
+8:27
+a lot of skills they need to be
+8:28
+comfortable with a lot of Technologies
+8:30
+and there is always demand for cyber
+8:32
+Security Professionals with Cloud skills
+8:34
+the third part is called Implement
+8:36
+platform protection this is where you'll
+8:38
+get to reinforce some of the network
+8:40
+security Concepts that you've learned
+8:41
+earlier in your Microsoft cyber security
+8:43
+analyst so you'll get to learn how to
+8:45
+configure firewalls within the cloud and
+8:47
+what that means within the context of
+8:49
+cloud and also some advanced concepts
+8:51
+such as defense in depth you may have
+8:53
+heard about it you may have learned it
+8:55
+but here you'll get to see how it's
+8:56
+actually applied in the real world in
+8:58
+the Microsoft Azure cloud and then
+9:00
+you'll get to configure kubernetes again
+9:02
+you may have not heard of this before
+9:04
+but kubernetes is something that cloud
+9:06
+Engineers know and are familiar with so
+9:08
+you will get introduced to that but not
+9:10
+just from an engineer point of view but
+9:12
+from a cyber security point of view if
+9:13
+you get a chance to work in a large
+9:15
+environment and their use cities you
+9:17
+will be the one who will secure that for
+9:19
+the organization course 4 goes through
+9:21
+application security but within a cloud
+9:23
+context so in the cloud we deploy
+9:26
+applications as the cloud security
+9:28
+professional you are not the one who
+9:29
+deploys these applications but you are
+9:31
+the one who configur security for those
+9:33
+applications and this includes
+9:35
+encryption in those application and how
+9:36
+to exchange and store those encryption
+9:39
+Keys you'll also get introduced to API
+9:41
+and API Security in fact there was a
+9:43
+high-profile company that got hacked in
+9:46
+Australia and the way that got hacked is
+9:48
+through insecure apis so in this course
+9:50
+you'll get introduced to what apis are
+9:53
+and how to secure them and course five
+9:55
+is all about securing data address and
+9:57
+in that again you will go through
+9:59
+encryption but you'll also go through
+10:00
+how to secure the SQL database which
+10:03
+you've got some practice with in the
+10:04
+Practical project that I introduced
+10:06
+earlier so here you get a chance to
+10:08
+explore this in a broader sense course
+10:10
+six is managing security operations this
+10:12
+is the bread and butter of cyber analyst
+10:14
+so if you're a cyber security
+10:16
+professional who deals with stopping
+10:17
+cyber attacks detecting cyber attacks
+10:20
+well a huge part of detecting and
+10:21
+stopping cyber attacks is the cloud
+10:23
+because many if not most of those
+10:25
+attacks nowadays happen in the cloud so
+10:27
+here you'll get introduced to some of
+10:28
+the Microsoft Solutions on how to detect
+10:30
+cyber attacks such as the Azure Monitor
+10:33
+and Microsoft Defender you will also get
+10:35
+introduced to Microsoft Sentinel which
+10:37
+is a seam similar to Splunk in fact it's
+10:39
+becoming increasingly popular so this is
+10:41
+a fantastic chance to learn Sentinel and
+10:44
+practice with Microsoft Sentinel you
+10:45
+will even get a chance to do some threat
+10:47
+hunting so if you haven't done threat
+10:49
+modeling or threat hunting and you don't
+10:51
+even know what there is this course will
+10:53
+teach you these concept but it will also
+10:54
+teach you how to perform them in the
+10:56
+cloud and then in course seven you will
+10:58
+get a practice exam exam to pass your B
+11:00
+at 500 exam again extremely popular exam
+11:03
+highly in demand you can get a really
+11:05
+nice job after passing this exam and
+11:07
+doing the stuff that I've mentioned
+11:08
+earlier but not only that there is a
+11:10
+Capstone project which is my favorite
+11:12
+part of the course because you get to
+11:14
+put all of these Concepts together and
+11:16
+you get to implement them using a
+11:17
+Hands-On project now in part four I want
+11:19
+to show you the different careers within
+11:22
+Cloud security noticed I've used the
+11:24
+word engineer in the title of this video
+11:26
+because the way Cloud security
+11:27
+professional are viewed is that they are
+11:29
+Cloud Engineers who understand cyber
+11:31
+security they are individuals who know
+11:33
+how to set up the cloud how to configure
+11:35
+the cloud but they have deep
+11:37
+understanding of cyber security and they
+11:39
+know how to implement those cyber
+11:41
+security recommendations within the
+11:42
+cloud now broadly speaking there are
+11:44
+three specializations within the cloud
+11:46
+the first one and the most common one is
+11:48
+the one that I explained where you are a
+11:50
+cloud security engineer you implement
+11:52
+security recommendations within the
+11:54
+cloud now the second one a cyber
+11:56
+security consultant where you advise
+11:58
+different organiz ations on cyber
+12:00
+security issues and as part of your job
+12:02
+you may be asked to advise organizations
+12:05
+on cloud security issues in fact this is
+12:07
+what I do I'm not a cloud security
+12:09
+specialist but I'm a cyber security
+12:11
+consultant and a lot if not all of my
+12:13
+clients use the cloud in one way shape
+12:15
+or form so I end up needing to have
+12:17
+conversations with them about the cloud
+12:19
+I give them Cloud recommendations I do
+12:21
+Cloud assessments and by the way I did a
+12:23
+really nice day in my life as a cyber
+12:25
+security consultant in this video if
+12:26
+you're curious on what my day looks like
+12:29
+and the third one you could be like I
+12:30
+said a dedicated cyber security analyst
+12:33
+who work in an organization and your job
+12:35
+is to respond to attacks to threats
+12:37
+you're more of a blue team professional
+12:39
+but as part of your job you will need to
+12:41
+deal with the cloud so you will need
+12:43
+Cloud security as a skill not
+12:45
+necessarily A specialization for example
+12:47
+you might be dealing with a Cyber attack
+12:49
+against an application that lives in the
+12:51
+cloud so you will need to understand how
+12:53
+the cloud works so you can analyze that
+12:55
+attack and perhaps stop that attack in a
+12:57
+bigger organization you could be a cyber
+12:59
+analyst specializing in the cloud but
+13:01
+more often than not you're usually a
+13:02
+blue team professional or a cyber
+13:04
+analyst who looks after the cloud as
+13:06
+part of their job which brings me to the
+13:08
+second mistake that people make with
+13:09
+Cloud security which is being extremely
+13:12
+narrow in their job search this one
+13:14
+actually drives me crazy so they'll do
+13:16
+the certification they will study hard
+13:18
+they will do all the hard work but when
+13:19
+it comes to job search they insist that
+13:21
+they want to perform an exact job they
+13:23
+have this imaginary job where all they
+13:25
+do is just designing Security in the
+13:27
+cloud so unless the title says design
+13:30
+Security in the cloud they don't apply
+13:32
+they don't like it or for example they
+13:33
+get hired as Cloud security professional
+13:36
+but then the actual job doesn't match
+13:38
+the imaginary job description they had
+13:39
+in mind and this is a recipe of not only
+13:42
+failing in your Cloud security career
+13:44
+but also it's recipe to be perpetually
+13:46
+upset and unhappy so what I really want
+13:48
+you to do is to just be a little bit
+13:50
+more flexible with your approach and
+13:52
+understand that cloud security can be
+13:54
+its own specialization but it can also
+13:56
+be a skill that you get to use as a
+13:58
+cyber security professional and that
+14:00
+sometimes the job is not what you
+14:01
+imagine it's not possible for the job to
+14:03
+be exactly what you want it to be every
+14:05
+single day sometimes you'll get to work
+14:07
+on exciting things but other times you
+14:09
+will have to do some boring tedious
+14:11
+things we all have to do it I have to do
+14:13
+it that's just the world we live in so
+14:15
+be a little bit more flexible now you
+14:17
+put water into a
+14:18
+cup it becomes the cup you put water
+14:21
+into a bottle it becomes the bottle you
+14:23
+put it in a teapot it becomes the teapot
+14:26
+now water can flow or it in
+14:29
+Crash be water my friend now in part
+14:33
+five I want you to expand your knowledge
+14:35
+at this point you might be wondering why
+14:37
+did I choose Microsoft Azure what about
+14:39
+Amazon AWS what about the Google Cloud
+14:42
+what about the Oracle Cloud well
+14:43
+remember in this video I'm trying to get
+14:45
+you the fastest way possible for you to
+14:47
+build the skills of cyber security and
+14:49
+Cloud at the same time it just so
+14:51
+happened that the training available
+14:53
+that goes over Microsoft is just a
+14:55
+little bit higher quality than the ones
+14:56
+available for AWS that's not to to say
+14:58
+the AWS training is bad it's great it
+15:01
+might just take you a little bit longer
+15:03
+to familiarize with this concept
+15:04
+especially if you're someone with no it
+15:06
+degree or with no technolog and you
+15:08
+trying to change careers from a
+15:10
+different career into cyber security Now
+15:12
+the good news if you've done all of the
+15:13
+certifications that have recommended so
+15:15
+far you'll be very confident with
+15:17
+Microsoft Azure the skills are extremely
+15:19
+transferable the concepts are exactly
+15:21
+the same the only difference is the
+15:23
+naming convention so the name of the
+15:24
+storage instance with an Azure is
+15:26
+different in AWS it's called S3 bucket
+15:28
+it's just different namings for the same
+15:30
+thing which means the best way for you
+15:32
+to learn Amazon AWS is through guided
+15:35
+projects notice I want you to do
+15:37
+projects with Amazon AWS before even
+15:40
+doing any trainings I want you to think
+15:42
+like an engineer I want you to think on
+15:44
+your feed and try to research topics
+15:46
+that you don't know because this is what
+15:47
+happens in the real world we don't
+15:49
+always have training available for new
+15:51
+problems that we face and trust me
+15:52
+you'll have no problem finishing these
+15:54
+projects the first one to create a
+15:56
+virtual private Cloud within Amazon WS
+15:59
+again as you go through these projects
+16:01
+you will realize that you are already
+16:03
+familiar with what a VPC is it just has
+16:05
+a different name with Microsoft aure and
+16:07
+the second project is a hosting project
+16:09
+where you will host a web application on
+16:11
+an Amazon AWS very very similar to the
+16:13
+one that you did with Microsoft Azure
+16:15
+except you'll do it with AWS and you
+16:17
+will see how your skills are extremely
+16:19
+transferable and this way you will get
+16:21
+to add Amazon to AWS to your CV now the
+16:23
+popular certification from Amazon AWS
+16:26
+that I want you to pass is the AWS
+16:28
+security specialty it's equivalent to
+16:30
+the a 500 from Microsoft same difficulty
+16:33
+extremely similar topics unfortunately
+16:35
+there is no cheap training from corsera
+16:37
+that covers this the one that I used to
+16:39
+recommend is from acloud Guru which is
+16:41
+the one that I recommend today however
+16:43
+things have changed a cloud Guru got
+16:45
+acquired by plural sites so things are
+16:48
+not how they used to be but it's still
+16:50
+good quality if you've reached this
+16:51
+stage I highly recommend that you also
+16:53
+do this training because you'll get a
+16:55
+chance to review exactly the same topics
+16:57
+that you've learned with Microsoft
+16:58
+you'll get to apply the same concept
+17:00
+with an Amazon AWS which will improve
+17:02
+your confidence it will expand your
+17:04
+knowledge and will ultimately lead you
+17:05
+to land your first Cloud security job
+17:08
+now again the third one there is an
+17:09
+equivalent certification from Google
+17:11
+Cloud Google cloud is less popular than
+17:13
+Microsoft Azure and Amazon AWS but it's
+17:16
+still widely used in the industry so
+17:18
+this one is optional if you have time
+17:20
+and you want to further expand your
+17:21
+Cloud knowledge good news is it's
+17:23
+available through corsera it's cheap to
+17:25
+complete it has practical project and it
+17:27
+has all the good stuff that you've done
+17:29
+in your Microsoft AO certificate just
+17:31
+with the Google Cloud again if you've
+17:33
+reached this stage you will be able to
+17:35
+finish this one quickly because you are
+17:37
+already familiar with all of these Cloud
+17:39
+security Concepts things will just have
+17:41
+slightly different names in the Google
+17:43
+Cloud but that's about it but this
+17:44
+brings me to the third biggest mistake
+17:46
+that people make with Cloud security is
+17:48
+that some individuals are wedded to one
+17:51
+technology they refer to themselves as
+17:53
+the AWS guy or the Azure girl they only
+17:55
+want to work with one technology they
+17:57
+want to specialize in AWS they want to
+17:59
+specialize in Microsoft Azure there is
+18:01
+nothing wrong with that but I think
+18:02
+you're missing out if you follow this
+18:04
+approach you're leaving a lot of
+18:05
+opportunities on the table as I've
+18:07
+explained all of these Cloud platforms
+18:09
+are extremely similar one is not better
+18:11
+than the other they pretty much do the
+18:13
+same things so in my opinion a
+18:15
+successful cyber security professional
+18:17
+is one who's adaptable is one who have
+18:19
+depth and bread of knowledge don't be
+18:21
+wed to one technology or one vendor
+18:23
+because vendors come and go and because
+18:25
+in the real world you will be asked to
+18:27
+deal with more than one technology so if
+18:29
+your organization for example brought up
+18:31
+Google cloud and they ask who knows
+18:33
+Google Cloud I want you to be the one to
+18:35
+put your hand up and say yes I will take
+18:37
+this opportunity on and this is how
+18:39
+you'll progress in your career this is
+18:41
+how I was able to jump up quickly how I
+18:43
+was able to learn quickly and how I was
+18:45
+able to have a breath of knowledge now
+18:47
+remember Cloud security is a
+18:48
+specialization but it's also a skill
+18:50
+that you can have as a cyber security
+18:52
+professional but if you're wondering
+18:54
+what other cyber security professional
+18:55
+specialization are like what do they do
+18:58
+well I broke them down all in this video
+19:00
+where I've listed every single cyber
+19:01
+security specialization I've listed the
+19:03
+task that they do what their day-to-day
+19:05
+look like but I also listed the pros and
+19:07
+cons of each specialization so please
+19:10
+watch this video and I'll see you there

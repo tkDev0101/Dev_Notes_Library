@@ -3,17 +3,6 @@ AWS CLOUD / DEVOPS ENGINEER ROADMAP (BEGINNER TO JOB-READY)
 
 
 
-
-
-
-
-
-
-
-Absolutely, Mthokozisi. Here is a \*\*properly structured but simply formatted AWS Cloud Engineer Roadmap\*\*—with thoughtful progression, practical focus, and no fancy formatting so you can copy it straight into Notepad.
-
-
-
 \\=========================================================================================
 
 📍 AWS CLOUD / DEVOPS ENGINEER ROADMAP (BEGINNER TO JOB-READY)
@@ -564,13 +553,4 @@ Version Control
 
 =============
 
-
-
-Start where you are, build consistently, document everything, and keep applying—even before you feel "ready."
-
-You grow the most by \*\*doing\*\* and \*\*sharing\*\* your work.
-
-
-
-Let me know when you're ready for a project, breakdown, or AWS exam plan—I got you!
 
