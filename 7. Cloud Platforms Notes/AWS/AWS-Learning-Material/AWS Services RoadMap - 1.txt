@@ -1,5 +1,3 @@
-AWS SERVICES ROADMAP 
-
 
 \=========================================================================================
 📍 AWS SERVICES ROADMAP TO BECOME A CLOUD ENGINEER (PRODUCTION-LEVEL)
